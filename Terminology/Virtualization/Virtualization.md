@@ -1,0 +1,42 @@
+---
+aliases: []
+date created: Wednesday, 26. November 2025, 18:11
+date modified: Monday, 1. December 2025, 21:12
+---
+
+# Virtualization
+
+
+[Host Machine / Host OS](Virtualization/Host%20Machine%20Host%20OS.md)
+
+[Virtual Machine (VM)](Virtualization/Virtual%20Machine%20(VM).md)
+
+[Hypervisor](Virtualization/Hypervisor.md)
+
+[Virtualization methods](Virtualization/Virtualization%20methods.md)
+
+[Virtualization Hardening & Operations](Virtualization/Virtualization%20Hardening%20&%20Operations.md)
+
+---
+
+**Term**: Virtualization
+
+**Definition**: A set of technologies that make one physical computer behave like many separate “virtual” computers by abstracting hardware into software.
+
+**Context/Example**: One powerful server can be split into several virtual machines (VMs), each running its own OS (e.g., one Linux server, one Windows server) on the same physical box.
+
+**Related Concepts**: [Virtual machine](Virtualization/Virtual%20Machine%20(VM).md), [hypervisor](Virtualization/Hypervisor.md), [containers](Virtualization/Virtualization%20methods/Container.md), cloud computing
+
+## Security Challenges
+
+[VM Escape](Virtualization/VM%20Escape.md)
+
+[Multi-Tenancy](Virtualization/Multi-Tenancy.md)
+
+[Side-Channel Attack](Virtualization/Side-Channel%20Attack.md)
+
+## Mitigating Security Risks
+
+Patch Management
+Principle of Least Privilege → give users/programs only the minimum permission they need to do their job.
+Disable unused [ports](Port.md)

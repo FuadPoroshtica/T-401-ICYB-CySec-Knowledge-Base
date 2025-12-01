@@ -1,0 +1,17 @@
+---
+aliases: []
+date created: Tuesday, 25. November 2025, 20:11
+date modified: Monday, 1. December 2025, 21:12
+---
+
+# CVE
+
+**Term**: CVE (Common Vulnerabilities and Exposures)
+
+**Definition**: A standardized identifier used to name and track publicly disclosed security vulnerabilities.
+
+![1_fo1_I3imkAYwzhdPrzgI7Q.webp](CVE/1_fo1_I3imkAYwzhdPrzgI7Q.webp)
+
+**Context/Example**: To execute its attack, the Stuxnet (2010) attack used the “[CVE-2010-2568: Windows LNK file vulnerability](https://www.cve.org/CVERecord?id=CVE-2010-2568)” (the most famous part), along with [CVE-2010-2772](https://www.cve.org/CVERecord?id=CVE-2010-2772), [CVE-2010-3888](https://www.cve.org/CVERecord?id=CVE-2010-3888), [CVE-2008-4250](https://www.cve.org/CVERecord?id=CVE-2008-4250), and [CVE-2010-2729](https://www.cve.org/CVERecord?id=CVE-2010-2729).
+
+**Related Concepts**: [NVD](NVD.md), security bulletins, CVSS, vulnerability management.

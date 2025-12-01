@@ -1,0 +1,14 @@
+---
+aliases: []
+date created: Tuesday, 25. November 2025, 08:11
+date modified: Monday, 1. December 2025, 21:12
+---
+
+# NVD
+**Term**: National Vulnerability Database (NVD)
+
+**Definition**: A public U.S. government-run database that catalogs known security vulnerabilities, usually indexed by CVE IDs.
+
+**Context/Example**:
+
+**Related Concepts**: [CVE](CVE.md), vulnerability scanning, security advisories.
