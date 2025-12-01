@@ -1,3 +1,9 @@
+---
+aliases: 
+date created: Monday, 1. December 2025, 22:12
+date modified: Monday, 1. December 2025, 22:12
+---
+
 # Cryptography
 
 Cryptography is the practice and study of techniques for secure communication in the presence of adversarial behavior.
