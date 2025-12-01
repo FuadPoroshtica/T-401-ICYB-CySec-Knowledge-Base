@@ -1,7 +1,7 @@
 ---
 aliases: []
 date created: Wednesday, 26. November 2025, 18:11
-date modified: Monday, 1. December 2025, 21:12
+date modified: Monday, 1. December 2025, 22:12
 ---
 
 # Virtualization
@@ -9,9 +9,9 @@ date modified: Monday, 1. December 2025, 21:12
 
 [Host Machine / Host OS](Virtualization/Host%20Machine%20Host%20OS.md)
 
-[Virtual Machine (VM)](Virtualization/Virtual%20Machine%20(VM).md)
+[Virtual Machine (VM)](Virtual%20Machine%20(VM).md)
 
-[Hypervisor](Virtualization/Hypervisor.md)
+[Hypervisor](Hypervisor.md)
 
 [Virtualization methods](Virtualization/Virtualization%20methods.md)
 
@@ -25,18 +25,18 @@ date modified: Monday, 1. December 2025, 21:12
 
 **Context/Example**: One powerful server can be split into several virtual machines (VMs), each running its own OS (e.g., one Linux server, one Windows server) on the same physical box.
 
-**Related Concepts**: [Virtual machine](Virtualization/Virtual%20Machine%20(VM).md), [hypervisor](Virtualization/Hypervisor.md), [containers](Virtualization/Virtualization%20methods/Container.md), cloud computing
+**Related Concepts**: [Virtual machine](Virtual%20Machine%20(VM).md), [hypervisor](Hypervisor.md), [containers](Virtualization%20methods/Container.md), cloud computing
 
 ## Security Challenges
 
-[VM Escape](Virtualization/VM%20Escape.md)
+[VM Escape](VM%20Escape.md)
 
-[Multi-Tenancy](Virtualization/Multi-Tenancy.md)
+[Multi-Tenancy](Multi-Tenancy.md)
 
-[Side-Channel Attack](Virtualization/Side-Channel%20Attack.md)
+[Side-Channel Attack](Side-Channel%20Attack.md)
 
 ## Mitigating Security Risks
 
 Patch Management
 Principle of Least Privilege → give users/programs only the minimum permission they need to do their job.
-Disable unused [ports](Port.md)
+Disable unused [ports](../Systems%20&%20Plaforms/Port.md)

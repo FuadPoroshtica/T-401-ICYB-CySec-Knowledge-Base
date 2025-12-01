@@ -1,7 +1,7 @@
 ---
 aliases: []
 date created: Tuesday, 25. November 2025, 20:11
-date modified: Monday, 1. December 2025, 21:12
+date modified: Monday, 1. December 2025, 22:12
 ---
 
 # Botnet
@@ -11,4 +11,4 @@ date modified: Monday, 1. December 2025, 21:12
 
 **Context/Example**: Botnets are a target/infrastructure that attackers want to control.
 
-**Related Concepts**: Command and control (C2), DDoS (Distributed Denial of Service), [malware](Malware.md), zombies
+**Related Concepts**: Command and control (C2), DDoS (Distributed Denial of Service), [Malware](Malware/Malware.md), zombies

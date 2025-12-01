@@ -1,7 +1,7 @@
 ---
 aliases: []
 date created: Thursday, 27. November 2025, 23:11
-date modified: Monday, 1. December 2025, 21:12
+date modified: Monday, 1. December 2025, 22:12
 ---
 
 # Cybersecurity Research: Advanced Topics
@@ -19,7 +19,7 @@ date modified: Monday, 1. December 2025, 21:12
 
 ## What is a Rootkit?
 
-A rootkit is malware designed to hide its presence by intercepting and modifying system calls. Think of it as a dishonest accountant who alters the books - when you ask “show me all files,” the rootkit filters the output to hide malicious files and processes.
+A rootkit is [malware](Attacks/Malware/Malware) designed to hide its presence by intercepting and modifying system calls. Think of it as a dishonest accountant who alters the books - when you ask “show me all files,” the rootkit filters the output to hide malicious files and processes.
 
 ## Famous Rootkit Attacks
 
@@ -57,7 +57,7 @@ A rootkit is malware designed to hide its presence by intercepting and modifying
 1. **Stealth Operations**: The rootkit component hid all files and processes from detection
 2. **Deception**: Faked normal sensor readings so operators saw no problems
 3. **Persistence**: Remained undetected for months while sabotaging centrifuges
-4. **Protection**: Prevented antivirus software from detecting the worm
+4. **Protection**: Prevented antivirus software from detecting the [worm](Attacks/Malware/Worm)
 
 **Technical Details:**
 - Kernel-mode rootkit that modified Windows kernel functions
@@ -100,7 +100,7 @@ A rootkit is malware designed to hide its presence by intercepting and modifying
 ### Rustock (2006) - The Spam King
 
 **What happened:**
-- Created one of the largest botnets in history
+- Created one of the largest [botnets](Attacks/Botnet) in history
 - Infected between **150,000 and 2.4 million** computers
 - Used primarily for sending spam emails
 
@@ -122,7 +122,7 @@ A rootkit is malware designed to hide its presence by intercepting and modifying
 1. **Boot-Level Persistence**: Loaded before the operating system
 2. **Deep System Control**: Could modify kernel operations
 3. **Data Theft**: Stole banking credentials and personal information
-4. **Backdoor Creation**: Allowed remote attacker access
+4. **[Backdoor](Attacks/Backdoor) Creation**: Allowed remote attacker access
 
 **Why MBR rootkits are dangerous:**
 - Load before antivirus software starts
@@ -143,7 +143,7 @@ All these attacks follow a similar pattern:
 
 ---
 
-# 2. Side-Channel Attacks - Meltdown & Spectre
+# 2. [Side-Channel Attacks](Virtualization/Side-Channel%20Attack.md) - Meltdown & Spectre
 
 ## Understanding the Foundation: Speculative Execution
 
@@ -445,9 +445,9 @@ Step 4: Attacker Actions
 2. **Bypass Login Screens**
     - Patch kernel memory to skip authentication
     - Works on locked Windows, Linux, macOS systems
-3. **Install Backdoors**
+3. **Install [Backdoors](Attacks/Backdoor)**
     - Inject kernel modules
-    - Install persistent malware
+    - Install persistent [malware](Attacks/Malware/Malware)
 4. **Mount File System**
     - Access all files as if logged in
 
@@ -519,14 +519,14 @@ Step 4: Attacker Actions
 - BIOS protections ineffective
 - Steal encryption keys before OS starts
 
-**Example:** FileVault password extraction on locked Macs (CVE-2016-7585)
+**Example:** FileVault password extraction on locked Macs ([CVE](Vulnerability standards/CVE)-2016-7585)
 
 ### 2. Post-Boot DMA Attacks
 
 **Target:** Running systems
 - Bypass login screens
 - Read live memory
-- Inject malware into running kernel
+- Inject [malware](Attacks/Malware/Malware) into running kernel
 
 ### 3. Remote DMA (RDMA) Attacks
 
@@ -571,7 +571,7 @@ Step 4: Attacker Actions
 **What it does:**
 - Creates “virtual memory” for DMA devices
 - Restricts which memory addresses devices can access
-- Like a firewall for DMA
+- Like a [firewall](Defense & Control/Firewall) for DMA
 
 **Intel:** VT-d
 **AMD:** AMD-Vi
@@ -910,7 +910,7 @@ Remember: **The best SUID mitigation is not using SUID at all!** Explore alterna
 - “Rootkits: Subverting the Windows Kernel” by Greg Hoglund
 - SANS Institute: Rootkit Detection and Prevention
 
-## Side-Channel Attacks
+## [Side-Channel Attacks](Virtualization/Side-Channel%20Attack.md)
 
 - Original Meltdown paper: https://meltdownattack.com/meltdown.pdf
 - Original Spectre paper: https://spectreattack.com/spectre.pdf

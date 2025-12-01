@@ -12,4 +12,4 @@ date modified: Monday, 1. December 2025, 21:12
 
 **Context/Example**: A “secure machine” is described as having “all ports closed”; that means no services are listening, severely reducing the ways an attacker can connect.
 
-**Related Concepts**: TCP/UDP, socket, service, [firewall](Firewall.md) rules
+**Related Concepts**: TCP/UDP, socket, service, [Firewall](../Defense%20&%20Control/Firewall.md) rules

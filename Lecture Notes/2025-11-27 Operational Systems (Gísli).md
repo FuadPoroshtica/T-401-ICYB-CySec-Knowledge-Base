@@ -1,7 +1,8 @@
 ---
 aliases: []
-date created: Thursday, 27. November 2025, 09:11
-date modified: Monday, 1. December 2025, 21:12
+d[POSIX](../Terminology/Systems & Plaforms/POSIX)reated: Thursday, 27. November 2025, 09:11
+date modified: Monday, 1. December 2025, 22:12
+date created: Monday, 1. December 2025, 20:12
 ---
 
 # Operating System Basics
@@ -24,7 +25,7 @@ date modified: Monday, 1. December 2025, 21:12
 
 Problem: Raw hardware interfaces (registers, disk controllers) are complex and inconsistent.
 
-> Solution: System Calls
+> [!check] Solution: System Calls
 >
 > - The OS wraps hardware instructions in clean software APIs.
 > - API is consistent across platforms, independent of the actual hardware.
@@ -36,7 +37,7 @@ Problem: Raw hardware interfaces (registers, disk controllers) are complex and i
 Problem: Resources (CPU cycles, RAM, I/O) are finite; multiple programs
 want them simultaneously.
 
-> Solution: Multiplexing
+> [!check] Solution: Multiplexing
 >
 > - Time Multiplexing: Scheduling different processes on the CPU over time.
 > - Space Multiplexing: dividing RAM and Disk space among processes and users.
@@ -55,7 +56,7 @@ want them simultaneously.
     - Loads the saved state of the next process.
 - Result: The illusion of parallelism on a single core.
 
-## Memory Management (Virtualization)
+## Memory Management ([Virtualization](../Terminology/Virtualization/Virtualization))
 
 - The OS provides the abstraction of Virtual Memory.
 - **Address Spaces**: Every process believes it has access to a contiguous map of memory (e.g., 0x0000 to 0xFFFF).
@@ -79,7 +80,7 @@ want them simultaneously.
 
 ## File Systems📂 / Storage Abstraction
 
-- **Physical View**: A hard drive is an array of millions of generic blocks (sectors).
+- **[Physical View](../Terminology/Physical View)**: A hard drive is an array of millions of generic blocks (sectors).
 - **Logical View**: The OS creates the concept of Files, Directories, and Paths.
 - **Responsibility**:
     - Mapping filenames to physical block addresses.
@@ -122,7 +123,7 @@ In practice, only these 2 rings are used:
 - Architecture: Monolithic Kernel (drivers in kernel space).
 **macOS** 🍎:
 - Based on the **Darwin** kernel (Hybrid XNU kernel: Mach Unix + BSD Unix).
-- It is POSIX compliant (i.e. compatible with standard Unix APIs).
+- It is [POSIX](../Terminology/Systems & Plaforms/POSIX) compliant (i.e. compatible with standard Unix APIs).
 
 ## Windows 🪟 (compared to Unix)
 
@@ -203,11 +204,11 @@ What does POSIX actually define?
     - Standardizes behavior of CLI tools (`ls`, `grep`, `awk`) so scripts are portable.
     Who is Compliant?
 
-| OS | Status |
-| --- | --- |
-| macOS | **Certified**. Actually fully POSIX compliant. |
-| Linux | **De Facto**. Mostly compliant, but people rarely pay for the certification. |
-| Windows | **No**. Uses Win32 API. Needs WSL (Subsystem for Linux). |
+| OS      | Status                                                                                           |
+| ------- | ------------------------------------------------------------------------------------------------ |
+| macOS   | **Certified**. Actually fully [POSIX](../Terminology/Systems%20&%20Plaforms/POSIX.md) compliant. |
+| Linux   | **De Facto**. Mostly compliant, but people rarely pay for the certification.                     |
+| Windows | **No**. Uses Win32 API. Needs WSL (Subsystem for Linux).                                         |
 
 So if they’re POSIX compliant, that means they support the same system calls and APIs, making it easier for developers to write cross-platform applications.
 
@@ -215,14 +216,13 @@ So if they’re POSIX compliant, that means they support the same system calls a
 
 ## The OS and the Trusted Computing Base
 
-> Trusted Computing Base (TCB)
+> [!definition] Trusted Computing Base (TCB)
 “... is the totality of protection mechanisms within a computer system – including hardware, firmware, and software – that is responsible for enforcing a security policy. TCB is all components that must work correctly for the system to be secure. If any part is broken, the security of the entire system is broken.”
 >
 
 **The Reference Monitor**
 The OS acts as a gatekeeper between Subjects (Users, Processes) and Objects (Files, Hardware).
 Every system call (e.g., `open()`) is intercepted to check:
-
 1. **Authentication**: *Who* are you?
 2. **Authorization**: Are you *allowed to do this*?
 
@@ -244,14 +244,14 @@ Every system call (e.g., `open()`) is intercepted to check:
         - This ensures that even if two users have the same password, their stored hashes differ.
     - `StoredValue = Hash(Password + Salt)`.
 
-## Access Control:”What can you do?”
+## [Access Control](../Terminology/Defense & Control/Access Control):”What can you do?”
 
 Once authenticated, the OS uses a **User ID (UID)** to enforce permissions.
 
 - **DAC (Discretionary Access Control):**
     - The **Owner** of the file decides permissions.
     - Example: Linux `chmod`. You can make your file readable by everyone.
-    - Risk: Malware running as “You” can change your file permissions.
+    - Risk: [Malware](../Terminology/Attacks/Malware/Malware) running as “You” can change your file permissions.
 - **MAC (Mandatory Access Control):**
     - The **System Policy** decides permissions. Users cannot override this.
     - Used in High Security (SELinux) and Mobile (iOS/Android).
@@ -268,7 +268,7 @@ Why?
 - It limits the “Blast Radius.”
 - If a calculator app is hacked, it shouldn’t have permission to read the network driver or kernel memory.
 - This is enforced via CPU modes (User Mode vs. Kernel Mode).
-- (Also: modern OSes use techniques like **Sandboxing** and **Containers** to isolate applications further.)
+- (Also: modern OSes use techniques like **Sandboxing** and **[Containers](../Terminology/Virtualization/Virtualization methods/Container)** to isolate applications further.)
 
 ## System Logs
 
@@ -294,7 +294,7 @@ Going deeper than standard logs:
     - *Example*: Not just “User logged in”, but “Process 402 attempted `open()` on `/etc/shadow` and was denied.”
     - Required for strict compliance to various standards (PCI-DSS, HIPAA).
 - File Integrity Monitoring (FIM):
-    - *Threat*: Attackers replacing system binaries (like `/bin/login`) with Trojan horses.
+    - *Threat*: Attackers replacing system binaries (like `/bin/login`) with [Trojan horses](../Terminology/Attacks/Malware/Trojan).
     - *Defense*: Calculate checksums (hashes) of critical files.
     - If the hash of /bin/login changes, the OS triggers an alarm immediately.
 
@@ -333,17 +333,15 @@ Linux uses the Linux Audit Framework. It listens to the kernel for specific syst
 - Start: `sudo systemctl start auditd`.
 - Defining Rules: You use `auditctl` to add rules to the kernel in real-time.
 
-> Example: Watch for changes to passwords
->
->
-> ```bash
+> [!example] Example: Watch for changes to passwords
+>```bash
 > $ sudo auditctl -w /etc/shadow -p wa -k password-change
 > ```
 >
-
+>
 > - `-w`: Watch this file path.
-- `-p wa`: Trigger on write or attribute change.
-- `-k`: Tag log entries with a search key.
+> - `-p wa`: Trigger on write or attribute change.
+> - `-k`: Tag log entries with a search key.
 >
 
 Logs are stored in `/var/log/audit/audit.log`, queried via `ausearch` or `aureport`.
@@ -359,7 +357,7 @@ macOS uses the Basic Security Module (BSM), an advanced auditing system derived 
 `$ sudo audit -s`
 - Binary Logs: Unlike Linux, macOS audit logs are binary (to prevent tampering). You cannot read them with cat.
 
-> Viewing Logs
+> [!info] Viewing Logs
 Use the praudit tool to parse the binary log to text:
 >
 >
@@ -370,7 +368,7 @@ Use the praudit tool to parse the binary log to text:
 
 # Common Vulnerabilities and Exploits
 
-## Memory Safety: Buffer Overflows
+## Memory Safety: [Buffer Overflows](../Terminology/Attacks/Buffer Overflow)
 
 Stems from the C/C++ programming languages allowing direct memory manipulation without bounds checking. So if you allocate a buffer of size 10, and write 20 bytes into it, the extra 10 bytes will overflow into adjacent memory.
 
@@ -384,9 +382,9 @@ Stems from the C/C++ programming languages allowing direct memory manipulation w
     - **ASLR (Address Space Layout Randomization)**: Randomizes memory layout so addresses are hard to guess.
     - **DEP/NX (Data Execution Prevention / No Execute)**: Marks stack memory as “Non-Executable.”
 
-## Race Conditions
+## [Race Conditions](../Terminology/Attacks/Race condition)
 
-> Example: TOCTOU (Time-of-Check to Time-of-Use)
+> [!example] Example: TOCTOU (Time-of-Check to Time-of-Use)
 Because OSes multitask, a gap exists between checking the file permissions and using it.
 >
 > 1. **Check**: OS confirms User A can write to `temp.txt`.
@@ -419,7 +417,7 @@ The attacker’s goal: Move from Ring 3 (User) to Ring 0 (Kernel).
 
 ### Rootkits
 
-- Malware that modifies the system to hide its own existence.
+- [Malware](../Terminology/Attacks/Malware/Malware) that modifies the system to hide its own existence.
 - e.g., by just diverting or intercepting system calls.
 - Essentially, it’s malware that’s designed to be stealthy and avoid detection by traditional security measures. It gets the operating system to lie to the user or security software about what’s really happening on the system.
 - Example: When you run `ls` or `ps`, the rootkit filters the output of the underlying system calls to hide the hacker’s files and processes. The OS lies to the user.
@@ -428,31 +426,23 @@ The attacker’s goal: Move from Ring 3 (User) to Ring 0 (Kernel).
 ### Zero-Day Vulnerabilities
 
 - A flaw known to the attacker but unknown to the vendor (0 days to fix).
-- **Defense**: “Defense in Depth”. You cannot patch it, so you must rely on firewalls, strict access control, procedures, etc. to contain it.
+- **Defense**: “Defense in Depth”. You cannot patch it, so you must rely on [firewalls](../Terminology/Defense & Control/Firewall), strict [access control](../Terminology/Defense & Control/Access Control), procedures, etc. to contain it.
 
 # Commands for Sysadmins
+| Action                 | Linux Command     | PowerShell / Windows                                  |
+| ---------------------- | ----------------- | ----------------------------------------------------- |
+| Execute asroot / Admin | `sudo [cmd]`      | `Start-Process -Verb RunAs`(Or open Terminal asAdmin) |
+| Change FilePermissions | `chmod 755 file`  | `icacls file /grant...`(Or `Set-Acl`)                 |
+| View Permissions       | `ls -l`           | `icacls [file]`(Or `Get-Acl`)                         |
+| Change Ownership       | `chown user file` | `takeown /f file`(Or `Set-Acl`)                       |
+| Change Password        | `passwd`          | `Set-LocalUser`                                       |
 
-| Action | Linux Command | PowerShell / Windows |
-| --- | --- | --- |
-| Execute as
-root / Admin | `sudo [cmd]` | `Start-Process -Verb RunAs`
-(Or open Terminal as
-Admin) |
-| Change File
-Permissions | `chmod 755 file` | `icacls file /grant...`
-(Or `Set-Acl`) |
-| View Permissions | `ls -l` | `icacls [file]`
-(Or `Get-Acl`) |
-| Change Ownership | `chown user file` | `takeown /f file`
-(Or `Set-Acl`) |
-| Change Password | `passwd` | `Set-LocalUser` |
-| (Note from teacher: “I’m not a particularly well-versed Windows user, so take the Windows commands with a grain of salt.”) |  |  |
-
-![image.png](Operational%20Systems%202025-11-27/image.png)
+`ls -l` access modifiers and their meanings:
+![image](../zAttachments/image.png)
 
 ## File Permissions: Linux vs. Windows
 
-**Linux (POSIX Model)**
+**Linux ([POSIX](../Terminology/Systems & Plaforms/POSIX) Model)**
 
 - Simple Structure: Permissions apply to three rigid categories:
 1. User (Owner)
@@ -465,7 +455,7 @@ Permissions | `chmod 755 file` | `icacls file /grant...`
     - Group: Read, Execute
     - Others: Read, Execute
 
-**Windows (ACL (Access Control List) Model)**
+**Windows (ACL ([Access Control](../Terminology/Defense & Control/Access Control) List) Model)**
 
 - **Complex Structure**: Uses Access Control Lists (ACLs).
 - **Granular**: You can assign distinct permissions to 50 different users individually.
@@ -487,7 +477,7 @@ Use Case: `passwd`
 Danger
 
 - SUID is a major vector for **Privilege Escalation**.
-- If an SUID root binary has a bug (e.g., buffer overflow), an attacker can exploit it to gain a Root Shell.
+- If an SUID root binary has a bug (e.g., [buffer overflow](../Terminology/Attacks/Buffer Overflow)), an attacker can exploit it to gain a Root Shell.
 - Attackers scan for these immediately:
 `find / -perm -4000`
 
@@ -495,67 +485,47 @@ Command: `chmod u+s file`
 Indicator: `-rwsr-xr-x 1 root root 64152 maí 30 2024 /usr/bin/passwd`
 
 ## Process & Service Management
-
-| Action | Linux Command | PowerShell / Windows |
-| --- | --- | --- |
-| Start/Stop
-Services | `systemctl start [svc]` | `Start-Service [svc]`
-(`Get-`, `Stop-`, `Set-`) |
-| List Processes
-(Snapshot) | `ps aux` | `Get-Process` |
-| Real-time | `top` / `htop` | `Get-Process \| Sort CPU`
-(Or GUI `taskmgr`) |
-| Kill Process | `kill -9 [PID]` | `Stop-Process -Id [PID]` |
+| Action                    | Linux Command           | PowerShell / Windows                           |                             |
+| ------------------------- | ----------------------- | ---------------------------------------------- | --------------------------- |
+| Start/StopServices        | `systemctl start [svc]` | `Start-Service [svc]`(`Get-`, `Stop-`, `Set-`) |                             |
+| List Pro-cesses(Snapshot) | `ps aux`                | `Get-Process`                                  |                             |
+| Real-time                 | `top` / `htop`          | `Get-Process \\                                | Sort CPU`(Or GUI `taskmgr`) |
+| Kill Process              | `kill -9 [PID]`         | `Stop-Process -Id [PID]`                       |                             |
 
 ## Disk & File System Management
-
-| Action | Linux Command | PowerShell / Windows |
-| --- | --- | --- |
-| Free Space | `df -h`
-(Disk Free) | `Get-Volume`
-(or `Get-PSDrive`) |
-| Disk Usage | `du -sh [folder]` | `gci -Recurse \| Measure -Property Length -Sum` |
-| Search | `find /path -name x` | `Get-ChildItem -Recurse -Filter "x"` |
-| Archive | `tar -czvf x.tar.gz`
-(or `zip`, `rar`, etc) | `Compress-Archive`
-(Win10+ has `tar.exe`) |
+| Action     | Linux Command                              | PowerShell / Windows                     |                                |
+| ---------- | ------------------------------------------ | ---------------------------------------- | ------------------------------ |
+| Free Space | `df -h`(Disk Free)                         | `Get-Volume`(or `Get-PSDrive`)           |                                |
+| Disk Usage | `du -sh [folder]`                          | `gci -Recurse \\                         | Measure -Property Length -Sum` |
+| Search     | `find /path -name x`                       | `Get-ChildItem -Recurse -Filter "x"`     |                                |
+| Archive    | `tar -czvf x.tar.gz`(or `zip`, `rar`, etc) | `Compress-Archive`(Win10+ has `tar.exe`) |                                |
 
 ## Logs
-
-| Action | Linux Command | PowerShell / Windows |
-| --- | --- | --- |
-| Follow
-changes live | `tail -f log.txt` | `Get-Content log.txt -Wait`
-(Alias: `cat -Wait`) |
-| Search | `grep "Error"` | `Select-String "Error"`
-(Alias: `sls`) |
-| ... or both | `tail -f log.txt \| grep "Error"` | `Get-Content log.txt -Wait \| Select-String "Error"` |
+| Action             | Linux Command       | PowerShell / Windows                            |                               |                        |
+| ------------------ | ------------------- | ----------------------------------------------- | ----------------------------- | ---------------------- |
+| Followchanges live | `tail -f log.txt`   | `Get-Content log.txt -Wait`(Alias: `cat -Wait`) |                               |                        |
+| Search             | `grep "Error"`      | `Select-String "Error"`(Alias: `sls`)           |                               |                        |
+| … or both          | `tail -f log.txt \\ | grep "Error"`                                   | `Get-Content log.txt -Wait \\ | Select-String "Error"` |
 
 ## Scheduling & Maintenance
-
-| Action | Linux Command | PowerShell / Windows |
-| --- | --- | --- |
-| Schedule
-Tasks | `crontab -e`
-(opens the cron table in an
-editor) | `Register-ScheduledTask` |
-| Install Updates | `apt update && apt upgrade`
-(Depending on Distro) | `winget upgrade --all`
-(Only for apps, not the OS itself!) |
+| Action          | Linux Command                                    | PowerShell / Windows                                      |
+| --------------- | ------------------------------------------------ | --------------------------------------------------------- |
+| ScheduleTasks   | `crontab -e`(opens the cron table in aneditor)   | `Register-ScheduledTask`                                  |
+| Install Updates | `apt update && apt upgrade`(Depending on Distro) | `winget upgrade --all`(Only for apps, not the OS itself!) |
 
 # Up Next ..
 
 ## Further Studies
 
 - Find examples of attacks that used root kits and discuss what role the rootkits played in the attacks.
-- Side-Channel Attacks (Meltdown & Spectre): These famous vulnerabilities exploited Speculative Execution in the CPU hardware. How did they allow a User Mode process to read Kernel Mode memory without ever technically triggering a privilege violation?
+- [Side-Channel Attacks](../Terminology/Virtualization/Side-Channel Attack) (Meltdown & Spectre): These famous vulnerabilities exploited Speculative Execution in the CPU hardware. How did they allow a User Mode process to read Kernel Mode memory without ever technically triggering a privilege violation?
 - DMA (Direct Memory Access) Attacks: Peripheral devices (like a GPU or Network Card) use DMA to access RAM without asking the CPU. How can a malicious device (e.g., a compromised USB drive) use DMA to read system memory, bypassing the OS entirely?
 - Which mitigation means exist to avoid the problem of SUID opening the system up for privilege escalation attacks?
 
 ## Lab today and Guest Lecture tomorrow
 
 - Lab 4: Use auditing (turn it on!) to find ”malicious” processes modifying the file system.
-- Guest Lecture tomorrow by **Giovanni Apruzzese** on Phishing.
+- Guest Lecture tomorrow by **Giovanni Apruzzese** on [Phishing](../Terminology/Attacks/Phishing).
 
 Day before the exam will be a recap lecture.
 Exam (Friday, 12th of December) will be later in the day? Around noon or later?

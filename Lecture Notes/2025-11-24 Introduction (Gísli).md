@@ -1,7 +1,7 @@
 ---
 aliases: []
 date created: Tuesday, 25. November 2025, 16:11
-date modified: Monday, 1. December 2025, 21:12
+date modified: Monday, 1. December 2025, 22:12
 ---
 
 # 2025-11-24 Introduction (Gísli)
@@ -12,14 +12,14 @@ date modified: Monday, 1. December 2025, 21:12
 ### Course contents:
 
 - Linux + Windows CLI tools.
-- OS basics (access control).
+- OS basics ([access control](../Terminology/Defense & Control/Access Control)).
 - Networking basics.
-- Virtualization.
+- [Virtualization](../Terminology/Virtualization/Virtualization).
     - Some of the labs we’ll be doing will be on virtual machines and stuff.
 - Web security.
 - Common tools for security testing.
 - Principles of defense.
-- Guest lectures on various topics: phishing, information warfare, binary exploitation, maybe more topics.
+- Guest lectures on various topics: [phishing](../Terminology/Attacks/Phishing), information warfare, binary exploitation, maybe more topics.
 They’ll be teaching us like shell scripts and stuff.
 Computer architecture.
 
@@ -76,7 +76,7 @@ Computer architecture.
 
 ## Main lecture
 
-### The problem: attack surface
+### The problem: [attack surface](../Terminology/Attack Surface)
 
 - Definition: “The sum of all potential vulnerabilities in a system where an attacker could try to subvert the intended purpose of the system and organization or person who is using it.”
     - E.g., they could obtain physical access, access via a public network, or access to online backups of your computer.
@@ -85,7 +85,7 @@ Computer architecture.
     - Email.
     - Network points of access.
     - USB, CD-ROM.
-    - Downloaded viruses and malware.
+    - Downloaded [virus](../Terminology/Attacks/Malware/Virus)es and [malware](../Terminology/Attacks/Malware/Malware).
     - SMS messages.
     - Software distributions, external software, BIOS, chips,...
     - **Any form of input or control over the software or machine**.
@@ -93,16 +93,16 @@ Computer architecture.
 ### What are the real risks?
 
 - Assume:
-    - Secure machine, all ports closed.
-    - Local firewall enabled.
+    - Secure machine, all [port](../Terminology/Systems & Plaforms/Port)s closed.
+    - Local [firewall](../Terminology/Defense & Control/Firewall) enabled.
     - all software updates applied
 - There are still risks:
-    - Inadvertent virus introduction (email, USB, evil website, Trojan software)
+    - Inadvertent virus introduction (email, USB, evil website, [Trojan](../Terminology/Attacks/Malware/Trojan) software)
     - Unpatched software versions
     - Zero-day exploit in an OS or a network application.
         - An exploit in the software that can be used to gain access to the system, but there is no fix for it yet.
     - Web browser malware.
-    - Hardware backdoor (Intel Management System)
+    - Hardware [backdoor](../Terminology/Attacks/Backdoor) (Intel Management System)
     - IT security failure.
 
 ### History of attacks
@@ -111,7 +111,7 @@ Computer architecture.
     - First virus on the internet (which was just the ARPANET at this point).
     - It didn’t actually do anything harmful, just displayed a message. It was kind of just a warning.
 - **1986**: North Korea trains the first “cyber-warriors”.
-- **1988**: The Morris worm brings down 6,000+ internet computers.
+- **1988**: The Morris [worm](../Terminology/Attacks/Malware/Worm) brings down 6,000+ internet computers.
 - **1994**: $10 million was stolen from Citibank by Russian hackers.
 - **1999**: Windows 98: ‘Melissa email worm’ brings down all email globally.
 - **2007**: Aurora generator test: 30 lines of code physically destroyed power generators.
@@ -141,8 +141,8 @@ Every computer professional should be doing it this way anyway.
 - **Unauthorized disclosure**
 - **Denial of authorized access**
 - **Forgery**
-- **Repudiation** - where the integrity of an asset can be disputed
-- **Spoofing** - masquerading as a legitimate entity.
+- **[Repudiation](../Terminology/Repudiation)** - where the integrity of an asset can be disputed
+- **[Spoofing](../Terminology/Attacks/Spoofing)** - masquerading as a legitimate entity.
 - Still missing that don’t really fit well in these:
     - Information warfare?
     - Bribery/blackmail?
@@ -155,10 +155,10 @@ Every computer professional should be doing it this way anyway.
 - Modify information
 - Physical destruction - Stuxnet
 - Infrastructure attack
-- Ransomware
+- [Ransomware](../Terminology/Attacks/Malware/Ransomware)
 - Masquerade as a victim
 - Add files - poison web cache
-- Corporate espionage
+- [Corporate espionage](../Terminology/Attacks/Corporate Espionage)
 - Information warfare
 
 ### Computer security evolution
@@ -175,9 +175,9 @@ Every computer professional should be doing it this way anyway.
 ### Further reading (we have to read this):
 
 - **1971**: ARPANET: Creeper
-    - First virus on the internet (the ARPANET at this point).
+    - First [virus](../Terminology/Attacks/Malware/Virus) on the internet (the ARPANET at this point).
     - It didn’t actually do anything harmful, just displayed a message. It was kind of just a warning.
-- **1988**: The Morris worm brings down 6,000+ internet computers.
+- **1988**: The Morris [worm](../Terminology/Attacks/Malware/Worm) brings down 6,000+ internet computers.
 - **1994**: $10 million was stolen from Citibank by Russian hackers.
 - **2009**: Operation Olympic Games
 - **2017**: WannaCry ransomware attack
@@ -193,7 +193,7 @@ The attacks:
     - **Impact:** Displayed the message: “I’m the creeper, catch me if you can!” on infected systems. It was not malicious and did not cause harm to the systems. Could only have affect about 28 machines in total.
     - **Weaknesses used:** Exploited vulnerabilities in ARPANET’s TENEX operating system.
 - Morris Worm (1988)
-    - **How it worked:** Exploited vulnerabilities in the debug mode of Unix sendmail, a buffer overflow vulnerability in the “finger” network service, and he transitive trust enabled by people setting up network [logins](https://en.wikipedia.org/wiki/Login) with no [password](https://en.wikipedia.org/wiki/Password) requirements via [remote execution](https://en.wikipedia.org/wiki/Berkeley_r-commands) (rexec) with [Remote Shell](https://en.wikipedia.org/wiki/Remote_Shell) (rsh), termed “rexec/rsh”, as well as weak passwords
+    - **How it worked:** Exploited vulnerabilities in the debug mode of Unix sendmail, a [buffer overflow](../Terminology/Attacks/Buffer Overflow) [vulnerability](../Terminology/Vulnerability) in the “finger” network service, and he transitive trust enabled by people setting up network [logins](https://en.wikipedia.org/wiki/Login) with no [password](https://en.wikipedia.org/wiki/Password) requirements via [remote execution](https://en.wikipedia.org/wiki/Berkeley_r-commands) (rexec) with [Remote Shell](https://en.wikipedia.org/wiki/Remote_Shell) (rsh), termed “rexec/rsh”, as well as weak passwords
     - **Impact:**
     - **Weaknesses used:**
 - Vladimir Levin stole $10 million USD from Citibank (1994)
@@ -222,7 +222,7 @@ The attacks:
 - Check the security of your own system.
 - Useful resources:
     - [https://nvd.nist.gov](https://nvd.nist.gov/) (US) National Vulnerability Database
-    - [https://www.cve.org](https://www.cve.org/), [https://www.cvedetails.com](https://www.cvedetails.com/) Maintains a searchable database of CVEs (Common Vulnerabilities and Exposures).
+    - [https://www.cve.org](https://www.cve.org/), [https://www.cvedetails.com](https://www.cvedetails.com/) Maintains a searchable database of [CVE](../Terminology/Vulnerability standards/CVE)s (Common Vulnerabilities and Exposures).
         - Sponsored by the US Dept. of Homeland Security.
         - Restricted to publicised vulnerabilities.
     - [https://www.exploit-db.com](https://www.exploit-db.com/) Public open source database of vulnerabilities

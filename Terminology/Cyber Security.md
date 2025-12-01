@@ -12,4 +12,4 @@ date modified: Monday, 1. December 2025, 21:12
 
 **Context/Example**: The whole course is about cyber security. Everything from securing your laptop to defending national power grids.
 
-**Related Concepts**: [Cyber Defense](Cyber%20Defense.md)
+**Related Concepts**: [Cyber Defense](Defense%20&%20Control/Cyber%20Defense.md)

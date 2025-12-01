@@ -23,4 +23,4 @@ POSIX Model of permission:
 
 **Example:** Linux and MacOS are POSIX compliant,
 
-**Related Concepts**: [Unix](Unix-Like.md), Linux, Permissions
+**Related Concepts**: [Unix-Like](Unix-Like.md), Linux, Permissions

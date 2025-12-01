@@ -1,12 +1,12 @@
 ---
 aliases: []
 date created: Tuesday, 25. November 2025, 22:11
-date modified: Monday, 1. December 2025, 21:12
+date modified: Monday, 1. December 2025, 22:12
 ---
 
 # Side-Channel Attack
 
-**Term**: Side-Channel Attack (in virtualization)
+**Term**: Side-Channel Attack (in [virtualization](/Virtualization))
 
 **Definition**: An attack that recovers secrets not by breaking a cryptographic hash *directly*, but by analyzing indirect signals like timing, cache use, or power consumption of a shared system.
 

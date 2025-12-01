@@ -1,7 +1,7 @@
 ---
 aliases: []
 date created: Monday, 1. December 2025, 20:12
-date modified: Monday, 1. December 2025, 21:12
+date modified: Monday, 1. December 2025, 22:12
 ---
 
 # OSINT & Networks 2025-12-01
@@ -77,7 +77,7 @@ You could hide your location with a VPN, Tor (The Onion Router) or by using a pu
 We want to counter “Browser fingerprinting” (screen resolution, installed fonts, battery level) to track unique devices even without cookies.
 Countermeasures:
 
-1. User agent spoofing. Basically lying to the website? Like “Hahha yeahhh I’m tootally using Chrome right now”. There are even extensions made for just this.
+1. User agent [spoofing](../Terminology/Attacks/Spoofing). Basically lying to the website? Like “Hahha yeahhh I’m tootally using Chrome right now”. There are even extensions made for just this.
 2. Script blockers, e.g., uBlock Origin, NoScript.
 3. Dedicated research browser.
 
@@ -153,7 +153,7 @@ A home router is actually much more than just a router. It typically combines mu
 - Router.
 - NAT (Network Address Translation).
     - NAT is for sharing a *single* public IP address among *multiple* devices on a local network. What it does is that it translates the private IP addresses of devices on the local network to the public IP address when they access the internet, and vice versa for incoming traffic.
-- Firewall (basic security features).
+- [Firewall](../Terminology/Defense & Control/Firewall) (basic security features).
 
 **Backbone routers:**
 
@@ -232,7 +232,7 @@ Sometimes we have to consider *where* our packets are being sent. E.g., if you�
 
 **Potential attacks:**
 
-- **Spoofing**: Faking the source address of a packet to impersonate another device. (MAC or IP address in packets.)
+- **[Spoofing](../Terminology/Attacks/Spoofing)**: Faking the source address of a packet to impersonate another device. (MAC or IP address in packets.)
 - Attacks on the mappings between different addresses: ARP (Address Resolution Protocol) poisoning (mapping between MAC and IP), DNS cache poisoning (mapping between domain names and IP addresses).
 
 Between these addresses there exist mappings:
@@ -270,7 +270,7 @@ Between these addresses there exist mappings:
 - Ephemeral ports: randomly assigned ports for temporary communication (1024-65535) for client apps (e.g., your browser tab).
 - Sockets: IP Address + Port number = Unique connection identifier. (E.g., `192.168.1.1:80` for a web server.)
 
-**Security context: Attack surface.**
+**Security context: [Attack surface](../Terminology/Attack Surface).**
 Every open port is a potential entry point for attackers. Services listening on ports can have vulnerabilities that can be exploited.
 Port scanning (e.g., `nmap`) is a technique used by attackers (and security professionals) to identify open ports on a target system. Tools like Nmap can be used for this purpose. It’s essentially a reconnaissance phase where attackers knock on the doors (ports) to see which ones are open. In many countries this is a criminal offense if done without permission.
 
@@ -362,7 +362,7 @@ He goes into the terminal and runs `arp -n` to see the ARP table on his system. 
 - Iface (interface)
     - The network interface associated with the ARP entry (e.g., eth0, wlan0).
 
-If you get several responses to an ARP request, you might be under an ARP spoofing attack. Because normally only one device should respond with its MAC address.
+If you get several responses to an ARP request, you might be under an ARP [spoofing](../Terminology/Attacks/Spoofing) attack. Because normally only one device should respond with its MAC address.
 
 ### Layer 2 Vulnerabilities: Wired Networks
 

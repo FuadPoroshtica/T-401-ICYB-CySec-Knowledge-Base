@@ -4,21 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "c3d3e6ff2bd5be7f",
+        "id": "8f0e11f53a5ca2bb",
         "type": "tabs",
         "children": [
           {
-            "id": "29ea8f3af1d66e09",
+            "id": "1473f7ef023f5c3a",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Lecture Notes/2025-11-24 Introduction (Gísli).md",
+                "file": "Terminology/Virtualization/Host Machine (Host OS).md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "2025-11-24 Introduction (Gísli)"
+              "title": "Host Machine (Host OS)"
             }
           }
         ]
@@ -72,7 +72,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 354.5
+    "width": 321.5
   },
   "right": {
     "id": "c79412028c3db95a",
@@ -167,13 +167,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Lecture Notes/2025-11-24 Introduction (Gísli).md",
+                "file": "Terminology/Virtualization/Host Machine (Host OS).md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of 2025-11-24 Introduction (Gísli)"
+              "title": "Outline of Host Machine (Host OS)"
             }
           }
         ]
@@ -198,42 +198,42 @@
   },
   "active": "cd0df65fee17bafb",
   "lastOpenFiles": [
-    "README.md",
-    "Tools and Commands/Basic Bash commands/Basic Bash commands.md",
-    "Tools and Commands/Attack Prevention & Hardening/Attack Prevention & Hardening.md",
-    "Tools and Commands/Attack Detection & Monitoring/Attack Detection & Monitoring.md",
-    "Tools and Commands/Forensics & Incident Response/Forensics Incident Response.md",
-    "Tools and Commands/Forensics & Incident Response",
-    "Terminology/Firewall.md",
-    "Terminology/Cybersecurity_Research_Advanced_Topics.md",
-    "Terminology/Cyber Security.md",
-    "Terminology/Cyber Defense.md",
-    "Terminology/CVE.md",
-    "Terminology/Corporate Espionage.md",
-    "Terminology/Bug Bounty.md",
-    "Terminology/Buffer Overflow.md",
-    "Terminology/Backdoor.md",
     "Terminology/Attack Surface.md",
-    "Terminology/Botnet.md",
-    "Terminology/Acronyms cheatsheet.md",
-    "Terminology/Access Control.md",
-    "Templates/Online Resource template.md",
-    "Templates/Tool Command template.md",
-    "Templates/Terminology template.md",
-    "Terminology/PWD (Phishing Website Detection).md",
-    "Terminology/Privileged Kernel mode.md",
-    "Terminology/Race condition.md",
     "Terminology/Repudiation.md",
-    "Terminology/Spoofing.md",
+    "Terminology/Vulnerability.md",
+    "Terminology/Physical View.md",
+    "Terminology/Cybersecurity_Research_Advanced_Topics.md",
+    "Terminology/Virtualization/Side-Channel Attack.md",
+    "Virtualization/Side-Channel.md",
+    "Virtualization",
+    "Terminology/Cyber Security.md",
+    "Terminology/Acronyms cheatsheet.md",
+    "Terminology/Attacks/Spoofing.md",
+    "Terminology/Attacks/Race condition.md",
+    "Terminology/Attacks/PWD (Phishing Website Detection).md",
+    "Terminology/Attacks/Phishing.md",
+    "Terminology/Attacks/Corporate Espionage.md",
+    "Terminology/Attacks/Buffer Overflow.md",
+    "Terminology/Attacks/Botnet.md",
+    "Terminology/Attacks/Backdoor.md",
+    "Terminology/Attacks/Malware/Worm.md",
+    "Terminology/Attacks/Malware/Virus.md",
+    "Terminology/Attacks/Malware/Trojan.md",
+    "Terminology/Attacks/Malware/Ransomware.md",
+    "Terminology/Attacks/Malware/Malware.md",
+    "Lecture Notes/2025-12-01 OSINT & Networks (Gísli).md",
+    "Lecture Notes/2025-11-28 Phishing and AI.md",
+    "Lecture Notes/2025-11-27 Operational Systems (Gísli).md",
+    "Lecture Notes/2025-11-27 Operational Systems (Ivan).md",
+    "Terminology/Systems & Plaforms",
+    "Terminology/Vulnerability standards",
+    "Terminology/Defense & Control",
+    "Terminology/Attacks",
+    "Terminology/03-Threats & Adversaries",
+    "Terminology/Fundamentals & Models",
+    "Terminology/00-Reference",
+    "Tools and Commands/Forensics & Incident Response",
     "Lecture Notes/Labs",
-    "Terminology/Malware",
-    "Terminology/Virtualization/Virtualization Hardening & Operations",
-    "Terminology/Virtualization/Virtualization methods",
-    "Terminology/Virtualization",
-    "Terminology",
-    "Lecture Notes",
-    "Online Resources",
-    "Tools and Commands/Basic Bash commands",
     "zAttachments/image.png",
     "zAttachments/1_fo1_I3imkAYwzhdPrzgI7Q.webp"
   ]
