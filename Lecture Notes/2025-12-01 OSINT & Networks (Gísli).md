@@ -1,7 +1,7 @@
 ---
 aliases: []
 date created: Monday, 1. December 2025, 20:12
-date modified: Tuesday, 2. December 2025, 19:12
+date modified: Tuesday, 2. December 2025, 20:12
 ---
 
 # OSINT & Networks 2025-12-01
@@ -262,13 +262,13 @@ Between these addresses there exist mappings:
 
 ### 3. Application Multiplexing
 
-*Problem: Which application on the destination device should receive the packet?Solution: Ports (transport layer).*
+*Problem: Which application on the destination device should receive the packet?Solution: Ports ([Transport Layer](../Terminology/Networks/OSI%20Model/4-Transport%20Layer.md)).*
 
-- Well known ports: 0-1023 (e.g., HTTP: 80, HTTPS: 443, FTP: 21, SSH: 22).
+- Well known ports: 0-1023 (e.g., [HTTP](../Terminology/Networks/Transfer%20Protocols/HTTP.md): 80, HTTPS: 443, FTP: 21, SSH: 22).
 - Ephemeral ports: randomly assigned ports for temporary communication (1024-65535) for client apps (e.g., your browser tab).
 - Sockets: IP Address + Port number = Unique connection identifier. (E.g., `192.168.1.1:80` for a web server.)
 
-**Security context: [Attack surface](../Terminology/Attack Surface).**
+**Security context: [Attack Surface](../Terminology/Attack%20Surface.md).**
 Every open port is a potential entry point for attackers. Services listening on ports can have vulnerabilities that can be exploited.
 Port scanning (e.g., `nmap`) is a technique used by attackers (and security professionals) to identify open ports on a target system. Tools like Nmap can be used for this purpose. It’s essentially a reconnaissance phase where attackers knock on the doors (ports) to see which ones are open. In many countries this is a criminal offense if done without permission.
 
@@ -360,7 +360,7 @@ He goes into the terminal and runs `arp -n` to see the ARP table on his system. 
 - Iface (interface)
     - The network interface associated with the ARP entry (e.g., eth0, wlan0).
 
-If you get several responses to an ARP request, you might be under an ARP [spoofing](../Terminology/Attacks/Spoofing) attack. Because normally only one device should respond with its MAC address.
+If you get several responses to an ARP request, you might be under an ARP [Spoofing](../Attacks/Spoofing.md) attack. Because normally only one device should respond with its MAC address.
 
 ### Layer 2 Vulnerabilities: Wired Networks
 

@@ -1,5 +1,5 @@
 ---
-aliases: [Network router]
+aliases: [Network router, routers]
 date created: Tuesday, 2. December 2025, 19:12
 date modified: Tuesday, 2. December 2025, 19:12
 ---
