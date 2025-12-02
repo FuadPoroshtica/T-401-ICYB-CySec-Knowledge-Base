@@ -1,7 +1,7 @@
 ---
 aliases: []
 date created: Tuesday, 2. December 2025, 08:12
-date modified: Tuesday, 2. December 2025, 14:12
+date modified: Tuesday, 2. December 2025, 19:12
 ---
 
 # 2025-12-02 Networks (Gísli)
