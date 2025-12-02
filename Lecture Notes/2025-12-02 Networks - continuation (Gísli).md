@@ -1,7 +1,7 @@
 ---
 aliases: []
 date created: Tuesday, 2. December 2025, 08:12
-date modified: Tuesday, 2. December 2025, 11:12
+date modified: Tuesday, 2. December 2025, 12:12
 ---
 
 # 2025-12-02 Networks (Gísli)
@@ -42,7 +42,7 @@ Components of the IPv4 header:
 - **Data (variable length)**: The actual payload being transported
 
 IPv4 address: 32 bits (32b) (4 bytes (4B)).
-172.16.254.1 = 10101100.00010000.11111110.00000001 ← 4 blocks of 8 bits each (1 byte), so 4 bytes.
+<font color="#ff0000">172</font>.<font color="#00b050">16</font>.<font color="#00b0f0">254</font>.<font color="#7030a0">1</font> = <font color="#ff0000">10101100</font>.<font color="#00b050">00010000</font>.<font color="#00b0f0">11111110</font>.<font color="#7030a0">00000001</font> ← 4 blocks of 8 bits each (1 byte), so 4 bytes.
 Each byte is represented as a decimal number (0-255).
 Notionally, high end bits are network identifier, low end bits are host identifier. So for 198.0.1.130:
 - Network ID: 198.0.1
@@ -341,8 +341,41 @@ A VPN creates a secure, encrypted tunnel over a public network (like the Interne
 7. **Delivery**: The original packet is forwarded to its intended destination on the private network.
 
 # Tools
-(TODO)
-We’ll need `nmap` today.
+## CLI Tools: Connectivity & Path (Layer 3)
+Diagnosing reachability and routing path issues.
+
+| Function                                                                                                                                         | Usage Example                           |
+| ------------------------------------------------------------------------------------------------------------------------------------------------ | --------------------------------------- |
+| `ping`<br>Sends ICMP Echo Requests to check if a host is online and measure latency (RTT)                                                        | `ping google.com`<br>`ping 192.168.1.1` |
+| `traceroute` (Linux) / `tracert` (Win)<br>Maps the path packets take to the destination by<br>incrementing TTL. Reveals where a connection dies. | `traceroute 8.8.8.8`                    |
+
+## CLI Tools: Interface Configuration (Layer 2/3)
+
+| Function                                                                                                   | Usage Example  |
+| ---------------------------------------------------------------------------------------------------------- | -------------- |
+| `ip addr` (Replaces `ifconfig`)<br>Shows IP addresses, Subnet Masks, and MAC addresses for all interfaces. | `ip addr show` |
+| `ip route` (Replaces `route`)<br>Displays the kernel routing table and the Default Gateway.                | `ip route`     |
+| `ip neigh` (Replaces `arp`)<br>Displays the ARP cache (Neighbor table).                                    | `ip neigh`     |
+Windows PowerShell equivalents are `Get-NetIPAddress`, `Get-NetRoute`,
+and `Get-NetNeighbor`.
+
+## CLI Tools: Sockets (Layer 4) & DNS (Layer 7)
+| Function                                                                              | Usage Example                                          |
+| ------------------------------------------------------------------------------------- | ------------------------------------------------------ |
+| `ss` (Replaces `netstat`)<br>Dump socket statistics. Fast way to see listening ports. | `ss -tunlp`<br>(TCP, UDP, Numeric, Listening, Process) |
+| `dig`<br>Detailed DNS lookup. Shows TTL, flags, and exact answer section.             | `dig google.com MX`<br>`dig @1.1.1.1 google.com`       |
+| `nslookup`<br>Simple name resolution (Windows/Linux).                                 | `nslookup google.com`                                  |
+
+## CLI Tools: Security & Advanced Debugging
+
+| Function                                                                                            | Usage Example                                                     |
+| --------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------- |
+| `netcat` (`nc`)<br>Read/Write data across networks. Used for port scanning, chat, or file transfer. | `nc -v google.com 80`<br>`nc -l 1234` (Listen)                    |
+| `wireshark`<br>GUI packet analyzer.                                                                 | `wireshark`                                                       |
+| `tcpdump` / `tshark`<br>Command-line packet analyzers. Capture raw traffic for analysis.            | `tcpdump -i eth0 port 80 tshark -Y "http.request.method == POST"` |
+| `nmap`<br>Network exploration tool. Scans for open ports and OS versions.                           | `nmap -sV 192.168.1.1`                                            |
+
+We’ll need `nmap` for today’s lab.
 Be careful with the flags you use, some of them can be quite invasive.
 Don’t scan machines you’re not allowd to.
 

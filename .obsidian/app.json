@@ -7,5 +7,5 @@
   "useMarkdownLinks": true,
   "alwaysUpdateLinks": true,
   "showUnsupportedFiles": true,
-  "readableLineLength": true
+  "readableLineLength": false
 }
