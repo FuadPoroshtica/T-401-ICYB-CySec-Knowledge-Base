@@ -1,12 +1,11 @@
 ---
 aliases: [Dynamic Host Configuration Protocol]
 date created: Tuesday, 2. December 2025, 19:12
-date modified: Tuesday, 2. December 2025, 19:12
+date modified: Tuesday, 2. December 2025, 20:12
 ---
 
 # DHCP
-**DHCP** stands for **Dynamic Host Configuration Protocol**.
-It is a network management protocol used to automate the process of configuring devices on [IP](TCP%20IP%20Model/IP.md) networks.
+The **Dynamic Host Configuration Protocol (DHCP)** is a network management protocol used to automate the process of configuring devices on [IP](TCP%20IP%20Model/IP.md) networks.
 DHCP allows devices to automatically receive [IP](TCP%20IP%20Model/IP.md) addresses and other network configuration parameters, such as subnet masks, default gateways, and [DNS](DNS.md) server addresses, from a DHCP server.
 This eliminates the need for manual configuration of network settings on each device, making it easier to manage large networks.
 

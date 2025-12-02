@@ -1,10 +1,10 @@
 ---
 aliases: [Border Gateway Protocol]
 date created: Tuesday, 2. December 2025, 19:12
-date modified: Tuesday, 2. December 2025, 19:12
+date modified: Tuesday, 2. December 2025, 20:12
 ---
 
-# BGP
+# BGP (Border Gateway Protocol)
 - Used between routes of neighboring [Autonomous Systems (ASes)](AS.md) to exchange routing information (info about available routes).
 - Routing is based on local criteria, such as path attributes, not necessarily the shortest path (efficiency criteria).
 	- E.g., company A has a peering agreement with company B, so it prefers routes through B even if they are longer.

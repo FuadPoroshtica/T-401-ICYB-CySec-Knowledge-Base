@@ -1,12 +1,11 @@
 ---
 aliases: [Local Area Network, LANs]
 date created: Tuesday, 2. December 2025, 19:12
-date modified: Tuesday, 2. December 2025, 19:12
+date modified: Tuesday, 2. December 2025, 20:12
 ---
 
 # LAN
-
-LAN (Local Area Network) is a network that connects computers within a limited area, like a home, school, or office building.
+**LAN (Local Area Network)** is a network that connects computers within a limited area, like a home, school, or office building.
 There are all kinds of technologies to connect things together, like Ethernet, Wi-Fi, Bluetooth, etc.
 
 More details about a Local Area Network (LAN) in a home:

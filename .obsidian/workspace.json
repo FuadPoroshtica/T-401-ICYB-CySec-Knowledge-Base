@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Terminology/Networks/TLS.md",
+                "file": "Terminology/Networks/Packet Switching.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "TLS"
+              "title": "Packet Switching"
             }
           }
         ]
@@ -167,13 +167,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Terminology/Networks/TLS.md",
+                "file": "Terminology/Networks/Packet Switching.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of TLS"
+              "title": "Outline of Packet Switching"
             }
           }
         ],
@@ -238,34 +238,34 @@
   },
   "active": "cd0df65fee17bafb",
   "lastOpenFiles": [
-    "Lecture Notes/2025-12-02 Networks - continuation (Gísli).md",
-    "Terminology/Networks/Transfer Protocols/SMTP.md",
     "Terminology/Networks/TLS.md",
-    "Terminology/Networks/OSI Model/4-Transport Layer.md",
-    "Terminology/Networks/OSI Model/7-Application Layer.md",
-    "Terminology/Networks/BGP.md",
-    "Terminology/Networks/DHCP.md",
-    "Terminology/Networks/ARP.md",
-    "Terminology/Networks/TCP IP Model/IP.md",
-    "Terminology/Networks/OSI Model/OSI Model.md",
-    "Terminology/Networks/OSI Model/6-Presentation Layer.md",
-    "Terminology/Networks/OSI Model/5-Session Layer.md",
-    "Terminology/Networks/OSI Model/3-Network Layer.md",
-    "Terminology/Networks/OSI Model/2-Data Link Layer.md",
-    "Terminology/Networks/OSI Model/1-Physical Layer.md",
-    "Lecture Notes/2025-12-01 OSINT & Networks (Gísli).md",
-    "Terminology/Networks/Transfer Protocols/HTTPS.md",
-    "Terminology/Networks/Transfer Protocols/HTTP.md",
-    "Terminology/Networks/AS.md",
-    "Terminology/Networks/Mail Protocols",
     "Terminology/Networks/Network hardware/Switch.md",
-    "Terminology/Networks/Packet Switching.md",
-    "Terminology/Systems & Plaforms/Port.md",
-    "Terminology/Networks/Transfer Protocols/FTP.md",
-    "Terminology/Networks/Transfer Protocols",
-    "Terminology/Networks/UDP.md",
+    "Terminology/Networks/Network hardware/Router.md",
+    "Terminology/Networks/Network hardware/Hub.md",
+    "Terminology/Networks/OSI Model/1-Physical Layer.md",
+    "Terminology/Networks/OSI Model/2-Data Link Layer.md",
+    "Terminology/Networks/OSI Model/3-Network Layer.md",
+    "Terminology/Networks/OSI Model/4-Transport Layer.md",
+    "Terminology/Networks/OSI Model/5-Session Layer.md",
+    "Terminology/Networks/OSI Model/6-Presentation Layer.md",
+    "Terminology/Networks/OSI Model/7-Application Layer.md",
+    "Terminology/Networks/OSI Model/OSI Model.md",
+    "Terminology/Networks/TCP IP Model/TCP IP Model.md",
+    "Terminology/Networks/TCP IP Model/TCP.md",
+    "Terminology/Networks/TCP IP Model/IP.md",
+    "Terminology/Networks/ARP.md",
+    "Terminology/Networks/AS.md",
+    "Terminology/Networks/BGP.md",
     "Terminology/Networks/Internet Routing.md",
     "Terminology/Networks/DNS.md",
+    "Terminology/Networks/DHCP.md",
+    "Terminology/Networks/LAN.md",
+    "Terminology/Networks/MAC.md",
+    "Terminology/Networks/NAT.md",
+    "Terminology/Networks/UDP.md",
+    "Terminology/Networks/Packet Switching.md",
+    "Terminology/Networks/Mail Protocols",
+    "Terminology/Networks/Transfer Protocols",
     "Terminology/Networks/TCP IP Model",
     "Terminology/Networks/Network hardware",
     "zAttachments/Pasted image 20251202093337.png",

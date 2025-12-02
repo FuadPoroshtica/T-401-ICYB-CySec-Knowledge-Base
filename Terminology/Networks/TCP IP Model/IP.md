@@ -5,8 +5,7 @@ date modified: Tuesday, 2. December 2025, 20:12
 ---
 
 # IP
-In the context of computer networking, **IP** stands for **Internet Protocol**.
-It is a fundamental protocol in the Internet Protocol Suite that is responsible for addressing and routing data packets across networks.
+The **Internet Protocol (IP)** is a fundamental protocol in the Internet Protocol Suite that is responsible for addressing and routing data packets across networks.
 IP assigns unique numerical addresses, known as IP addresses, to devices on a network, allowing them to communicate with each other.
 There are two main versions of IP in use today: IPv4 and IPv6. IPv4 uses 32-bit addresses, while IPv6 uses 128-bit addresses to accommodate the growing number of devices connected to the internet.
 IP operates at the [Network Layer](../OSI%20Model/3-Network%20Layer.md) (Layer 3) of the [OSI Model](../OSI%20Model/OSI%20Model.md), which is responsible for packet forwarding, including routing through intermediate [routers](../Network%20hardware/Router.md).

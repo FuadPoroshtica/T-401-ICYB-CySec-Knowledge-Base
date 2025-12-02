@@ -5,7 +5,7 @@ date modified: Tuesday, 2. December 2025, 20:12
 ---
 
 # TLS
-**TLS** stands for **Transport Layer Security**. It is a cryptographic protocol designed to provide secure communication over a computer network. TLS is widely used to secure data transmitted over the internet, including web browsing, email, instant messaging, and voice over IP (VoIP).
+**TLS (Transport Layer Security)** is a cryptographic protocol designed to provide secure communication over a computer network. TLS is widely used to secure data transmitted over the internet, including web browsing, email, instant messaging, and voice over IP (VoIP).
 TLS operates on the [Transport Layer](OSI%20Model/4-Transport%20Layer.md) of the [OSI Model](OSI%20Model/OSI%20Model.md) and is the successor to the earlier Secure Sockets Layer (SSL) protocol.
 TLS provides several key security features, including:
 - **Encryption:** TLS encrypts data transmitted between a client and server, ensuring that sensitive information remains confidential and protected from eavesdropping.

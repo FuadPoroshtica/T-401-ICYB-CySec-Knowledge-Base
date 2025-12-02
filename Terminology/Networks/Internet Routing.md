@@ -1,25 +1,25 @@
 ---
 aliases: []
 date created: Tuesday, 2. December 2025, 19:12
-date modified: Tuesday, 2. December 2025, 19:12
+date modified: Tuesday, 2. December 2025, 20:12
 ---
 
 # Internet Routing
 How do packets actually get to their destination across multiple networks?
 **IGP**: Interior Gateway Protocol (within an [Autonomous System (AS)](AS.md)).
-**EGP**: Exterior Gateway Protocol (between autonomous systems).
-**BGP**: Border Gateway Protocol (the main EGP used on the Internet).
-**AS**: Autonomous System, a collection of [IP](TCP%20IP%20Model/IP.md) networks and [routers](Network%20hardware/Router.md) under the control of a single organization that presents a common routing policy to the Internet.
+**EGP**: Exterior Gateway Protocol (between [Autonomous Systems](AS.md)).
+**[BGP](BGP.md)**: Border Gateway Protocol (the main EGP used on the Internet).
+**[AS](AS.md)**: Autonomous System, a collection of [IP](TCP%20IP%20Model/IP.md) networks and [routers](Network%20hardware/Router.md) under the control of a single organization that presents a common routing policy to the Internet.
 
 Routing is done on the basis of these autonomous systems (ASes). Each AS is assigned a unique AS number (ASN).
 The BGP is used to exchange routing information between ASes, allowing [routers](Network%20hardware/Router.md) to determine the best path for data packets to reach their destination across the Internet.
-Routers maintain a routing table that contains information about the paths to different network destinations. When a packet arrives at a router, the router examines the destination IP address and consults its routing table to determine the next hop for the packet. The packet is then forwarded to the next router along the path to its destination.
+[Routers](Network%20hardware/Router.md) maintain a routing table that contains information about the paths to different network destinations. When a packet arrives at a [router](Network%20hardware/Router.md), the [router](Network%20hardware/Router.md) examines the destination IP address and consults its routing table to determine the next hop for the packet. The packet is then forwarded to the next [router](Network%20hardware/Router.md) along the path to its destination.
 
 Interior Gateway Protocols (IGPs) are used within an AS to manage routing. Examples of IGPs include OSPF (Open Shortest Path First) and EIGRP (Enhanced Interior Gateway Routing Protocol).
 
 ## Routing Mechanics: Populating vs. Using the Routing Table
 1. **Creating the table**
-	1. **The goal**: build a map of the network. To know roughly where everything is. And each router needs to sort of learn this.
+	1. **The goal**: build a map of the network. To know roughly where everything is. And each [router](Network%20hardware/Router.md) needs to sort of learn this.
 	2. **Input**: Updates from neighboring or statically configured routes.
 	3. **Process**: Algorithms (e.g., Dijkstra’s, Bellman-Ford) to compute shortest paths.
 		1. Dijkstra’s algorithm can’t be used in BGP because it requires complete knowledge of the distance between *all* the nodes, which is not feasible in the decentralized and dynamic environment of the Internet. BGP operates on a path-vector protocol, where each router shares information about the paths it knows to reach different networks, rather than requiring a complete map of the entire network.

@@ -1,12 +1,11 @@
 ---
 aliases: [User Datagram Protocol]
 date created: Tuesday, 2. December 2025, 19:12
-date modified: Tuesday, 2. December 2025, 19:12
+date modified: Tuesday, 2. December 2025, 20:12
 ---
 
 # UDP
-**UDP** stands for **User Datagram Protocol**.
-It is a communication protocol used across the Internet for time-sensitive transmissions such as video playback or [DNS](/DNS) lookups.
+The **User Datagram Protocol (UDP)** is a communication protocol used across the Internet for time-sensitive transmissions such as video playback or [DNS](/DNS) lookups.
 UDP is a connectionless protocol, meaning it does not establish a dedicated end-to-end connection before sending data.
 This allows for faster data transmission but does not guarantee delivery, order, or error-checking.
 UDP operates at the [Transport Layer](OSI%20Model/4-Transport%20Layer.md) (Layer 4) of the [OSI Model](OSI%20Model/OSI%20Model.md), alongside [TCP (Transmission Control Protocol)](TCP%20IP%20Model/TCP.md).
