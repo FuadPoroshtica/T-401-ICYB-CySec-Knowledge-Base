@@ -1,7 +1,7 @@
 ---
-aliases: 
+aliases: []
 date created: Monday, 1. December 2025, 22:12
-date modified: Monday, 1. December 2025, 22:12
+date modified: Tuesday, 2. December 2025, 09:12
 ---
 
 # Cryptography

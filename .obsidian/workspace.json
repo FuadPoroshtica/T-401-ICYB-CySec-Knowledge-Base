@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Terminology/Attacks/Malware/Virus.md",
+                "file": "README.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Virus"
+              "title": "README"
             }
           }
         ]
@@ -67,8 +67,7 @@
               "title": "Source Control"
             }
           }
-        ],
-        "currentTab": 2
+        ]
       }
     ],
     "direction": "horizontal",
@@ -180,36 +179,35 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 329.5
   },
   "left-ribbon": {
     "hiddenItems": {
       "daily-notes:Open today's daily note": false,
-      "omnisearch:Omnisearch": false,
-      "obsidian-git:Open Git source control": false,
-      "switcher:Open quick switcher": false,
       "graph:Open graph view": false,
       "canvas:Create new canvas": false,
       "templates:Insert template": false,
       "command-palette:Open command palette": false,
       "bases:Create new base": false,
-      "obsidian-importer:Open Importer": false
+      "obsidian-git:Open Git source control": false,
+      "omnisearch:Omnisearch": false
     }
   },
-  "active": "cd0df65fee17bafb",
+  "active": "7c5aa656356b9280",
   "lastOpenFiles": [
-    "Terminology/Attacks/Malware/Malware.md",
+    "zAttachments/Mind_Map.png",
+    "docs/cryptography/README.md",
+    "Terminology/Attacks/Malware/Ransomware.md",
     "Terminology/Attacks/Malware/Virus.md",
+    "Terminology/Attacks/Malware/Malware.md",
     "Terminology/Attacks/Malware/Worm.md",
     "Terminology/Attacks/Malware/Trojan.md",
-    "Terminology/Attacks/Malware/Ransomware.md",
     "Terminology/Cybersecurity_Research_Advanced_Topics.md",
     "Terminology/Cyber Security.md",
     "Terminology/Repudiation.md",
     "Terminology/Physical View.md",
     "Terminology/Attack Surface.md",
     "Terminology/Acronyms cheatsheet.md",
-    "docs/cryptography/README.md",
     "Terminology/Virtualization/Host Machine (Host OS).md",
     "conflict-files-obsidian-git.md",
     "resources/references.md",
@@ -231,7 +229,6 @@
     "Terminology/Attacks/Spoofing.md",
     "Terminology/Attacks/Race condition.md",
     "Terminology/Attacks/PWD (Phishing Website Detection).md",
-    "Terminology/Attacks/Phishing.md",
     "Terminology/Systems & Plaforms",
     "Terminology/Vulnerability standards",
     "zAttachments/image.png",
