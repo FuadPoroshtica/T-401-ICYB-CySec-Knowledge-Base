@@ -1,7 +1,7 @@
 ---
 aliases: []
 date created: Tuesday, 2. December 2025, 08:12
-date modified: Tuesday, 2. December 2025, 12:12
+date modified: Tuesday, 2. December 2025, 14:12
 ---
 
 # 2025-12-02 Networks (Gísli)
@@ -296,7 +296,8 @@ QUIT
 ```
 
 ### SMB
-SMB (Server Message Block) is a binary protocol, so you can’t use `telnet` or `nc` to interact with it directly. But you can use tools like `smbclient` to interact with SMB shares from the command line.
+SMB (Server Message Block) is a binary protocol, so you can’t use `telnet` or `nc` to interact with it directly.
+But you can use tools like `smbclient` to interact with SMB shares from the command line.
 Example: Using `smbclient` to connect to an SMB share.
 ```bash
 # 1. Enumeration ( List Shares )
@@ -378,6 +379,60 @@ and `Get-NetNeighbor`.
 We’ll need `nmap` for today’s lab.
 Be careful with the flags you use, some of them can be quite invasive.
 Don’t scan machines you’re not allowd to.
+
+
+Once you’ve used `ssh` to connect to a remote server, you can use various command-line tools to interact with the server securely. Here are some common tasks you might perform after establishing an SSH connection:
+1. **File Transfer**: Use `scp` (secure copy) or `sftp` (SSH File Transfer Protocol) to transfer files between your local machine and the remote server.
+	- Example using `scp`:
+     ```bash
+     scp localfile.txt user@remotehost:/path/to/destination/
+     ```
+	- Example using `sftp`:
+     ```bash
+     sftp user@remotehost
+     sftp> put localfile.txt /path/to/destination/
+     sftp> get /path/to/remotefile.txt localfile.txt
+     sftp> exit
+     ```
+2. **Remote Command Execution**: Run commands directly on the remote server without logging in interactively.
+	- Example:
+     ```bash
+     ssh user@remotehost 'ls -l /var/www/html'
+     ```
+3. **Port Forwarding**: Create secure tunnels for other network services using SSH port forwarding.
+	- Example of local port forwarding:
+     ```bash
+     ssh -L 8080:localhost:80 user@remotehost
+     ```
+	- Example of remote port forwarding:
+     ```bash
+     ssh -R 9090:localhost:3000 user@remotehost
+     ```
+4. **Session Management**: Use tools like `tmux` or `screen` to manage multiple terminal sessions on the remote server.
+	- Example using `tmux`:
+     ```bash
+     tmux new -s mysession
+     ```
+5. **System Monitoring**: Use commands like `top`, `htop`, `df`, `free`, and `uptime` to monitor system performance and resource usage.
+	- Example:
+     ```bash
+     top
+     ```
+6. **Editing Files**: Use text editors like `vim`, `nano`, or `emacs` to edit configuration files or scripts on the remote server.
+	- Example:
+     ```bash
+     vim /etc/nginx/nginx.conf
+     ```
+7. **Managing Services**: Use `systemctl` or `service` commands to start, stop, or restart services on the remote server.
+	- Example:
+     ```bash
+     sudo systemctl restart nginx
+     ```
+8. **Checking Logs**: View system and application logs using commands like `tail`, `less`, or `cat`.
+	- Example:
+     ```bash
+     tail -f /var/log/syslog
+     ```
 
 # Further studies
 - UPnP, STUN etc punch holes into NAT to allow certain incoming traffic. Why can this be problematic for security? Find some vulnerabilities of these techniques. How can they be countered?

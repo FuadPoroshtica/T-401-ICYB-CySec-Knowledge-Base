@@ -1,7 +1,7 @@
 ---
 aliases: []
 date created: Thursday, 27. November 2025, 09:11
-date modified: Monday, 1. December 2025, 21:12
+date modified: Tuesday, 2. December 2025, 13:12
 ---
 
 # 2025-11-27 Operational Systems (Ivan)

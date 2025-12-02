@@ -24,19 +24,19 @@
             }
           },
           {
-            "id": "fce0ccdd95871ba4",
+            "id": "fd8cfe8360b110ce",
             "type": "leaf",
             "pinned": true,
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Lecture Notes/2025-12-01 OSINT & Networks (Gísli).md",
+                "file": "Lecture Notes/Labs/Lab 7 (Gísli).md",
                 "mode": "source",
                 "source": false
               },
               "pinned": true,
               "icon": "lucide-file",
-              "title": "2025-12-01 OSINT & Networks (Gísli)"
+              "title": "Lab 7 (Gísli)"
             }
           }
         ]
@@ -215,10 +215,15 @@
   },
   "active": "cd0df65fee17bafb",
   "lastOpenFiles": [
+    "Lecture Notes/Labs/Lab 7 (Gísli).md",
+    "Lecture Notes/2025-12-02 Networks - continuation (Gísli).md",
+    "Lecture Notes/2025-12-01 OSINT & Networks (Gísli).md",
+    "Lecture Notes/2025-11-27 Operational Systems (Ivan).md",
+    "Lecture Notes/2025-11-27 Operational Systems (Gísli).md",
+    "Lecture Notes/2025-11-27 Operational Systems (Kim).md",
     "resources/references.md",
     "resources",
     "zAttachments/Mind_Map.png",
-    "Lecture Notes/2025-12-01 OSINT & Networks (Gísli).md",
     "Terminology/Networks/OSI Model/1-Physical Layer.md",
     "Terminology/Networks/OSI Model/6-Presentation Layer.md",
     "Terminology/Networks/OSI Model/5-Session Layer.md",
@@ -227,13 +232,11 @@
     "Terminology/Networks/OSI Model/3-Network Layer.md",
     "Terminology/Networks/OSI Model/7-Application Layer.md",
     "Terminology/Networks/OSI Model/Untitled",
-    "Lecture Notes/2025-12-02 Networks - continuation (Gísli).md",
     "Terminology/Networks/OSI Model",
     "Terminology/Networks",
     "Lecture Notes/2025-12-02 Networks (Gísli).md",
     "zAttachments/Pasted image 20251202093337.png",
     "zAttachments/Pasted image 20251202091743.png",
-    "Lecture Notes/2025-11-27 Operational Systems (Kim).md",
     "Terminology/Attacks/Malware/Virus.md",
     "Terminology/Attacks/Malware/Malware.md",
     "Terminology/Attacks/Malware/Worm.md",
@@ -245,9 +248,6 @@
     "Terminology/Physical View.md",
     "Terminology/Attack Surface.md",
     "Terminology/Acronyms cheatsheet.md",
-    "docs/cryptography/README.md",
-    "Terminology/Virtualization/Host Machine (Host OS).md",
-    "conflict-files-obsidian-git.md",
     "docs/threat-analysis",
     "docs/security-governance",
     "docs/network-security",
