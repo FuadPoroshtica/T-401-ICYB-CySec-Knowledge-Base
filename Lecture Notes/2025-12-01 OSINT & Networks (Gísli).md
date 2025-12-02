@@ -1,7 +1,7 @@
 ---
 aliases: []
 date created: Monday, 1. December 2025, 20:12
-date modified: Monday, 1. December 2025, 22:12
+date modified: Tuesday, 2. December 2025, 08:12
 ---
 
 # OSINT & Networks 2025-12-01
@@ -70,7 +70,7 @@ You shouldn’t be logged into your personal account in your browser if you don�
 A VPN (Virtual Private Network) can also hide your traffic.
 
 You should protect your hardware and software. Make sure your own system is safe. Like running it on a VM.
-There are even OSs for this, like Tails OS. It’s an “amnesiac system”, it clears everything after you’re done.
+There are even OSes for this, like Tails OS. It’s an “amnesiac system”, it clears everything after you’re done.
 
 You could hide your location with a VPN, Tor (The Onion Router) or by using a public Wi-Fi.
 

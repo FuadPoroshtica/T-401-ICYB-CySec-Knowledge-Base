@@ -4,21 +4,39 @@
     "type": "split",
     "children": [
       {
-        "id": "8f0e11f53a5ca2bb",
+        "id": "17a5710a5e2985e5",
         "type": "tabs",
         "children": [
           {
-            "id": "1473f7ef023f5c3a",
+            "id": "e0a6c65512e3f99c",
             "type": "leaf",
+            "pinned": true,
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Terminology/Attacks/Malware/Virus.md",
+                "file": "Lecture Notes/2025-12-02 Networks - continuation (Gísli).md",
                 "mode": "source",
                 "source": false
               },
+              "pinned": true,
               "icon": "lucide-file",
-              "title": "Virus"
+              "title": "2025-12-02 Networks - continuation (Gísli)"
+            }
+          },
+          {
+            "id": "fce0ccdd95871ba4",
+            "type": "leaf",
+            "pinned": true,
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Lecture Notes/2025-12-01 OSINT & Networks (Gísli).md",
+                "mode": "source",
+                "source": false
+              },
+              "pinned": true,
+              "icon": "lucide-file",
+              "title": "2025-12-01 OSINT & Networks (Gísli)"
             }
           }
         ]
@@ -72,7 +90,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 321.5
+    "width": 320.49999618530273
   },
   "right": {
     "id": "c79412028c3db95a",
@@ -180,26 +198,41 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "left-ribbon": {
     "hiddenItems": {
       "daily-notes:Open today's daily note": false,
       "omnisearch:Omnisearch": false,
-      "obsidian-git:Open Git source control": false,
-      "switcher:Open quick switcher": false,
       "graph:Open graph view": false,
       "canvas:Create new canvas": false,
       "templates:Insert template": false,
       "command-palette:Open command palette": false,
       "bases:Create new base": false,
-      "obsidian-importer:Open Importer": false
+      "obsidian-git:Open Git source control": false
     }
   },
   "active": "cd0df65fee17bafb",
   "lastOpenFiles": [
-    "Terminology/Attacks/Malware/Malware.md",
+    "Lecture Notes/2025-12-01 OSINT & Networks (Gísli).md",
+    "Terminology/Networks/OSI Model/1-Physical Layer.md",
+    "Terminology/Networks/OSI Model/6-Presentation Layer.md",
+    "Terminology/Networks/OSI Model/5-Session Layer.md",
+    "Terminology/Networks/OSI Model/4-Transport Layer.md",
+    "Terminology/Networks/OSI Model/2-Data Link Layer.md",
+    "Terminology/Networks/OSI Model/3-Network Layer.md",
+    "Terminology/Networks/OSI Model/7-Application Layer.md",
+    "Terminology/Networks/OSI Model/Untitled",
+    "Lecture Notes/2025-12-02 Networks - continuation (Gísli).md",
+    "Terminology/Networks/OSI Model",
+    "Terminology/Networks",
+    "Lecture Notes/2025-12-02 Networks (Gísli).md",
+    "zAttachments/Pasted image 20251202093337.png",
+    "zAttachments/Pasted image 20251202091743.png",
+    "Lecture Notes/2025-11-27 Operational Systems (Kim).md",
     "Terminology/Attacks/Malware/Virus.md",
+    "Terminology/Attacks/Malware/Malware.md",
     "Terminology/Attacks/Malware/Worm.md",
     "Terminology/Attacks/Malware/Trojan.md",
     "Terminology/Attacks/Malware/Ransomware.md",
@@ -214,26 +247,12 @@
     "conflict-files-obsidian-git.md",
     "resources/references.md",
     "resources",
-    "docs/security-governance/README.md",
-    "docs/threat-analysis/README.md",
-    "docs/network-security/README.md",
-    "docs/incident-response/README.md",
     "docs/threat-analysis",
     "docs/security-governance",
     "docs/network-security",
     "docs/incident-response",
     "docs/cryptography",
     "docs",
-    "Terminology/Vulnerability.md",
-    "Terminology/Virtualization/Side-Channel Attack.md",
-    "Virtualization/Side-Channel.md",
-    "Virtualization",
-    "Terminology/Attacks/Spoofing.md",
-    "Terminology/Attacks/Race condition.md",
-    "Terminology/Attacks/PWD (Phishing Website Detection).md",
-    "Terminology/Attacks/Phishing.md",
-    "Terminology/Systems & Plaforms",
-    "Terminology/Vulnerability standards",
     "zAttachments/image.png",
     "zAttachments/1_fo1_I3imkAYwzhdPrzgI7Q.webp"
   ]

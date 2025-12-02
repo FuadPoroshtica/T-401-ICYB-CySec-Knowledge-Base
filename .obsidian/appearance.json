@@ -1,4 +1,5 @@
 {
   "interfaceFontFamily": "",
-  "baseFontSizeAction": true
+  "baseFontSizeAction": true,
+  "baseFontSize": 20
 }
