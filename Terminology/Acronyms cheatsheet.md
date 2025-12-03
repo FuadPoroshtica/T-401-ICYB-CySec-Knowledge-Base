@@ -10,19 +10,14 @@ All the acronyms and abbreviations that we’ve seen so far:
 
 | Acronym                                        | Definition                                                                                                    |
 | ---------------------------------------------- | ------------------------------------------------------------------------------------------------------------- |
-| **.msc**                                       | Microsoft Management Console extension (.msc)                                                                 |
 | **.NET**                                       | Microsoft’s software development framework                                                                    |
-| **ACK**                                        | Acknowledgment packet in TCP handshake                                                                        |
 | **ACL**                                        | Access Control List                                                                                           |
-| **AES**                                        | Advanced Encryption Standard                                                                                  |
 | **AMD-V**                                      | AMD [Virtualization](Virtualization/Virtualization.md) extensions                                             |
 | **API**                                        | Application Programming Interface                                                                             |
 | **ARM**<br>(CPU architecture)                  | Advanced RISC Machine                                                                                         |
 | **ARP**                                        | Address Resolution Protocol – maps IP addresses to MAC addresses on a local network.                          |
-| ARP                                            | Address Resolution Protocol                                                                                   |
 | **ART**                                        | Android Runtime                                                                                               |
 | **AS**                                         | Autonomous System – an independently administered network (or group of networks) on the Internet.             |
-| AS                                             | Autonomous System                                                                                             |
 | **ASCII**                                      | American Standard Code for Information Interchange                                                            |
 | **ASLR**                                       | Address Space Layout Randomization                                                                            |
 | **AT&T**                                       | American Telephone & Telegraph (Unix origin)                                                                  |
@@ -35,7 +30,6 @@ All the acronyms and abbreviations that we’ve seen so far:
 | **BSD**                                        | Berkeley Software Distribution                                                                                |
 | **BSM**                                        | Basic Security Module (macOS auditing)                                                                        |
 | **CAM**<br>(Windows Command Interpreter)       | Content Addressable Memory – special memory in switches used for fast lookup tables (e.g., MAC→port).         |
-| **CLI**                                        | Command-Line Interface                                                                                        |
 | **`cp`**                                       | copy                                                                                                          |
 | **CPU**                                        | Central Processing Unit                                                                                       |
 | **CSMA/CA**                                    | Carrier Sense Multiple Access with Collision Avoidance – medium-access method used in Wi-Fi.                  |
@@ -47,40 +41,28 @@ All the acronyms and abbreviations that we’ve seen so far:
 | **DEP / NX**                                   | Data Execution Prevention / No-Execute (bit)                                                                  |
 | **DEX**                                        | Dalvik Executable (Android bytecode format)                                                                   |
 | **`df`**                                       | Disk Free                                                                                                     |
-| **DH** / Diffie–Hellman                        | Key exchange algorithm                                                                                        |
-| **DHCP**                                       | Dynamic Host Configuration Protocol                                                                           |
-| DKIM                                           | DomainKeys Identified Mail                                                                                    |
 | **DMA**                                        | Direct Memory Access                                                                                          |
-| DMARC                                          | Domain-based Message Authentication, Reporting and Conformance                                                |
 | **DNS**                                        | Domain Name System – translates domain names (e.g., [canvas.ru.is](http://canvas.ru.is/)) to IP addresses.    |
 | **DoS**                                        | Denial of Service – attack that attempts to make a service or network unavailable.                            |
 | **`du`**                                       | Disk Usage                                                                                                    |
 | **EC2**                                        | Elastic Compute Cloud                                                                                         |
-| **EGP**                                        | Exterior Gateway Protocol                                                                                     |
 | **EXIF**                                       | Exchangeable Image File Format – metadata embedded in image files (camera model, time, GPS, etc.).            |
 | **FHSS**                                       | Frequency-Hopping Spread Spectrum – radio technique that rapidly changes frequency to reduce interference.    |
 | **FIM**                                        | File Integrity Monitoring                                                                                     |
-| FTP                                            | File Transfer Protocol                                                                                        |
 | **GNU**                                        | “GNU’s Not Unix” (Unix-like userspace project)                                                                |
 | **GPU**                                        | Graphics Processing Unit                                                                                      |
 | **GUI**                                        | Graphical User Interface                                                                                      |
 | **HAL**                                        | Hardware Abstraction Layer                                                                                    |
-| **HMAC**                                       | Hash-based Message Authentication Code                                                                        |
 | **HMI**                                        | Human-Machine Interface                                                                                       |
 | **HTML**                                       | HyperText Markup Language                                                                                     |
 | **HTTP**                                       | HyperText Transfer Protocol – main application-level protocol of the web.                                     |
 | **HTTPS**                                      | HyperText Transfer Protocol Secure                                                                            |
 | **I/O**                                        | Input/Output                                                                                                  |
 | **IaaS**                                       | Infrastructure as a Service                                                                                   |
-| **ICMP**                                       | Internet Control Message Protocol                                                                             |
 | **ICS**                                        | Industrial Control Systems                                                                                    |
 | **IEEE**                                       | Institute of Electrical and Electronics Engineers                                                             |
-| **IGP**                                        | Interior Gateway Protocol                                                                                     |
-| **IHL**                                        | Internet Header Length                                                                                        |
-| **IMAP**                                       | Internet Message Access Protocol                                                                              |
 | **IP**                                         | Internet Protocol – network-layer protocol that delivers packets based on IP addresses.                       |
 | **IPC**                                        | Inter-Process Communication                                                                                   |
-| IPv4                                           | Internet Protocol version 4                                                                                   |
 | **ISP**                                        | Internet Service Provider – company that provides Internet connectivity.                                      |
 | **ISR**                                        | Interrupt Service Routine                                                                                     |
 | **IT**                                         | Information Technology                                                                                        |
@@ -92,19 +74,12 @@ All the acronyms and abbreviations that we’ve seen so far:
 | **Me (Windows Me)**                            | Windows Millennium Edition                                                                                    |
 | **MMU**                                        | Memory Management Unit                                                                                        |
 | **MS-DOS**                                     | Microsoft Disk Operating System                                                                               |
+| **.msc**                                       | Microsoft Management Console extension (.msc)                                                                 |
 | **MSP**                                        | Managed Service Provider                                                                                      |
 | **`mv`**                                       | move                                                                                                          |
-| MX (DNS record)                                | Mail Exchange record                                                                                          |
 | **NAT**                                        | Network Address Translation – rewrites internal private IP addresses to public ones at a router.              |
-| nb.                                            | “number” (abbreviation appearing in slides)                                                                   |
-| nc                                             | netcat (network utility)                                                                                      |
-| **NFC**                                        | Near Field Communication                                                                                      |
 | **NIC**<br>(DEC minicomputer)                  | Network Interface Card – hardware that connects a device to a network.                                        |
-| **OS** (in “OS versions”)                      | Operating System                                                                                              |
-| **OSI**                                        | Open Systems Interconnection model                                                                            |
-| **P2P**                                        | Peer-to-Peer                                                                                                  |
 | **PID**                                        | Process Identifier                                                                                            |
-| **POP3**                                       | Post Office Protocol version 3                                                                                |
 | **POSIX**<br>(Unix standard)                   | Portable Operating System Interface                                                                           |
 | **`ps`**                                       | process status                                                                                                |
 | **PS**                                         | PowerShell                                                                                                    |
@@ -115,41 +90,27 @@ All the acronyms and abbreviations that we’ve seen so far:
 | **RCE**                                        | Remote Code Execution                                                                                         |
 | **REPL**                                       | Read-Eval-Print Loop                                                                                          |
 | **RF**                                         | Radio Frequency – part of the electromagnetic spectrum used for wireless communication.                       |
-| **RFID**                                       | Radio-Frequency Identification                                                                                |
 | **RHEL**                                       | Red Hat Enterprise Linux                                                                                      |
 | **`rm`**                                       | remove                                                                                                        |
 | **RTOS**                                       | Real-Time Operating System                                                                                    |
-| **RTT**                                        | Round-Trip Time                                                                                               |
 | **`sed`**                                      | stream editor                                                                                                 |
 | **SELinux**                                    | Security-Enhanced Linux                                                                                       |
-| **SFTP**                                       | SSH File Transfer Protocol                                                                                    |
 | **SHA-256**                                    | Secure Hash Algorithm 256-bit                                                                                 |
 | **SIM**                                        | Subscriber Identity Module – smart card in mobile devices that stores subscriber information.                 |
-| **SMB**                                        | Server Message Block                                                                                          |
 | **SMS**                                        | Short Message Service – text-messaging service for mobile networks.                                           |
-| SMTP                                           | Simple Mail Transfer Protocol                                                                                 |
-| **SPF**                                        | Sender Policy Framework                                                                                       |
 | **SSH**                                        | Secure Shell – protocol for secure remote login and command execution.                                        |
-| **SSL**                                        | Secure Sockets Layer (referenced in “SSL Inspection”)                                                         |
 | **STDIN**                                      | Standard Input                                                                                                |
 | **STDOUT**                                     | Standard Output                                                                                               |
-| **STUN**                                       | Session Traversal Utilities for NAT                                                                           |
 | **`sudo`**                                     | “superuser do” (Unix privilege escalation tool)                                                               |
 | **SUID / SGID**                                | Set User ID / Set Group ID                                                                                    |
 | **`tar`**                                      | Tape ARchive                                                                                                  |
 | **TCB**                                        | Trusted Computing Base                                                                                        |
-| TCP                                            | Transmission Control Protocol                                                                                 |
-| TCP SYN                                        | Synchronize packet in TCP handshake                                                                           |
 | **TCP/IP**                                     | Transmission Control Protocol / Internet Protocol – core protocol suite of the Internet.                      |
-| TLS                                            | Transport Layer Security                                                                                      |
 | **TOCTOU**                                     | Time-Of-Check-To-Time-Of-Use ([Race condition](Attacks/Race%20condition.md))                                  |
 | **Tor**                                        | The Onion Router – anonymity network that routes traffic through multiple relays.                             |
 | **`tr`**                                       | translate                                                                                                     |
-| **TTL**                                        | Time To Live                                                                                                  |
 | **TTY**                                        | Teletype / Teletypewriter                                                                                     |
-| UDP                                            | User Datagram Protocol                                                                                        |
 | **UID**                                        | User ID                                                                                                       |
-| **UPnP**                                       | Universal Plug and Play                                                                                       |
 | **URL**                                        | Uniform Resource Locator – standard format for web addresses.                                                 |
 | **USB**                                        | Universal Serial Bus – standard for wired data connection and power between devices.                          |
 | **UTF-8**                                      | Unicode Transformation Format, 8-bit                                                                          |
@@ -157,18 +118,18 @@ All the acronyms and abbreviations that we’ve seen so far:
 | **VDI**                                        | Virtual Desktop Infrastructure                                                                                |
 | **VM**                                         | Virtual Machine – software emulation of a physical computer.                                                  |
 | **VMM**                                        | Virtual Machine Monitor (a.k.a. [Hypervisor](Virtualization/Hypervisor.md))                                   |
-| **VoIP**                                       | Voice over IP (Voice over Internet Protocol)                                                                  |
+| **VOIP**                                       | Voice over Internet Protocol – carrying voice calls over IP networks.                                         |
 | **VPN**                                        | Virtual Private Network – encrypted tunnel through another network (often to hide or protect traffic).        |
 | **VT-x**<br>(x86 extension for virtualization) | Intel Virtualization Technology                                                                               |
 | **VT100**                                      | DEC Video Terminal 100                                                                                        |
-| WAN                                            | Wide Area Network                                                                                             |
 | **Wi-Fi**<br>                                  | Wireless LAN technology based on IEEE 802.11 standards<br>(often informally expanded as “Wireless Fidelity”). |
 | **WIMP**                                       | Windows, Icons, Menus, Pointer                                                                                |
+| (GUI paradigm)                                 |                                                                                                               |
 | **WSL**                                        | Windows Subsystem for Linux                                                                                   |
-| X                                              | Digital certificate standard (ITU-T X)                                                                        |
 | **x86**                                        | Intel/AMD 32-bit/64-bit CPU architecture family                                                               |
 | **Xerox PARC**                                 | Palo Alto Research Center                                                                                     |
 | **XNU**                                        | “X is Not Unix”                                                                                               |
+| (Apple kernel: Mach + BSD)                     |                                                                                                               |
 | **XP**                                         | Windows XP product line                                                                                       |
+| (“eXPerience”)                                 |                                                                                                               |
 | **Zsh**                                        | Z Shell                                                                                                       |
-

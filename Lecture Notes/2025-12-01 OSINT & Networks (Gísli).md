@@ -1,7 +1,7 @@
 ---
 aliases: []
 date created: Monday, 1. December 2025, 20:12
-date modified: Tuesday, 2. December 2025, 20:12
+date modified: Tuesday, 2. December 2025, 08:12
 ---
 
 # OSINT & Networks 2025-12-01
@@ -147,6 +147,7 @@ A switch looks the same as a hub.
 
 **Home router:**
 A home router is actually much more than just a router. It typically combines multiple functions:
+
 - Switch.
 - Wireless access point (for Wi-Fi).
 - Router.
@@ -155,6 +156,7 @@ A home router is actually much more than just a router. It typically combines mu
 - [Firewall](../Terminology/Defense & Control/Firewall) (basic security features).
 
 **Backbone routers:**
+
 - These are high-capacity routers that form the core of the internet.
 - They are things that ISPs use to connect to each other. Like they can be used for a whole country or region.
 
@@ -177,13 +179,13 @@ The internet uses a layered architecture to manage the complexity of networking.
 
 The most common model is the OSI (Open Systems Interconnection) model, which has seven layers:
 
-1. **[Physical Layer](../Terminology/Networks/OSI%20Model/1-Physical%20Layer.md) (Layer 1):** Deals with the physical connection between devices, including cables, switches, and other hardware.
-2. **[Data Link Layer](../Terminology/Networks/OSI%20Model/2-Data%20Link%20Layer.md) (Layer 2):** Responsible for node-to-node (a node here is a device or a point of connection in a network) data transfer and error detection/correction. (E.g., Ethernet, MAC addresses.)
-3. **[Network Layer](../Terminology/Networks/OSI%20Model/3-Network%20Layer.md) (Layer 3):** Manages data routing and forwarding between different networks. (E.g., IP addresses, routers.) Basically, connections that are *more* than one hop away.
-4. **[Transport Layer](../Terminology/Networks/OSI%20Model/4-Transport%20Layer.md) (Layer 4):** Ensures reliable data transfer between end devices. (E.g., TCP, UDP.). It essentially manages end-to-end communication. Ensuring that data is delivered error-free, in sequence, and with no losses or duplications.
-5. **[Session Layer](../Terminology/Networks/OSI%20Model/5-Session%20Layer.md) (Layer 5):** Manages sessions or connections between applications. Establishes, maintains, and terminates connections. (E.g., APIs, sockets.)
-6. **[Presentation Layer](../Terminology/Networks/OSI%20Model/6-Presentation%20Layer.md) (Layer 6):** Translates data formats between the application and the network. Handles data encryption, compression, and translation. (E.g., SSL/TLS, data encoding.)
-7. **[Application Layer](../Terminology/Networks/OSI%20Model/7-Application%20Layer.md) (Layer 7):** Provides network services directly to end-user applications. (E.g., HTTP, FTP, SMTP.). Services like web browsing, email, file transfer, etc.
+1. **Physical Layer (Layer 1):** Deals with the physical connection between devices, including cables, switches, and other hardware.
+2. **Data Link Layer (Layer 2):** Responsible for node-to-node (a node here is a device or a point of connection in a network) data transfer and error detection/correction. (E.g., Ethernet, MAC addresses.)
+3. **Network Layer (Layer 3):** Manages data routing and forwarding between different networks. (E.g., IP addresses, routers.) Basically, connections that are *more* than one hop away.
+4. **Transport Layer (Layer 4):** Ensures reliable data transfer between end devices. (E.g., TCP, UDP.). It essentially manages end-to-end communication. Ensuring that data is delivered error-free, in sequence, and with no losses or duplications.
+5. **Session Layer (Layer 5):** Manages sessions or connections between applications. Establishes, maintains, and terminates connections. (E.g., APIs, sockets.)
+6. **Presentation Layer (Layer 6):** Translates data formats between the application and the network. Handles data encryption, compression, and translation. (E.g., SSL/TLS, data encoding.)
+7. **Application Layer (Layer 7):** Provides network services directly to end-user applications. (E.g., HTTP, FTP, SMTP.). Services like web browsing, email, file transfer, etc.
 
 ### TCP/IP Model
 
@@ -262,13 +264,13 @@ Between these addresses there exist mappings:
 
 ### 3. Application Multiplexing
 
-*Problem: Which application on the destination device should receive the packet?Solution: Ports ([Transport Layer](../Terminology/Networks/OSI%20Model/4-Transport%20Layer.md)).*
+*Problem: Which application on the destination device should receive the packet?Solution: Ports (transport layer).*
 
-- Well known ports: 0-1023 (e.g., [HTTP](../Terminology/Networks/Transfer%20Protocols/HTTP.md): 80, HTTPS: 443, FTP: 21, SSH: 22).
+- Well known ports: 0-1023 (e.g., HTTP: 80, HTTPS: 443, FTP: 21, SSH: 22).
 - Ephemeral ports: randomly assigned ports for temporary communication (1024-65535) for client apps (e.g., your browser tab).
 - Sockets: IP Address + Port number = Unique connection identifier. (E.g., `192.168.1.1:80` for a web server.)
 
-**Security context: [Attack Surface](../Terminology/Attack%20Surface.md).**
+**Security context: [Attack surface](../Terminology/Attack Surface).**
 Every open port is a potential entry point for attackers. Services listening on ports can have vulnerabilities that can be exploited.
 Port scanning (e.g., `nmap`) is a technique used by attackers (and security professionals) to identify open ports on a target system. Tools like Nmap can be used for this purpose. It’s essentially a reconnaissance phase where attackers knock on the doors (ports) to see which ones are open. In many countries this is a criminal offense if done without permission.
 
@@ -360,7 +362,7 @@ He goes into the terminal and runs `arp -n` to see the ARP table on his system. 
 - Iface (interface)
     - The network interface associated with the ARP entry (e.g., eth0, wlan0).
 
-If you get several responses to an ARP request, you might be under an ARP [Spoofing](../Attacks/Spoofing.md) attack. Because normally only one device should respond with its MAC address.
+If you get several responses to an ARP request, you might be under an ARP [spoofing](../Terminology/Attacks/Spoofing) attack. Because normally only one device should respond with its MAC address.
 
 ### Layer 2 Vulnerabilities: Wired Networks
 
