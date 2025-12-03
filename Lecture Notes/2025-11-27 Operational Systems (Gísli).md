@@ -1,7 +1,7 @@
 ---
 aliases: []
 d[POSIX](../Terminology/Systems & Plaforms/POSIX)reated: Thursday, 27. November 2025, 09:11
-date modified: Monday, 1. December 2025, 22:12
+date modified: Tuesday, 2. December 2025, 13:12
 date created: Monday, 1. December 2025, 20:12
 ---
 
