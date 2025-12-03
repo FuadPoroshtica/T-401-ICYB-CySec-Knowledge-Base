@@ -1,7 +1,7 @@
 ---
 aliases: []
 date created: Tuesday, 2. December 2025, 08:12
-date modified: Tuesday, 2. December 2025, 14:12
+date modified: Tuesday, 2. December 2025, 20:12
 ---
 
 # 2025-12-02 Networks (Gísli)
@@ -120,7 +120,7 @@ Routers maintain a routing table that contains information about the paths to di
 
 Interior Gateway Protocols (IGPs) are used within an AS to manage routing. Examples of IGPs include OSPF (Open Shortest Path First) and EIGRP (Enhanced Interior Gateway Routing Protocol).
 
-### Routing Mechanics: Populaitng vs. Using the Routing Table
+### Routing Mechanics: Populating vs. Using the Routing Table
 1. **Creating the table**
 	1. **The goal**: build a map of the network. To know roughly where everything is. And each router needs to sort of learn this.
 	2. **Input**: Updates from neighboring or statically configured routes.
@@ -139,10 +139,10 @@ Some tools to see this on your machine:
 - `traceroute` / `tracert`: Show the path packets take to a destination.
 - `ping`: Test reachability of a host on an IP network.
 
-The linked layer uses MAC addresses to deliver frames within the same network.
-“Frames” in this context means data packets at the link layer of the OSI model. So the ethernet frame is the data packet used in Ethernet networks at the link layer. Other frames include Wi-Fi frames, which are used in wireless networks.
-The MAC address (Media Access Control address) is a unique identifier assigned to network interfaces for communications at the data link layer of a network segment.
-The network layer uses IP addresses to route packets between different networks.
+The [Data Link Layer](../Terminology/Networks/OSI%20Model/2-Data%20Link%20Layer.md) uses [MAC](../Terminology/Networks/MAC.md) addresses to deliver frames within the same network.
+“Frames” in this context means data packets at the link layer of the [OSI Model](../Terminology/Networks/OSI%20Model/OSI%20Model.md). So the ethernet frame is the data packet used in Ethernet networks at the link layer. Other frames include Wi-Fi frames, which are used in wireless networks.
+The [MAC](../Terminology/Networks/MAC.md) address (Media Access Control address) is a unique identifier assigned to network interfaces for communications at the [Data Link Layer](../Terminology/Networks/OSI%20Model/2-Data%20Link%20Layer.md) of a network segment.
+The [Network Layer](../Terminology/Networks/OSI%20Model/3-Network%20Layer.md) uses IP addresses to route packets between different networks.
 
 ## Border Gateway Protocol: BGP
 - Used between routes of neighboring autonomous systems (ASes) to exchange routing information (info about available routes).
@@ -238,20 +238,20 @@ Mitigation strategies:
 
 ## Infrastructure: DNS & DHCP
 Infrastructure protocols, technically application layer protocols, but not user-facing.
-**DNS (Domain Name System) (Port 53)**:
+**[DNS (Domain Name System)](../Terminology/Networks/DNS.md) (Port 53)**:
 - Translates human-readable domain names (e.g., www.example.com) into IP addresses.
-- **Issue**: UDP/cleartext → vulnerable to spoofing, cache poisoning.
+- **Issue**: [UDP](../Terminology/Networks/UDP.md)/cleartext → vulnerable to spoofing, cache poisoning.
 - **Various attacks**: Cache poisoning, DNS Tunneling, Amplification attacks, Typosquatting.
 - **Mitigation**: DNSSEC (DNS Security Extensions) to provide authentication and integrity for DNS data.
 
-**DHCP (Dynamic Host Configuration Protocol) (Ports 67, 68)**:
+**[DHCP (Dynamic Host Configuration Protocol)](../Terminology/Networks/DHCP.md) (Ports 67, 68)**:
 - Automatically assigns IP addresses and other network configuration parameters to devices on a network.
-- **Issue**: UDP/cleartext → vulnerable to spoofing, rogue DHCP servers.
+- **Issue**: [UDP](../Terminology/Networks/UDP.md)/cleartext → vulnerable to spoofing, rogue DHCP servers.
 - **Attack**: Rogue DHCP server can assign incorrect IP addresses or DNS servers to clients, leading to traffic interception or denial of service.
 - **Mitigation**: Use DHCP snooping on switches to prevent unauthorized DHCP servers from operating on the network.
 
 ## Email
-SMTP (Simple Mail Transfer Protocol) for sending email (Port 25, 587):
+[SMTP (Simple Mail Transfer Protocol)](../Terminology/Networks/Transfer%20Protocols/SMTP.md) for sending email (Port 25, 587):
 - Pushing mail from client to server or between servers.
 - Vulnerability: Cleartext (no encryption), no authentication.
 
@@ -265,7 +265,7 @@ Because SMTP trusts the sender address in the email header, an attacker can send
 - SPF/DKIM/DMARC: Email authentication protocols that help verify the legitimacy of the sender and protect against email spoofing.
 
 ## File Sharing
-**FTP (File Transfer Protocol) (Ports 20, 21):**
+**[FTP (File Transfer Protocol)](../Terminology/Networks/Transfer%20Protocols/FTP.md) (Ports 20, 21):**
 - For transferring files between client and server.
 - **Vulnerability**: Cleartext (no encryption), no authentication.
 - **Mitigation**: Always use SFTP (SSH File Transfer Protocol) or FTPS (FTP over TLS).
@@ -282,7 +282,7 @@ Because SMTP trusts the sender address in the email header, an attacker can send
 
 ## Interacting with Text-based Protocols (CLI)
 Many older protocols are text-based (SMTP, HTTP, FTP, ...) and can be interacted with using command-line tools like `telnet` or `netcat (nc)`.
-Example: Using `telnet` to interact with an SMTP server.
+Example: Using `telnet` to interact with an [SMTP](../Terminology/Networks/Transfer%20Protocols/SMTP.md) server.
 ```bash
 telnet mail.server.com 25
 HELO attacker
@@ -313,13 +313,13 @@ smb : \ > get xyz
 
 # Security
 ## Packet Filtering Firewalls
-The Gatekeeper: Inspecting layer 3 (IP) and layer 4 (TCP/UDP) headers of packets.
+The Gatekeeper: Inspecting layer 3 ([IP](../Terminology/Networks/TCP%20IP%20Model/IP.md)) and layer 4 ([TCP](../Terminology/Networks/TCP%20IP%20Model/TCP.md)/[UDP](../Terminology/Networks/UDP.md)) headers of packets.
 - Location: Usually at the network perimeter (between internal network and Internet).
 - Logic: Compares packet headers against a set of rules (ACLs - Access Control Lists).
 - Criteria:
 	- Source & destination IP addresses.
 	- Source & destination port numbers.
-	- Protocol (TCP, UDP, ICMP, ...).
+	- Protocol ([TCP](../Terminology/Networks/TCP%20IP%20Model/TCP.md), [UDP](../Terminology/Networks/UDP.md), ICMP, ...).
 	- Protocol header flags (e.g., TCP SYN, ACK, ...).
 - Actions:
 	- `ALLOW` (accept) the packet.
@@ -333,7 +333,7 @@ A VPN creates a secure, encrypted tunnel over a public network (like the Interne
 - **Common protocols**: WireGuard, IPsec, OpenVPN.
 
 **How it works: Encapsulation and encryption.**
-1. **The original packet** (e.g., an HTTP request) is created by the client.
+1. **The original packet** (e.g., an [HTTP](../Terminology/Networks/Transfer%20Protocols/HTTP.md) request) is created by the client.
 2. **Encryption**: The original packet is encrypted using a symmetric encryption algorithm (e.g., AES) with a session key.
 3. **Encapsulation**: The encrypted packet is encapsulated within a new packet with a new header (e.g., an IPsec header).
 4. **Transit**: The encapsulated packet is sent over the public network (Internet).
@@ -435,6 +435,6 @@ Once you’ve used `ssh` to connect to a remote server, you can use various comm
      ```
 
 # Further studies
-- UPnP, STUN etc punch holes into NAT to allow certain incoming traffic. Why can this be problematic for security? Find some vulnerabilities of these techniques. How can they be countered?
-- SSL Inspection: In a corporate environment, some firewalls can inspect HTTPS traffic to look for malware (or leaked data). How is this possible given that TLS provides end-to-end encryption?
-- BGP & The Chain of Trust: Discuss how HTTPS (TLS) mitigates some of the problems of BGP hijacks. (Example: An attacker successfully hijacks a BGP prefix for a bank and diverts all traffic for the bank’s web server to a machine controlled by the attacker. Can they decrypt the traffic? Would the user notice? How?)
+- UPnP, STUN etc punch holes into [NAT](../Terminology/Networks/NAT.md) to allow certain incoming traffic. Why can this be problematic for security? [find](../Tools%20and%20Commands/Basic%20Bash%20commands/find.md) some vulnerabilities of these techniques. How can they be countered?
+- SSL Inspection: In a corporate environment, some firewalls can inspect [HTTPS](../Terminology/Networks/Transfer%20Protocols/HTTPS.md) traffic to look for [Malware](../Terminology/Attacks/Malware/Malware.md) (or leaked data). How is this possible given that [TLS](../Terminology/Networks/TLS.md) provides end-to-end encryption?
+- [BGP](../Terminology/Networks/BGP.md) & The Chain of Trust: Discuss how [HTTPS](../Terminology/Networks/Transfer%20Protocols/HTTPS.md) (TLS) mitigates some of the problems of BGP hijacks. (Example: An attacker successfully hijacks a BGP prefix for a bank and diverts all traffic for the bank’s web server to a machine controlled by the attacker. Can they decrypt the traffic? Would the user notice? How?)
