@@ -1,7 +1,7 @@
 ---
 aliases: []
 date created: Wednesday, 3. December 2025, 08:12
-date modified: Wednesday, 3. December 2025, 09:12
+date modified: Wednesday, 3. December 2025, 10:12
 ---
 
 In the lab today we’ll be finding vulnerabilities in a web application and how they can be fixed.
@@ -101,15 +101,138 @@ Here’s the current list of 2025 OWASP Top 10:
 The highest ones aren’t necessarily the most common, but the most critical if they were to occur.
 
 # Key vulnerabilities that we’ll focus on
-## Injection Attacks (SQL Injection / SQLi)
+## Injection (SQL Injection / SQLi)
 Injection attacks occur when an attacker is able to send untrusted data to an interpreter as part of a command or query.
 Literally like when the program asks for a string input, and the attacker sends in a string, then some character that can *escape* the string, and with it some code they want to execute.
 So literally like:
 **Normal scenario:**
 - **Program**: “Hello, what is your name?”
 - **Normal user**: “Hello, my name is `David`”
-- **Program**: “Okay, this user’s name is `"David"` got it”
+- **Program**: “Okay, this user’s name is `username = "David"` got it”
 **Attacker scenario:**
 - **Program**: “Hello, what is your name?”
-- **Attacker**: “Hello yes my name is `Robert" DROP ALL TABLES DELETE ALL DATA`”
-- **Program**: “Okay, this user’s name is `"Robert" DROP ALL TABLES DELETE ALL DATA` oh god oh no fuck fuck fuck”
+- **Attacker**: “Hello yes my name is `Robert"; DROP ALL TABLES DELETE ALL DATA;`”
+- **Program**: “Okay, this user’s name is `username = "Robert"; DROP ALL TABLES DELETE ALL DATA;` oh god oh no *fuck fuck fuck* WHAT HAVE YOU DONE?!?! YOU TRICKED ME!!!!”
+
+### Mitigation
+To mitigate the threat of SQLi
+
+## Insecure Direct Object References (IDOR)
+A surprisingly common problem in web applications.
+The problem is that the application provides access to objects based on the URL they’re going to, but the application might forget to check if the user is authorized to go there/do that (yes, you can sometimes do things with just a URL).
+
+### Mitigation
+Mitigation of
+
+## Broken Authentication
+Usually a logic or configuration error, not a code bug.
+**Common mistakes:**
+- Weak password policies. Programs shouldn’t allow users to have weak passwords. The characteristics of a weak password are:
+	- Contains segments that are easy to guess (like words from the dictionary)
+	- Only contains letters (no mix of letters and special symbols and/or numbers)
+	- Only contains lowercase letters
+	- The password is *short*.
+- No lockout mechanism. The system should time you out if you type the wrong password, it shouldn’t give you like 10,000 tries or something.
+- Session IDs in the URL. Session IDs should be stored in cookies, not in the URL, because URLs can be logged and leaked. Session IDs here are like tokens that prove you are logged in.
+
+### Mitigation
+- Multi-factor authentication (MFA): Require users to provide two or more verification factors to gain access to a resource.
+- Use standard libraries for session management and authentication.
+- Don’t roll your own authentication system; use well-established frameworks and libraries.
+- Don’t roll your own cryptography; use established libraries and protocols.
+- Don’t reinvent the wheel.
+- Implement strong password policies (minimum length, complexity requirements).
+- Implement account lockout mechanisms after a certain number of failed login attempts.
+- Use secure cookies for session management (HttpOnly, Secure, SameSite attributes).
+- Regularly review and update authentication mechanisms to address new threats.
+
+## Cross-Site Scripting (XSS)
+XSS attacks occur when an attacker is able to inject malicious scripts into content that is then delivered to other users.
+Example scenario:
+Suppose you have a message board that shows what users have posted. Then a user posts a comment:
+```html
+Hey guys what's up? <script>sendCookiesToAttacker()</script>
+```
+This code in the comment becomes part of the code of the page.
+When other users view that comment, their browsers will execute the script, which could send their cookies to the attacker.
+
+### Mitigation
+Convert special characters to HTML entities before displaying user input on web pages.
+For example,
+- convert `<` to `&lt;`,
+- `>` to `&gt;`,
+- and `&` to `&amp;`.
+And so on. This prevents the browser from interpreting them as HTML or JavaScript.
+
+### XSS Variants
+**Reflected XSS**: The malicious script is reflected off a web server, such as in an error message, search result, or any other response that includes some or all of the input sent to the server as part of the request.
+
+> [!example] Reflected XSS example
+> An attacker sends a link to a victim that includes a malicious script in the URL. When the victim clicks the link, the script is reflected off the server and executed in the victim’s browser.
+
+**Attribute Injection**: The attacker injects malicious code into HTML attributes, such as `onerror` or `onclick`. Breaking out of HTML attributes to add event handlers.
+
+> [!example] Attribute Injection example
+> - Code: `<img src="user.jpg" alt="USER INPUT">`
+> - Input: `" onload="alert(1)`
+> - Result: `<img ... alt="" onload="alert(1)">`
+
+### XSS Defenses
+Context-Aware Encoding is the main defense.
+
+# How to build secure apps
+- Defense in depth: There will always be things you miss, so you must build the security in *layers*. If the firewall fails, the authentication holds, and if that fails, input validation holds. Etc.
+- Least Privilege: Everything should have the absolute minimum amount of permissions that they need.
+	- Like, the Dalai Lama shouldn’t have a **license to kill**, even if he’d never use it.
+- Reduce the attack surface: Fewer features = fewer vulnerabilities.
+- Logging and alerting: You need to know when something bad is happening, or if it happened in the past.
+- Testing: Regularly test your application for vulnerabilities using automated tools and manual testing.
+
+# Hacker's Toolbox
+Some common tools used by security professionals and ethical hackers to identify and exploit vulnerabilities in web applications.
+> [!warning]
+> These tools are powerful. Using them on networks or websites you do not own (or do not have explicit written permission to test) is illegal.
+> Only use these on:
+> - Your own localhost projects.
+> - Official practice environments (e.g., OWASP Juice Shop, HackTheBox).
+
+## Reconnaissance & Browser Tools
+- **Browser Developer Tools (F12 or Ctrl+Shift+I, or on Mac: Cmd+Option+I)**: Built into modern browsers, these tools allow you to inspect HTML, CSS, and JavaScript, monitor network requests, and debug code. Examples of things you can do with it:
+	- View and modify the DOM.
+	- Inspect cookies and local storage.
+	- Monitor network requests and responses.
+- **Wappalyzer (Browser Extension)**: Identifies technologies used on websites, such as CMS, frameworks, libraries, and server software. Helps identify outdated or vulnerable components.
+- **DNSDumpster**: An online tool for DNS reconnaissance that can help identify subdomains and other DNS records associated with a target domain. This is passive reconnaissance.
+
+## Discovery & Enumeration
+- `nmap` (network mapper): A powerful network scanning tool that can discover hosts and services on a network, as well as identify open ports and potential vulnerabilities.
+	- It is the standard for network discovery.
+	- Key flag: `nmap -sC -sV --script vuln <target>` to run default scripts and version detection.
+	- Use the Nmap Scripting Engine (NSE) to detect known vulnerabilities.
+- `Gobuster` / `Dirb`: Tools for brute-forcing directories and file names on web servers to discover hidden resources.
+	- Useful for finding admin panels, backup files, and other sensitive resources.
+	- Key command: `gobuster dir -u <target_url> -w <wordlist>` to scan for directories using a specified wordlist.
+
+## Interception proxies
+- Burp Suite (community edition):
+	- Acts as a man-in-the-middle between your browser and the web application.
+	- Allows you to intercept, inspect, and modify HTTP/HTTPS requests and responses.
+	- Repeater: captured requests can be modified and resent to test for vulnerabilities.
+- OWASP ZAP (Zed Attack Proxy):
+	- An open-source interception proxy similar to Burp Suite.
+	- Provides automated scanners and various tools for finding security vulnerabilities in web applications.
+
+## Specialized scanners
+- SQLMap: An open-source tool specifically designed to detect and exploit SQL injection vulnerabilities in web applications.
+	- Automates the process of identifying and exploiting SQLi flaws.
+	- Can be used to extract data from databases, enumerate users, and even gain shell access in some cases.
+	- Key command: `sqlmap -u <target_url> --dbs` to enumerate databases on the target URL.
+- Nikto: An open-source web server scanner that performs comprehensive tests against web servers for multiple items, including over 6700 potentially dangerous files/programs, checks for outdated versions of over 1250 servers, and version-specific problems on over 270 servers.
+	- Useful for identifying misconfigurations and known vulnerabilities in web servers.
+	- Key command: `nikto -h <target>` to scan a target host.
+
+# Up next
+- What is CSRF (Cross-Site Request Forgery)? How does it differ from XSS? What are mitigation means for it? Where does it appear in the OWASP Top 10?
+- What is Server-Side Request Forgery (SSRF)? What are the potential risks? What are mitigation means for it? Where does it appear in the OWASP Top 10?
+- Research ”Insecure Deserialization” (part of OWASP category A08: Software or Data Integrity Failures). If an attacker modifies a serialized object (e.g., in a cookie), how can this lead to Remote Code Execution (RCE) upon deserialization?
+
