@@ -2,14 +2,14 @@
 Attack surfaces, basically everything that has any form of input or control over software or machine, example: Email, networks, usb, sms, software dists and downloads 
 Computer security involves: preventing and detecting unwanted acces, use of computer and theft of data and prevention of unauthorized modifications and or injection of data catagories include unauth access, modification, and disclosure denial of auth access forgery, repudiation - -rep basically, spoofing - fakes being a legit entity 
 Evolution of computer security prevent attacks with better programing and design quality and test dawg 
-Extra Reading 
+Extra Reading <br>
 #### **Creeper (1971)** 
-**How it worked?** All happened on ARPANET, it used the FTP to send a copy of itself to a new host, and after that would delete it self from the sender 
-**Impact?** Totally harmless just displayed the message "Im the creeper catch me if you can" **Which weakness it used?** used a weakness in FTP? 
+**How it worked?** All happened on ARPANET, it used the FTP to send a copy of itself to a new host, and after that would delete it self from the sender <br>
+**Impact?** Totally harmless just displayed the message "Im the creeper catch me if you can" **Which weakness it used?** used a weakness in FTP? <br>
 #### **Morris Worm (1988)** 
-**How it worked?** used a backdoor in sendmail program to spread, and a bug in the finger program to identify network users, but it targeted specific version of Unix OS's with known flaws and it used weak passwords to its advantage to gain access to other systems where the same user had an account 
-**Impact?** Since the worm was instructed to replicate itself 14% of the time, some machines were infected a few times causing them to become slower and slower and eventually unusable and crashing, some lame US office said total economic impact was between 100k and 10ms 
-**Which weakness it used?** A hole in the debug mode of the Unix sendmail program, and a buffer overflow or overrun hole in the finger network service and weak passwords 
+**How it worked?** used a backdoor in sendmail program to spread, and a bug in the finger program to identify network users, but it targeted specific version of Unix OS's with known flaws and it used weak passwords to its advantage to gain access to other systems where the same user had an account <br>
+**Impact?** Since the worm was instructed to replicate itself 14% of the time, some machines were infected a few times causing them to become slower and slower and eventually unusable and crashing, some lame US office said total economic impact was between 100k and 10ms <br>
+**Which weakness it used?** A hole in the debug mode of the Unix sendmail program, and a buffer overflow or overrun hole in the finger network service and weak passwords <br>
 #### **Vladimir Citibank 10ms!!**
 **How it worked?** kind of unknown, but people are guessing Packet sniffing/network interception, social engineering and insider info to access legitimate credenstials of high level accounts 
 **Impact?** mfs lost 10ms 
