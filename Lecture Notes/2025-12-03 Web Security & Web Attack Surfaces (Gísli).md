@@ -1,7 +1,7 @@
 ---
 aliases: []
 date created: Wednesday, 3. December 2025, 08:12
-date modified: Wednesday, 3. December 2025, 10:12
+date modified: Wednesday, 3. December 2025, 12:12
 ---
 
 In the lab today we’ll be finding vulnerabilities in a web application and how they can be fixed.
@@ -89,7 +89,7 @@ Here’s the current list of 2025 OWASP Top 10:
 | A10:2025 | Mishandling of Exceptional Conditions ([fastly.com](https://www.fastly.com/blog/new-2025-owasp-top-10-list-what-changed-what-you-need-to-know?utm_source=chatgpt.com "The New 2025 OWASP Top 10 List: What Changed, and ...")) |
 
 1. **Broken Access Control**: Restrictions on what authenticated users are allowed to do are often not properly enforced.
-2. **Security Misconfiguration**: Insecure default configurations, incomplete or ad hoc configurations, open cloud storage, misconfigured HTTP headers, and verbose error messages containing sensitive information.
+2. **Security Misconfiguration**: Insecure default configurations, incomplete, or ad hoc configurations, open cloud storage, misconfigured HTTP headers, and verbose error messages containing sensitive information.
 3. **Software Supply Chain Failures**: Vulnerabilities in third-party components, libraries, and frameworks.
 4. **Cryptographic Failures**: Inadequate protection of data in transit and at rest.
 5. **Injection**: Flaws such as SQL, NoSQL, OS, and LDAP injection occur when untrusted data is sent to an interpreter as part of a command or query.
@@ -188,7 +188,7 @@ Context-Aware Encoding is the main defense.
 - Logging and alerting: You need to know when something bad is happening, or if it happened in the past.
 - Testing: Regularly test your application for vulnerabilities using automated tools and manual testing.
 
-# Hacker's Toolbox
+# Hacker’s Toolbox
 Some common tools used by security professionals and ethical hackers to identify and exploit vulnerabilities in web applications.
 > [!warning]
 > These tools are powerful. Using them on networks or websites you do not own (or do not have explicit written permission to test) is illegal.
@@ -235,4 +235,3 @@ Some common tools used by security professionals and ethical hackers to identify
 - What is CSRF (Cross-Site Request Forgery)? How does it differ from XSS? What are mitigation means for it? Where does it appear in the OWASP Top 10?
 - What is Server-Side Request Forgery (SSRF)? What are the potential risks? What are mitigation means for it? Where does it appear in the OWASP Top 10?
 - Research ”Insecure Deserialization” (part of OWASP category A08: Software or Data Integrity Failures). If an attacker modifies a serialized object (e.g., in a cookie), how can this lead to Remote Code Execution (RCE) upon deserialization?
-
