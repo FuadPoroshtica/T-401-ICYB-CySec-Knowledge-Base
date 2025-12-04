@@ -1,7 +1,7 @@
 ---
 aliases: []
 date created: Wednesday, 3. December 2025, 08:12
-date modified: Wednesday, 3. December 2025, 12:12
+date modified: Thursday, 4. December 2025, 08:12
 ---
 
 In the lab today we’ll be finding vulnerabilities in a web application and how they can be fixed.
