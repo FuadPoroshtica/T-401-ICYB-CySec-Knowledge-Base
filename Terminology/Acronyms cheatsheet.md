@@ -123,7 +123,7 @@ All the acronyms and abbreviations that we’ve seen so far:
 | NPM                                  | Node Package Manager                                                                                          |
 | NSE                                  | `nmap` Scripting Engine                                                                                       |
 | OAuth 2.0                            | Open Authorization 2.0                                                                                        |
-| OS (in “OS versions”)                | Operating System                                                                                              |
+| OS                                   | Operating System                                                                                              |
 | OSI                                  | Open Systems Interconnection model                                                                            |
 | OSINT                                | Open Source Intelligence                                                                                      |
 | OWASP                                | Open Web Application Security Project                                                                         |

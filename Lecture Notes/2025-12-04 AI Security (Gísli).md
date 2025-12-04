@@ -1,7 +1,7 @@
 ---
 aliases: []
 date created: Thursday, 4. December 2025, 08:12
-date modified: Thursday, 4. December 2025, 10:12
+date modified: Thursday, 4. December 2025, 11:12
 ---
 
 What he means by “AI” in this lecture is generative AI, e.g., LLMs, image generation models, etc.
@@ -21,7 +21,7 @@ What he means by “AI” in this lecture is generative AI, e.g., LLMs, image ge
 The places where attacks can happen:
 
 ## Supply Chain (Training Phases)
-Security vulnerabilites can be introduced during any stage of the training process of AIs:
+Security vulnerabilities can be introduced during any stage of the training process of AIs:
 1. **Pre-Training (The foundation):**
 	- During this stage the AI model is trained on literal petabytes (quadrillions of bytes) of data from the internet.
 	- *Risk*: Data Poisoning. Baking bad data into the model itself.
