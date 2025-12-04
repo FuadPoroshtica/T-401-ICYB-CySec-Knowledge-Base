@@ -1,7 +1,7 @@
 ---
 aliases: []
 date created: Wednesday, 3. December 2025, 08:12
-date modified: Wednesday, 3. December 2025, 10:12
+date modified: Thursday, 4. December 2025, 11:12
 ---
 
 # 2025-12-03  Web Security & Attack Surfaces (Fuad)
@@ -95,7 +95,7 @@ The attack surface is the sum of all points (vectors) where an unauthorized user
 **⚠️ LEGAL WARNING:** Only use these tools on localhost projects or environments where you have explicit written permission (e.g., OWASP Juice Shop) [3].
 
 ### Phase 1: Reconnaissance (Passive)
-- **Browser DevTools (F12):** Inspect network requests, headers, and local storage [17].
+- **Browser DevTools (<kbd>F12</kbd>):** Inspect network requests, headers, and local storage [17].
 - **Wappalyzer:** Identifies technology stacks and versions (e.g., PHP 5.6) [17].
 - **DNSDumpster:** Maps attack surfaces (subdomains) passively [18].
 

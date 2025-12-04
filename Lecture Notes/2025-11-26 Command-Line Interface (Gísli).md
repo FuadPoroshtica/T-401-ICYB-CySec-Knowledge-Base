@@ -1,7 +1,7 @@
 ---
 aliases: []
 date created: Wednesday, 26. November 2025, 08:11
-date modified: Monday, 1. December 2025, 22:12
+date modified: Thursday, 4. December 2025, 11:12
 ---
 
 # 2025-11-26 Command-Line Interface (Gísli)
@@ -90,7 +90,7 @@ date modified: Monday, 1. December 2025, 22:12
     - **PowerShell**: `curl` (`Invoke-WebRequest`)
     - (Note: PowerShell’s ‘`curl`’ is NOT the real `curl`. It parses *HTML* objects.)
 
-Use Ctrl+R for reverse search in history.
+Use <kbd>Ctrl</kbd>+<kbd>R</kbd> for reverse search in history.
 Auto-complete (by pressing ↹Tab) for commands and file names is a common feature in almost all CLIs.
 
 ## Pipes - The glue of the Command Line Interface

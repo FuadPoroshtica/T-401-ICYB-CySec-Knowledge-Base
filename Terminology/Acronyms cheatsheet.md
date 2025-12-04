@@ -64,7 +64,7 @@ All the acronyms and abbreviations that we’ve seen so far:
 | EC2                                  | Elastic Compute Cloud                                                                                         |
 | EGP                                  | Exterior Gateway Protocol                                                                                     |
 | EXIF                                 | Exchangeable Image File Format – metadata embedded in image files (camera model, time, GPS, etc.).            |
-| F12                                  | Browser developer tools keyboard shortcut                                                                     |
+| <kbd>F12</kbd>                       | Browser developer tools keyboard shortcut                                                                     |
 | FHSS                                 | Frequency-Hopping Spread Spectrum – radio technique that rapidly changes frequency to reduce interference.    |
 | FIM                                  | File Integrity Monitoring                                                                                     |
 | FTP                                  | File Transfer Protocol                                                                                        |
@@ -112,7 +112,7 @@ All the acronyms and abbreviations that we’ve seen so far:
 | MMU                                  | Memory Management Unit                                                                                        |
 | MS-DOS                               | Microsoft Disk Operating System                                                                               |
 | MSP                                  | Managed Service Provider                                                                                      |
-| `mv`                                 | move — moves files somewhere (kinda the same as <kbd>Ctrl</kbd> +<kbd>X</kbd>, <kbd>Ctrl</kbd>+`V`)           |
+| `mv`                                 | move — moves files somewhere (kinda the same as <kbd>Ctrl</kbd> +<kbd>X</kbd>, <kbd>Ctrl</kbd>+<kbd>V</kbd>)  |
 | MX                                   | Mail Exchange record (DNS record)                                                                             |
 | NAT                                  | Network Address Translation – rewrites internal private IP addresses to public ones at a router.              |
 | nb.                                  | “number” (abbreviation appearing in slides)                                                                   |
