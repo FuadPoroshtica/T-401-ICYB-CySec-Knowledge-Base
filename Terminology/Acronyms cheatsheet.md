@@ -1,7 +1,7 @@
 ---
 aliases: []
 date created: Monday, 1. December 2025, 11:12
-date modified: Thursday, 4. December 2025, 10:12
+date modified: Thursday, 4. December 2025, 12:12
 ---
 
 # Acronyms cheatsheet
