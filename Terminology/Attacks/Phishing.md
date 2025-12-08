@@ -7,7 +7,7 @@ date modified: Monday, 1. December 2025, 21:12
 # Phishing Scams
 **Term**: Phishing
 
-**Definition**: A website that purport to be safe, in order to “bait” the user into giving away their personal info.
+**Definition**: A website that purports to be safe, in order to “bait” the user into giving away their personal info.
 
 **Context/Example**: PhishTank has a database of Phishing links.
 
