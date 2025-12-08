@@ -171,7 +171,7 @@ The format:
 - Attack-defense: Teams attack each other’s systems while defending their own.
 
 *CTFs are gamified learning.*
-Platforms: picoCTF, TryHackMe, OverTheWire, Hakkaraskóli GGFÍ, HackTheBox.
+Platforms: [picoCTF](https://www.picoctf.org/), [TryHackMe](https://tryhackme.com/), [OverTheWire](https://overthewire.org/wargames/), [Hakkaraskóli GGFÍ](https://skoli.ggc.tf/), [HackTheBox](https://www.hackthebox.com/).
 
 ## Bug Bounties 🐛💰
 A bug bounty program is a reward system where organizations pay security researchers to find and report vulnerabilities in their systems. The “Gig Economy” of cybersecurity.
@@ -181,7 +181,7 @@ How it works:
 2. Researchers find and report bugs.
 3. Researched writes a report explaining the bug and how to reproduce it.
 4. Company validates the bug and pays a “bounty” (monetary reward) based on severity.
-Major Platforms: HackerOne, Bugcrowd, Intigriti, Defend Iceland.
+Major Platforms: [HackerOne](https://www.hackerone.com/), [Bugcrowd](https://www.bugcrowd.com/), [Intigriti](https://www.intigriti.com/), [Defend Iceland](https://defendiceland.is/).
 
 ## CRITICAL: The rules of engagement ⚠️
 The difference between hacking and crime is SCOPE.
@@ -216,7 +216,7 @@ The “castle and moat” model is outdated due to cloud and remote work.
 # Up Next.. ⏭️
 ## Further Studies 📚
 Zero Trust sounds great in theory (“Never Trust, Always Verify”), but how do you actually implement that?
-- Read the Google Research Paper “BeyondCorp: A New Approach to Enterprise Security”.
+- Read the Google Research Paper “[BeyondCorp: A New Approach to Enterprise Security](https://www.usenix.org/system/files/login/articles/login_dec14_02_ward.pdf)”.
 - Find out how Google replaced VPN and Firewalls as a defense mechanism by relying on “Zero Trust”.
 - What replaces the Firewall as a primary enforcement point?
 - How does a system decide if a device is trusted?
@@ -227,7 +227,7 @@ Zero Trust sounds great in theory (“Never Trust, Always Verify”), but how do
 Be a bit careful with the terms of use with these. E.g., we can’t make them create malware.
 He kind of recommends not using your account to do this, kinda.
 
-# Guest lectures
+# Guest lectures 🧑‍🏫
 There will be guest lectures for the next 2 days.
-**Tuesday (tomorrow):** Jackie will hold a lecture on information warfare.
-**Wednesday:** Fatima will hold a lecture about privacy.
+**Tuesday/þriðjudagur (tomorrow):** Jackie Mallett PhD will hold a lecture on *information warfare*.
+**Wednesday/miðvikudagur:** Fatima Zahra Errounda PhD will hold a lecture about *privacy*.
