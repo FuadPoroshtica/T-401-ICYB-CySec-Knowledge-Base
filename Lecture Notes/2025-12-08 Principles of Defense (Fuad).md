@@ -1,7 +1,7 @@
 ---
 aliases: []
 date created: Monday, 8. December 2025, 10:12
-date modified: Monday, 8. December 2025, 11:12
+date modified: Monday, 8. December 2025, 18:12
 ---
 
 # 2025-12-08 Principles of Defense (Fuad)
@@ -9,7 +9,7 @@ date modified: Monday, 8. December 2025, 11:12
   Friday afternoon will be the exam
 - **In the economics of defense**, the defender must be right 100% of the time, but the attacker only once.
 - Security is always a tradeoff because sharks always surround you.
-  That’s why they made 443 known as HTTPS, a secure tunnel.
+  That’s why they made 443 known as [HTTPS](../Terminology/Networks/Transfer%20Protocols/HTTPS.md), a secure tunnel.
 - Risk = Threat x vulnerability x Cost
   Threats: Who attacks?
   Vulnerability: where are we weak?
@@ -21,7 +21,7 @@ date modified: Monday, 8. December 2025, 11:12
 - Fail-safe defaults, rules what is allowed, economy of mechanism
 - Complete mediation, open design. Avoid: Security by Obscurity.
 - **Defense in depth**: Everything can fail, you should have a next one to defend
-- You want to protect a physical. You want to have firewall separation between the internal network, detect all the time, including individual hosts, and make sure all data is encrypted all the time, ensure integrity, use a hash as a signature, and always have a backup.
+- You want to protect a physical. You want to have [Firewall](../Terminology/Defense%20&%20Control/Firewall.md) separation between the internal network, detect all the time, including individual hosts, and make sure all data is encrypted all the time, ensure integrity, use a hash as a signature, and always have a backup.
 - Administration responsibilities include MFA password policies, Training, patch management, and principles of privilege.
 - By type: Physical, Technical, and Administrative, and then by Function: Preventive, Detective, and Corrective
 - **Standards, Frameworks, Checklists:** Checklists fossilize procedures, Set can/should be reviewed, think of them as a synchronization point, allow training and practice.
@@ -44,7 +44,7 @@ date modified: Monday, 8. December 2025, 11:12
 - Backups: 3 copies of data, 2 Different media types, and 1 Copy offsite, offline (Physically separated).
 - Immutable Backups: backups that cannot be altered or deleted.
 - CTF: capture the flag, to see, is a cybersecurity exercise where participants solve challenges to find 🔗 a hidden string of text, known as the “Flag”.
-- Bug bounty People pay people to find bugs/vulnerabilities on their service.
+- [Bug Bounty](../Terminology/Defense%20&%20Control/Bug%20Bounty.md) People pay people to find bugs/vulnerabilities on their service.
 - CTF, you are authorized to have full access, but sometimes there are scope constraints, for example, only test dev.example.com. DO not perform DDoS. Do not access user data.
 - International: The Budapest Convention,
 - **Summary:** Zero trust architecture: “Never trust, always verify.”
@@ -53,8 +53,8 @@ date modified: Monday, 8. December 2025, 11:12
 	- [Microsoft Secure](https://cloudblogs.microsoft.com/microsoftsecure/)
 	- [National Vulnerability Database (USA)](https://nvd.nist.gov/)
 	- [Internet Storm Center](https://isc.sans.edu/)
-	- [Common Vulnerabilities and Exposures](https://cve.mitre.org/) (CVE)
+	- [Common Vulnerabilities and Exposures](https://cve.mitre.org/) ([CVE](../Terminology/Vulnerability%20standards/CVE.md))
 	- [Complete Disclosure Mailing Lists](seclists.org): fulldisclosure@seclists.org
 - Mindset, Risk, Design, Architecture, and Resilience
 - **Lab today**
-	- Try to jailbreak LLM.
+	- Try to jailbreak [LLM](../Terminology/Artifical%20Intelligence/LLM.md).
