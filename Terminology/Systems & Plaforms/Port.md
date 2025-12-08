@@ -1,8 +1,11 @@
 ---
-aliases: [ports]
+aliases: []
+date created: Thursday, 4. December 2025, 08:12
+date modified: Thursday, 4. December 2025, 08:12
+---
+
 date created: Monday, 1. December 2025, 20:12
 date modified: Tuesday, 2. December 2025, 20:12
----
 
 # Port
 
