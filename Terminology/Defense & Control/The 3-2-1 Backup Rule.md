@@ -1,11 +1,11 @@
 ---
-aliases: [The 3-2-1 Rule]
+aliases: [The 3-2-1 Rule, The 3 2 1 Backup Rule, The 3 2 1 Rule]
 date created: Monday, 8. December 2025, 10:12
-date modified: Monday, 8. December 2025, 11:12
+date modified: Monday, 8. December 2025, 18:12
 ---
 
 # The 3-2-1 Backup Rule
-Ransomware targets backups first, so having multiple backups is important. Don’t keep a backup just on your computer.
+[Ransomware](../Attacks/Malware/Ransomware.md) targets backups first, so having multiple backups is important. Don’t keep a backup just on your computer.
 
 > [!info] The 3-2-1 rule.
 > - **3** copies of data.

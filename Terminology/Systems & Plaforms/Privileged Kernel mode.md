@@ -1,7 +1,7 @@
 ---
 aliases: []
 date created: Thursday, 27. November 2025, 10:11
-date modified: Monday, 8. December 2025, 11:12
+date modified: Monday, 8. December 2025, 18:12
 ---
 
 # Privileged Kernel mode

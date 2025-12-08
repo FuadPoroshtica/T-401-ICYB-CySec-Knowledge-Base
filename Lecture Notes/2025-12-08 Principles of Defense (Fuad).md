@@ -7,7 +7,7 @@ date modified: Monday, 8. December 2025, 18:12
 # 2025-12-08 Principles of Defense (Fuad)
 - On Thursday, there will be no lab.
   Friday afternoon will be the exam
-- **In the economics of defense**, the defender must be right 100% of the time, but the attacker only once.
+- **In the [Economics of Defense](../Terminology/Defense%20&%20Control/Economics%20of%20Defense.md)**, the defender must be right 100% of the time, but the attacker only once.
 - Security is always a tradeoff because sharks always surround you.
   That’s why they made 443 known as [HTTPS](../Terminology/Networks/Transfer%20Protocols/HTTPS.md), a secure tunnel.
 - Risk = Threat x vulnerability x Cost
@@ -17,10 +17,10 @@ date modified: Monday, 8. December 2025, 18:12
   *(Threat x Vulnerability = Likelihood)*
 - Mitigate/Reduce, Avoid, Accept, and Transfer
 - The cost should exceed the asset’s value.
-- **Design Principles & Defense in Depth**: Don’t run a web server as root.
+- **Design Principles & [Defense in Depth](../Terminology/Defense%20&%20Control/Defense%20in%20Depth.md)**: Don’t run a web server as root.
 - Fail-safe defaults, rules what is allowed, economy of mechanism
 - Complete mediation, open design. Avoid: Security by Obscurity.
-- **Defense in depth**: Everything can fail, you should have a next one to defend
+- **[Defense in Depth](../Terminology/Defense%20&%20Control/Defense%20in%20Depth.md)**: Everything can fail, you should have a next one to defend
 - You want to protect a physical. You want to have [Firewall](../Terminology/Defense%20&%20Control/Firewall.md) separation between the internal network, detect all the time, including individual hosts, and make sure all data is encrypted all the time, ensure integrity, use a hash as a signature, and always have a backup.
 - Administration responsibilities include MFA password policies, Training, patch management, and principles of privilege.
 - By type: Physical, Technical, and Administrative, and then by Function: Preventive, Detective, and Corrective
@@ -35,19 +35,19 @@ date modified: Monday, 8. December 2025, 18:12
 - PCI-DSS: credit card security.
 - HIPAA medical data security
 - SOC2: SaaS/Cloud security
-- **Incident Response & Recovery**: How do we react? When things go south, you don’t really have a plan for how to respond, so you need one. What should I do? IRP Incident Response Plan: The “Fire Drill”. Make sure to have a plan
+- **[Incident Response & Recovery](../Terminology/Defense%20&%20Control/Incident%20Response%20&%20Recovery.md)**: How do we react? When things go south, you don’t really have a plan for how to respond, so you need one. What should I do? IRP Incident Response Plan: The “Fire Drill”. Make sure to have a plan
 - Chain of custody: preserving evidence for legal action.
-- RPO: Recovery point objective, how much data can we afford to lose?
+- [RPO (Recovery point objective)](../Terminology/Defense%20&%20Control/Recovery%20Point%20Objective%20(RPO).md):, how much data can we afford to lose?
   Determined by backup frequency.
-- RTO: (Recovery Time Objective)
+- [RTO (Recovery Time Objective)](../Terminology/Defense%20&%20Control/Recovery%20Time%20Objective%20(RTO).md)
   How long can the system be down?
 - Backups: 3 copies of data, 2 Different media types, and 1 Copy offsite, offline (Physically separated).
 - Immutable Backups: backups that cannot be altered or deleted.
-- CTF: capture the flag, to see, is a cybersecurity exercise where participants solve challenges to find 🔗 a hidden string of text, known as the “Flag”.
+- [CTF](../Terminology/Defense%20&%20Control/Capture%20the%20Flag%20(CTF).md): capture the flag, to see, is a cybersecurity exercise where participants solve challenges to find 🔗 a hidden string of text, known as the “Flag”.
 - [Bug Bounty](../Terminology/Defense%20&%20Control/Bug%20Bounty.md) People pay people to find bugs/vulnerabilities on their service.
 - CTF, you are authorized to have full access, but sometimes there are scope constraints, for example, only test dev.example.com. DO not perform DDoS. Do not access user data.
 - International: The Budapest Convention,
-- **Summary:** Zero trust architecture: “Never trust, always verify.”
+- **Summary:** [Zero Trust Architecture](../Terminology/Defense%20&%20Control/Zero%20Trust%20Architecture.md): “Never trust, always verify.”
 - Stay informed:
 	- [Exploit db](https://www.exploit-db.com/google-hacking-database/)
 	- [Microsoft Secure](https://cloudblogs.microsoft.com/microsoftsecure/)

@@ -50,7 +50,7 @@ Do a cost-benefit analysis when deciding on countermeasures.
 > You do not buy a $5,000 titanium lock to secure a $50 bike.
 
 Defense cost must not exceed the value of what is being protected.
-**Defense in depth:** Multiple layers of defense, so if one fails, others are still there.
+**[Defense in Depth](../Terminology/Defense%20&%20Control/Defense%20in%20Depth.md):** Multiple layers of defense, so if one fails, others are still there.
 
 # Design Principles & Defense in depth 📐🛡️
 
@@ -159,8 +159,8 @@ Major Platforms: [HackerOne](https://www.hackerone.com/), [Bugcrowd](https://www
 
 ## CRITICAL: The rules of engagement ⚠️
 The difference between hacking and crime is SCOPE.
-- In a CTF: You have implied permission to break specific assets.
-- In Bug Bounties: You must read the Policy Page. They define the scope, rules, and legal boundaries.
+- In a [CTF](../Terminology/Defense%20&%20Control/Capture%20the%20Flag%20(CTF).md): You have implied permission to break specific assets.
+- In [Bug Bounties](../Terminology/Defense%20&%20Control/Bug%20Bounty.md): You must read the Policy Page. They define the scope, rules, and legal boundaries.
 - Scope Constraints:
 	- “Only test `*.dev.example.com`”
 	- “Do not perform DDoS attacks”
@@ -191,14 +191,14 @@ The “[Castle and Moat](../Terminology/Defense%20&%20Control/Castle%20and%20Moa
 ## Further Studies 📚
 Zero Trust sounds great in theory (“Never Trust, Always Verify”), but how do you actually implement that?
 - Read the Google Research Paper “[BeyondCorp: A New Approach to Enterprise Security](https://www.usenix.org/system/files/login/articles/login_dec14_02_ward.pdf)”.
-- Find out how Google replaced VPN and Firewalls as a defense mechanism by relying on “Zero Trust”.
-- What replaces the Firewall as a primary enforcement point?
+- Find out how Google replaced VPN and [Firewalls](../Terminology/Defense%20&%20Control/Firewall.md) as a defense mechanism by relying on “Zero Trust”.
+- What replaces the [Firewall](../Terminology/Defense%20&%20Control/Firewall.md) as a primary enforcement point?
 - How does a system decide if a device is trusted?
 - What are advantages and disadvantages of this approach regarding security (Hint: look at the Core Design Principles)?
 
 ## Lab Today 🧪
-**Lab 10:** LLM Jailbreak (this is a bonus lab).
-Be a bit careful with the terms of use with these. E.g., we can’t make them create malware.
+**Lab 10:** [LLM](../Terminology/Artifical%20Intelligence/LLM.md) Jailbreak (this is a bonus lab).
+Be a bit careful with the terms of use with these. E.g., we can’t make them create [Malware](../Terminology/Attacks/Malware/Malware.md).
 He kind of recommends not using your account to do this, kinda.
 
 # Guest lectures 🧑‍🏫

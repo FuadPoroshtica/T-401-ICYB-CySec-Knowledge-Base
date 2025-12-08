@@ -1,7 +1,7 @@
 ---
 aliases: [Application Layer]
 date created: Tuesday, 2. December 2025, 10:12
-date modified: Thursday, 4. December 2025, 08:12
+date modified: Monday, 8. December 2025, 18:12
 ---
 
 # 7-Application Layer
@@ -19,7 +19,7 @@ The Application Layer works closely with the [Presentation Layer](6-Presentation
 - Vulnerabilities: Anyone on the network path (in the same Wi-Fi or [LAN](../LAN.md)) can eavesdrop (packet sniffing).
 
 **HTTPS (Port 443)**:
-- HTTP inside a TLS (Transport Layer Security) tunnel.
+- HTTP inside a [TLS (Transport Layer Security)](../TLS.md) tunnel.
 - Security: Encryption, integrity, authentication.
 - Prevents listening in, but also Man-in-the-Middle attacks (if the attacker can’t get a valid certificate).
 - Certificates: Issued by Certificate Authorities (CAs) to verify the identity of websites and enable secure connections.

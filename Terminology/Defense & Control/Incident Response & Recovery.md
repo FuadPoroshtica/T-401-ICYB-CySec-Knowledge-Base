@@ -1,7 +1,7 @@
 ---
 aliases: []
 date created: Monday, 8. December 2025, 11:12
-date modified: Monday, 8. December 2025, 11:12
+date modified: Monday, 8. December 2025, 18:12
 ---
 
 # Incident Response & Recovery 🚨🛠️
@@ -23,7 +23,7 @@ Assume you will be (or already are) breached:
 - Determined by redundancy and failover speed.
 
 ## Resilience: [The 3-2-1 Backup Rule](The%203-2-1%20Backup%20Rule.md) 💾
-Ransomware targets backups first. Don’t keep a backup just on your computer.
+[Ransomware](../Attacks/Malware/Ransomware.md) targets backups first. Don’t keep a backup just on your computer.
 
 > [!info] The 3-2-1 Rule
 > - **3** copies of data.
