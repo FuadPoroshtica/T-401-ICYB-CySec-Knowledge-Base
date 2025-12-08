@@ -1,6 +1,12 @@
+---
+aliases: 
+date created: Tuesday, 2. December 2025, 10:12
+date modified: Monday, 8. December 2025, 09:12
+---
+
 # Threat Analysis
 
-Threat analysis is the process of identifying, assessing, and prioritizing potential threats to an organization's assets and operations.
+Threat analysis is the process of identifying, assessing, and prioritizing potential threats to an organization’s assets and operations.
 
 ## Threat Modeling
 
