@@ -92,7 +92,7 @@ Here’s the current list of 2025 OWASP Top 10:
 2. **Security Misconfiguration**: Insecure default configurations, incomplete, or ad hoc configurations, open cloud storage, misconfigured HTTP headers, and verbose error messages containing sensitive information.
 3. **Software Supply Chain Failures**: Vulnerabilities in third-party components, libraries, and frameworks.
 4. **Cryptographic Failures**: Inadequate protection of data in transit and at rest.
-5. **Injection**: Flaws such as SQL, NoSQL, OS, and LDAP injection occur when untrusted data is sent to an interpreter as part of a command or query.
+5. **Injection**: Flaws such as SQL, NoSQL, [OS](Operating%20System.md), and LDAP injection occur when untrusted data is sent to an interpreter as part of a command or query.
 6. **Insecure Design**: Lack of security controls and design flaws.
 7. **Authentication Failures**: Broken authentication and session management.
 8. **Software or Data Integrity Failures**: Code and infrastructure that does not protect against integrity violations.

@@ -126,7 +126,7 @@ A rootkit is [malware](Attacks/Malware/Malware) designed to hide its presence by
 
 **Why MBR rootkits are dangerous:**
 - Load before antivirus software starts
-- Survive OS reinstallation
+- Survive [OS](Operating%20System.md) reinstallation
 - Require special boot-time tools to detect and remove
 
 ---
@@ -514,10 +514,10 @@ Step 4: Attacker Actions
 
 ### 1. Pre-Boot DMA Attacks
 
-**Target:** Systems before OS loads
+**Target:** Systems before [OS](Operating%20System.md) loads
 - UEFI Secure Boot can’t stop them
 - BIOS protections ineffective
-- Steal encryption keys before OS starts
+- Steal encryption keys before [OS](Operating%20System.md) starts
 
 **Example:** FileVault password extraction on locked Macs ([CVE](Vulnerability standards/CVE)-2016-7585)
 
@@ -598,7 +598,7 @@ Modern systems have Thunderbolt security settings:
 
 Windows 10/11 feature:
 - Enabled by default on new systems
-- Blocks DMA until OS fully boots
+- Blocks DMA until [OS](Operating%20System.md) fully boots
 - Uses IOMMU to restrict access
 
 ### 4. Physical Security Measures
@@ -613,7 +613,7 @@ Windows 10/11 feature:
 ### 5. Software Protections
 
 **Operating System Level:**
-- Keep OS updated
+- Keep [OS](Operating%20System.md) updated
 - Enable Secure Boot
 - Enable Trusted Boot
 - Use pre-boot authentication (TPM)
@@ -629,7 +629,7 @@ Windows 10/11 feature:
 
 **Why DMA attacks are hard to detect:**
 
-1. **Below OS visibility**: Operates at hardware level
+1. **Below [OS](Operating%20System.md) visibility**: Operates at hardware level
 2. **No software traces**: Doesn’t execute code traditionally
 3. **Fast execution**: Can be completed in seconds
 4. **Looks legitimate**: DMA is a normal hardware feature

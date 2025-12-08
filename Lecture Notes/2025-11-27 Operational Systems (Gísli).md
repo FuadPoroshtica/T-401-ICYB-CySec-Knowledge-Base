@@ -7,14 +7,14 @@ date created: Monday, 1. December 2025, 20:12
 
 # Operating System Basics
 
-# What is an OS?
+# What is an [OS](Operating%20System.md)?
 
 ## The Operating System (Kernel)
 
 - Event-driven program that manages the hardware state.
 - Acts as a bridge between applications and hardware.
 - The Kernel:
-    - The core component of the OS.
+    - The core component of the [OS](Operating%20System.md).
     - Runs in Privileged Mode (Kernel Mode).
     - Has direct access to hardware instructions and memory.
 - User Space:
@@ -27,10 +27,10 @@ Problem: Raw hardware interfaces (registers, disk controllers) are complex and i
 
 > [!check] Solution: System Calls
 >
-> - The OS wraps hardware instructions in clean software APIs.
+> - The [OS](Operating%20System.md) wraps hardware instructions in clean software APIs.
 > - API is consistent across platforms, independent of the actual hardware.
 > - When you call `printf()` or `fopen()`, you trigger a System Call.
-> - The OS switches to Kernel Mode, performs the hardware task, and returns the result.
+> - The [OS](Operating%20System.md) switches to Kernel Mode, performs the hardware task, and returns the result.
 
 ## Arbitration / Resource Management
 
@@ -51,16 +51,16 @@ want them simultaneously.
     - “*Program*”: Static instructions on disk.
     - “*Process*”: A program in execution (loaded into RAM with a specific program counter, stack pointer, and registers).
 - Context Switching:
-    - The OS halts the current process.
+    - The [OS](Operating%20System.md) halts the current process.
     - Saves the CPU register state to a Process Control Block (PCB) in RAM.
     - Loads the saved state of the next process.
 - Result: The illusion of parallelism on a single core.
 
 ## Memory Management ([Virtualization](../Terminology/Virtualization/Virtualization))
 
-- The OS provides the abstraction of Virtual Memory.
+- The [OS](Operating%20System.md) provides the abstraction of Virtual Memory.
 - **Address Spaces**: Every process believes it has access to a contiguous map of memory (e.g., 0x0000 to 0xFFFF).
-- **Translation**: The OS + Hardware (MMU) map virtual addresses to physical RAM addresses.
+- **Translation**: The [OS](Operating%20System.md) + Hardware (MMU) map virtual addresses to physical RAM addresses.
     - Basically, what process_1 calls “memory 0x0001”, it might be mapped to like 0x0251 or something in actual memory, and what process_1 sees as “memory 0x0002” might actually be mapped to 0x0571 etc.
     - Basically, they just get like block 1, block 2, block 3 etc. which are mapped and spread out across the whole memory.
 - **Protection**:
@@ -73,15 +73,15 @@ want them simultaneously.
 *Architecture context*: I/O can be millions of times slower than a CPU cycle. We cannot use busy-waiting.
 
 1. **Request**🫴: User program requests I/O (System Call).
-2. **Sleep**😴: OS puts the process in a “Waiting” state and yields the CPU to another process.
+2. **Sleep**😴: [OS](Operating%20System.md) puts the process in a “Waiting” state and yields the CPU to another process.
 3. **Interrupt**🫸: When hardware is ready, it sends an electrical signal (Interrupt) to the CPU.
 4. **ISR (Interrupt Service Routine)** 🚫: CPU jumps to the OS’s Interrupt Service Routine (essentially a function in the kernel).
-5. **Wake**😱: OS moves the original process back to the “Ready” queue.
+5. **Wake**😱: [OS](Operating%20System.md) moves the original process back to the “Ready” queue.
 
 ## File Systems📂 / Storage Abstraction
 
 - **[Physical View](../Terminology/Physical View)**: A hard drive is an array of millions of generic blocks (sectors).
-- **Logical View**: The OS creates the concept of Files, Directories, and Paths.
+- **Logical View**: The [OS](Operating%20System.md) creates the concept of Files, Directories, and Paths.
 - **Responsibility**:
     - Mapping filenames to physical block addresses.
     - Managing metadata (permissions, timestamps).
@@ -101,7 +101,7 @@ In practice, only these 2 rings are used:
 - Restricted subset of instructions.
 - Cannot directly access hardware.
 
-**Traps**: If user code attempts a privileged instruction, the CPU hardware “traps” the attempt and hands control to the OS to handle the violation (usually by killing the process).
+**Traps**: If user code attempts a privileged instruction, the CPU hardware “traps” the attempt and hands control to the [OS](Operating%20System.md) to handle the violation (usually by killing the process).
 
 # Common Operating Systems
 
@@ -149,7 +149,7 @@ Slightly different to Linux.
 ## Android 🤖📱
 
 Often misunderstood as “Just Linux.” It uses the Linux Kernel, but the user-space is unique.
-It is ***the*** most deployed OS in the world (billions of devices). Because unlike iOS, Android is open-source and used by many manufacturers, not just for phones but also tablets, TVs, cars, etc.
+It is ***the*** most deployed [OS](Operating%20System.md) in the world (billions of devices). Because unlike iOS, Android is open-source and used by many manufacturers, not just for phones but also tablets, TVs, cars, etc.
 
 > The Android Stack
 >
@@ -160,13 +160,13 @@ It is ***the*** most deployed OS in the world (billions of devices). Because unl
 **Key Mechanism: Binder IPC**
 
 - Apps are strictly sandboxed (security).
-- They communicate via Binder (Inter-Process Communication) to talk to the OS or other apps. Which means that apps can’t directly access each other’s memory or data.
+- They communicate via Binder (Inter-Process Communication) to talk to the [OS](Operating%20System.md) or other apps. Which means that apps can’t directly access each other’s memory or data.
 
 ## Embedded and RTOS (Real-Time Operating Systems)
 
 There are many other kinds of operating systems designed for specific use-cases, especially in embedded systems (IoT (Internet of Things) devices, automotive systems, industrial machines).
 
-*General Purpose OS (Windows/Linux) Goal*: Throughput.
+*General Purpose [OS](Operating%20System.md) (Windows/Linux) Goal*: Throughput.
 *RTOS Goal*: Determinism / Consistency.
 
 - **RTOS (Real-Time Operating System):**
@@ -182,10 +182,10 @@ There are many other kinds of operating systems designed for specific use-cases,
 **POSIX** = **P**ortable **O**perating **S**ystem **I**nterface (the **X** is for Unix).
 
 > The Concept: An API Contract
-POSIX is an IEEE (Institute of Electrical and Electronics Engineers) standard that defines an interface between User Space applications and the OS Kernel.
+POSIX is an IEEE (Institute of Electrical and Electronics Engineers) standard that defines an interface between User Space applications and the [OS](Operating%20System.md) Kernel.
 >
-> - It does not tell the OS how to implement a feature.
-> - It tells the OS: “If you want to be Unix-compatible, you must support these function names and behaviors.”
+> - It does not tell the [OS](Operating%20System.md) how to implement a feature.
+> - It tells the [OS](Operating%20System.md): “If you want to be Unix-compatible, you must support these function names and behaviors.”
 
 The Motivation (The “Unix Wars”)
 
@@ -204,7 +204,7 @@ What does POSIX actually define?
     - Standardizes behavior of CLI tools (`ls`, `grep`, `awk`) so scripts are portable.
     Who is Compliant?
 
-| OS      | Status                                                                                           |
+| [OS](Operating%20System.md)      | Status                                                                                           |
 | ------- | ------------------------------------------------------------------------------------------------ |
 | macOS   | **Certified**. Actually fully [POSIX](../Terminology/Systems%20&%20Plaforms/POSIX.md) compliant. |
 | Linux   | **De Facto**. Mostly compliant, but people rarely pay for the certification.                     |
@@ -214,14 +214,14 @@ So if they’re POSIX compliant, that means they support the same system calls a
 
 # Operating Systems and Security
 
-## The OS and the Trusted Computing Base
+## The [OS](Operating%20System.md) and the Trusted Computing Base
 
 > [!definition] Trusted Computing Base (TCB)
 “... is the totality of protection mechanisms within a computer system – including hardware, firmware, and software – that is responsible for enforcing a security policy. TCB is all components that must work correctly for the system to be secure. If any part is broken, the security of the entire system is broken.”
 >
 
 **The Reference Monitor**
-The OS acts as a gatekeeper between Subjects (Users, Processes) and Objects (Files, Hardware).
+The [OS](Operating%20System.md) acts as a gatekeeper between Subjects (Users, Processes) and Objects (Files, Hardware).
 Every system call (e.g., `open()`) is intercepted to check:
 1. **Authentication**: *Who* are you?
 2. **Authorization**: Are you *allowed to do this*?
@@ -235,18 +235,18 @@ Every system call (e.g., `open()`) is intercepted to check:
 
 **Secure Storage (Hashing)**
 
-- **Rule #1**: The OS never stores passwords in plain text.
-- **Hashing**: The OS stores a cryptographic hash (e.g., SHA-256) of the password.
+- **Rule #1**: The [OS](Operating%20System.md) never stores passwords in plain text.
+- **Hashing**: The [OS](Operating%20System.md) stores a cryptographic hash (e.g., SHA-256) of the password.
     - On login: `InputHash = Hash(UserInput)`.
     - If `InputHash == StoredHash`, access is granted.
 - **Salting** 🧂:
-    - To prevent “Rainbow Table” attacks (pre-computed hash databases), the OS adds a random string (salt) before hashing.
+    - To prevent “Rainbow Table” attacks (pre-computed hash databases), the [OS](Operating%20System.md) adds a random string (salt) before hashing.
         - This ensures that even if two users have the same password, their stored hashes differ.
     - `StoredValue = Hash(Password + Salt)`.
 
 ## [Access Control](../Terminology/Defense & Control/Access Control):”What can you do?”
 
-Once authenticated, the OS uses a **User ID (UID)** to enforce permissions.
+Once authenticated, the [OS](Operating%20System.md) uses a **User ID (UID)** to enforce permissions.
 
 - **DAC (Discretionary Access Control):**
     - The **Owner** of the file decides permissions.
@@ -259,7 +259,7 @@ Once authenticated, the OS uses a **User ID (UID)** to enforce permissions.
 
 ## The Principle of Least Privilege
 
-> Golden Rule of OS Architecture
+> Golden Rule of [OS](Operating%20System.md) Architecture
 A process should only have the absolute minimum privileges necessary to do its job.
 >
 
@@ -272,7 +272,7 @@ Why?
 
 ## System Logs
 
-The “Flight Recorder” of the OS.
+The “Flight Recorder” of the [OS](Operating%20System.md).
 
 - **What**: High-level textual records of events.
 - **Content**: (Failed) logins, sudo usage, Service crashes.
@@ -296,7 +296,7 @@ Going deeper than standard logs:
 - File Integrity Monitoring (FIM):
     - *Threat*: Attackers replacing system binaries (like `/bin/login`) with [Trojan horses](../Terminology/Attacks/Malware/Trojan).
     - *Defense*: Calculate checksums (hashes) of critical files.
-    - If the hash of /bin/login changes, the OS triggers an alarm immediately.
+    - If the hash of /bin/login changes, the [OS](Operating%20System.md) triggers an alarm immediately.
 
 We’ll be doing this in today’s lab!
 
@@ -374,7 +374,7 @@ Stems from the C/C++ programming languages allowing direct memory manipulation w
 
 - **The Flaw:**
     - A program allocates a fixed buffer.
-    - The OS/Program fails to check input size, allowing writes past the buffer end.
+    - The [OS](Operating%20System.md)/Program fails to check input size, allowing writes past the buffer end.
 - **The Exploit (Stack Smashing):**
     - The attacker overflows the stack to overwrite the **Return Address**.
     - CPU jumps to malicious code (shellcode) instead of returning to the main function.
@@ -387,9 +387,9 @@ Stems from the C/C++ programming languages allowing direct memory manipulation w
 > [!example] Example: TOCTOU (Time-of-Check to Time-of-Use)
 Because OSes multitask, a gap exists between checking the file permissions and using it.
 >
-> 1. **Check**: OS confirms User A can write to `temp.txt`.
+> 1. **Check**: [OS](Operating%20System.md) confirms User A can write to `temp.txt`.
 > 2. **The Gap (Context Switch)**: Attacker quickly swaps `temp.txt` with a symbolic link to `/etc/shadow` (password file).
-> 3. **Use**: OS resumes the process and writes to the target, overwriting the password file because the check already passed.
+> 3. **Use**: [OS](Operating%20System.md) resumes the process and writes to the target, overwriting the password file because the check already passed.
 
 A research task we have today is how to mitigate and prevent these.
 
@@ -401,7 +401,7 @@ Occurs when the Shell is tricked into executing unintended commands.
 - The Exploit:
     - Script expects a filename: `rm $filename`
     - Attacker inputs: `file.txt; rm -rf /`
-    - The OS interprets ; as a command separator and executes both.
+    - The [OS](Operating%20System.md) interprets ; as a command separator and executes both.
 
 ## Privilege Escalation
 
@@ -420,7 +420,7 @@ The attacker’s goal: Move from Ring 3 (User) to Ring 0 (Kernel).
 - [Malware](../Terminology/Attacks/Malware/Malware) that modifies the system to hide its own existence.
 - e.g., by just diverting or intercepting system calls.
 - Essentially, it’s malware that’s designed to be stealthy and avoid detection by traditional security measures. It gets the operating system to lie to the user or security software about what’s really happening on the system.
-- Example: When you run `ls` or `ps`, the rootkit filters the output of the underlying system calls to hide the hacker’s files and processes. The OS lies to the user.
+- Example: When you run `ls` or `ps`, the rootkit filters the output of the underlying system calls to hide the hacker’s files and processes. The [OS](Operating%20System.md) lies to the user.
 - **Defense**: Use trusted boot mechanisms and integrity checks to detect unauthorized changes to system binaries.
 
 ### Zero-Day Vulnerabilities
@@ -511,7 +511,7 @@ Indicator: `-rwsr-xr-x 1 root root 64152 maí 30 2024 /usr/bin/passwd`
 | Action          | Linux Command                                    | PowerShell / Windows                                      |
 | --------------- | ------------------------------------------------ | --------------------------------------------------------- |
 | ScheduleTasks   | `crontab -e`(opens the cron table in aneditor)   | `Register-ScheduledTask`                                  |
-| Install Updates | `apt update && apt upgrade`(Depending on Distro) | `winget upgrade --all`(Only for apps, not the OS itself!) |
+| Install Updates | `apt update && apt upgrade`(Depending on Distro) | `winget upgrade --all`(Only for apps, not the [OS](Operating%20System.md) itself!) |
 
 # Up Next ..
 
@@ -519,7 +519,7 @@ Indicator: `-rwsr-xr-x 1 root root 64152 maí 30 2024 /usr/bin/passwd`
 
 - Find examples of attacks that used root kits and discuss what role the rootkits played in the attacks.
 - [Side-Channel Attacks](../Terminology/Virtualization/Side-Channel Attack) (Meltdown & Spectre): These famous vulnerabilities exploited Speculative Execution in the CPU hardware. How did they allow a User Mode process to read Kernel Mode memory without ever technically triggering a privilege violation?
-- DMA (Direct Memory Access) Attacks: Peripheral devices (like a GPU or Network Card) use DMA to access RAM without asking the CPU. How can a malicious device (e.g., a compromised USB drive) use DMA to read system memory, bypassing the OS entirely?
+- DMA (Direct Memory Access) Attacks: Peripheral devices (like a GPU or Network Card) use DMA to access RAM without asking the CPU. How can a malicious device (e.g., a compromised USB drive) use DMA to read system memory, bypassing the [OS](Operating%20System.md) entirely?
 - Which mitigation means exist to avoid the problem of SUID opening the system up for privilege escalation attacks?
 
 ## Lab today and Guest Lecture tomorrow

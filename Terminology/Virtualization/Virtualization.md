@@ -23,7 +23,7 @@ date modified: Monday, 8. December 2025, 19:12
 
 **Definition**: A set of technologies that make one physical computer behave like many separate “virtual” computers by abstracting hardware into software.
 
-**Context/Example**: One powerful server can be split into several [Virtual Machines (VMs)](Virtual%20Machine%20(VM).md), each running its own OS (e.g., one Linux server, one Windows server) on the same physical box.
+**Context/Example**: One powerful server can be split into several [Virtual Machines (VMs)](Virtual%20Machine%20(VM).md), each running its own [OS](Operating%20System.md) (e.g., one Linux server, one Windows server) on the same physical box.
 
 **Related Concepts**: [Virtual machine](Virtual%20Machine%20(VM).md), [hypervisor](Hypervisor.md), [containers](Virtualization%20methods/Container.md), cloud computing
 
