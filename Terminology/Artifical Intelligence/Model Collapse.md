@@ -1,3 +1,10 @@
+---
+aliases: 
+date created: Monday, 8. December 2025, 11:12
+date modified: Monday, 8. December 2025, 11:12
+---
+
+# Model Collapse
 ## Model Collapse
 (A.k.a. “AI inbreeding”... 😬)
 [Shumailov et al., “The Curse of Recursion”](https://arxiv.org/abs/2305.17493):
@@ -7,5 +14,3 @@
 
 **Security Context**: This is a long-term Data Supply Chain vulnerability.
 If we build security tools (e.g., malware classifiers) on future datasets, they may be trained on “synthetic garbage,” rendering them ineffective.
-
-

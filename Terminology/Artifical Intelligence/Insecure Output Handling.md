@@ -1,3 +1,10 @@
+---
+aliases: 
+date created: Monday, 8. December 2025, 11:12
+date modified: Monday, 8. December 2025, 11:12
+---
+
+# Insecure Output Handling
 ## Insecure Output Handling
 **The Mistake**: Trusting AI-generated content without validation.
 ```python

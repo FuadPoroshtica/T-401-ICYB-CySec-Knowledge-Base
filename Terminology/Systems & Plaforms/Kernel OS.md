@@ -1,7 +1,7 @@
 ---
 aliases: []
 date created: Thursday, 27. November 2025, 10:11
-date modified: Thursday, 4. December 2025, 08:12
+date modified: Monday, 8. December 2025, 11:12
 ---
 
 # Kernel / OS

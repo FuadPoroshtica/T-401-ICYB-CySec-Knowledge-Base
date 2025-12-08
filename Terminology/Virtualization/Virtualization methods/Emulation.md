@@ -1,7 +1,7 @@
 ---
 aliases: []
 date created: Tuesday, 25. November 2025, 22:11
-date modified: Tuesday, 2. December 2025, 20:12
+date modified: Monday, 8. December 2025, 11:12
 ---
 
 # Emulation

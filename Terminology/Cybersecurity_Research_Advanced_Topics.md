@@ -1,7 +1,7 @@
 ---
 aliases: []
 date created: Thursday, 27. November 2025, 23:11
-date modified: Monday, 1. December 2025, 22:12
+date modified: Monday, 8. December 2025, 11:12
 ---
 
 # Cybersecurity Research: Advanced Topics

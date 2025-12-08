@@ -1,7 +1,7 @@
 ---
 aliases: [Transmission Control Protocol]
 date created: Tuesday, 2. December 2025, 19:12
-date modified: Tuesday, 2. December 2025, 20:12
+date modified: Monday, 8. December 2025, 11:12
 ---
 
 # TCP

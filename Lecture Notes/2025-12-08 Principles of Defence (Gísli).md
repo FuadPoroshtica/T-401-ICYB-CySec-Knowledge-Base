@@ -1,7 +1,7 @@
 ---
 aliases: []
 date created: Monday, 8. December 2025, 08:12
-date modified: Monday, 8. December 2025, 10:12
+date modified: Monday, 8. December 2025, 11:12
 ---
 
 - This week, up to Wednesday, will be the same as the last weeks.
@@ -13,7 +13,7 @@ date modified: Monday, 8. December 2025, 10:12
 # 2025-12-08 Principles of Defence (Gísli) 🛡️
 Today we’ll be talking about *defense*, not just attacks like we’ve been doing so far.
 
-# Economics of Defense 💰🛡️
+# [Economics of Defense](../Terminology/Defense%20&%20Control/Economics%20of%20Defense.md) 💰🛡️
 - One of the problems of defense is that cyber warfare is asymmetric. The attacker only needs to find *one flaw*, but the defender needs to fix all of them.
 - **The goal:** The CIA triad: 🔺
 	- **Confidentiality:** Information is not disclosed to unauthorized parties.
@@ -54,7 +54,7 @@ Defense cost must not exceed the value of what is being protected.
 
 # Design Principles & Defense in depth 📐🛡️
 
-## Core design principles 🧱
+## [Core design principles of Defense](../Terminology/Defense%20&%20Control/Core%20design%20principles%20of%20Defense.md) 🧱
 The most important ones from Saltzer & Schroeder are:
 - 🔑**Least privilege:** Give each user/process the minimum privileges needed to perform its function.
 	- E.g., a web server process should not run as root.
@@ -73,8 +73,8 @@ The most important ones from Saltzer & Schroeder are:
 	- Why? Because security through obscurity is not reliable.
 	- **Avoid:** Security by obscurity.
 
-# Defense in depth 🧅
-## The Layered Approach (The Onion) 🧅
+## [Defense in Depth](../Terminology/Defense%20&%20Control/Defense%20in%20Depth.md) 🧅
+### The Layered Approach (The Onion) 🧅
 The idea is that this is a layered approach.
 No single control is infallible. If one layer fails, others are still there and catch the threat.
 1. **Physical controls:** Locks, guards, cameras. 🏢🔒
@@ -89,7 +89,7 @@ No single control is infallible. If one layer fails, others are still there and 
 	- **Operations:** Principle of least privilege, change management, incident response.
 *Scenario:* If a laptop is stolen (physical security fail), the hard drive encryption (data layer) protects the information.
 
-## Classifying Controls 📊
+### Classifying Controls 📊
 By type: 🧩
 - **Physical:** Locks, guards, cameras.
 - **Technical:** Firewalls, encryption, access control.
@@ -134,36 +134,10 @@ Apply in Iceland because of EEA membership.
 - HIPAA
 - SOC 2
 
-# Incident Response & Recovery 🚨🛠️
-In case shit still hit the fan, how do we react?
-Assume you have no time when this happens.
-Assume you will be (or already are) breached:
-- **Incident Response Plan (IRP):** The “Fire Drill”. Who do you call? What do you turn off?
-	- During the Akira attack here at HR, they tried to contact everyone they needed to, and tried to go on Microsoft Teams, but they couldn’t because it was down. So they had to go on Facebook to find everyone. This shouldn’t happen.
-- **Chain of Custody:** Preserving evidence for legal action. Don’t just reboot the server!
-	- Logging and forensics is important.
+# [Incident Response & Recovery](../Terminology/Defense%20&%20Control/Incident%20Response%20&%20Recovery.md) 🚨🛠️
 
-## Recovery: RPO and RTO ⏱️
-**RPO (Recovery Point Objective)** 📂
-- How much data can we afford to lose?
-- Determined by backup frequency. Backing up all the data once an hour, once a day, etc.
-
-**RTO (Recovery Time Objective)** 🕰️
-- How long can the system be down?
-- Determined by redundancy and failover speed.
-
-## Resilience: The 3-2-1 Backup Rule 💾
-Ransomware targets backups first. Don’t keep a backup just on your computer.
-
-> [!info] The 3-2-1 rule.
-> - **3** copies of data.
-> - **2** Different media types (e.g., disk + tape/cloud)
-> - **1** Copy offline (physically separated)
-
-**Immutable backups:** Backups that cannot be altered or deleted, even by an administrator, for a set period.
-
-# CTFs and Bug Bounties 🏁🐛
-## CTFs 🏁
+# [CTFs](../Terminology/Defense%20&%20Control/Capture%20the%20Flag%20(CTF).md) and [Bug Bounties](../Terminology/Defense%20&%20Control/Bug%20Bounty.md) 🏁🐛
+## [CTFs](../Terminology/Defense%20&%20Control/Capture%20the%20Flag%20(CTF).md) 🏁
 A CTF (Capture The Flag) is a security competition where participants solve challenges to find “flags” (secret strings) hidden in the challenges. They are a great way to practice and learn cybersecurity skills.
 
 The format:
@@ -173,7 +147,7 @@ The format:
 *CTFs are gamified learning.*
 Platforms: [picoCTF](https://www.picoctf.org/), [TryHackMe](https://tryhackme.com/), [OverTheWire](https://overthewire.org/wargames/), [Hakkaraskóli GGFÍ](https://skoli.ggc.tf/), [HackTheBox](https://www.hackthebox.com/).
 
-## Bug Bounties 🐛💰
+## [Bug Bounties](../Terminology/Defense%20&%20Control/Bug%20Bounty.md) 🐛💰
 A bug bounty program is a reward system where organizations pay security researchers to find and report vulnerabilities in their systems. The “Gig Economy” of cybersecurity.
 
 How it works:
@@ -203,8 +177,8 @@ Iceland (Almenn hegningarlög 19/1940):
 - Article 257: Criminalizes
 
 ## Modern evolution: zero trust 🔐
-The “castle and moat” model is outdated due to cloud and remote work.
-- **Zero Trust Architecture (ZTA):** “Never trust, always verify.” 🚫🤝
+The “[Castle and Moat](../Terminology/Defense%20&%20Control/Castle%20and%20Moat%20security%20model.md)” model is outdated due to cloud and remote work.
+- **[Zero Trust Architecture (ZTA)](../Terminology/Defense%20&%20Control/Zero%20Trust%20Architecture.md):** “Never trust, always verify.” 🚫🤝
 	- Continuous verification of users and devices.
 	- No “inside” vs. “outside” network distinction.
 	- Every request is authenticated, authorized, and encrypted.
