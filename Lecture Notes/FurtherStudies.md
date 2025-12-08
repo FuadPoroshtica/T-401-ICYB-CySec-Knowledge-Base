@@ -53,8 +53,10 @@ https://monovm.com/blog/vm-vs-containers/
   https://clovinsecurity.wixsite.com/clovin-security/post/ultimate-guide-to-cve-2025-22224-vmware-esxi-zero-day-vulnerability-exposed-clovin-security
 
 2. [Side-Channel Attacks](../Terminology/Virtualization/Side-Channel%20Attack.md):
-	1. What is a [Side-Channel Attack](../Terminology/Virtualization/Side-Channel%20Attack.md) (in the context of virtualization)?
-	2. Why is this especially problematic for cloud environments?
-	3. Find recent examples of such attacks and discuss their impact.
+	1. What is a [Side-Channel Attack](../Terminology/Virtualization/Side-Channel%20Attack.md) (in the context of virtualization)?- An exploit that uses indirect data such as timing, power consumption, or electromagnetic emissions to extract sensitive information 
+	2. Why is this especially problematic for cloud environments?- Even routine maintenance can introduce risks. During updates, temporary configuration changes might briefly expose resources, creating exploitation windows for vigilant attackers monitoring cloud environments.
+	3. Find recent examples of such attacks and discuss their impact. 
 	4. What mitigation strategies exist to counter these types of attacks?
 3. What are the risks associated with using untrusted or vulnerable [container](../Terminology/Virtualization/Virtualization%20methods/Container.md) [images](../Terminology/Virtualization/Virtualization%20Hardening%20&%20Operations/Image.md) from public repositories?
+
+
