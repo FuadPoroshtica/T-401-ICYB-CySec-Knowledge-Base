@@ -1,7 +1,7 @@
 ---
 aliases: []
 date created: Tuesday, 25. November 2025, 16:11
-date modified: Monday, 1. December 2025, 22:12
+date modified: Thursday, 4. December 2025, 11:12
 ---
 
 # 2025-11-24 Introduction (Gísli)

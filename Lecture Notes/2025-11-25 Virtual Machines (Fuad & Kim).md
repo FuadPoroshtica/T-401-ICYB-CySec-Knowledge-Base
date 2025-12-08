@@ -1,7 +1,7 @@
 ---
 aliases: []
 date created: Tuesday, 25. November 2025, 18:11
-date modified: Monday, 1. December 2025, 22:12
+date modified: Thursday, 4. December 2025, 11:12
 ---
 
 # Virtual Machines 2025-11-25

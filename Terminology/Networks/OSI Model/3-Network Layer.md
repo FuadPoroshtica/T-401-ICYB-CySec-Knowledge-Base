@@ -1,11 +1,7 @@
 ---
 aliases: [Network Layer]
 date created: Tuesday, 2. December 2025, 10:12
-<<<<<<< HEAD
 date modified: Thursday, 4. December 2025, 08:12
-=======
-date modified: Tuesday, 2. December 2025, 20:12
->>>>>>> d7e105de18f7c68e4647a15a667bea96455f530c
 ---
 
 # 3-Network Layer

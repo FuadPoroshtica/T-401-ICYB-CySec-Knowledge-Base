@@ -1,7 +1,7 @@
 ---
 aliases: []
 date created: Wednesday, 3. December 2025, 08:12
-date modified: Wednesday, 3. December 2025, 12:12
+date modified: Thursday, 4. December 2025, 11:12
 ---
 
 In the lab today we’ll be finding vulnerabilities in a web application and how they can be fixed.
@@ -197,7 +197,7 @@ Some common tools used by security professionals and ethical hackers to identify
 > - Official practice environments (e.g., OWASP Juice Shop, HackTheBox).
 
 ## Reconnaissance & Browser Tools
-- **Browser Developer Tools (F12 or Ctrl+Shift+I, or on Mac: Cmd+Option+I)**: Built into modern browsers, these tools allow you to inspect HTML, CSS, and JavaScript, monitor network requests, and debug code. Examples of things you can do with it:
+- **Browser Developer Tools (<kbd>F12 </kbd>or <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>I</kbd>, or on Mac: <kbd>⌘Cmd</kbd>+<kbd>⌥Option</kbd>+<kbd>I</kbd>)**: Built into modern browsers, these tools allow you to inspect HTML, CSS, and JavaScript, monitor network requests, and debug code. Examples of things you can do with it:
 	- View and modify the DOM.
 	- Inspect cookies and local storage.
 	- Monitor network requests and responses.

@@ -1,7 +1,7 @@
 ---
 aliases: [Address Resolution Protocol]
 date created: Tuesday, 2. December 2025, 20:12
-date modified: Tuesday, 2. December 2025, 20:12
+date modified: Thursday, 4. December 2025, 08:12
 ---
 
 # ARP
