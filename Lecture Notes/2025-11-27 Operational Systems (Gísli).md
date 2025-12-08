@@ -1,6 +1,5 @@
 ---
 aliases: []
-d[POSIX](../Terminology/Systems & Plaforms/POSIX)reated: Thursday, 27. November 2025, 09:11
 date modified: Tuesday, 2. December 2025, 13:12
 date created: Monday, 1. December 2025, 20:12
 ---
@@ -9,13 +8,13 @@ date created: Monday, 1. December 2025, 20:12
 
 # What is an [OS](Operating%20System.md)?
 
-## The Operating System (Kernel)
+## The Operating System
 
 - Event-driven program that manages the hardware state.
 - Acts as a bridge between applications and hardware.
-- The Kernel:
+- The [Kernel](../Terminology/Systems%20&%20Plaforms/Kernel.md):
     - The core component of the [OS](Operating%20System.md).
-    - Runs in Privileged Mode (Kernel Mode).
+    - Runs in Privileged Mode ([Kernel](../Terminology/Systems%20&%20Plaforms/Kernel.md) Mode).
     - Has direct access to hardware instructions and memory.
 - User Space:
     - Where your applications run.
@@ -30,7 +29,7 @@ Problem: Raw hardware interfaces (registers, disk controllers) are complex and i
 > - The [OS](Operating%20System.md) wraps hardware instructions in clean software APIs.
 > - API is consistent across platforms, independent of the actual hardware.
 > - When you call `printf()` or `fopen()`, you trigger a System Call.
-> - The [OS](Operating%20System.md) switches to Kernel Mode, performs the hardware task, and returns the result.
+> - The [OS](Operating%20System.md) switches to [Kernel](../Terminology/Systems%20&%20Plaforms/Kernel.md) Mode, performs the hardware task, and returns the result.
 
 ## Arbitration / Resource Management
 
@@ -65,7 +64,7 @@ want them simultaneously.
     - Basically, they just get like block 1, block 2, block 3 etc. which are mapped and spread out across the whole memory.
 - **Protection**:
     - Process A cannot access Process B’s physical memory pages (or segments).
-    - A user process cannot access kernel memory.
+    - A user process cannot access [Kernel](../Terminology/Systems%20&%20Plaforms/Kernel.md) memory.
     - “*Segfault*” (*segmentation fault*): Occurs when a process tries to access an address that *has no mapping to a physical address*.
 
 ## I/O and Interrupt Management
@@ -75,7 +74,7 @@ want them simultaneously.
 1. **Request**🫴: User program requests I/O (System Call).
 2. **Sleep**😴: [OS](Operating%20System.md) puts the process in a “Waiting” state and yields the CPU to another process.
 3. **Interrupt**🫸: When hardware is ready, it sends an electrical signal (Interrupt) to the CPU.
-4. **ISR (Interrupt Service Routine)** 🚫: CPU jumps to the OS’s Interrupt Service Routine (essentially a function in the kernel).
+4. **ISR (Interrupt Service Routine)** 🚫: CPU jumps to the OS’s Interrupt Service Routine (essentially a function in the [Kernel](../Terminology/Systems%20&%20Plaforms/Kernel.md)).
 5. **Wake**😱: [OS](Operating%20System.md) moves the original process back to the “Ready” queue.
 
 ## File Systems📂 / Storage Abstraction
@@ -91,7 +90,7 @@ want them simultaneously.
 
 Hardware architectures (like x86) support privilege levels.
 In practice, only these 2 rings are used:
-**Ring 0 (Kernel Mode)**
+**Ring 0 ([Kernel](../Terminology/Systems%20&%20Plaforms/Kernel.md) Mode)**
 
 - Full access to all hardware instructions.
 - Can manipulate memory maps and disable interrupts.
@@ -117,12 +116,12 @@ In practice, only these 2 rings are used:
 
 **Linux** 🐧:
 
-- Technically just the ***Kernel*** (Linus Torvalds, 1991).
+- Technically just the ***[Kernel](../Terminology/Systems%20&%20Plaforms/Kernel.md)*** (Linus Torvalds, 1991).
     - He used to work with MS-DOS (Microsoft), but he didn’t like that it wasn’t open-source.
-- **Distro (short for “distribution”)**: Kernel + GNU Tools + Package Manager + Desktop.
-- Architecture: Monolithic Kernel (drivers in kernel space).
+- **Distro (short for “distribution”)**: [Kernel](../Terminology/Systems%20&%20Plaforms/Kernel.md) + GNU Tools + Package Manager + Desktop.
+- Architecture: Monolithic [Kernel](../Terminology/Systems%20&%20Plaforms/Kernel.md) (drivers in [Kernel](../Terminology/Systems%20&%20Plaforms/Kernel.md) space).
 **macOS** 🍎:
-- Based on the **Darwin** kernel (Hybrid XNU kernel: Mach Unix + BSD Unix).
+- Based on the **Darwin** [Kernel](../Terminology/Systems%20&%20Plaforms/Kernel.md) (Hybrid XNU [Kernel](../Terminology/Systems%20&%20Plaforms/Kernel.md): Mach Unix + BSD Unix).
 - It is [POSIX](../Terminology/Systems & Plaforms/POSIX) compliant (i.e. compatible with standard Unix APIs).
 
 ## Windows 🪟 (compared to Unix)
@@ -130,9 +129,9 @@ In practice, only these 2 rings are used:
 Slightly different to Linux.
 
 - **Architecture: Hybrid Kernel**
-    - Performance critical parts (filesystem, networking) run in Kernel Mode.
+    - Performance critical parts (filesystem, networking) run in [Kernel](../Terminology/Systems%20&%20Plaforms/Kernel.md) Mode.
     - Other subsystems run in User Mode (has a Microkernel-like influence).
-        - Everything we really need is run in kernel mode, and the rest is in user mode.
+        - Everything we really need is run in [Kernel](../Terminology/Systems%20&%20Plaforms/Kernel.md) mode, and the rest is in user mode.
 - **Configuration: The Registry**
     - *Unix*: Uses text files (e.g., `/etc/config`). Most configuration is done via plain text files.
         - Pros: Simple, easy to back up/restore.
@@ -148,14 +147,14 @@ Slightly different to Linux.
 
 ## Android 🤖📱
 
-Often misunderstood as “Just Linux.” It uses the Linux Kernel, but the user-space is unique.
+Often misunderstood as “Just Linux.” It uses the Linux [Kernel](../Terminology/Systems%20&%20Plaforms/Kernel.md), but the user-space is unique.
 It is ***the*** most deployed [OS](Operating%20System.md) in the world (billions of devices). Because unlike iOS, Android is open-source and used by many manufacturers, not just for phones but also tablets, TVs, cars, etc.
 
 > The Android Stack
 >
 > 1. **Top**: Android Runtime (ART). Apps compile to Bytecode (DEX), not native machine code. So each app runs in its own instance of the ART VM (like Java).
 > 2. **Middle**: Native Libraries & Hardware Abstraction Layer (HAL). So things like OpenGL, SQLite, Media codecs, etc.
-> 3. **Bottom**: Linux Kernel (Memory, Scheduling, Drivers). So all the low-level stuff is handled by the Linux kernel.
+> 3. **Bottom**: Linux [Kernel](../Terminology/Systems%20&%20Plaforms/Kernel.md) (Memory, Scheduling, Drivers). So all the low-level stuff is handled by the Linux [Kernel](../Terminology/Systems%20&%20Plaforms/Kernel.md).
 
 **Key Mechanism: Binder IPC**
 
@@ -182,7 +181,7 @@ There are many other kinds of operating systems designed for specific use-cases,
 **POSIX** = **P**ortable **O**perating **S**ystem **I**nterface (the **X** is for Unix).
 
 > The Concept: An API Contract
-POSIX is an IEEE (Institute of Electrical and Electronics Engineers) standard that defines an interface between User Space applications and the [OS](Operating%20System.md) Kernel.
+POSIX is an IEEE (Institute of Electrical and Electronics Engineers) standard that defines an interface between User Space applications and the [OS](Operating%20System.md) [Kernel](../Terminology/Systems%20&%20Plaforms/Kernel.md).
 >
 > - It does not tell the [OS](Operating%20System.md) how to implement a feature.
 > - It tells the [OS](Operating%20System.md): “If you want to be Unix-compatible, you must support these function names and behaviors.”
@@ -266,8 +265,8 @@ A process should only have the absolute minimum privileges necessary to do its j
 Why?
 
 - It limits the “Blast Radius.”
-- If a calculator app is hacked, it shouldn’t have permission to read the network driver or kernel memory.
-- This is enforced via CPU modes (User Mode vs. Kernel Mode).
+- If a calculator app is hacked, it shouldn’t have permission to read the network driver or [Kernel](../Terminology/Systems%20&%20Plaforms/Kernel.md) memory.
+- This is enforced via CPU modes (User Mode vs. [Kernel](../Terminology/Systems%20&%20Plaforms/Kernel.md) Mode).
 - (Also: modern OSes use techniques like **Sandboxing** and **[Containers](../Terminology/Virtualization/Virtualization methods/Container)** to isolate applications further.)
 
 ## System Logs
@@ -289,8 +288,8 @@ The “Flight Recorder” of the [OS](Operating%20System.md).
 
 Going deeper than standard logs:
 
-- System Auditing (Kernel Level):
-    - Hooks into the kernel to track System Calls.
+- System Auditing ([Kernel](../Terminology/Systems%20&%20Plaforms/Kernel.md) Level):
+    - Hooks into the [Kernel](../Terminology/Systems%20&%20Plaforms/Kernel.md) to track System Calls.
     - *Example*: Not just “User logged in”, but “Process 402 attempted `open()` on `/etc/shadow` and was denied.”
     - Required for strict compliance to various standards (PCI-DSS, HIPAA).
 - File Integrity Monitoring (FIM):
@@ -326,12 +325,12 @@ Logs are viewed in the **Event Viewer** or using `Get-EventLog` in PowerShell.
 
 ### Enable System Auditing: Linux🐧
 
-Linux uses the Linux Audit Framework. It listens to the kernel for specific system calls and file changes.
+Linux uses the Linux Audit Framework. It listens to the [Kernel](../Terminology/Systems%20&%20Plaforms/Kernel.md) for specific system calls and file changes.
 **Installation:**
 
 - Install: `sudo apt install auditd` (Debian/Ubuntu) or `yum install audit` (RHEL/CentOS).
 - Start: `sudo systemctl start auditd`.
-- Defining Rules: You use `auditctl` to add rules to the kernel in real-time.
+- Defining Rules: You use `auditctl` to add rules to the [Kernel](../Terminology/Systems%20&%20Plaforms/Kernel.md) in real-time.
 
 > [!example] Example: Watch for changes to passwords
 >```bash
@@ -405,12 +404,12 @@ Occurs when the Shell is tricked into executing unintended commands.
 
 ## Privilege Escalation
 
-The attacker’s goal: Move from Ring 3 (User) to Ring 0 (Kernel).
+The attacker’s goal: Move from Ring 3 (User) to Ring 0 ([Kernel](../Terminology/Systems%20&%20Plaforms/Kernel.md)).
 
 - Vertical Escalation:
     - Exploiting bugs in “SetUID” programs (programs that run as root, like `sudo` or `passwd`).
-- Kernel Exploits:
-    - Crashing or manipulating the Kernel itself.
+- [Kernel](../Terminology/Systems%20&%20Plaforms/Kernel.md) Exploits:
+    - Crashing or manipulating the [Kernel](../Terminology/Systems%20&%20Plaforms/Kernel.md) itself.
     - **Weak Link**: Third-party **Drivers**. They run with full privileges but often have less rigorous code quality than the core kernel.
 
 ## Rootkits and Zero-Days
@@ -419,14 +418,14 @@ The attacker’s goal: Move from Ring 3 (User) to Ring 0 (Kernel).
 
 - [Malware](../Terminology/Attacks/Malware/Malware) that modifies the system to hide its own existence.
 - e.g., by just diverting or intercepting system calls.
-- Essentially, it’s malware that’s designed to be stealthy and avoid detection by traditional security measures. It gets the operating system to lie to the user or security software about what’s really happening on the system.
+- Essentially, it’s malware that’s designed to be stealthy and avoid detection by traditional security measures. It gets the [Operating System](../Terminology/Systems%20&%20Plaforms/Operating%20System.md) to lie to the user or security software about what’s really happening on the system.
 - Example: When you run `ls` or `ps`, the rootkit filters the output of the underlying system calls to hide the hacker’s files and processes. The [OS](Operating%20System.md) lies to the user.
 - **Defense**: Use trusted boot mechanisms and integrity checks to detect unauthorized changes to system binaries.
 
 ### Zero-Day Vulnerabilities
 
 - A flaw known to the attacker but unknown to the vendor (0 days to fix).
-- **Defense**: “Defense in Depth”. You cannot patch it, so you must rely on [firewalls](../Terminology/Defense & Control/Firewall), strict [access control](../Terminology/Defense & Control/Access Control), procedures, etc. to contain it.
+- **Defense**: “[Defense in Depth](../Terminology/Defense%20&%20Control/Defense%20in%20Depth.md)”. You cannot patch it, so you must rely on [firewalls](../Terminology/Defense & Control/Firewall), strict [access control](../Terminology/Defense & Control/Access Control), procedures, etc. to contain it.
 
 # Commands for Sysadmins
 | Action                 | Linux Command     | PowerShell / Windows                                  |
