@@ -1,7 +1,7 @@
 ---
 aliases: []
 date created: Monday, 8. December 2025, 10:12
-date modified: Monday, 8. December 2025, 18:12
+date modified: Tuesday, 9. December 2025, 09:12
 ---
 
 # 2025-12-08 Principles of Defense (Fuad)

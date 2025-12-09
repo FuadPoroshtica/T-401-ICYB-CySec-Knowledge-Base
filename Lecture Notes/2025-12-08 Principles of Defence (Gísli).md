@@ -1,7 +1,7 @@
 ---
 aliases: []
 date created: Monday, 8. December 2025, 08:12
-date modified: Monday, 8. December 2025, 18:12
+date modified: Tuesday, 9. December 2025, 09:12
 ---
 
 - This week, up to Wednesday, will be the same as the last weeks.

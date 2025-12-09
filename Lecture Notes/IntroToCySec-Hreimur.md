@@ -1,7 +1,7 @@
 ---
 aliases: []
 date created: Monday, 8. December 2025, 08:12
-date modified: Monday, 8. December 2025, 11:12
+date modified: Tuesday, 9. December 2025, 09:12
 ---
 
 # IntroToCySec-Hreimur
