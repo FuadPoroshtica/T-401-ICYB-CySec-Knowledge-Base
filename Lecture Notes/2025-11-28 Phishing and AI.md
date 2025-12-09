@@ -1,7 +1,7 @@
 ---
 aliases: []
 date created: Friday, 28. November 2025, 09:11
-date modified: Thursday, 4. December 2025, 11:12
+date modified: Monday, 8. December 2025, 18:12
 ---
 
 # 2025-11-28 [Phishing](../Terminology/Attacks/Phishing) and AI

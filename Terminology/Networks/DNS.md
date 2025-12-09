@@ -1,7 +1,7 @@
 ---
 aliases: [Domain Name System]
 date created: Tuesday, 2. December 2025, 19:12
-date modified: Thursday, 4. December 2025, 08:12
+date modified: Monday, 8. December 2025, 19:12
 ---
 
 # DNS

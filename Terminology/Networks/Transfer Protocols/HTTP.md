@@ -1,7 +1,7 @@
 ---
 aliases: [Hypertext Transfer Protocol]
 date created: Tuesday, 2. December 2025, 19:12
-date modified: Monday, 8. December 2025, 11:12
+date modified: Monday, 8. December 2025, 18:12
 ---
 
 # HTTP

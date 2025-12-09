@@ -1,7 +1,7 @@
 ---
-aliases: [The 3-2-1 Rule]
+aliases: [The 3-2-1 Rule, The 3 2 1 Backup Rule, The 3 2 1 Rule]
 date created: Monday, 8. December 2025, 10:12
-date modified: Monday, 8. December 2025, 15:12
+date modified: Monday, 8. December 2025, 18:12
 ---
 
 # The 3-2-1 Backup Rule

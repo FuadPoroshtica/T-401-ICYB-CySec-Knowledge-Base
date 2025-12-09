@@ -1,7 +1,7 @@
 ---
 aliases: [Firewalls]
 date created: Monday, 1. December 2025, 20:12
-date modified: Monday, 8. December 2025, 15:12
+date modified: Monday, 8. December 2025, 18:12
 ---
 
 # Firewall

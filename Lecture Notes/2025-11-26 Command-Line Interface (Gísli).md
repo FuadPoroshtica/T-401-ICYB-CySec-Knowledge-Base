@@ -284,7 +284,7 @@ Usage: `Greet -Name "John"`
 | PowerShell   | `myfile.ps1`              | None                         | **Policy**: Blocked by default. Enable with, e.g., `Set-ExecutionPolicy X`. <br>**Run**: Must use `.\file.ps1` (Like Bash). |
 
 > [!note] Note: The Shebang (#!)
-> In Unix/Bash, the first line `#!/bin/bash` tells the OS which interpreter to use. You can change this to e.g. `#!/usr/bin/python` to write a Python script that behaves like a shell script.
+> In Unix/Bash, the first line `#!/bin/bash` tells the [OS](Operating%20System.md) which interpreter to use. You can change this to e.g. `#!/usr/bin/python` to write a Python script that behaves like a shell script.
 
 # Vulnerabilities in the Command Line
 

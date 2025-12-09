@@ -12,7 +12,7 @@ date modified: Thursday, 4. December 2025, 11:12
 ### Course contents:
 
 - Linux + Windows CLI tools.
-- OS basics ([access control](../Terminology/Defense & Control/Access Control)).
+- [OS](Operating%20System.md) basics ([access control](../Terminology/Defense & Control/Access Control)).
 - Networking basics.
 - [Virtualization](../Terminology/Virtualization/Virtualization).
     - Some of the labs we’ll be doing will be on virtual machines and stuff.
@@ -99,7 +99,7 @@ Computer architecture.
 - There are still risks:
     - Inadvertent virus introduction (email, USB, evil website, [Trojan](../Terminology/Attacks/Malware/Trojan) software)
     - Unpatched software versions
-    - Zero-day exploit in an OS or a network application.
+    - Zero-day exploit in an [OS](Operating%20System.md) or a network application.
         - An exploit in the software that can be used to gain access to the system, but there is no fix for it yet.
     - Web browser malware.
     - Hardware [backdoor](../Terminology/Attacks/Backdoor) (Intel Management System)

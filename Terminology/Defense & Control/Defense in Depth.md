@@ -1,7 +1,7 @@
 ---
 aliases: []
 date created: Monday, 8. December 2025, 11:12
-date modified: Monday, 8. December 2025, 15:12
+date modified: Monday, 8. December 2025, 18:12
 ---
 
 # Defense in Depth
@@ -23,11 +23,11 @@ No single control is infallible. If one layer fails, others are still there and 
 
 ### Classifying Controls 📊
 By type: 🧩
-- **Physical:** Locks, guards, cameras.
-- **Technical:** Firewalls, encryption, [Access Control](Access%20Control.md).
-- **Administrative:** Policies, training, incident response plans.
+- **Physical controls:** Locks, guards, cameras.
+- **Technical controls:** Firewalls, encryption, [Access Control](Access%20Control.md).
+- **Administrative controls:** Policies, training, incident response plans.
 
 By function: 🎯
-- **Preventive:** Stop attacks before they happen (e.g., [Firewalls](Firewall.md), [Access Control](Access%20Control.md)).
-- **Detective:** Identify and log attacks (e.g., Intrusion Detection System (IDS), monitoring).
-- **Corrective:** Respond to and recover from attacks (e.g., backups, incident response).
+- **Preventive controls:** Stop attacks before they happen (e.g., [Firewalls](Firewall.md), [Access Control](Access%20Control.md)).
+- **Detective controls:** Identify and log attacks (e.g., Intrusion Detection System (IDS), monitoring).
+- **Corrective controls:** Respond to and recover from attacks (e.g., backups, incident response).

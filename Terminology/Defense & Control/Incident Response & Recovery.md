@@ -1,7 +1,7 @@
 ---
 aliases: []
 date created: Monday, 8. December 2025, 11:12
-date modified: Monday, 8. December 2025, 15:12
+date modified: Monday, 8. December 2025, 18:12
 ---
 
 # Incident Response & Recovery 🚨🛠️
