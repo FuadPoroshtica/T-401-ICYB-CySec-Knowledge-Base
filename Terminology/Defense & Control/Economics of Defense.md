@@ -1,7 +1,7 @@
 ---
 aliases: []
 date created: Monday, 8. December 2025, 11:12
-date modified: Monday, 8. December 2025, 11:12
+date modified: Monday, 8. December 2025, 15:12
 ---
 
 # Economics of Defense 💰🛡️
@@ -41,4 +41,4 @@ Do a cost-benefit analysis when deciding on countermeasures.
 > You do not buy a $5,000 titanium lock to secure a $50 bike.
 
 Defense cost must not exceed the value of what is being protected.
-**Defense in depth:** Multiple layers of defense, so if one fails, others are still there.
+**[Defense in Depth](Defense%20in%20Depth.md):** Multiple layers of defense, so if one fails, others are still there.

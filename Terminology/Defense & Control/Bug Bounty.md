@@ -1,7 +1,7 @@
 ---
 aliases: [Bug Bounties]
 date created: Tuesday, 25. November 2025, 20:11
-date modified: Monday, 8. December 2025, 11:12
+date modified: Monday, 8. December 2025, 15:12
 ---
 
 # Bug Bounty 🐛💰
@@ -17,4 +17,4 @@ How it works:
 4. Company validates the bug and pays a “bounty” (monetary reward) based on severity.
 Major Platforms: [HackerOne](https://www.hackerone.com/), [Bugcrowd](https://www.bugcrowd.com/), [Intigriti](https://www.intigriti.com/), [Defend Iceland](https://defendiceland.is/).
 
-**Related Concepts**: Responsible disclosure, vulnerability research, security bounty programs.
+**Related Concepts**: Responsible disclosure, [Vulnerability](../Vulnerability.md) research, security bounty programs.
