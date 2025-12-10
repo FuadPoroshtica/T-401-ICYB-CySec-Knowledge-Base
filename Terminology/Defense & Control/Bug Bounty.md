@@ -1,15 +1,20 @@
 ---
-aliases: []
+aliases: [Bug Bounties]
 date created: Tuesday, 25. November 2025, 20:11
-date modified: Monday, 1. December 2025, 21:12
+date modified: Monday, 8. December 2025, 18:12
 ---
 
-# Bug Bounty
+# Bug Bounty 🐛💰
 
 **Term**: Bug Bounty
 
-**Definition**: A program in which a company pays researchers a reward (bounty) for responsibly reporting security vulnerabilities.
+**Definition**: A bug bounty program is a reward system where organizations pay security researchers rewards (bounties) to find and report vulnerabilities in their systems. The “Gig Economy” of cybersecurity.
 
-**Context/Example**: Manufacturers offer small sums for bugs, while nation-states pay large amounts for attacks.
+How it works:
+1. Company launches a bug bounty program.
+2. Researchers find and report bugs.
+3. Researched writes a report explaining the bug and how to reproduce it.
+4. Company validates the bug and pays a “bounty” (monetary reward) based on severity.
+Major Platforms: [HackerOne](https://www.hackerone.com/), [Bugcrowd](https://www.bugcrowd.com/), [Intigriti](https://www.intigriti.com/), [Defend Iceland](https://defendiceland.is/).
 
-**Related Concepts**: Responsible disclosure, vulnerability research, security bounty programs.
+**Related Concepts**: Responsible disclosure, [Vulnerability](../Vulnerability.md) research, security bounty programs.

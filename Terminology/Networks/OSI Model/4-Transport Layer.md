@@ -1,7 +1,7 @@
 ---
 aliases: [Transport Layer]
 date created: Tuesday, 2. December 2025, 10:12
-date modified: Thursday, 4. December 2025, 08:12
+date modified: Monday, 8. December 2025, 18:12
 ---
 
 # 4-Transport Layer
@@ -16,7 +16,7 @@ The Transport Layer works closely with the [Network Layer](3-Network%20Layer.md)
 **UDP (User Datagram Protocol):**
 - Connectionless protocol. Fire-and-forget. No handshake, no confirmation.
 - Fast, low overhead, no guarantees.
-- Use cases: Streaming, gaming, VoIP, DNS queries. For when delivering *fast* is more important than delivering *reliably*.
+- Use cases: Streaming, gaming, VoIP, [DNS](../DNS.md) queries. For when delivering *fast* is more important than delivering *reliably*.
 
 **TCP (Transmission Control Protocol):**
 - Connection-oriented protocol. **3-Way Handshake** (syn, syn-ack, ack) to establish a connection.
@@ -24,7 +24,7 @@ The Transport Layer works closely with the [Network Layer](3-Network%20Layer.md)
 	- **SYN-ACK**: Server responds with a SYN-ACK packet to acknowledge the receipt of the SYN and to indicate its willingness to establish a connection.
 	- **ACK**: Client sends an ACK packet back to the server to acknowledge the receipt of the SYN-ACK, completing the handshake.
 - Guarnteed delivery, in-order delivery, flow control, congestion control.
-- Use cases: Web browsing (HTTP/HTTPS), email (SMTP, IMAP), file transfer (FTP). For when *reliable* delivery is more important than *fast* delivery.
+- Use cases: Web browsing ([HTTP](../Transfer%20Protocols/HTTP.md)/[HTTPS](../Transfer%20Protocols/HTTPS.md)), email ([SMTP](../Transfer%20Protocols/SMTP.md), IMAP), file transfer ([FTP](../Transfer%20Protocols/FTP.md)). For when *reliable* delivery is more important than *fast* delivery.
 
 **Possible attacks:**
 - **TCP SYN Flood**: An attacker sends a large number of SYN requests to a target server, but never finishes the handshake by sending the final ACK. This leaves the server with many half-open connections, consuming resources and potentially leading to a denial of service (DoS) for legitimate users.

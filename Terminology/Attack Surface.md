@@ -1,7 +1,7 @@
 ---
 aliases: []
 date created: Tuesday, 25. November 2025, 18:11
-date modified: Thursday, 4. December 2025, 08:12
+date modified: Monday, 8. December 2025, 18:12
 ---
 
 # Attack Surface

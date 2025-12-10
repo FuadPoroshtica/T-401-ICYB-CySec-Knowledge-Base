@@ -1,7 +1,7 @@
 ---
 aliases: []
 date created: Tuesday, 25. November 2025, 22:11
-date modified: Monday, 1. December 2025, 21:12
+date modified: Monday, 8. December 2025, 11:12
 ---
 
 # Hypervisor
@@ -27,9 +27,9 @@ date modified: Monday, 1. December 2025, 21:12
 
 **Term**: Type 2 Hypervisor (Hosted Hypervisor)
 
-**Definition**: A hypervisor that runs as a normal application on a host OS like Windows, macOS, or Linux.
+**Definition**: A hypervisor that runs as a normal application on a host [OS](Operating%20System.md) like Windows, macOS, or Linux.
 
-**Context/Example**: VirtualBox or VMware Workstation installed in your desktop OS; the hypervisor is “just another program” the OS is running.
+**Context/Example**: VirtualBox or VMware Workstation installed in your desktop [OS](Operating%20System.md); the hypervisor is “just another program” the [OS](Operating%20System.md) is running.
 
 **Related Concepts**: Type 1 hypervisor, host OS, desktop virtualization.
 

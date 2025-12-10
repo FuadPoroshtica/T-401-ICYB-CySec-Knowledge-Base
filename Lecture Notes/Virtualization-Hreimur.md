@@ -22,7 +22,7 @@ Like a big apartment building (physical server) and individual apartments (virtu
 - Foundation for services like AWS EC2, Azure VMs and Google Cloud compute engine
 - Virtual desktop for users, allowing access from anywhere
 - Replicating and restoring entire virtualized environments
-- Runnig older OS or apps that require specific hardware/environments
+- Runnig older [OS](Operating%20System.md) or apps that require specific hardware/environments
 - Safely run untrusted apps or browsing the web in an isolated environment <br>
 
 ## Terms
@@ -42,20 +42,20 @@ Like a big apartment building (physical server) and individual apartments (virtu
 - Full Virtualization: Fully simulates hardware, guet OS runs unmodified
     - How it works: Hypervisor fully simulates all hardware for the guest OS. The guest runs unmodified beliving it has direcet access to hardware
     - Hardware assisted: Moderns CPUs include features that offload much of the virtualization burden from the hypervisor = improved performance
-    - Pros: Guest OS runs undmodified = high compatibility, Strong isolation as the vms are highly isolated from eachother and host, Can run different OS families and near native performance with hardware assistance
+    - Pros: Guest OS runs undmodified = high compatibility, Strong isolation as the vms are highly isolated from eachother and host, Can run different [OS](Operating%20System.md) families and near native performance with hardware assistance
     - Cons: Higher overhead without hardware assistance, can be resource intensive compared to lighter methods and requires CPU support for hardware-assisted features for optimal speed
 - Paravirtualization: Guest OS is modified and aware its virtualized and communicates directly with hypervisor
     - How it works: Guest OS is modified to be aware its running in a virtual environment, it makes special hypercalls instead of talking directly to hardware
-    - Key Idea: OS and hypervisor cooperate to achive better performance
+    - Key Idea: [OS](Operating%20System.md) and hypervisor cooperate to achive better performance
     - Pros: lower overhead and better performance than pure full virtualization (without hardware assistance) and more efficient use of resources.
     - Cons: Requires modification or special drivers for the guest kernel, reducing compatibility. Can be more complex to setup because of mods to the guest OS
     - Less common as a primary method since hardware assistance is popping off
 - Hardware assisted: Uses special CPU instructuions to accelerate virtulaization
-- OS-Level Virtualization: Shares the host OS kernel but isolates apps in “containers”
-    - How it works: Containers share the host OS kernel, each container has its own isolated user space, process, file system and network interface
+- [OS](Operating%20System.md)-Level Virtualization: Shares the host [OS](Operating%20System.md) kernel but isolates apps in “containers”
+    - How it works: Containers share the host [OS](Operating%20System.md) kernel, each container has its own isolated user space, process, file system and network interface
     - Key Idea: Focuses on isolateing apps and their dependencies not enitre OS’s
-    - Pros: Extremely lightweight and fast startups, Very efficient resource wise, Highly portable (Build once, run anywhere) on compatible OS, good for microservices and continuous integration/delivery
-    - Cons: Less isolation than VMs: shared kernel is a single point of vulnerability/failure. All containers must ron on the same host OS kernel
+    - Pros: Extremely lightweight and fast startups, Very efficient resource wise, Highly portable (Build once, run anywhere) on compatible [OS](Operating%20System.md), good for microservices and continuous integration/delivery
+    - Cons: Less isolation than VMs: shared kernel is a single point of vulnerability/failure. All containers must ron on the same host [OS](Operating%20System.md) kernel
 - Emulation: Simulates an entire hardware platform often for different cpu architectures
     - How it works: Completly simulate the hardware and instruction set of a different system, The gues code is translated on the fly to run on the host native architecture
     - Key Idea: allows for software designed for one type of hardware to run on entirely different hardware

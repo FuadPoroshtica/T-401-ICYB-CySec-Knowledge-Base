@@ -1,7 +1,7 @@
 ---
 aliases: []
 date created: Tuesday, 25. November 2025, 20:11
-date modified: Monday, 8. December 2025, 09:12
+date modified: Monday, 8. December 2025, 10:12
 ---
 
 # Botnet

@@ -1,7 +1,7 @@
 ---
 aliases: [Simple Mail Transfer Protocol]
 date created: Tuesday, 2. December 2025, 20:12
-date modified: Tuesday, 2. December 2025, 20:12
+date modified: Monday, 8. December 2025, 18:12
 ---
 
 # SMTP

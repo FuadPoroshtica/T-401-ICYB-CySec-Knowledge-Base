@@ -1,7 +1,7 @@
 ---
 aliases: []
 date created: Tuesday, 2. December 2025, 08:12
-date modified: Tuesday, 2. December 2025, 20:12
+date modified: Monday, 8. December 2025, 11:12
 ---
 
 # 2025-12-02 Networks (Gísli)
@@ -374,7 +374,7 @@ and `Get-NetNeighbor`.
 | `netcat` (`nc`)<br>Read/Write data across networks. Used for port scanning, chat, or file transfer. | `nc -v google.com 80`<br>`nc -l 1234` (Listen)                    |
 | `wireshark`<br>GUI packet analyzer.                                                                 | `wireshark`                                                       |
 | `tcpdump` / `tshark`<br>Command-line packet analyzers. Capture raw traffic for analysis.            | `tcpdump -i eth0 port 80 tshark -Y "http.request.method == POST"` |
-| `nmap`<br>Network exploration tool. Scans for open ports and OS versions.                           | `nmap -sV 192.168.1.1`                                            |
+| `nmap`<br>Network exploration tool. Scans for open ports and [OS](Operating%20System.md) versions.                           | `nmap -sV 192.168.1.1`                                            |
 
 We’ll need `nmap` for today’s lab.
 Be careful with the flags you use, some of them can be quite invasive.

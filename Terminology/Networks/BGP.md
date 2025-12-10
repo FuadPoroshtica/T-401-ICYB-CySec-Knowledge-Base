@@ -1,7 +1,7 @@
 ---
 aliases: [Border Gateway Protocol]
 date created: Tuesday, 2. December 2025, 19:12
-date modified: Thursday, 4. December 2025, 08:12
+date modified: Monday, 8. December 2025, 18:12
 ---
 
 # BGP (Border Gateway Protocol)
@@ -20,4 +20,4 @@ BGP operates on trust. If a malicious [AS](AS.md) advertises that it has the bes
 - **The result**: Traffic interception, data theft, traffic analysis, denial of service.
 - **Mitigation**: RPKI (Resource Public Key Infrastructure) to cryptographically verify route announcements
 
-In 2008, Pakistan Telecom attempted to block access to YouTube within Pakistan by announcing a more specific route for YouTube’s IP address range (a /24 prefix) than the legitimate route announced by YouTube (a /22 prefix). However, this announcement was propagated beyond Pakistan’s borders, causing global traffic destined for YouTube to be misrouted to Pakistan Telecom. This incident resulted in a significant portion of global YouTube traffic being diverted to Pakistan, leading to widespread service disruption until the issue was resolved.
+In 2008, Pakistan Telecom attempted to block access to YouTube within Pakistan by announcing a more specific route for YouTube’s [IP](TCP%20IP%20Model/IP.md) address range (a /24 prefix) than the legitimate route announced by YouTube (a /22 prefix). However, this announcement was propagated beyond Pakistan’s borders, causing global traffic destined for YouTube to be misrouted to Pakistan Telecom. This incident resulted in a significant portion of global YouTube traffic being diverted to Pakistan, leading to widespread service disruption until the issue was resolved.
