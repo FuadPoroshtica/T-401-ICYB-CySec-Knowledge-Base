@@ -1,7 +1,7 @@
 ---
 aliases: []
 date created: Wednesday, 10. December 2025, 08:12
-date modified: Wednesday, 10. December 2025, 13:12
+date modified: Wednesday, 10. December 2025, 20:12
 ---
 
 # 2025-12-10 Data Privacy (Fuad)
@@ -43,7 +43,7 @@ date modified: Wednesday, 10. December 2025, 13:12
 - **Normalizes surveillance**
 - **Right vs Wrong**
 	- The premise assumes that the ethical status of an action is easily answered: either you did something bad, or there is nothing to worry about.
-	- The distinction between ”right” and ”wrong” is complex, depending on legal constraints, cultural context, and jurisdiction
+	- The distinction between “right” and “wrong” is complex, depending on legal constraints, cultural context, and jurisdiction
 	- Example: sexual orientation or smoking cannabis
 	- The common assumption that only wrongdoing requires privacy is often perpetuated by those who try to exploit the data collected
 - **Myth 4:** “We Always Need to Know Who You Are.”
@@ -88,7 +88,7 @@ date modified: Wednesday, 10. December 2025, 13:12
 - Passive Leakage: Personal Preferences Leakage ![](../zAttachments/Pasted%20image%2020251210095833.png)
 - A big LLM will soon start using your data to create an advertisement, which will lead to your data being used.
 - Active Attacks: Jailbreak Attack ![](../zAttachments/Pasted%20image%2020251210100401.png)
-- Yu, Zhiyuan, et al. ”Don’t listen to me: Understanding and exploring jailbreak prompts of large language models.” 33rd USENIX Security Symposium (USENIX Security 24). 2024.
+- Yu, Zhiyuan, et al. “Don’t listen to me: Understanding and exploring jailbreak prompts of large language models.” 33rd USENIX Security Symposium (USENIX Security 24). 2024.
 - Active Attacks: Jailbreak Attack 2![](../zAttachments/Screenshot%202025-12-10%20at%2010.04.50.png)
 
 ## **Large Language Models**
@@ -106,10 +106,9 @@ date modified: Wednesday, 10. December 2025, 13:12
 	- Develop critical perspectives on tech design decisions
     
 **Food for Thought**
-- Are ’free’ services ethically acceptable?
+- Are ‘free’ services ethically acceptable?
 - Should CS professionals be liable for privacy harms?
 - What should students prioritize: innovation or safety?
 - Importance of privacy-by-design development
 > T-722-PRIV, Foundations of Data Privacy: A Legal and Technical Perspective
 	Fatimae@ru.is
-
