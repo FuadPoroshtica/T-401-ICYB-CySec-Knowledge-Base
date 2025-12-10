@@ -1,7 +1,7 @@
 ---
-aliases: 
+aliases: []
 date created: Wednesday, 10. December 2025, 08:12
-date modified: Wednesday, 10. December 2025, 09:12
+date modified: Wednesday, 10. December 2025, 13:12
 ---
 
 # 2025-12-10 Data Privacy (Fuad)
@@ -82,7 +82,7 @@ date modified: Wednesday, 10. December 2025, 09:12
 
 **Large Language Models** - attack strategies
 - Passive Leakage: Sensitive Inquiries ![](../zAttachments/Pasted%20image%2020251210095700.png)
-- A PhD student accessed Samsung's data, noting that it relies on a third-party company, and that the information he obtained was also private. This was a huge mistake made by Samsung.
+- A PhD student accessed Samsung’s data, noting that it relies on a third-party company, and that the information he obtained was also private. This was a huge mistake made by Samsung.
 - Passive Leakage: Contextual Leakage![](../zAttachments/Pasted%20image%2020251210095750.png)
 - Mental and sensitive data should not be revealed with LLM. - Law is not the same as any authorized person, like the police, can have access to that data.
 - Passive Leakage: Personal Preferences Leakage ![](../zAttachments/Pasted%20image%2020251210095833.png)
@@ -90,10 +90,11 @@ date modified: Wednesday, 10. December 2025, 09:12
 - Active Attacks: Jailbreak Attack ![](../zAttachments/Pasted%20image%2020251210100401.png)
 - Yu, Zhiyuan, et al. ”Don’t listen to me: Understanding and exploring jailbreak prompts of large language models.” 33rd USENIX Security Symposium (USENIX Security 24). 2024.
 - Active Attacks: Jailbreak Attack 2![](../zAttachments/Screenshot%202025-12-10%20at%2010.04.50.png)
+
 ## **Large Language Models**
 **Attack Targets**
 - Attack Target: Membership Inference Attacks![](../zAttachments/Screenshot%202025-12-10%20at%2010.06.15.png)
-- They need to know about previous data to learn more about you, 
+- They need to know about previous data to learn more about you,
 - Attack Target: Model Inversion ![](../zAttachments/Screenshot%202025-12-10%20at%2010.08.20.png)
 **Takeaways**
 - Lessons:
@@ -111,4 +112,4 @@ date modified: Wednesday, 10. December 2025, 09:12
 - Importance of privacy-by-design development
 > T-722-PRIV, Foundations of Data Privacy: A Legal and Technical Perspective
 	Fatimae@ru.is
-	
+
