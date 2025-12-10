@@ -1,7 +1,7 @@
 ---
 aliases: []
 date created: Monday, 1. December 2025, 11:12
-date modified: Monday, 8. December 2025, 18:12
+date modified: Wednesday, 10. December 2025, 20:12
 ---
 
 # Acronyms cheatsheet
@@ -123,7 +123,7 @@ All the acronyms and abbreviations that we’ve seen so far:
 | NPM                                                                                         | Node Package Manager                                                                                                                                                                            |
 | NSE                                                                                         | `nmap` Scripting Engine                                                                                                                                                                         |
 | OAuth 2.0                                                                                   | Open Authorization 2.0                                                                                                                                                                          |
-| [OS](Operating%20System.md)                                                                                          | Operating System                                                                                                                                                                                |
+| [OS](Operating%20System.md)                                                                 | Operating System                                                                                                                                                                                |
 | OSI                                                                                         | Open Systems Interconnection model                                                                                                                                                              |
 | OSINT                                                                                       | Open Source Intelligence                                                                                                                                                                        |
 | [OWASP](Web%20Security/OWASP.md)                                                            | Open Web Application Security Project                                                                                                                                                           |
@@ -139,7 +139,7 @@ All the acronyms and abbreviations that we’ve seen so far:
 | `pwd`                                                                                       | Print Working Directory                                                                                                                                                                         |
 | pwd                                                                                         | Common abbreviation for “password”                                                                                                                                                              |
 | PyPI                                                                                        | Python Package Index                                                                                                                                                                            |
-| QNX                                                                                         | Real-time microkernel [OS](Operating%20System.md)                                                                                                                                                                        |
+| QNX                                                                                         | Real-time microkernel [OS](Operating%20System.md)                                                                                                                                               |
 | RAM                                                                                         | Random Access Memory                                                                                                                                                                            |
 | RCE                                                                                         | Remote Code Execution                                                                                                                                                                           |
 | REPL                                                                                        | Read-Eval-Print Loop                                                                                                                                                                            |

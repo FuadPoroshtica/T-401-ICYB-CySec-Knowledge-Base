@@ -5,7 +5,7 @@ date modified: Monday, 8. December 2025, 18:12
 ---
 
 # XSS
-**Definition**: A “Cross Site Scripting” attack is where someone manages to execute a script on the client-side, can give access to session tokens and cookies.
+**Definition**: Cross-Site Scripting (XSS) is a type of attack where an attacker injects malicious scripts into content from otherwise trusted websites. This allows the attacker to execute scripts in the victim's browser, potentially stealing cookies, session tokens, or other sensitive information.
 
 **Context/Example**: An attacker types:
 ```HTML

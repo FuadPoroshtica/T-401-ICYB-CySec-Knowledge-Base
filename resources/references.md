@@ -1,7 +1,7 @@
 ---
-aliases: 
+aliases: []
 date created: Wednesday, 3. December 2025, 08:12
-date modified: Wednesday, 10. December 2025, 09:12
+date modified: Wednesday, 10. December 2025, 21:12
 ---
 
 # References and Resources
