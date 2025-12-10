@@ -1,11 +1,11 @@
 ---
 aliases: [Cross-Site Scripting, Cross Site Scripting]
 date created: Monday, 8. December 2025, 09:12
-date modified: Monday, 8. December 2025, 18:12
+date modified: Wednesday, 10. December 2025, 21:12
 ---
 
 # XSS
-**Definition**: Cross-Site Scripting (XSS) is a type of attack where an attacker injects malicious scripts into content from otherwise trusted websites. This allows the attacker to execute scripts in the victim's browser, potentially stealing cookies, session tokens, or other sensitive information.
+**Definition**: Cross-Site Scripting (XSS) is a type of attack where an attacker injects malicious scripts into content from otherwise trusted websites. This allows the attacker to execute scripts in the victim’s browser, potentially stealing cookies, session tokens, or other sensitive information.
 
 **Context/Example**: An attacker types:
 ```HTML

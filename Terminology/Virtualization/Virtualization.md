@@ -1,7 +1,7 @@
 ---
-aliases: []
+aliases: [Virtualisation]
 date created: Wednesday, 26. November 2025, 18:11
-date modified: Monday, 8. December 2025, 19:12
+date modified: Wednesday, 10. December 2025, 22:12
 ---
 
 # Virtualization
