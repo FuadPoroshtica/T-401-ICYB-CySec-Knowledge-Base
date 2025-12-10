@@ -148,3 +148,19 @@ Fix: rm ./* or use -- (rm -- * )
 | Columns      | awk, cut     | Select-Object     |
 | Text Replace | sed          | -replace operator |
 | Aliases      | Same flags   | Different Flags!  |
+
+
+#### Wildcard Injection Prevention
+Problem: How to prevent attacks like rm * when attacker creates a file named -rf?
+- Us -- to end options rm -- *
+- use ./ prefix: rm ./* 
+- Quote the glob: rm " * "
+- Never run commands in untrusted dirs as root
+#### Curl bash Problem
+Task: Find recent supply chain attack where remote script was compromised
+Verify the integrity: Download the script first, Check file hash against published checksums, Inspect the code manually, Use GPG signatures if available, Check HTTPS certificate, Review source repo history and only then run it.
+#### Principle of least privilege
+Why sudo > logging in as root
+Audit trail: var/log/auth.log tracks who did what, Requires a password which can prevent accidental commands, Time limited: sudo access expires, Selective: Can grant specific commands only, Reversible: easy to revoke access.
+Audit trail example: Shows "User X ran command Y at time Z"
+
