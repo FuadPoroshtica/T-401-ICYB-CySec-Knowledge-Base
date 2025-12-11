@@ -1,7 +1,7 @@
 ---
 aliases: []
 date created: Monday, 1. December 2025, 11:12
-date modified: Thursday, 4. December 2025, 12:12
+date modified: Thursday, 11. December 2025, 13:12
 ---
 
 # Acronyms cheatsheet
@@ -212,3 +212,5 @@ All the acronyms and abbreviations that we’ve seen so far:
 | XP                                   | Windows XP product line                                                                                       |
 | XSS                                  | Cross-Site Scripting                                                                                          |
 | Zsh                                  | Z Shell                                                                                                       |
+| CTF                                  | Capture The Flag                                                                                              |
+|                                      |                                                                                                               |
