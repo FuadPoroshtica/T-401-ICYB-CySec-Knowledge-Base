@@ -14,7 +14,7 @@ date modified: Thursday, 11. December 2025, 10:12
 	- TODO
 - Economy of Mechanism:
 	- TODO
-- [[Complete mediation]]:
+- [Complete mediation](<../Terminology/Complete mediation.md>):
 	- ...always check access for every access, something
 - Open design:
 	- The opposite of security by obscurity. It shouldn’t depend on security by obscurity. The system should be easy to understand so that it is easy to analyze what is going on for forensics.
@@ -34,7 +34,7 @@ He’s not expecting us to know everything about computer networks, but we shoul
 
 We should know:
 
-- It’s organized into layers in [OSI Model](../Terminology/Networks/OSI Model/OSI Model.md) and [TCP IP Model](../Terminology/Networks/TCP IP Model/TCP IP Model.md). We don’t have to memorize the layer numbers.
+- It’s organized into layers in [OSI Model](<../Terminology/Networks/OSI Model/OSI Model.md>) and [TCP IP Model](<../Terminology/Networks/TCP IP Model/TCP IP Model.md>). We don’t have to memorize the layer numbers.
 - Data is split up into packets.
 - The packets don’t just make one hop, they hop again and again between places.
 	- Just like packages you get in the mail! They transfer between transport hubs!
@@ -91,14 +91,14 @@ Various protocols operate at this layer, including:
 
 - [HTTP](../Terminology/Networks/Transfer Protocols/HTTP.md) and [HTTPS](../Terminology/Networks/Transfer Protocols/HTTPS.md) (we should be aware of the difference between them)
     - These are the protocols used for web browsing.
-- [TLS (Transport Layer Security)](../Terminology/Networks/TLS.md) for CIA (Confidentiality, Integrity, Availability)
+- [TLS](<../Terminology/Networks/TLS.md>) for CIA (Confidentiality, Integrity, Availability) [TLS](<../Terminology/Networks/TLS.md>)
     - Provides encryption and secure communication over a network.
 - <abbr title="Secure Shell">SSH</abbr> (vs Telnet)
     - Secure Shell (<abbr title="Secure Shell">SSH</abbr>) is a protocol for secure remote login and other secure network services over an insecure network. It encrypts the session, making it secure against eavesdropping, connection hijacking, and other attacks.
     - Telnet, on the other hand, transmits data in plaintext, making it vulnerable to interception and attacks.
-- [DNS](../Terminology/Networks/DNS.md) (Domain Name System)
+- [DNS](<../Terminology/Networks/DNS.md>) (Domain Name System)
     - Translates human-readable domain names (like `www.example.com`) into IP addresses that computers use to identify each other on the network.
-- [DHCP](../Terminology/Networks/DHCP.md) (Dynamic Host Configuration Protocol)
+- [DHCP](<../Terminology/Networks/DHCP.md>) (Dynamic Host Configuration Protocol)
     - Automatically assigns IP addresses and other network configuration parameters to devices on a network, allowing them to communicate effectively.
 - Email: [SMTP](../Terminology/Networks/Transfer Protocols/SMTP.md), <abbr title="Internet Message Access Protocol">IMAP</abbr>, <abbr title="Post Office Protocol Version 3">POP3</abbr>
     - [SMTP (Simple Mail Transfer Protocol)](../Terminology/Networks/Transfer Protocols/SMTP.md) is used for sending emails.
@@ -106,7 +106,7 @@ Various protocols operate at this layer, including:
 	- <abbr title="Post Office Protocol Version 3">POP3</abbr> downloads the email to the local device and usually deletes it from the server, while <abbr title="Internet Message Access Protocol">IMAP</abbr> allows users to view and manage their emails directly on the server, keeping them synchronized across multiple devices.
 - File sharing/file transfer: [FTP](../Terminology/Networks/Transfer Protocols/FTP.md), <abbr title="SSH File Transfer Protocol">SFTP</abbr>, <abbr title="Server Message Block">SMB</abbr>
 	- [FTP](../Terminology/Networks/Transfer Protocols/FTP.md) (File Transfer Protocol) is used for transferring files between a client and server on a network. It is not secure as it transmits data in plaintext.
-	- SFTP (<abbr title="Secure Shell">SSH</abbr> File Transfer Protocol) is a secure version of [FTP](../Terminology/Networks/Transfer%20Protocols/FTP.md) that uses <abbr title="Secure Shell">SSH</abbr> to encrypt the data transfer.
+	- SFTP (<abbr title="Secure Shell">SSH</abbr> File Transfer Protocol) is a secure version of [FTP](<../Terminology/Networks/Transfer Protocols/FTP.md>) that uses <abbr title="Secure Shell">SSH</abbr> to encrypt the data transfer.
 	- <abbr title="Server Message Block">SMB</abbr> (Server Message Block) is a network file sharing protocol that allows applications and users to read and write to files and request services from server programs in a computer network. It is commonly used in Windows environments.
 
 ## Network Security
@@ -119,7 +119,7 @@ Various protocols operate at this layer, including:
 	- It provides confidentiality and integrity for data in transit.
 
 # Operating System
-## What is an [OS](../Terminology/Systems%20&%20Plaforms/Operating%20System.md)?
+## What is an [OS](<../Terminology/Systems & Plaforms/Operating System.md>)?
 - Know the difference between the [Kernel](../Terminology/Systems & Plaforms/Kernel.md) and user space.
 - Core functionality
     - Abstracton from raw hardware interfaces. E.g., instead of having to know how to talk to a hard drive, you can just use file system calls.
@@ -148,7 +148,7 @@ Issues:
     - TOCTOU (Time of Check to Time of Use) is a specific type of race condition where a resource is checked for a certain condition (e.g., access permissions) and then used later, but the condition may have changed in the meantime.
     - Attackers can exploit <abbr title="Time of Check to Time of Use">TOCTOU</abbr> vulnerabilities to gain unauthorized access to resources.
 - Command Injection
-    - Command injection is a security vulnerability that occurs when an attacker is able to execute arbitrary commands on a host [Operating System](../Terminology/Systems%20&%20Plaforms/Operating%20System.md) via a vulnerable application. This typically happens when user input is not properly sanitized and is passed directly to a system shell or command interpreter.
+    - Command injection is a security vulnerability that occurs when an attacker is able to execute arbitrary commands on a host [Operating System](<../Terminology/Systems & Plaforms/Operating System.md>) via a vulnerable application. This typically happens when user input is not properly sanitized and is passed directly to a system shell or command interpreter.
     - Attackers can exploit command injection vulnerabilities to gain unauthorized access, manipulate data, or compromise the system.
     - Mitigation strategies include input validation, using parameterized queries, and avoiding the use of system shells for executing commands.
 - Privilege Escalation
@@ -173,7 +173,7 @@ Important concepts:
 What types we need to know for the exam:
 
 - Different types:
-	- [Hypervisor](../Terminology/Virtualization/Hypervisor.md) / [Virtual Machine](../Terminology/Virtualization/Virtual Machine (VM).md)
+	- [Hypervisor](<../Terminology/Virtualization/Hypervisor.md>) / [Virtual Machine](../Terminology/Virtualization/Virtual Machine (VM).md)
 	- [Container](../Terminology/Virtualization/Virtualization methods/Container.md) (e.g., Docker)
 	- [Emulation](../Terminology/Virtualization/Virtualization methods/Emulation.md)
 - ... offer different
@@ -212,7 +212,7 @@ Server-Side:
     - The supply chain refers to all the libraries, frameworks, and third-party services that a web application depends on. Vulnerabilities in any of these components can introduce security risks to the application.
 Client-Side:
 - HTML, CSS, ... → DOM (Document Object Model)
-    - The <abbr title="Document Object Model">DOM</abbr> represents the structure of a web page and can be manipulated by scripts, which can introduce security risks such as [Cross-Site Scripting (XSS)](../Terminology/Attacks/XSS.md) if not properly handled.
+    - The <abbr title="Document Object Model">DOM</abbr> represents the structure of a web page and can be manipulated by scripts, which can introduce security risks such as [Cross-Site Scripting (XSS)](<../Terminology/Attacks/XSS.md>) if not properly handled.
     - Understanding the <abbr title="Document Object Model">DOM</abbr> is crucial for identifying potential vulnerabilities in web applications.
 - Client-Side Storage (Cookies, Access Tokens, ...)
     - Client-side storage mechanisms can be exploited if sensitive data is not properly protected, leading to risks such as session hijacking or unauthorized access.
@@ -230,7 +230,7 @@ Client-Side:
 - [Broken Authentication](../Terminology/Web Security/Broken Authentication.md) (passwords, session ids, tokens)
     - [Broken Authentication](../Terminology/Web Security/Broken Authentication.md) refers to vulnerabilities in the authentication mechanisms of a web application that allow attackers to compromise user accounts or gain unauthorized access. This can occur due to weak password policies, session management flaws, or inadequate protection of authentication credentials.
     - *Mitigation*: Mitigation techniques include implementing strong password policies, using multi-factor authentication, securely managing sessions, and regularly reviewing authentication mechanisms for vulnerabilities.
-- [Cross-Site Scripting (XSS)](../Terminology/Attacks/XSS.md)
+- [Cross-Site Scripting (XSS)](<../Terminology/Attacks/XSS.md>)
 ⇒ [OWASP](../Terminology/Web Security/OWASP.md) Top-Ten
 The main problem with “Vibe Coding” is that it encourages developers to write code quickly without actually understanding it or considering security implications.
 
@@ -244,7 +244,7 @@ The main problem with “Vibe Coding” is that it encourages developers to writ
 - Model Surface
   - Weights & Embeddings. Attackers can manipulate the model’s weights or embeddings to alter its behavior.
   - The neural network file. If attackers gain access to the model file, they can modify it to introduce vulnerabilities or change its functionality.
-  - *Attack Vectors*: Extraction of (private) training data, [Backdoors](../Terminology/Attacks/Backdoor.md).
+  - *Attack Vectors*: Extraction of (private) training data, [Backdoors](<../Terminology/Attacks/Backdoor.md>).
 - Agency Surface
   - Plugins, <abbr title="Application Programming Interface">API</abbr> calls, Code Execution. If the AI has access to external plugins, <abbr title="Application Programming Interface">API</abbr>s, or can execute code, attackers can exploit these capabilities to perform malicious actions.
   - *Attack Vectors*: Confused deputies (tricking the model into doing something it has the ability to do, but shouldn’t)
