@@ -16,6 +16,6 @@ FTP typically uses two separate channels for communication:
 - A control channel for sending commands and responses (default port: 21)
 - And a data channel for transferring files (default port: 20).
 
-FTP does not provide built-in encryption, which means that data, including usernames and passwords, is transmitted in plain text. To enhance security, secure variants of FTP, such as FTPS (FTP over SSL/[TLS](../TLS.md)) and SFTP (SSH File Transfer Protocol), are commonly used.
+FTP does not provide built-in encryption, which means that data, including usernames and passwords, is transmitted in plain text. To enhance security, secure variants of FTP, such as FTPS (FTP over SSL/[TLS](<../TLS.md>)) and SFTP (SSH File Transfer Protocol), are commonly used.
 
 FTP is widely used for website management, file sharing, and data backup. It is supported by various FTP clients and servers, making it a versatile and widely adopted protocol for file transfer.

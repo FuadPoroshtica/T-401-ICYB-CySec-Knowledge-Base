@@ -8,4 +8,4 @@ date modified: Monday, 8. December 2025, 11:12
 
 **Context/Example**: A dataset of “anonymous” GPS pings from a city’s transportation app is released for research. An attacker cross-references the time and location patterns with public information (like home or workplace locations) and reconstructs an individual’s daily travel route—identifying where they live, work, and their habits.
 
-**Related Concepts**: Location Privacy, Re-identification Attacks, Mobility Data, [K-anonymity](K-anonymity.md), [Differential Privacy](Differential Privacy.md), Spatiotemporal Data, Deanonymization
+**Related Concepts**: Location Privacy, Re-identification Attacks, Mobility Data, [K-anonymity](<./K-anonymity.md>), [Differential Privacy](Differential Privacy.md), Spatiotemporal Data, Deanonymization

@@ -24,4 +24,4 @@ date modified: Monday, 8. December 2025, 19:12
 
 **Context/Example**: Containers isolate user space (processes, files) but share the same kernel; a kernel bug can break isolation across all containers.
 
-**Related Concepts**: System calls, privilege separation, [containers](Container.md), kernel exploit.
+**Related Concepts**: System calls, privilege separation, [containers](<./Container.md>), kernel exploit.

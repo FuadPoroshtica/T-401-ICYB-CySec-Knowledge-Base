@@ -30,10 +30,10 @@ Operating systems perform several key functions, including:
 
 ## Cyber Security Context
 
-In the context of cyber security, operating systems play a crucial role in maintaining the security and integrity of computer systems. They implement various security measures, such as user authentication, [Access Controls](../Defense & Control/Access Control.md), encryption, and system monitoring, to protect against unauthorized access, [Malware](../Attacks/Malware/Malware.md), and other cyber threats. Understanding the operating system is essential for identifying vulnerabilities, implementing security policies, and ensuring the overall security posture of an organization’s IT infrastructure.
+In the context of cyber security, operating systems play a crucial role in maintaining the security and integrity of computer systems. They implement various security measures, such as user authentication, [Access Controls](../Defense & Control/Access Control.md), encryption, and system monitoring, to protect against unauthorized access, [Malware](<../Attacks/Malware/Malware.md>), and other cyber threats. Understanding the operating system is essential for identifying vulnerabilities, implementing security policies, and ensuring the overall security posture of an organization’s IT infrastructure.
 
 Operating systems are a fundamental component of modern computing, and their design and functionality significantly impact the performance, usability, and security of computer systems.
 
 ## Kernel vs Operating System
 
-The difference between an Operating System and a kernel is that the [Kernel](Kernel.md) is the core component of the operating system that directly interacts with the hardware, while the operating system encompasses the [Kernel](Kernel.md) along with additional software and services that provide a complete user experience and system management capabilities.
+The difference between an Operating System and a kernel is that the [Kernel](<./Kernel.md>) is the core component of the operating system that directly interacts with the hardware, while the operating system encompasses the [Kernel](<./Kernel.md>) along with additional software and services that provide a complete user experience and system management capabilities.

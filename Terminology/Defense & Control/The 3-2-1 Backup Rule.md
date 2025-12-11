@@ -6,7 +6,7 @@ date modified: Thursday, 11. December 2025, 09:12
 
 # The 3-2-1 Backup Rule
 
-[Ransomware](../Attacks/Malware/Ransomware.md) targets backups first, so having multiple backups is important. Don’t keep a backup just on your computer.
+[Ransomware](<../Attacks/Malware/Ransomware.md>) targets backups first, so having multiple backups is important. Don’t keep a backup just on your computer.
 
 > [!info] The 3-2-1 rule.
 > - **3** copies of data.
@@ -15,4 +15,4 @@ date modified: Thursday, 11. December 2025, 09:12
 
 **Immutable backups:** Backups that cannot be altered or deleted, even by an administrator, for a set period.
 
-**Related Concepts**: [Ransomware](../Attacks/Malware/Ransomware.md)
+**Related Concepts**: [Ransomware](<../Attacks/Malware/Ransomware.md>)

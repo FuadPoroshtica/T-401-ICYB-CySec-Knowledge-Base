@@ -1,3 +1,10 @@
+---
+aliases: 
+date created: Thursday, 11. December 2025, 19:12
+date modified: Thursday, 11. December 2025, 19:12
+---
+
+# WebSecurity-Further-studies-JonIngi
 ***Further studies web security***
 
 ***Cross-site request forgery (CSRF)***
@@ -21,17 +28,17 @@ Back in 2017 CSRF attacks were ranked number 8 in the OWASP top 10. In the most 
 SSRF is an attack where the attackers make requests to internal and unauthorized locations on a vulnerable server. They do this by controlling the URL of the server. The attacker can access internal services, read sensitive data or interact with the system that were not meant to be publicly reachable. This allows them to bypass restrictions and potentially give them more access into the infrastructure.
 
 ***Potential risks of SSRF***
-The risks of SSRF are access of networks, theft of meta data, remote execution (RCE), unauthorized actions, data exfiltration, firewall/network bypass and more access to the infrastructure.  
+The risks of SSRF are access of networks, theft of meta data, remote execution (RCE), unauthorized actions, data exfiltration, firewall/network bypass and more access to the infrastructure.
 
-If the attacker gets access to the networks they can get a lot of sensitive data E.G. The database, admin panels and internal APIs. 
+If the attacker gets access to the networks they can get a lot of sensitive data E.G. The database, admin panels and internal APIs.
 
-If they steal the metadata the attacker can get access of all access keys, tokens and cookies giving them full control of their cloud. 
+If they steal the metadata the attacker can get access of all access keys, tokens and cookies giving them full control of their cloud.
 
-RCE can be used to execute commands and upload files which giving the attacker the opportunity to do almost anything to the infrastructure. 
+RCE can be used to execute commands and upload files which giving the attacker the opportunity to do almost anything to the infrastructure.
 
 Unauthorized actions can allow the attacker to make post requests to internal endpoints, they can reset passwords and enableing/disabling services. This of course depends on how much access they get.
 
-Data exfiltration can give the attacker a lot of information allowing them to read configuration files, internal api responses and system statuses. 
+Data exfiltration can give the attacker a lot of information allowing them to read configuration files, internal api responses and system statuses.
 
 Firewall bypass allows the attacker to use the server as a proxy allowing them access to networks that should be isolated.
 

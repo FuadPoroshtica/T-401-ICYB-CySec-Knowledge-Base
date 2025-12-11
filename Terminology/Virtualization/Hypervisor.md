@@ -23,7 +23,7 @@ date modified: Monday, 8. December 2025, 11:12
 
 **Context/Example**: VMware ESXi or Microsoft Hyper-V Server installed directly on a server; all [VMs](Virtual Machine (VM).md) run on top of this thin hypervisor layer.
 
-**Related Concepts**: Type 2 hypervisor, [full virtualization](Virtualization methods/Full Virtualization.md), [multi-tenancy](Multi-Tenancy.md), cloud providers.
+**Related Concepts**: Type 2 hypervisor, [full virtualization](Virtualization methods/Full Virtualization.md), [multi-tenancy](<./Multi-Tenancy.md>), cloud providers.
 
 **Term**: Type 2 Hypervisor (Hosted Hypervisor)
 
@@ -43,4 +43,4 @@ date modified: Monday, 8. December 2025, 11:12
 
 **Context/Example**: A bug in ESXi or KVM that lets a guest VM send specially crafted instructions and gain control over the hypervisor process.
 
-**Related Concepts**: [VM escape](VM Escape.md), patch management, [CVE](Hypervisor.md), [attack surface](Hypervisor.md).
+**Related Concepts**: [VM escape](VM Escape.md), patch management, [CVE](<./Hypervisor.md>), [attack surface](<./Hypervisor.md>).

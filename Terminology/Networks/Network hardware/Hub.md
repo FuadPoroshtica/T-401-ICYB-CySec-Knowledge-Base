@@ -12,4 +12,4 @@ date modified: Monday, 8. December 2025, 18:12
 - Also called an “Ethernet Hub”, used to connect multiple Ethernet devices together and making them act as a single network segment.
 - If a signal is induced at any input, every output is open, except the original.
 
-A [Switch](Switch.md) looks the same as a hub.
+A [Switch](<./Switch.md>) looks the same as a hub.

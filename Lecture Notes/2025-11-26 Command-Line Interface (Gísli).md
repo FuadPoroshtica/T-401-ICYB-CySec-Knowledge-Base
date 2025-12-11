@@ -320,14 +320,14 @@ then (*maybe*) execute it.
 > - The `$PATH` variable controls where the shell looks for programs.
 > - **Danger**: Adding `.` (current directory) to the start of PATH (or in the
 path at all).
-> - **Scenario**: The attacker places a [virus](../Terminology/Attacks/Malware/Virus.md) named ‘ls’ in a shared folder. You type `ls`, and the [virus](../Terminology/Attacks/Malware/Virus.md) runs instead of the real command.
+> - **Scenario**: The attacker places a [virus](<../Terminology/Attacks/Malware/Virus.md>) named ‘ls’ in a shared folder. You type `ls`, and the [virus](<../Terminology/Attacks/Malware/Virus.md>) runs instead of the real command.
 
 ## Permission Laziness
 
 > [!error] The “`chmod 777`” trap
 > - **Action**: Granting Read/Write/Execute permissions to *Everyone* to fix a “permission denied” error.
 > - **Risk**: Any user (or hacked web service) can overwrite your scripts.
-> - **Scenario**: Attacker modifies a startup script. When you reboot, their [Malware](../Terminology/Attacks/Malware/Malware.md) runs with your admin privileges.
+> - **Scenario**: Attacker modifies a startup script. When you reboot, their [Malware](<../Terminology/Attacks/Malware/Malware.md>) runs with your admin privileges.
 
 > [!error] Running as Root
 > - **Principle of Least Privilege**: Always log in as a standard user; use `sudo` only when necessary.

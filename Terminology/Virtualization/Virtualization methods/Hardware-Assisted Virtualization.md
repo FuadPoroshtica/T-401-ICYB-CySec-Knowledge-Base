@@ -8,7 +8,7 @@ date modified: Monday, 8. December 2025, 11:12
 
 **Term**: Hardware-Assisted Virtualization (Intel VT-x, AMD-V)
 
-**Definition**: CPU features that help the [hypervisor](../Hypervisor.md) run [VMs](../Virtual Machine (VM).md) faster and more securely by offloading low-level virtualization tasks to the processor.
+**Definition**: CPU features that help the [hypervisor](<../Hypervisor.md>) run [VMs](../Virtual Machine (VM).md) faster and more securely by offloading low-level virtualization tasks to the processor.
 
 **Context/Example**: Enabling “Intel VT-x” or “AMD-V” in BIOS/UEFI makes VMs run close to native speed instead of emulating privileged instructions in software.
 

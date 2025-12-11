@@ -31,6 +31,6 @@ When a packet comes back from the outside, the NAT device looks up the destinati
 
 But this means that unsolicited incoming connections from the outside to devices behind the NAT are generally not possible, unless specific port forwarding rules are set up on the NAT device.
 
-In the NAT translation table, we have a mapping of internal IP addresses and ports to the external IP address and ports. There’s the WAN (Wide Area Network) side, which is the public IP address assigned to the NAT device (like a [Router](Network hardware/Router.md)), and the [LAN (Local Area Network)](LAN.md) side, which consists of the private IP addresses and ports of the devices behind the NAT.
+In the NAT translation table, we have a mapping of internal IP addresses and ports to the external IP address and ports. There’s the WAN (Wide Area Network) side, which is the public IP address assigned to the NAT device (like a [Router](Network hardware/Router.md)), and the [LAN (Local Area Network)](<./LAN.md>) side, which consists of the private IP addresses and ports of the devices behind the NAT.
 
 When a device inside the NAT initiates a connection to an external server, the NAT device records this mapping in its translation table. For example, if an internal device with IP address

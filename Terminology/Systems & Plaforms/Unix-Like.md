@@ -13,4 +13,4 @@ Unix has had a huge influence on the computers, as most computers run either a v
 
 **Context/Example**: Linux is a Unix-Like [Operating System](Operating System.md)
 
-**Related Concepts**: Linux, [POSIX](POSIX.md)
+**Related Concepts**: Linux, [POSIX](<./POSIX.md>)

@@ -11,4 +11,4 @@ date modified: Monday, 8. December 2025, 10:12
 
 **Context/Example**: Botnets are a target/infrastructure that attackers want to control.
 
-**Related Concepts**: Command and control (C2), DDoS (Distributed Denial of Service), [Malware](Malware/Malware.md), zombies
+**Related Concepts**: Command and control (C2), DDoS (Distributed Denial of Service), [Malware](<./Malware/Malware.md>), zombies

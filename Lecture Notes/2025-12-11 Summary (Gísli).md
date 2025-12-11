@@ -47,7 +47,7 @@ todo
 ### Finding the path
 *Problem: How does a packet know which wire leads to the destination?*
 It uses routing tables.
-- Layer 2(LAN): MAC address table / switching table
+- Layer 2([LAN](<../Terminology/Networks/LAN.md>)): [MAC](<../Terminology/Networks/MAC.md>) address table / switching table
 
 ### [Physical Layer](../Terminology/Networks/OSI Model/1-Physical Layer.md)
 
@@ -66,7 +66,7 @@ Delivery of packets to devices anywhere in the network.
 
 This requires:
 
-- Addressing (IP addresses)
+- Addressing ([IP](<../Terminology/Networks/TCP IP Model/IP.md>) addresses)
     - Routing (finding the path)
 - Forwarding (moving the packet from one link to another)
 

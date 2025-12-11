@@ -182,7 +182,7 @@ Usually a logic or configuration error, not a code bug.
 - Use secure cookies for session management (HttpOnly, Secure, SameSite attributes).
 - Regularly review and update authentication mechanisms to address new threats.
 
-[XSS](../Terminology/Attacks/XSS.md)
+[XSS](<../Terminology/Attacks/XSS.md>)
 
 # How to build secure apps
 - Defense in depth: There will always be things you miss, so you must build the security in *layers*. If the firewall fails, the authentication holds, and if that fails, input validation holds. Etc.

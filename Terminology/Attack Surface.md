@@ -11,4 +11,4 @@ date modified: Monday, 8. December 2025, 18:12
 
 **Context/Example**: Email, USB sticks, Wi-Fi, Bluetooth, and downloaded software are all parts of the attack surface.
 
-**Related Concepts**: [Vulnerability](Vulnerability.md), exposure, threat model, [Attack Prevention & Hardening](../../Tools and Commands/Attack Prevention & Hardening/Attack Prevention & Hardening.md)
+**Related Concepts**: [Vulnerability](<./Vulnerability.md>), exposure, threat model, [Attack Prevention & Hardening](../../Tools and Commands/Attack Prevention & Hardening/Attack Prevention & Hardening.md)

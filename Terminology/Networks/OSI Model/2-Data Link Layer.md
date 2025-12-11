@@ -12,7 +12,7 @@ The Data Link Layer handles error detection and correction, as well as flow cont
 
 The Data Link Layer is divided into two sublayers:
 
-1. the [Media Access Control](../MAC.md) (MAC) layer, which controls access to the physical medium,
+1. the [Media Access Control](<../MAC.md>) (MAC) layer, which controls access to the physical medium,
 2. and the Logical Link Control (LLC) layer, which manages communication between devices on the same network.
 
 The Data Link Layer works closely with the [Physical Layer](1-Physical Layer.md) to provide reliable data transfer over the physical medium.
@@ -35,7 +35,7 @@ Node-to-node data transfer on the same network
 ## Link Layer Protocols
 
 - **Ethernet (IEEE 802.3):**
-    - The standard for wired [Local Area Networks (LANs)](../LAN.md) .
+    - The standard for wired [Local Area Networks (LANs)](<../LAN.md>) .
     - In practice often Point-to-Point connections (switch to end device), but technically supports a shared medium (the wire, the bus).
     - Mechanism: Random access with collision detection (CSMA/CD - Carrier Sense Multiple Access with Collision Detection).
 - **Wi-Fi (IEEE 802.11):**

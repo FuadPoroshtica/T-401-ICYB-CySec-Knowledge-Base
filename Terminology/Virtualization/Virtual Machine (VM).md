@@ -11,5 +11,5 @@ date modified: Monday, 8. December 2025, 19:12
 
 **Context/Example**: A Kali Linux VM running inside VirtualBox is a guest [OS](../Systems & Plaforms/Operating System.md) / VM. It *acts* like its own machine, but it’s just software.
 
-**Related Concepts**: [Host OS](Host Machine (Host OS).md), [hypervisor](Hypervisor.md), [Image/Template](Virtualization Hardening & Operations/Image.md), snapshot.
+**Related Concepts**: [Host OS](Host Machine (Host OS).md), [hypervisor](<./Hypervisor.md>), [Image/Template](Virtualization Hardening & Operations/Image.md), snapshot.
 

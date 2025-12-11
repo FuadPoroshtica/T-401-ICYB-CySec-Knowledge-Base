@@ -28,7 +28,7 @@ Assume you will be (or already are) breached:
 
 ## Resilience: [The 3-2-1 Backup Rule](The 3-2-1 Backup Rule.md) 💾
 
-[Ransomware](../Attacks/Malware/Ransomware.md) targets backups first. Don’t keep a backup just on your computer.
+[Ransomware](<../Attacks/Malware/Ransomware.md>) targets backups first. Don’t keep a backup just on your computer.
 
 > [!info] The 3-2-1 Rule
 > - **3** copies of data.

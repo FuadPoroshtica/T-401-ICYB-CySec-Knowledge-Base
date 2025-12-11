@@ -14,6 +14,6 @@ It is a connection-oriented protocol, meaning that a connection must be establis
 
 TCP is commonly used for applications that require reliable data transfer, such as web browsing, email, and file transfers.
 
-It operates at the [Transport Layer](../OSI Model/4-Transport Layer.md) (Layer 4) of the [OSI Model](../OSI Model/OSI Model.md), which is responsible for end-to-end communication and data flow control.
+It operates at the [Transport Layer](<../OSI Model/4-Transport Layer.md>) (Layer 4) of the [OSI Model](<../OSI Model/OSI Model.md>), which is responsible for end-to-end communication and data flow control.
 
-TCP works in conjunction with the [Internet Protocol (IP)](IP.md), which is responsible for routing data packets to their destination.
+TCP works in conjunction with the [Internet Protocol (IP)](<./IP.md>), which is responsible for routing data packets to their destination.

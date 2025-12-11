@@ -5,7 +5,7 @@ date modified: Monday, 8. December 2025, 18:12
 ---
 
 # BGP (Border Gateway Protocol)
-- Used between routes of neighboring [Autonomous Systems (ASes)](AS.md) to exchange routing information (info about available routes).
+- Used between routes of neighboring [Autonomous Systems (ASes)](<./AS.md>) to exchange routing information (info about available routes).
 - Routing is based on local criteria, such as path attributes, not necessarily the shortest path (efficiency criteria).
 	- E.g., company A has a peering agreement with company B, so it prefers routes through B even if they are longer.
 	- Price of having traffic carried on a particular route.
@@ -15,7 +15,7 @@ date modified: Monday, 8. December 2025, 18:12
 - BGP lacks basic authentication and security features, making it vulnerable to various attacks (e.g., route hijacking).
 
 **Possible attack: BGP Hijacking.**
-BGP operates on trust. If a malicious [AS](AS.md) advertises that it has the best route to a particular [IP](TCP IP Model/IP.md) prefix, other ASes may accept this information and route traffic through the malicious [AS](AS.md). So an attacker can exploit the Longest Prefix Match rule to divert traffic.
+BGP operates on trust. If a malicious [AS](<./AS.md>) advertises that it has the best route to a particular [IP](TCP IP Model/IP.md) prefix, other ASes may accept this information and route traffic through the malicious [AS](<./AS.md>). So an attacker can exploit the Longest Prefix Match rule to divert traffic.
 - **The attack**: The victim announces `10.0.0.0./8`. The attacker announces `10.1.0.0/16` (a sub-prefix of the victim’s prefix). Because of longest prefix match, traffic destined for it will be routed to the attacker.
 - **The result**: Traffic interception, data theft, traffic analysis, denial of service.
 - **Mitigation**: RPKI (Resource Public Key Infrastructure) to cryptographically verify route announcements
