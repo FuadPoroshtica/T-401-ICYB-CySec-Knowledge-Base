@@ -28,7 +28,7 @@ date modified: Thursday, 11. December 2025, 09:12
     - Much easier to communicate exactly to someone what they should do.
 - Different Shells (CLIs):
 - **The Unix family**.
-    - Bash: [POSIX](../Terminology/Systems & Plaforms/POSIX)-compliant, default on most Linux
+    - Bash: [POSIX](<../Terminology/Systems & Plaforms/POSIX.md>)-compliant, default on most Linux
     - Zsh: more customizable, advanced features, default on macOS
 - **The Windows family**.
     - PowerShell: Standard for Windows administration, has things like `OO` (pipes.NET Objects instead of text)
@@ -284,7 +284,7 @@ Usage: `Greet -Name "John"`
 | PowerShell   | `myfile.ps1`              | None                         | **Policy**: Blocked by default. Enable with, e.g., `Set-ExecutionPolicy X`. <br>**Run**: Must use `.\file.ps1` (Like Bash). |
 
 > [!note] Note: The Shebang (#!)
-> In Unix/Bash, the first line `#!/bin/bash` tells the [OS](Operating System.md) which interpreter to use. You can change this to e.g. `#!/usr/bin/python` to write a Python script that behaves like a shell script.
+> In Unix/Bash, the first line `#!/bin/bash` tells the [OS](<../Terminology/Systems & Plaforms/Operating System.md>) which interpreter to use. You can change this to e.g. `#!/usr/bin/python` to write a Python script that behaves like a shell script.
 
 # Vulnerabilities in the Command Line
 
