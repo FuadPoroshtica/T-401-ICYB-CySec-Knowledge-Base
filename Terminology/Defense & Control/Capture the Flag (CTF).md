@@ -14,4 +14,4 @@ The format:
 - Attack-defense: Teams attack each other’s systems while defending their own.
 
 *CTFs are gamified learning.*
-Platforms: [picoCTF](https://www.picoctf.org/), [TryHackMe](https://tryhackme.com/), [OverTheWire](https://overthewire.org/wargames/), [Hakkaraskóli GGFÍ](https://skoli.ggc.tf/), [HackTheBox](https://www.hackthebox.com/).
+Platforms: [picoCTF](<https://www.picoctf.org/>), [TryHackMe](<https://tryhackme.com/>), [OverTheWire](<https://overthewire.org/wargames/>), [Hakkaraskóli GGFÍ](https://skoli.ggc.tf/), [HackTheBox](<https://www.hackthebox.com/>).

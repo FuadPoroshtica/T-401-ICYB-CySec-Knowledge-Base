@@ -13,7 +13,7 @@ date modified: Thursday, 11. December 2025, 09:12
 ### Course contents:
 
 - Linux + Windows CLI tools.
-- [OS](<../Terminology/Systems & Plaforms/Operating System.md>) basics ([access control](../Terminology/Defense & Control/Access Control)).
+- [OS](<../Terminology/Systems & Plaforms/Operating System.md>) basics ([access control](<../Terminology/Defense & Control/Access Control.md>)).
 - Networking basics.
 - [Virtualization](<../Terminology/Virtualization/Virtualization.md>).
     - Some of the labs we’ll be doing will be on virtual machines and stuff.
@@ -77,7 +77,7 @@ Computer architecture.
 
 ## Main lecture
 
-### The problem: [attack surface](../Terminology/Attack Surface)
+### The problem: [attack surface](<../Terminology/Attack Surface.md>)
 
 - Definition: “The sum of all potential vulnerabilities in a system where an attacker could try to subvert the intended purpose of the system and organization or person who is using it.”
     - E.g., they could obtain physical access, access via a public network, or access to online backups of your computer.
@@ -161,7 +161,7 @@ Every computer professional should be doing it this way anyway.
 - [Ransomware](<../Terminology/Attacks/Malware/Ransomware.md>)
 - Masquerade as a victim
 - Add files - poison web cache
-- [Corporate espionage](../Terminology/Attacks/Corporate Espionage)
+- [Corporate espionage](<../Terminology/Attacks/Corporate Espionage.md>)
 - Information warfare
 
 ### Computer security evolution

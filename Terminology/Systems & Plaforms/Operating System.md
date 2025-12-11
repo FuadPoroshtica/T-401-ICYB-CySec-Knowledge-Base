@@ -25,7 +25,7 @@ Operating systems perform several key functions, including:
 - **Desktop Operating Systems**: Such as Microsoft Windows, macOS, and various Linux distributions, designed for personal computers.
 - **Mobile Operating Systems**: Such as Android and iOS, designed for smartphones and tablets.
 - **Server Operating Systems**: Such as Windows Server, Linux Server distributions (e.g., Ubuntu Server, CentOS), and UNIX, designed to manage server hardware and provide services to client machines.
-- **Embedded Operating Systems**: Such as FreeRTOS and VxWorks, designed for embedded systems in devices like [routers](../Networks/Network hardware/Router.md), appliances, and automotive systems.
+- **Embedded Operating Systems**: Such as FreeRTOS and VxWorks, designed for embedded systems in devices like [routers](<../Networks/Network hardware/Router.md>), appliances, and automotive systems.
 - **Real-Time Operating Systems (RTOS)**: Such as QNX and RTLinux, designed for applications that require precise timing and high reliability.
 
 ## Cyber Security Context

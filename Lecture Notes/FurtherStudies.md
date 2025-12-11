@@ -13,7 +13,7 @@ Day 1 - Intro
 Creeper 1971:
 1. Creeper was a [Worm](<../Terminology/Attacks/Malware/Worm.md>) — a type of malwere that replicates itself and spreads to other systems. In this case, its targets were Digital Equipment Corporation (DEC) computers which were linked to ARPANET.
 2. connected teletype computer screens displayed the phrase: “I’m the creeper, catch me if you can!”
-3. Unprotected [FTP](../Terminology/Networks/Transfer Protocols/FTP.md) access, Lack of security measures, open network architecture, no concept of [Malware](<../Terminology/Attacks/Malware/Malware.md>) protection. Its creator had simply wanted to create an experimental, self-duplicating program to illustrate that it was possible.
+3. Unprotected [FTP](<../Terminology/Networks/Transfer Protocols/FTP.md>) access, Lack of security measures, open network architecture, no concept of [Malware](<../Terminology/Attacks/Malware/Malware.md>) protection. Its creator had simply wanted to create an experimental, self-duplicating program to illustrate that it was possible.
 (https://www.exabeam.com/blog/infosec-trends/creeper-the-worlds-first-computer-virus/)
 
 Morris Worm (1988):
@@ -43,11 +43,11 @@ https://www.fortinet.com/resources/cyberglossary/wannacry-ransomware-attack
 
 Day 2- [Virtualization](<../Terminology/Virtualization/Virtualization.md>)
 
-1. Under what specific scenarios would you have to choose VMs over [containers](../Terminology/Virtualization/Virtualization methods/Container.md) for security reasons, and vice-versa?
-VM are better if security is the priority since each VM operates as a fully isolated computer with its own [OS](Operating System.md) and applications, so if one VM is compromised, it’s difficult for the attack to spread to other VMs or the host machine. But [containers](../Terminology/Virtualization/Virtualization methods/Container.md) share the host operating system kernel, so a vulnerability in the kernel can potentially affect all [containers](../Terminology/Virtualization/Virtualization methods/Container.md). So VMs are better suited for workloads that handle sensitive data or require strict security and compliance. [Containers](../Terminology/Virtualization/Virtualization methods/Container.md) might be chosen when performance is the priority as [containers](../Terminology/Virtualization/Virtualization methods/Container.md) are faster, lighter, and more resource efficient, the fast startup time of [containers](../Terminology/Virtualization/Virtualization methods/Container.md) directly contributes to scalability, making them ideal for microservices architectures.
+1. Under what specific scenarios would you have to choose VMs over [containers](<../Terminology/Virtualization/Virtualization methods/Container.md>) for security reasons, and vice-versa?
+VM are better if security is the priority since each VM operates as a fully isolated computer with its own [OS](<../Terminology/Systems & Plaforms/Operating System.md>) and applications, so if one VM is compromised, it’s difficult for the attack to spread to other VMs or the host machine. But [containers](<../Terminology/Virtualization/Virtualization methods/Container.md>) share the host operating system kernel, so a vulnerability in the kernel can potentially affect all [containers](<../Terminology/Virtualization/Virtualization methods/Container.md>). So VMs are better suited for workloads that handle sensitive data or require strict security and compliance. [Containers](<../Terminology/Virtualization/Virtualization methods/Container.md>) might be chosen when performance is the priority as [containers](<../Terminology/Virtualization/Virtualization methods/Container.md>) are faster, lighter, and more resource efficient, the fast startup time of [containers](<../Terminology/Virtualization/Virtualization methods/Container.md>) directly contributes to scalability, making them ideal for microservices architectures.
 https://monovm.com/blog/vm-vs-containers/
 
-2. Research historical examples of [VM Escape](../Terminology/Virtualization/VM Escape.md) vulnerabilities (e.g., specific [CVEs](../Terminology/Vulnerability standards/CVE.md) for VMware, VirtualBox, KVM, or Docker). What were the root causes?
+2. Research historical examples of [VM Escape](../Terminology/Virtualization/VM Escape.md) vulnerabilities (e.g., specific [CVEs](<../Terminology/Vulnerability standards/CVE.md>) for VMware, VirtualBox, KVM, or Docker). What were the root causes?
 (VM escape is the process of a program breaking out of the VM on which it is running and interacting with the host operating system.)
   - CVE-2025-22224 is a Time-of-Check Time-of-Use (TOCTOU-is a class of software bugs caused by a [Race condition](../Terminology/Attacks/Race condition.md) involving the checking of the state of a part of a system (such as a security credential) and the use of the results of that check.) vulnerability in VMware ESXi and Workstation, rated critical with a CVSS score of 9.3. It stems from a heap overflow in the Virtual Machine Communication Interface (VMCI), enabling an out-of-bounds write. An attacker with local admin privileges on a VM can exploit this to execute code as the VMX process on the host.
   https://clovinsecurity.wixsite.com/clovin-security/post/ultimate-guide-to-cve-2025-22224-vmware-esxi-zero-day-vulnerability-exposed-clovin-security
@@ -57,9 +57,9 @@ https://monovm.com/blog/vm-vs-containers/
 	2. Why is this especially problematic for cloud environments?- Even routine maintenance can introduce risks. During updates, temporary configuration changes might briefly expose resources, creating exploitation windows for vigilant attackers monitoring cloud environments.
 	3. Find recent examples of such attacks and discuss their impact.
 	4. What mitigation strategies exist to counter these types of attacks?
-3. What are the risks associated with using untrusted or vulnerable [container](../Terminology/Virtualization/Virtualization methods/Container.md) [images](../Terminology/Virtualization/Virtualization Hardening & Operations/Image.md) from public repositories?
+3. What are the risks associated with using untrusted or vulnerable [container](<../Terminology/Virtualization/Virtualization methods/Container.md>) [images](<../Terminology/Virtualization/Virtualization Hardening & Operations/Image.md>) from public repositories?
 
-Day 6 - Networks [Networks](../Terminology/Networks)
+Day 6 - Networks [Networks](<../Terminology/Networks>)
 1. Find examples of vulnerabilities and attacks using Bluetooth:
 	1. **PerfektBlue (2024-2025):** This recent vulnerability chain affects millions of vehicles through OpenSynergy’s BlueSDK, enabling remote code execution over Bluetooth Classic with minimal user interaction.  Attackers within Bluetooth range can compromise infotainment systems to access GPS location, microphones, and contact lists.
     2. **KNOB Attack (Key Negotiation of Bluetooth):** This exploit forces devices to agree on encryption keys with significantly reduced entropy during the pairing process, making brute-force attacks feasible. The vulnerability exists because the key negotiation itself isn’t encrypted.

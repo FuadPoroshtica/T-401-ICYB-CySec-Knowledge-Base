@@ -12,8 +12,8 @@ date modified: Tuesday, 2. December 2025, 20:12
 
 **Term**: Port (*network port*)
 
-**Definition**: A logical endpoint number on a machine that identifies a specific network service (e.g., port 80 for [HTTP](../Networks/Transfer Protocols/HTTP.md)). Ports help direct incoming and outgoing network traffic to the correct application or service. Ports are identified by numbers ranging from 0 to 65535, with well-known ports (0-1023) reserved for common services. They can use either the [TCP](../Networks/TCP IP Model/TCP.md) or [UDP](<../Networks/UDP.md>) protocol.
+**Definition**: A logical endpoint number on a machine that identifies a specific network service (e.g., port 80 for [HTTP](<../Networks/Transfer Protocols/HTTP.md>)). Ports help direct incoming and outgoing network traffic to the correct application or service. Ports are identified by numbers ranging from 0 to 65535, with well-known ports (0-1023) reserved for common services. They can use either the [TCP](<../Networks/TCP IP Model/TCP.md>) or [UDP](<../Networks/UDP.md>) protocol.
 
 **Context/Example**: A “secure machine” is described as having “all ports closed”; that means no services are listening, severely reducing the ways an attacker can connect.
 
-**Related Concepts**: [TCP](../Networks/TCP IP Model/TCP.md)/[UDP](<../Networks/UDP.md>), socket, service, [Firewall](../Defense & Control/Firewall.md) rules
+**Related Concepts**: [TCP](<../Networks/TCP IP Model/TCP.md>)/[UDP](<../Networks/UDP.md>), socket, service, [Firewall](<../Defense & Control/Firewall.md>) rules

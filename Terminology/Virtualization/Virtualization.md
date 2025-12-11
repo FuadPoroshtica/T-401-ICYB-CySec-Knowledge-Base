@@ -22,9 +22,9 @@ date modified: Thursday, 11. December 2025, 09:12
 
 **Definition**: A set of technologies that make one physical computer behave like many separate “virtual” computers by abstracting hardware into software.
 
-**Context/Example**: One powerful server can be split into several [Virtual Machines (VMs)](Virtual Machine (VM).md), each running its own [OS](Operating System.md) (e.g., one Linux server, one Windows server) on the same physical box.
+**Context/Example**: One powerful server can be split into several [Virtual Machines (VMs)](Virtual Machine (VM).md), each running its own [OS](<../Systems & Plaforms/Operating System.md>) (e.g., one Linux server, one Windows server) on the same physical box.
 
-**Related Concepts**: [Virtual machine](Virtual Machine (VM).md), [hypervisor](<./Hypervisor.md>), [containers](Virtualization methods/Container.md), cloud computing
+**Related Concepts**: [Virtual machine](Virtual Machine (VM).md), [hypervisor](<./Hypervisor.md>), [containers](<./Virtualization methods/Container.md>), cloud computing
 
 ## Security Challenges
 
@@ -40,4 +40,4 @@ Patch Management
 
 Principle of Least Privilege → give users/programs only the minimum permission they need to do their job.
 
-Disable unused [ports](../Systems & Plaforms/Port.md)
+Disable unused [ports](<../Systems & Plaforms/Port.md>)

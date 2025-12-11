@@ -7,4 +7,4 @@ date modified: Thursday, 11. December 2025, 19:12
 # T-401-ICYB CySec Knowledge Base
 
 
-![Note](./zAttachments/Mind_Map.png)
+![Note](<./zAttachments/Mind_Map.png>)

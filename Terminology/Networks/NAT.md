@@ -5,15 +5,15 @@ date modified: Thursday, 11. December 2025, 09:12
 ---
 
 # NAT
-- **NAT (Network Address Translation)** is a technique used to map multiple private [IP](TCP IP Model/IP.md) addresses to a single public [IP](TCP IP Model/IP.md) address (or a few addresses) before sending packets to another network (e.g., the Internet).
-- Allows multiple devices on a local network to share a single public [IP](TCP IP Model/IP.md) address.
+- **NAT (Network Address Translation)** is a technique used to map multiple private [IP](<./TCP IP Model/IP.md>) addresses to a single public [IP](<./TCP IP Model/IP.md>) address (or a few addresses) before sending packets to another network (e.g., the Internet).
+- Allows multiple devices on a local network to share a single public [IP](<./TCP IP Model/IP.md>) address.
 - Helps conserve the limited number of available IPv4 addresses.
 - Provides a layer of security by hiding internal IP addresses from the external network.
-- Commonly used in home and office networks with [routers](Network hardware/Router.md) that perform NAT.
+- Commonly used in home and office networks with [routers](<./Network hardware/Router.md>) that perform NAT.
 
 ## NAT: Usability vs. Security Impact
 **Pros**:
-- The “natural [Firewall](../Defense & Control/Firewall.md)” effect: Devices behind a NAT are not directly reachable from the outside, which can enhance security.
+- The “natural [Firewall](<../Defense & Control/Firewall.md>)” effect: Devices behind a NAT are not directly reachable from the outside, which can enhance security.
 - Topology hiding: The internal network structure is hidden from external entities.
 - IPv4 Conservation: NAT helps mitigate the shortage of IPv4 addresses by allowing multiple devices to share a single public IP address. This is part of the reason why IPv4 is still widely used despite the exhaustion of available addresses, and why the switch to IPv6 has been slow.
 **Cons**:
@@ -31,6 +31,6 @@ When a packet comes back from the outside, the NAT device looks up the destinati
 
 But this means that unsolicited incoming connections from the outside to devices behind the NAT are generally not possible, unless specific port forwarding rules are set up on the NAT device.
 
-In the NAT translation table, we have a mapping of internal IP addresses and ports to the external IP address and ports. There’s the WAN (Wide Area Network) side, which is the public IP address assigned to the NAT device (like a [Router](Network hardware/Router.md)), and the [LAN (Local Area Network)](<./LAN.md>) side, which consists of the private IP addresses and ports of the devices behind the NAT.
+In the NAT translation table, we have a mapping of internal IP addresses and ports to the external IP address and ports. There’s the WAN (Wide Area Network) side, which is the public IP address assigned to the NAT device (like a [Router](<./Network hardware/Router.md>)), and the [LAN (Local Area Network)](<./LAN.md>) side, which consists of the private IP addresses and ports of the devices behind the NAT.
 
 When a device inside the NAT initiates a connection to an external server, the NAT device records this mapping in its translation table. For example, if an internal device with IP address

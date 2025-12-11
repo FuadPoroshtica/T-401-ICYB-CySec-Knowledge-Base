@@ -6,7 +6,7 @@ date modified: Monday, 8. December 2025, 18:12
 
 # A Network Switch
 - More intelligent than a [Hub](<./Hub.md>).
-- It knows which devices are connected to which [ports](../../Systems & Plaforms/Port).
+- It knows which devices are connected to which [ports](<../../Systems & Plaforms/Port.md>).
 - It forwards data only to the intended recipient device.
 - Unmanaged switches are plug-and-play.
 - Managed switches offer advanced features like VLANs (Virtual Local Networks), QoS (Quality-of-Service), and network monitoring. They can be controlled and customized via software.
