@@ -97,7 +97,7 @@ Day 6 - Networks [Networks](../Terminology/Networks)
    6. **Employee Education** - Train staff on risks of unauthorized devices and enforce strict policies about personal routers.
    7. **Zero Trust Architecture** - Treat all users and devices as untrusted until authenticated and authorized.
 
-Day 9 - AI Security [AI Security](../Terminology/Artifical Intelligence/Defensive Strategies)
+Day 9 - AI Security [AI Security](../Terminology/Artifical_Intelligence/Defensive_Strategies)
 1. The 2024 Hong Kong Deepfake Scam.
    - _What happened?_ In early February 2024, Hong Kong police reported a case where **deepfake techology** was employed to execute a multimillion-dollar **fraud**. The scammers orchestrated a video conference call, using deepfakes to impersonate the chief financial offier and other staff members of the mutlinational firm **Arup**, convincing a finance worker to transfer approximately 25 million dollars to five Hong Kong bank accounts.
    - _In general how can cases like these be prevented?_ These cases can be prevented be implementing **stronger verification methods** beyond visual confirmation, sucha as multi-factor authentication or independent confirmation of requests, as well as **training for employees** on recognizing deepfake technology and understanding the tactics used in such scams can help employees remain vigilant.
