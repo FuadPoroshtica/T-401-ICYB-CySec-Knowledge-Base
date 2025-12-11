@@ -58,7 +58,7 @@ We chose Obsidian for the final version of the knowledge base because:
 
 - It is completely free for personal and educational use.
 - It works locally, so there are no surprises with quotas or paywalls.
-- Its support for **wikilinks** (`[[Page name]]`) and backlinks makes it easy to navigate between concepts.
+- Its support for **wikilinks** (`[[Page name]]`, e.g., [Side-Channel Attack](Terminology/Virtualization/Side-Channel%20Attack.md)).
 - It integrates well with **Git and GitHub**, giving us proper version control and an easy way to share our work with instructors. Additionally, it lets us view it online during the final exam itself using GitHub’s “wiki” feature.
 - There is a large ecosystem of community plugins, which we could use if needed (though we mostly stuck to core features for this assignment).
 
