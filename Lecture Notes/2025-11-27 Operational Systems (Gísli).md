@@ -1,6 +1,6 @@
 ---
 aliases: []
-date modified: Tuesday, 2. December 2025, 13:12
+date modified: Thursday, 11. December 2025, 09:12
 date created: Monday, 1. December 2025, 20:12
 ---
 
@@ -34,6 +34,7 @@ Problem: Raw hardware interfaces (registers, disk controllers) are complex and i
 ## Arbitration / Resource Management
 
 Problem: Resources (CPU cycles, RAM, I/O) are finite; multiple programs
+
 want them simultaneously.
 
 > [!check] Solution: Multiplexing
@@ -89,7 +90,9 @@ want them simultaneously.
 ## Protection🛡️ (Ring 0 vs Ring 3)
 
 Hardware architectures (like x86) support privilege levels.
+
 In practice, only these 2 rings are used:
+
 **Ring 0 ([Kernel](../Terminology/Systems%20&%20Plaforms/Kernel.md) Mode)**
 
 - Full access to all hardware instructions.
@@ -148,6 +151,7 @@ Slightly different to Linux.
 ## Android 🤖📱
 
 Often misunderstood as “Just Linux.” It uses the Linux [Kernel](../Terminology/Systems%20&%20Plaforms/Kernel.md), but the user-space is unique.
+
 It is ***the*** most deployed [OS](Operating%20System.md) in the world (billions of devices). Because unlike iOS, Android is open-source and used by many manufacturers, not just for phones but also tablets, TVs, cars, etc.
 
 > The Android Stack
@@ -326,6 +330,7 @@ Logs are viewed in the **Event Viewer** or using `Get-EventLog` in PowerShell.
 ### Enable System Auditing: Linux🐧
 
 Linux uses the Linux Audit Framework. It listens to the [Kernel](../Terminology/Systems%20&%20Plaforms/Kernel.md) for specific system calls and file changes.
+
 **Installation:**
 
 - Install: `sudo apt install auditd` (Debian/Ubuntu) or `yum install audit` (RHEL/CentOS).
@@ -428,6 +433,7 @@ The attacker’s goal: Move from Ring 3 (User) to Ring 0 ([Kernel](../Terminolog
 - **Defense**: “[Defense in Depth](../Terminology/Defense%20&%20Control/Defense%20in%20Depth.md)”. You cannot patch it, so you must rely on [firewalls](../Terminology/Defense & Control/Firewall), strict [access control](../Terminology/Defense & Control/Access Control), procedures, etc. to contain it.
 
 # Commands for Sysadmins
+
 | Action                 | Linux Command     | PowerShell / Windows                                  |
 | ---------------------- | ----------------- | ----------------------------------------------------- |
 | Execute asroot / Admin | `sudo [cmd]`      | `Start-Process -Verb RunAs`(Or open Terminal asAdmin) |
@@ -437,6 +443,7 @@ The attacker’s goal: Move from Ring 3 (User) to Ring 0 ([Kernel](../Terminolog
 | Change Password        | `passwd`          | `Set-LocalUser`                                       |
 
 `ls -l` access modifiers and their meanings:
+
 ![image](../zAttachments/image.png)
 
 ## File Permissions: Linux vs. Windows
@@ -481,9 +488,11 @@ Danger
 `find / -perm -4000`
 
 Command: `chmod u+s file`
+
 Indicator: `-rwsr-xr-x 1 root root 64152 maí 30 2024 /usr/bin/passwd`
 
 ## Process & Service Management
+
 | Action                    | Linux Command           | PowerShell / Windows                           |                             |
 | ------------------------- | ----------------------- | ---------------------------------------------- | --------------------------- |
 | Start/StopServices        | `systemctl start [svc]` | `Start-Service [svc]`(`Get-`, `Stop-`, `Set-`) |                             |
@@ -492,6 +501,7 @@ Indicator: `-rwsr-xr-x 1 root root 64152 maí 30 2024 /usr/bin/passwd`
 | Kill Process              | `kill -9 [PID]`         | `Stop-Process -Id [PID]`                       |                             |
 
 ## Disk & File System Management
+
 | Action     | Linux Command                              | PowerShell / Windows                     |                                |
 | ---------- | ------------------------------------------ | ---------------------------------------- | ------------------------------ |
 | Free Space | `df -h`(Disk Free)                         | `Get-Volume`(or `Get-PSDrive`)           |                                |
@@ -500,6 +510,7 @@ Indicator: `-rwsr-xr-x 1 root root 64152 maí 30 2024 /usr/bin/passwd`
 | Archive    | `tar -czvf x.tar.gz`(or `zip`, `rar`, etc) | `Compress-Archive`(Win10+ has `tar.exe`) |                                |
 
 ## Logs
+
 | Action             | Linux Command       | PowerShell / Windows                            |                               |                        |
 | ------------------ | ------------------- | ----------------------------------------------- | ----------------------------- | ---------------------- |
 | Followchanges live | `tail -f log.txt`   | `Get-Content log.txt -Wait`(Alias: `cat -Wait`) |                               |                        |
@@ -507,6 +518,7 @@ Indicator: `-rwsr-xr-x 1 root root 64152 maí 30 2024 /usr/bin/passwd`
 | … or both          | `tail -f log.txt \\ | grep "Error"`                                   | `Get-Content log.txt -Wait \\ | Select-String "Error"` |
 
 ## Scheduling & Maintenance
+
 | Action          | Linux Command                                    | PowerShell / Windows                                      |
 | --------------- | ------------------------------------------------ | --------------------------------------------------------- |
 | ScheduleTasks   | `crontab -e`(opens the cron table in aneditor)   | `Register-ScheduledTask`                                  |
@@ -527,7 +539,9 @@ Indicator: `-rwsr-xr-x 1 root root 64152 maí 30 2024 /usr/bin/passwd`
 - Guest Lecture tomorrow by **Giovanni Apruzzese** on [Phishing](../Terminology/Attacks/Phishing).
 
 Day before the exam will be a recap lecture.
+
 Exam (Friday, 12th of December) will be later in the day? Around noon or later?
+
 Knowledge base in the exam: we might just get a print-out. It shouldn’t be too big.
 
 [Lab 4 (Gísli) Operating Systems](Operational%20Systems%202025-11-27/Lab%204%20(G%C3%ADsli)%20Operating%20Systems.md)

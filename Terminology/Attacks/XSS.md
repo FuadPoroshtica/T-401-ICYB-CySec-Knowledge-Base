@@ -1,23 +1,27 @@
 ---
-aliases: [Cross-Site Scripting, Cross Site Scripting]
+aliases: [Cross-Site Scripting, Cross Site Scripting, Cross-Site Scripting (XSS), Cross–Site Scripting, Cross–Site Scripting (XSS)]
 date created: Monday, 8. December 2025, 09:12
-date modified: Monday, 8. December 2025, 18:12
+date modified: Thursday, 11. December 2025, 09:12
 ---
 
 # XSS
-**Definition**: A “Cross Site Scripting” attack is where someone manages to execute a script on the client-side, can give access to session tokens and cookies.
+**Definition**: Cross-Site Scripting (XSS) is a type of attack where an attacker injects malicious scripts into content from otherwise trusted websites. This allows the attacker to execute scripts in the victim’s browser, potentially stealing cookies, session tokens, or other sensitive information.
 
 **Context/Example**: An attacker types:
 ```HTML
 <img src=”x” onerror="alert(document.cookie)">
 ```
+
 Into an unprotected input field on a website. The DOM then interoperates this as an img tag. The src is set to “`x`” which means it *always* executes the onerror code.
 
 **Related Concepts**: Session cookie, Cookies
 
 ## Mitigation
+
 Convert special characters to HTML entities before displaying user input on web pages.
+
 For example,
+
 - convert `<` to `&lt;`,
 - `>` to `&gt;`,
 - and `&` to `&amp;`.
@@ -37,4 +41,5 @@ And so on. This prevents the browser from interpreting them as HTML or JavaScrip
 > - Result: `<img ... alt="" onload="alert(1)">`
 
 ## XSS Defenses
+
 Context-Aware Encoding is the main defense.

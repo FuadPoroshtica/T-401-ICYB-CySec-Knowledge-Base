@@ -8,7 +8,7 @@ date modified: Monday, 8. December 2025, 15:12
 
 **Term**: Spoofing
 
-**Definition**: Pretending to be someone or something else in order to gain trust or access.
+**Definition**: Spoofing is a cyber attack technique where an attacker disguises themselves as a trusted entity by falsifying data — such as IP addresses, email headers, or website URLs — to gain unauthorized access to information or systems.
 
 **Context/Example**: Spoofed [IP](../Networks/TCP%20IP%20Model/IP.md) addresses or fake login pages.
 

@@ -1,13 +1,17 @@
 ---
 aliases: [Transport Layer]
 date created: Tuesday, 2. December 2025, 10:12
-date modified: Monday, 8. December 2025, 18:12
+date modified: Thursday, 11. December 2025, 09:12
 ---
 
 # 4-Transport Layer
+
 The Transport Layer is the fourth layer in the [OSI Model](OSI%20Model.md) of computer networking.
+
 It is responsible for providing reliable data transfer services between end systems, ensuring that data is delivered accurately and in the correct order.
+
 The Transport Layer manages end-to-end communication, including error detection and correction, flow control, and congestion control.
+
 It uses protocols such as the [Transmission Control Protocol (TCP)](../TCP%20IP%20Model/TCP.md) and the [User Datagram Protocol (UDP)](../UDP.md) to facilitate data transfer between applications running on different devices.
 
 The Transport Layer works closely with the [Network Layer](3-Network%20Layer.md) to provide end-to-end data delivery across multiple networks.

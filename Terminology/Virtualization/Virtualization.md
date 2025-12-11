@@ -1,11 +1,10 @@
 ---
-aliases: []
+aliases: [Virtualisation]
 date created: Wednesday, 26. November 2025, 18:11
-date modified: Monday, 8. December 2025, 19:12
+date modified: Thursday, 11. December 2025, 09:12
 ---
 
 # Virtualization
-
 
 [Host Machine / Host OS](Virtualization/Host%20Machine%20Host%20OS.md)
 
@@ -38,5 +37,7 @@ date modified: Monday, 8. December 2025, 19:12
 ## Mitigating Security Risks
 
 Patch Management
+
 Principle of Least Privilege → give users/programs only the minimum permission they need to do their job.
+
 Disable unused [ports](../Systems%20&%20Plaforms/Port.md)

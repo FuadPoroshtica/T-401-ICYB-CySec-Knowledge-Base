@@ -1,7 +1,7 @@
 ---
 aliases: [Network Address Translation]
 date created: Tuesday, 2. December 2025, 19:12
-date modified: Monday, 8. December 2025, 18:12
+date modified: Thursday, 11. December 2025, 09:12
 ---
 
 # NAT
@@ -26,7 +26,9 @@ date modified: Monday, 8. December 2025, 18:12
 > NAT stops unsolicited incoming connections from the outside, but it does not provide encryption or protect against attacks from the inside.
 
 The connections initiated from inside the NAT to the outside are tracked in a NAT table.
+
 When a packet comes back from the outside, the NAT device looks up the destination port in the NAT table to determine which internal device should receive the packet.
+
 But this means that unsolicited incoming connections from the outside to devices behind the NAT are generally not possible, unless specific port forwarding rules are set up on the NAT device.
 
 In the NAT translation table, we have a mapping of internal IP addresses and ports to the external IP address and ports. There’s the WAN (Wide Area Network) side, which is the public IP address assigned to the NAT device (like a [Router](Network%20hardware/Router.md)), and the [LAN (Local Area Network)](LAN.md) side, which consists of the private IP addresses and ports of the devices behind the NAT.

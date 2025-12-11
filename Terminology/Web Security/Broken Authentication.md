@@ -1,12 +1,15 @@
 ---
 aliases: []
 date created: Monday, 8. December 2025, 11:12
-date modified: Monday, 8. December 2025, 11:12
+date modified: Thursday, 11. December 2025, 09:12
 ---
 
 # Broken Authentication
-Usually a logic or configuration error, not a code bug.
+
+Broken Authentication refers to vulnerabilities in authentication mechanisms that allow attackers to compromise user accounts or gain unauthorized access to systems. This can occur due to weak password policies, lack of multi-factor authentication, session management flaws, and other issues.
+
 **Common mistakes:**
+
 - Weak password policies. Programs shouldn’t allow users to have weak passwords. The characteristics of a weak password are:
 	- Contains segments that are easy to guess (like words from the dictionary)
 	- Only contains letters (no mix of letters and special symbols and/or numbers)

@@ -1,7 +1,7 @@
 ---
 aliases: [File Transfer Protocol]
 date created: Tuesday, 2. December 2025, 19:12
-date modified: Monday, 8. December 2025, 18:12
+date modified: Thursday, 11. December 2025, 09:12
 ---
 
 # FTP
@@ -12,6 +12,7 @@ FTP can operate in two modes: active and passive.
 - While in passive mode, the server opens a random port and waits for the client to connect to it.
 
 FTP typically uses two separate channels for communication:
+
 - A control channel for sending commands and responses (default port: 21)
 - And a data channel for transferring files (default port: 20).
 

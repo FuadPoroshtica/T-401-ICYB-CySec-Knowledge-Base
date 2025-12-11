@@ -1,5 +1,5 @@
 ---
-aliases: []
+aliases: [Virtual Machine Monitor, VMM]
 date created: Tuesday, 25. November 2025, 22:11
 date modified: Monday, 8. December 2025, 11:12
 ---

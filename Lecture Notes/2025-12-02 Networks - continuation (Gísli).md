@@ -1,20 +1,27 @@
 ---
 aliases: []
 date created: Tuesday, 2. December 2025, 08:12
-date modified: Monday, 8. December 2025, 11:12
+date modified: Thursday, 11. December 2025, 09:12
 ---
 
 # 2025-12-02 Networks (Gísli)
+
 1b = 1 bit.
+
 1B = 1 byte = 8b.
+
 So 16b = 2B.
 
 The link layer provides node-to-node delivery on the same network.
+
 The protocols involved are Ethernet, Wi-Fi, Bluetooth, USB, NFC, RFID, ...
+
 Address: MAC (hardware) address
 
 # The internet / network layer
+
 What guarantees can/should a network offer?
+
 - **Guaranteed delivery**: All packets sent will eventually arrive at the destination.
 - **In order packet delivery:** Packets should arrive in the order that they are sent.
 - **Guaranteed delivery within specified time**.
@@ -22,9 +29,10 @@ What guarantees can/should a network offer?
 - **Security:** No eavesdropping. No diversion to different hosts. No undetected modifications.
 Which guarantees are offered by the Internet (Internet Protocol - IP)? **NONE OF THE ABOVE!** Instead, it offers a “best-effort” delivery service.
 
-
 ![](../zAttachments/Pasted%20image%2020251202091743.png)
+
 Components of the IPv4 header:
+
 - **Version (4 bits)**: IP version (IPv4 or IPv6)
 - **Header Length (4 bits)**: Length of the header in 32-bit words
 - **Type of Service (8 bits)**: Quality of service parameters
@@ -42,14 +50,20 @@ Components of the IPv4 header:
 - **Data (variable length)**: The actual payload being transported
 
 IPv4 address: 32 bits (32b) (4 bytes (4B)).
+
 <font color="#ff0000">172</font>.<font color="#00b050">16</font>.<font color="#00b0f0">254</font>.<font color="#7030a0">1</font> = <font color="#ff0000">10101100</font>.<font color="#00b050">00010000</font>.<font color="#00b0f0">11111110</font>.<font color="#7030a0">00000001</font> ← 4 blocks of 8 bits each (1 byte), so 4 bytes.
+
 Each byte is represented as a decimal number (0-255).
+
 Notionally, high end bits are network identifier, low end bits are host identifier. So for 198.0.1.130:
+
 - Network ID: 198.0.1
 - Host ID: 130
 
 ## Subnet addressing - Subnet mask
+
 Subnetworks (subnets) are a logical divison of an IP network.
+
 198.0.1.130/24 means that the first 24 bits are the network ID, and the last 8 bits are the host ID. 198.0.1/24 and 198.0.1.130/24 are the same network, because they have the same first 24 bits.
 
 In more detail, the slash notation here (/24) is called CIDR (Classless Inter-Domain Routing) notation. It means that the first 24 bits of the IP address are used for the network portion, and the remaining bits (in this case, 8 bits) are used for the host portion. This allows for flexible allocation of IP addresses and efficient routing.
@@ -67,6 +81,7 @@ Subnet mask: A 32-bit number that masks an IP address and divides the IP address
 These are not routable on the public Internet.
 
 There aren’t enough IPv4 addresses for all devices connected to the Internet.
+
 IPv4 only allows for about 4.3 billion (4.3 x 10^9) unique addresses.
 
 ## NAT: Network Address Translation
@@ -77,10 +92,15 @@ IPv4 only allows for about 4.3 billion (4.3 x 10^9) unique addresses.
 - Commonly used in home and office networks with routers that perform NAT.
 
 Basically, all the devices in your *home* have *private* IP addresses (e.g., 192.168.1.x),
+
 and your *router* has a *public* IP address assigned by your Internet Service Provider (ISP).
+
 When a device in your home sends data to the Internet, the router translates the private IP address to its public IP address and keeps track of which internal device made the request.
+
 When the response comes back, the router translates the public IP address back to the appropriate private IP address and forwards the data to the correct device.
+
 ![](../zAttachments/Pasted%20image%2020251202093337.png)
+
 Everyone on the internet doesn’t see the difference between multiple devices behind a NAT and a single device with a public IP address.
 
 But there can only be 65000 simultaneous connections from the private network to the public network, because only 16 bits (2B) are used for port numbers.
@@ -100,7 +120,9 @@ But there can only be 65000 simultaneous connections from the private network to
 > NAT stops unsolicited incoming connections from the outside, but it does not provide encryption or protect against attacks from the inside.
 
 The connections initiated from inside the NAT to the outside are tracked in a NAT table.
+
 When a packet comes back from the outside, the NAT device looks up the destination port in the NAT table to determine which internal device should receive the packet.
+
 But this means that unsolicited incoming connections from the outside to devices behind the NAT are generally not possible, unless specific port forwarding rules are set up on the NAT device.
 
 In the NAT translation table, we have a mapping of internal IP addresses and ports to the external IP address and ports. There’s the WAN (Wide Area Network) side, which is the public IP address assigned to the NAT device (like a router), and the LAN (Local Area Network) side, which consists of the private IP addresses and ports of the devices behind the NAT.
@@ -108,14 +130,21 @@ In the NAT translation table, we have a mapping of internal IP addresses and por
 When a device inside the NAT initiates a connection to an external server, the NAT device records this mapping in its translation table. For example, if an internal device with IP address
 
 ## Internet Routing
+
 How do packets actually get to their destination across multiple networks?
+
 **IGP**: Interior Gateway Protocol (within an autonomous system (AS)).
+
 **EGP**: Exterior Gateway Protocol (between autonomous systems).
+
 **BGP**: Border Gateway Protocol (the main EGP used on the Internet).
+
 **AS**: Autonomous System, a collection of IP networks and routers under the control of a single organization that presents a common routing policy to the Internet.
 
 Routing is done on the basis of these autonomous systems (ASes). Each AS is assigned a unique AS number (ASN).
+
 The BGP is used to exchange routing information between ASes, allowing routers to determine the best path for data packets to reach their destination across the Internet.
+
 Routers maintain a routing table that contains information about the paths to different network destinations. When a packet arrives at a router, the router examines the destination IP address and consults its routing table to determine the next hop for the packet. The packet is then forwarded to the next router along the path to its destination.
 
 Interior Gateway Protocols (IGPs) are used within an AS to manage routing. Examples of IGPs include OSPF (Open Shortest Path First) and EIGRP (Enhanced Interior Gateway Routing Protocol).
@@ -136,12 +165,16 @@ Interior Gateway Protocols (IGPs) are used within an AS to manage routing. Examp
 	4. **Result**: The packet is moved to the outbound interface towards the next hop. (Or dropped if no route is found.)
 
 Some tools to see this on your machine:
+
 - `traceroute` / `tracert`: Show the path packets take to a destination.
 - `ping`: Test reachability of a host on an IP network.
 
 The [Data Link Layer](../Terminology/Networks/OSI%20Model/2-Data%20Link%20Layer.md) uses [MAC](../Terminology/Networks/MAC.md) addresses to deliver frames within the same network.
+
 “Frames” in this context means data packets at the link layer of the [OSI Model](../Terminology/Networks/OSI%20Model/OSI%20Model.md). So the ethernet frame is the data packet used in Ethernet networks at the link layer. Other frames include Wi-Fi frames, which are used in wireless networks.
+
 The [MAC](../Terminology/Networks/MAC.md) address (Media Access Control address) is a unique identifier assigned to network interfaces for communications at the [Data Link Layer](../Terminology/Networks/OSI%20Model/2-Data%20Link%20Layer.md) of a network segment.
+
 The [Network Layer](../Terminology/Networks/OSI%20Model/3-Network%20Layer.md) uses IP addresses to route packets between different networks.
 
 ## Border Gateway Protocol: BGP
@@ -155,7 +188,9 @@ The [Network Layer](../Terminology/Networks/OSI%20Model/3-Network%20Layer.md) us
 - BGP lacks basic authentication and security features, making it vulnerable to various attacks (e.g., route hijacking).
 
 Possible attack: BGP Hijacking.
+
 BGP operates on trust. If a malicious AS advertises that it has the best route to a particular IP prefix, other ASes may accept this information and route traffic through the malicious AS. So an attacker can exploit the Longest Prefix Match rule to divert traffic.
+
 - The attack: The victim announces 10.0.0.0./8. The attacker announces 10.1.0.0/16 (a sub-prefix of the victim’s prefix). Because of longest prefix match, traffic destined for it will be routed to the attacker.
 - The result: Traffic interception, data theft, traffic analysis, denial of service.
 - Mitigation: RPKI (Resource Public Key Infrastructure) to cryptographically verify route announcements
@@ -195,13 +230,17 @@ In 2008, Pakistan Telecom attempted to block access to YouTube within Pakistan b
 - Certificates: Issued by Certificate Authorities (CAs) to verify the identity of websites and enable secure connections.
 
 ## TLS (Transport Layer Security): Core Functions
+
 Provides the security layer for many application layer protocols (e.g., HTTPS, FTPS, SMTPS).
+
 1. Confidentiality (Encryption): Ensures that data exchanged between parties cannot be read by unauthorized entities. This is typically achieved using symmetric encryption algorithms (e.g., AES) after a secure key exchange.
 2. Integrity (Hashing): Ensures that the data has not been altered during transmission. This is typically achieved using cryptographic hash functions (e.g., SHA-256) and message authentication codes (MACs).
 3. Authentication (Identity): Verifies the identities of the parties involved in the communication. This is typically achieved using digital certificates issued by trusted Certificate Authorities (CAs) and asymmetric cryptography (e.g., RSA, ECC), Chain of Trust.
 
 ### TLS Handshake
+
 The goal: safely agree on a shared secret key over an insecure wire.
+
 - Asymmetric cryptography (public key) cryptography to exchange a symmetric session key.
 	- Used only during setup.
 	- Slow, high overhead.
@@ -237,8 +276,11 @@ Mitigation strategies:
 - Change the default SSH port from 22 to a non-standard port to reduce exposure to automated attacks.
 
 ## Infrastructure: DNS & DHCP
+
 Infrastructure protocols, technically application layer protocols, but not user-facing.
+
 **[DNS (Domain Name System)](../Terminology/Networks/DNS.md) (Port 53)**:
+
 - Translates human-readable domain names (e.g., www.example.com) into IP addresses.
 - **Issue**: [UDP](../Terminology/Networks/UDP.md)/cleartext → vulnerable to spoofing, cache poisoning.
 - **Various attacks**: Cache poisoning, DNS Tunneling, Amplification attacks, Typosquatting.
@@ -251,17 +293,22 @@ Infrastructure protocols, technically application layer protocols, but not user-
 - **Mitigation**: Use DHCP snooping on switches to prevent unauthorized DHCP servers from operating on the network.
 
 ## Email
+
 [SMTP (Simple Mail Transfer Protocol)](../Terminology/Networks/Transfer%20Protocols/SMTP.md) for sending email (Port 25, 587):
+
 - Pushing mail from client to server or between servers.
 - Vulnerability: Cleartext (no encryption), no authentication.
 
 IMAP & POP3:
+
 - Pulling mail from server to client (mail client on PC or phone).
 - Vulnerability: Legacy versions are cleartext (no encryption), no authentication.
 - Modern versions use TLS for encryption (IMAPS on Port 993, POP3S on Port 995).
 
 Security context: Email Spoofing.
+
 Because SMTP trusts the sender address in the email header, an attacker can send emails that appear to come from a legitimate source (e.g., a trusted company or individual). This can be used for phishing attacks, spreading malware, or other malicious activities.
+
 - SPF/DKIM/DMARC: Email authentication protocols that help verify the legitimacy of the sender and protect against email spoofing.
 
 ## File Sharing
@@ -281,8 +328,11 @@ Because SMTP trusts the sender address in the email header, an attacker can send
 - **Mitigation**: Disable SMBv1, apply patches, use strong authentication methods, and monitor network traffic for unusual activity.
 
 ## Interacting with Text-based Protocols (CLI)
+
 Many older protocols are text-based (SMTP, HTTP, FTP, ...) and can be interacted with using command-line tools like `telnet` or `netcat (nc)`.
+
 Example: Using `telnet` to interact with an [SMTP](../Terminology/Networks/Transfer%20Protocols/SMTP.md) server.
+
 ```bash
 telnet mail.server.com 25
 HELO attacker
@@ -296,9 +346,13 @@ QUIT
 ```
 
 ### SMB
+
 SMB (Server Message Block) is a binary protocol, so you can’t use `telnet` or `nc` to interact with it directly.
+
 But you can use tools like `smbclient` to interact with SMB shares from the command line.
+
 Example: Using `smbclient` to connect to an SMB share.
+
 ```bash
 # 1. Enumeration ( List Shares )
 $ smbclient -L //10.0.0.5 -N
@@ -313,7 +367,9 @@ smb : \ > get xyz
 
 # Security
 ## Packet Filtering Firewalls
+
 The Gatekeeper: Inspecting layer 3 ([IP](../Terminology/Networks/TCP%20IP%20Model/IP.md)) and layer 4 ([TCP](../Terminology/Networks/TCP%20IP%20Model/TCP.md)/[UDP](../Terminology/Networks/UDP.md)) headers of packets.
+
 - Location: Usually at the network perimeter (between internal network and Internet).
 - Logic: Compares packet headers against a set of rules (ACLs - Access Control Lists).
 - Criteria:
@@ -327,7 +383,9 @@ The Gatekeeper: Inspecting layer 3 ([IP](../Terminology/Networks/TCP%20IP%20Mode
 Default Deny: The final rule is to deny all traffic that does not match any previous rule, ensures that only explicitly allowed traffic is permitted.
 
 ## Virtual Private Network (VPN)
+
 A VPN creates a secure, encrypted tunnel over a public network (like the Internet) to connect remote users or networks to a private network.
+
 - Uses tunneling protocols (e.g., IPsec, OpenVPN, WireGuard) to encapsulate and encrypt data packets.
 - **Goal**: Provide secure remote access to a private network.
 - **Common protocols**: WireGuard, IPsec, OpenVPN.
@@ -343,6 +401,7 @@ A VPN creates a secure, encrypted tunnel over a public network (like the Interne
 
 # Tools
 ## CLI Tools: Connectivity & Path (Layer 3)
+
 Diagnosing reachability and routing path issues.
 
 | Function                                                                                                                                         | Usage Example                           |
@@ -357,10 +416,13 @@ Diagnosing reachability and routing path issues.
 | `ip addr` (Replaces `ifconfig`)<br>Shows IP addresses, Subnet Masks, and MAC addresses for all interfaces. | `ip addr show` |
 | `ip route` (Replaces `route`)<br>Displays the kernel routing table and the Default Gateway.                | `ip route`     |
 | `ip neigh` (Replaces `arp`)<br>Displays the ARP cache (Neighbor table).                                    | `ip neigh`     |
+
 Windows PowerShell equivalents are `Get-NetIPAddress`, `Get-NetRoute`,
+
 and `Get-NetNeighbor`.
 
 ## CLI Tools: Sockets (Layer 4) & DNS (Layer 7)
+
 | Function                                                                              | Usage Example                                          |
 | ------------------------------------------------------------------------------------- | ------------------------------------------------------ |
 | `ss` (Replaces `netstat`)<br>Dump socket statistics. Fast way to see listening ports. | `ss -tunlp`<br>(TCP, UDP, Numeric, Listening, Process) |
@@ -377,11 +439,13 @@ and `Get-NetNeighbor`.
 | `nmap`<br>Network exploration tool. Scans for open ports and [OS](Operating%20System.md) versions.                           | `nmap -sV 192.168.1.1`                                            |
 
 We’ll need `nmap` for today’s lab.
+
 Be careful with the flags you use, some of them can be quite invasive.
+
 Don’t scan machines you’re not allowd to.
 
-
 Once you’ve used `ssh` to connect to a remote server, you can use various command-line tools to interact with the server securely. Here are some common tasks you might perform after establishing an SSH connection:
+
 1. **File Transfer**: Use `scp` (secure copy) or `sftp` (SSH File Transfer Protocol) to transfer files between your local machine and the remote server.
 	- Example using `scp`:
      ```bash

@@ -1,12 +1,14 @@
 ---
 aliases: []
 date created: Monday, 8. December 2025, 11:12
-date modified: Monday, 8. December 2025, 18:12
+date modified: Thursday, 11. December 2025, 09:12
 ---
 
 # Core design principles of Defense
 ## Core design principles 🧱
+
 The most important ones from Saltzer & Schroeder are:
+
 - 🔑**Least privilege:** Give each user/process the minimum privileges needed to perform its function.
 	- E.g., a web server process should not run as root.
 	- Why? Because if the process is compromised, the attacker only gets limited access.

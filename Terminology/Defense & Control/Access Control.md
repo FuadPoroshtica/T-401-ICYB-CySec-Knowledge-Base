@@ -8,7 +8,7 @@ date modified: Monday, 8. December 2025, 18:12
 
 **Term**: Access Control
 
-**Definition**: Mechanisms that decide who (or what process) is allowed to access *which* resources and *in what way*.
+**Definition**: Mechanisms that decide who (or what process) is allowed to access *which* resources and *in what way*. Access control systems enforce policies that restrict access to systems, networks, and data based on predefined rules. These mechanisms help protect sensitive information and ensure that only authorized users can perform specific actions.
 
 **Context/Example**: File permissions, user accounts, and roles.
 

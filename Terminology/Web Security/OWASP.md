@@ -1,17 +1,23 @@
 ---
 aliases: [Open Web Application Security Project]
 date created: Monday, 8. December 2025, 11:12
-date modified: Monday, 8. December 2025, 18:12
+date modified: Thursday, 11. December 2025, 09:12
 ---
 
 # OWASP
+
 The Open Web Application Security Project (OWASP) is a nonprofit foundation that works to improve the security of software.
+
 They provide resources, tools, and best practices for web application security.
 
 ## OWASP Top 10
+
 One of their most well-known projects is the **OWASP Top Ten**/ **OWASP Top 10**, which is a list of the most critical web application security risks.
+
 The OWASP Top Ten is updated every few years to reflect the evolving threat landscape.
+
 The last version was released in 2021, and the latest version is currently being developed for 2025, though it’s basically been finalized.
+
 Here’s the current list of 2025 OWASP Top 10:
 
 | Rank     | Category                                                                                                                                                                                                                       |

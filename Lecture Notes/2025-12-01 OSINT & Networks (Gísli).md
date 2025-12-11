@@ -1,14 +1,17 @@
 ---
 aliases: []
 date created: Monday, 1. December 2025, 20:12
-date modified: Thursday, 4. December 2025, 11:12
+date modified: Thursday, 11. December 2025, 09:12
 ---
 
 # OSINT & Networks 2025-12-01
 
 (2025-12-01 W2 Monday 09:00)
+
 He says that the knowledge base is there for a quick lookup on stuff. Again, he talks about not just copying the slides.
+
 This course should roughly take 150-180 hours, so 50 hours/week, so roughly 10 hours/work day
+
 Next week we’ll talk about networking stuff, virtual networking stuff.
 
 The lab today will run until Thursday, and we’ll do 2 labs inbetween as well. It’ll take us a while to complete.
@@ -52,7 +55,9 @@ But it can also be used by the “dark side”, e.g. for:
 ## Tools and Techniques
 
 (We’ll be doing this in the exercise today)
+
 “Google Dorks”. Using commands to filter results for specific data types. E.g. `site:linkedin.com "project manager"`, etc.
+
 Also DuckDuckGo.
 
 He lists a bunch of tools. Tool to select tools: [OSINT Framework](https://osintframework.com/).
@@ -66,15 +71,19 @@ The process of protecting individual pieces of data that could be grouped togeth
 >
 
 There are multiple things that can be done, like using browser plugins to block trackers and such; blocking cookies or trackers, blocking JavaScript.
+
 You shouldn’t be logged into your personal account in your browser if you don’t want to be found.
+
 A VPN (Virtual Private Network) can also hide your traffic.
 
 You should protect your hardware and software. Make sure your own system is safe. Like running it on a VM.
+
 There are even OSes for this, like Tails [OS](Operating%20System.md). It’s an “amnesiac system”, it clears everything after you’re done.
 
 You could hide your location with a VPN, Tor (The Onion Router) or by using a public Wi-Fi.
 
 We want to counter “Browser fingerprinting” (screen resolution, installed fonts, battery level) to track unique devices even without cookies.
+
 Countermeasures:
 
 1. User agent [spoofing](../Terminology/Attacks/Spoofing). Basically lying to the website? Like “Hahha yeahhh I’m tootally using Chrome right now”. There are even extensions made for just this.
@@ -82,6 +91,7 @@ Countermeasures:
 3. Dedicated research browser.
 
 If you investigate a target on LinkedIn, LinkedIn will tell the target “John Smith viewed your profile”. To avoid this, analysts use Sock Puppets. Fake identities created for research purposes.
+
 Anatomy of a sock puppet:
 
 - Use a fake name.
@@ -113,11 +123,17 @@ OPSEC in OSINT: Preemptively masks your trail to evade identification.
 ## Structure and components
 
 LAN (Local Area Network) is a network that connects computers within a limited area, like a home, school, or office building.
+
 There are all kinds of technologies to connect things together, like Ethernet, Wi-Fi, Bluetooth, etc.
+
 More details about a Local Area Network (LAN) in a home:
+
 Typically, we have a home router that connects to the ISP (Internet Service Provider) via a modem.
+
 The home router typically has a built-in switch to connect multiple wired devices, and also provides Wi-Fi for wireless devices.
+
 (A switch is a device that connects multiple devices on a LAN and uses MAC (Media Access Control) addresses to forward data to the correct destination.)
+
 And in reality, the internet itself is just a huge network of networks.
 
 ### A network hub:
@@ -165,12 +181,15 @@ A home router is actually much more than just a router. It typically combines mu
 - ISPs (Internet Service Providers).
 
 The endpoints connect to ISPs via various means (DSL, cable, fiber, cellular, satellite), which connect to AS (Autonomous Systems) that make up the internet backbone. AS are large networks or group of networks under a common administration, like an ISP or a large organization. AS can be connected together with IXPs (Internet Exchange Points), which are physical locations where different AS can exchange traffic with each other.
+
 So, the order is sorta like:
+
 End devices → LANs → ISPs → AS → IXPs → *other* AS → *other* ISPs → *other* LANs → *other* end devices.
 
 ## Layered architecture
 
 The internet uses a layered architecture to manage the complexity of networking.
+
 ![[Pasted image 20251201102251.png|700]]
 
 ### OSI Model
@@ -199,6 +218,7 @@ Great lies in networking: “An application only needs...”
 ### How is data sent over the internet? - Packet Switching
 
 The internet uses a method called **packet switching** to send data. Instead of sending data as a continuous stream, it breaks the data into smaller packets. Each packet contains a portion of the data, along with metadata like source and destination addresses, sequence numbers, and error-checking information.
+
 Steps:
 
 1. Data is broken into smaller chunks called “packets”.
@@ -331,7 +351,9 @@ Node-to-node data transfer on the same network
     - Unlike Ethernet, devices speak only when the Host (computer) asks them to.
 
 Currently he’s showing us Wireshark. Wireshark is a network protocol analyzer that captures and displays packets in real-time. It allows you to see the details of network traffic, including headers, payloads, and protocols used.
+
 Basically, you can see all the packets being sent and received on your network interface.
+
 We can see:
 
 - The frame number.
@@ -343,6 +365,7 @@ We can see:
 It’s very nice to inspect the packets and what’s going on, network-wise, in your system.
 
 He shows us the ARP (Address Resolution Protocol) packets. ARP is used to map IP addresses to MAC addresses within a local network.
+
 When a device wants to communicate with another device on the same network, it sends an ARP request to ask “Who has this IP address?” The device with that IP address responds with its MAC address.
 
 If a computer doesn’t know the MAC address of a device it wants to communicate with, it sends out an ARP request as a broadcast to all devices on the local network. The device with the matching IP address responds with its MAC address.

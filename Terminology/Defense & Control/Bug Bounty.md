@@ -1,7 +1,7 @@
 ---
 aliases: [Bug Bounties]
 date created: Tuesday, 25. November 2025, 20:11
-date modified: Monday, 8. December 2025, 18:12
+date modified: Thursday, 11. December 2025, 09:12
 ---
 
 # Bug Bounty 🐛💰
@@ -11,6 +11,7 @@ date modified: Monday, 8. December 2025, 18:12
 **Definition**: A bug bounty program is a reward system where organizations pay security researchers rewards (bounties) to find and report vulnerabilities in their systems. The “Gig Economy” of cybersecurity.
 
 How it works:
+
 1. Company launches a bug bounty program.
 2. Researchers find and report bugs.
 3. Researched writes a report explaining the bug and how to reproduce it.

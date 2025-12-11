@@ -1,7 +1,7 @@
 ---
 aliases: []
 date created: Wednesday, 26. November 2025, 08:11
-date modified: Thursday, 4. December 2025, 11:12
+date modified: Thursday, 11. December 2025, 09:12
 ---
 
 # 2025-11-26 Command-Line Interface (Gísli)
@@ -78,6 +78,7 @@ date modified: Thursday, 4. December 2025, 11:12
 | Search Text          | `grep "txt"`      | `sls "txt"` (`Select-String`)                          |
 | Find File            | `find. -name "X"` | `ls -r -filter "X"` (`Get-ChildItem -Recurse -Filter`) |
 | Find File by Content | `grep -R "txt"`   | `ls -r                                                 |
+
 - **SuperUser Permissions:**
 	- **Bash**: `sudo command`
 	- **PowerShell**: Right-Click → “Run as Administrator”.
@@ -91,6 +92,7 @@ date modified: Thursday, 4. December 2025, 11:12
     - (Note: PowerShell’s ‘`curl`’ is NOT the real `curl`. It parses *HTML* objects.)
 
 Use <kbd>Ctrl</kbd>+<kbd>R</kbd> for reverse search in history.
+
 Auto-complete (by pressing ↹Tab) for commands and file names is a common feature in almost all CLIs.
 
 ## Pipes - The glue of the Command Line Interface
@@ -160,7 +162,6 @@ The Logic:
 
 > [!warning] The Confusion
 > Both systems use similar symbols (like `*`), but they mean different things and serve different purposes.
-
 
 |  | **File Globs (Wildcards)** | **Regular Expressions (Regex)** |
 | --- | --- | --- |
@@ -268,7 +269,6 @@ Usage: `Greet -Name "John"`
 | **Nano**                           | The Beginner  | Modeless. behaves like Notepad. Instructions are listed at the bottom (e.g., Ctrl+X to Exit).                                                                                                                                        |
 | **Vim**                            | The Standard  | Modal. You are either in “Insert Mode” (typing) or “Command Mode” (navigating). Extremely fast once learned. Installed on 99% of servers.                                                                                            |
 | **Emacs**<br>(*don’t use this 😟*) | The Ecosystem | Programmable. An interpreter for Lisp.<br>Extremely “powerful” (*does “powerful” just mean “does a bunch of crap”? Linux people keep throwing that word around...*) (can run email, calendars, games), but complex key combinations. |
-
 
 > [!tip] Tip:
 >
