@@ -1,12 +1,12 @@
 ---
 aliases: []
 date created: Tuesday, 25. November 2025, 17:11
-date modified: Monday, 1. December 2025, 21:12
+date modified: Thursday, 11. December 2025, 13:12
 ---
 
 # Regular Expression (e.g. regex)
 
-Regular Expression is filtering method used in many linux/unix commands.
+Regular Expression is a filtering method used in many linux/unix commands.
 
 | Symbol   | Use                                             |
 | -------- | ----------------------------------------------- |
