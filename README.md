@@ -1,7 +1,7 @@
 ---
 aliases: []
 date created: Thursday, 11. December 2025, 11:12
-date modified: Thursday, 11. December 2025, 15:12
+date modified: Thursday, 11. December 2025, 19:12
 ---
 
 # Group README and Reflection Document
@@ -39,7 +39,6 @@ Here are the names of all the students in this group (`kb_group_7`), including t
 	- GitHub username: `kormakursnorras`
 - Nastassia Herman: `nastassia25@ru.is`
 	- GitHub username: `krakengard`
-	-
 
 
 Our collaborative project for the CySec Knowledge Base was a high-speed effort, requiring quick adaptation.
@@ -71,7 +70,7 @@ Our three-week schedule presented significant time constraints, which required s
 - **Synthesizing Overlapping Concepts:** Many core principles, such as **Least Privilege** and **Defense in Depth**, appeared in the context of Operating Systems, Networks, and Web Security. To avoid repetition, we decided to define these fundamental concepts once in a core section and simply reference them when discussing their technical implementation (e.g., discussing SUID as an enforcement of Least Privilege).
     
 
-cd 
+cd
 You can see how much each member contributed to the knowledge base on the [contributors page](https://github.com/FuadPoroshtica/T-401-ICYB-CySec-Knowledge-Base/graphs/contributors).
 
 You can see how much each member contributed to the knowledge base on the [contributors page](https://github.com/FuadPoroshtica/T-401-ICYB-CySec-Knowledge-Base/graphs/contributors), which shows the Git-based version history for the project.
@@ -138,4 +137,3 @@ This approach let us quickly jump from a lecture note to the relevant glossary t
 ## Collaborative Process Reflection
 
 TODO
-

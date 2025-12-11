@@ -423,7 +423,7 @@ The attacker’s goal: Move from Ring 3 (User) to Ring 0 ([Kernel](../Terminolog
 
 - [Malware](../Terminology/Attacks/Malware/Malware) that modifies the system to hide its own existence.
 - e.g., by just diverting or intercepting system calls.
-- Essentially, it’s malware that’s designed to be stealthy and avoid detection by traditional security measures. It gets the [Operating System](../Terminology/Systems & Plaforms/Operating System.md) to lie to the user or security software about what’s really happening on the system.
+- Essentially, it’s malware that’s designed to be stealthy and avoid detection by traditional security measures. It gets the [Operating System](../Terminology/Systems%20&%20Plaforms/Operating%20System.md) to lie to the user or security software about what’s really happening on the system.
 - Example: When you run `ls` or `ps`, the rootkit filters the output of the underlying system calls to hide the hacker’s files and processes. The [OS](Operating System.md) lies to the user.
 - **Defense**: Use trusted boot mechanisms and integrity checks to detect unauthorized changes to system binaries.
 

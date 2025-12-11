@@ -170,7 +170,7 @@ date modified: Wednesday, 10. December 2025, 22:12
 > What is the purpose of the “Shebang” (`#!/bin/bash`) at the very first line of a Unix script?
   - ~~× It tells the script to look for files in the `/bin` directory.~~
   - ~~× It is a comment line used for copyright information.~~
-  - ✓ It tells the [Operating System](../Terminology/Systems & Plaforms/Operating System.md) which interpreter (e.g., Bash, Python, Ruby) should be used to execute the file.
+  - ✓ It tells the [Operating System](../Terminology/Systems%20&%20Plaforms/Operating%20System.md) which interpreter (e.g., Bash, Python, Ruby) should be used to execute the file.
   - ~~× It grants the script Administrator permissions automatically.~~
 
 > Why is passing a password as a flag (e.g., `mysql -u root -pSecret123`) considered a security [Vulnerability](../Terminology/Vulnerability.md)?
@@ -218,9 +218,9 @@ date modified: Wednesday, 10. December 2025, 22:12
   - ✓ Windows Event Viewer
   - ✓ Tripwire (checking file checksums/hashes)
  
-> A “[Race condition](../Terminology/Attacks/Race condition.md)” (specifically TOCTOU) exploits which specific aspect of an [Operating System](../Terminology/Systems & Plaforms/Operating System.md)?
-  - ~~×The inability of the [OS](../Terminology/Systems & Plaforms/Operating System.md) to filter SQL commands from user input.~~
-  - ✓ The fact that the [OS](../Terminology/Systems & Plaforms/Operating System.md) multitasks, creating a time gap between checking permissions and using a resource.
+> A “[Race condition](../Terminology/Attacks/Race condition.md)” (specifically TOCTOU) exploits which specific aspect of an [Operating System](../Terminology/Systems%20&%20Plaforms/Operating%20System.md)?
+  - ~~×The inability of the [OS](../Terminology/Systems%20&%20Plaforms/Operating%20System.md) to filter SQL commands from user input.~~
+  - ✓ The fact that the [OS](../Terminology/Systems%20&%20Plaforms/Operating%20System.md) multitasks, creating a time gap between checking permissions and using a resource.
   - ~~×The finite amount of RAM available to the Stack.~~
   - ~~×The weak encryption used in legacy passwords.~~
  
@@ -396,7 +396,7 @@ date modified: Wednesday, 10. December 2025, 22:12
   - ~~×It is a Bridge; it should be replaced with a [Hub](../Terminology/Networks/Network hardware/Hub.md).~~
   - ~~×It is a [Switch](../Terminology/Networks/Network hardware/Switch.md); it should be replaced with a [Router](../Terminology/Networks/Network hardware/Router.md).~~
  
-> A “BadUSB” attack (such as a Rubber Ducky) bypasses [Firewall](../Terminology/Defense & Control/Firewall.md) restrictions and antivirus checks by identifying itself to the [Operating System](../Terminology/Systems & Plaforms/Operating System.md) as which type of device?
+> A “BadUSB” attack (such as a Rubber Ducky) bypasses [Firewall](../Terminology/Defense & Control/Firewall.md) restrictions and antivirus checks by identifying itself to the [Operating System](../Terminology/Systems%20&%20Plaforms/Operating%20System.md) as which type of device?
   - ~~×A Network Interface Card.~~
   - ~~×A Mass Storage Device (Flash Drive).~~
   - ~~×A Biometric Scanner.~~
@@ -593,7 +593,7 @@ date modified: Wednesday, 10. December 2025, 22:12
 > The program crashes with a SIGSEGV (Segmentation Fault) when the attacker runs `python3 -c "print(chr(0x41) * 100)"` and the Return Address is overwritten with `0x4141`... Why does this specific crash happen?
   - ✓ The CPU attempts to jump to address `0x4141414141414141`, which is not a valid mapped memory address.
   - ~~×The `printf` function failed.~~
-  - ~~×The [Operating System](../Terminology/Systems & Plaforms/Operating System.md) detected a hacker.~~
+  - ~~×The [Operating System](../Terminology/Systems%20&%20Plaforms/Operating%20System.md) detected a hacker.~~
   - ~~×The buffer is full.~~
  
 > In [Pwntools](../Terminology/Binary Exploitation/Pwntools.md), what does the line `p = process("./vuln")` do?
