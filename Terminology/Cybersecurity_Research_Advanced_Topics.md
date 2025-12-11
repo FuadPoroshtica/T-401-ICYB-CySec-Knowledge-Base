@@ -1,7 +1,7 @@
 ---
 aliases: []
 date created: Thursday, 27. November 2025, 23:11
-date modified: Monday, 8. December 2025, 11:12
+date modified: Thursday, 11. December 2025, 09:12
 ---
 
 # Cybersecurity Research: Advanced Topics
@@ -148,6 +148,7 @@ All these attacks follow a similar pattern:
 ## Understanding the Foundation: Speculative Execution
 
 Modern CPUs use **speculative execution** to improve performance:
+
 - Like a chef preparing popular dishes before orders come in
 - The CPU guesses which code will run next and executes it early
 - If the guess is wrong, results are discarded
@@ -168,6 +169,7 @@ Imagine a secure vault where you can’t see inside:
 - **Side-channel attack**: Listen to the clicking sounds the lock makes and deduce the combination
 
 In Meltdown/Spectre:
+
 - **Direct attack**: Try to read kernel memory (blocked by permissions)
 - **Side-channel attack**: Trick the CPU into speculatively accessing kernel memory, then measure cache timing to deduce what was accessed
 
@@ -342,6 +344,7 @@ They exploit the fact that modern CPUs operate in two “realities”:
 ### Hardware Mitigations
 
 New processors include:
+
 - Hardware barriers that prevent speculation
 - Better permission checking during speculation
 - Reduced speculative execution windows
@@ -597,6 +600,7 @@ Modern systems have Thunderbolt security settings:
 ### 3. Kernel DMA Protection (Windows)
 
 Windows 10/11 feature:
+
 - Enabled by default on new systems
 - Blocks DMA until [OS](Operating%20System.md) fully boots
 - Uses IOMMU to restrict access
@@ -892,6 +896,7 @@ ausearch -k suid_watch
 ## Conclusion
 
 SUID is a powerful but dangerous feature. The key to securing it is:
+
 1. **Use it sparingly** - only when absolutely necessary
 2. **Audit regularly** - know what has SUID on your systems
 3. **Monitor actively** - detect suspicious SUID usage

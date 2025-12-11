@@ -1,14 +1,17 @@
 ---
 aliases: []
 date created: Monday, 8. December 2025, 11:12
-date modified: Monday, 8. December 2025, 15:12
+date modified: Thursday, 11. December 2025, 09:12
 ---
 
 # Generative AI Attack Surface
+
 The places where attacks can happen:
 
 ## Supply Chain (Training Phases)
+
 Security vulnerabilities can be introduced during any stage of the training process of AIs:
+
 1. **Pre-Training (The foundation):**
 	- During this stage the AI model is trained on literal petabytes (quadrillions of bytes) of data from the internet.
 	- *Risk*: Data Poisoning. Baking bad data into the model itself.
@@ -33,6 +36,7 @@ Security vulnerabilities can be introduced during any stage of the training proc
     - Example: An attacker could input a prompt that tricks the model into ignoring its safety instructions and generating harmful content.
 
 Comparison of injection methods:
+
 - **[Buffer Overflow](../Attacks/Buffer%20Overflow.md) code injection**: Overwrite specific memory locations to change program behavior.
 - **[SQL Injection](../Web%20Security/SQL%20Injection%20(SQLi).md)**: User input is interpreted as an SQL command.
 - **LLM Injection**: User input is interpreted as a System Instruction

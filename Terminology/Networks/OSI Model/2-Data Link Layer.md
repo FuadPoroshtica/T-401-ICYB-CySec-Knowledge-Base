@@ -1,14 +1,17 @@
 ---
 aliases: [Data Link Layer]
 date created: Tuesday, 2. December 2025, 10:12
-date modified: Monday, 8. December 2025, 18:12
+date modified: Thursday, 11. December 2025, 09:12
 ---
 
 # Data Link Layer
+
 The **Data Link Layer** is the second layer in the [OSI Model](OSI%20Model.md) of computer networking. It is responsible for establishing, maintaining, and terminating a reliable link between two directly connected nodes on a network.
 
 The Data Link Layer handles error detection and correction, as well as flow control, to ensure that data is transmitted accurately and efficiently over the physical medium. It also manages the framing of data packets, adding headers and trailers to create frames that can be transmitted over the network.
+
 The Data Link Layer is divided into two sublayers:
+
 1. the [Media Access Control](../MAC.md) (MAC) layer, which controls access to the physical medium,
 2. and the Logical Link Control (LLC) layer, which manages communication between devices on the same network.
 

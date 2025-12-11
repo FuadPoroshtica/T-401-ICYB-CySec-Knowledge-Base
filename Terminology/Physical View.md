@@ -1,7 +1,7 @@
 ---
 aliases: []
 date created: Thursday, 27. November 2025, 10:11
-date modified: Wednesday, 10. December 2025, 21:12
+date modified: Thursday, 11. December 2025, 09:12
 ---
 
 # Physical View
@@ -10,4 +10,5 @@ date modified: Wednesday, 10. December 2025, 21:12
 **Related concepts:** MMU (Memory Management Unit), Cache, Storage Devices, Input/Output Devices, Hardware Architecture
 
 ## Physical View vs. Hard drive
+
 The “Physical View” refers to the overall hardware structure of a computer system, while a “Hard Drive” is a specific hardware component within that structure used for data storage.

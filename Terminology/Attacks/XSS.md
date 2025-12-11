@@ -1,7 +1,7 @@
 ---
 aliases: [Cross-Site Scripting, Cross Site Scripting]
 date created: Monday, 8. December 2025, 09:12
-date modified: Wednesday, 10. December 2025, 21:12
+date modified: Thursday, 11. December 2025, 09:12
 ---
 
 # XSS
@@ -11,13 +11,17 @@ date modified: Wednesday, 10. December 2025, 21:12
 ```HTML
 <img src=”x” onerror="alert(document.cookie)">
 ```
+
 Into an unprotected input field on a website. The DOM then interoperates this as an img tag. The src is set to “`x`” which means it *always* executes the onerror code.
 
 **Related Concepts**: Session cookie, Cookies
 
 ## Mitigation
+
 Convert special characters to HTML entities before displaying user input on web pages.
+
 For example,
+
 - convert `<` to `&lt;`,
 - `>` to `&gt;`,
 - and `&` to `&amp;`.
@@ -37,4 +41,5 @@ And so on. This prevents the browser from interpreting them as HTML or JavaScrip
 > - Result: `<img ... alt="" onload="alert(1)">`
 
 ## XSS Defenses
+
 Context-Aware Encoding is the main defense.

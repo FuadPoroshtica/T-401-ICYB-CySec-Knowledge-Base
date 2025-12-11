@@ -1,13 +1,15 @@
 ---
 aliases: [OS, Operating System (OS), Operating Systems, OSes, Operating Systems (OSes)]
 date created: Monday, 8. December 2025, 19:12
-date modified: Monday, 8. December 2025, 19:12
+date modified: Thursday, 11. December 2025, 09:12
 ---
 
 # Operating System
+
 An **Operating System (OS)** is system software that manages computer hardware, software resources, and provides common services for computer programs. It acts as an intermediary between users and the computer hardware, enabling users to interact with the system without needing to understand the complexities of the hardware.
 
 Operating systems perform several key functions, including:
+
 - **Resource Management**: Allocating and managing hardware resources such as CPU, memory, disk space, and peripheral devices.
 - **File Management**: Organizing, storing, retrieving, and managing data on storage devices.
 - **Process Management**: Handling the creation, scheduling, and termination of processes (running programs).
@@ -27,10 +29,11 @@ Operating systems perform several key functions, including:
 - **Real-Time Operating Systems (RTOS)**: Such as QNX and RTLinux, designed for applications that require precise timing and high reliability.
 
 ## Cyber Security Context
-In the context of cyber security, operating systems play a crucial role in maintaining the security and integrity of computer systems. They implement various security measures, such as user authentication, [Access Controls](../Defense%20&%20Control/Access%20Control.md), encryption, and system monitoring, to protect against unauthorized access, [Malware](../Attacks/Malware/Malware.md), and other cyber threats. Understanding the operating system is essential for identifying vulnerabilities, implementing security policies, and ensuring the overall security posture of an organization’s IT infrastructure.
 
+In the context of cyber security, operating systems play a crucial role in maintaining the security and integrity of computer systems. They implement various security measures, such as user authentication, [Access Controls](../Defense%20&%20Control/Access%20Control.md), encryption, and system monitoring, to protect against unauthorized access, [Malware](../Attacks/Malware/Malware.md), and other cyber threats. Understanding the operating system is essential for identifying vulnerabilities, implementing security policies, and ensuring the overall security posture of an organization’s IT infrastructure.
 
 Operating systems are a fundamental component of modern computing, and their design and functionality significantly impact the performance, usability, and security of computer systems.
 
 ## Kernel vs Operating System
+
 The difference between an Operating System and a kernel is that the [Kernel](Kernel.md) is the core component of the operating system that directly interacts with the hardware, while the operating system encompasses the [Kernel](Kernel.md) along with additional software and services that provide a complete user experience and system management capabilities.

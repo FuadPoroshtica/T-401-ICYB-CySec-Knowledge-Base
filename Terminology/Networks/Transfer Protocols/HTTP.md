@@ -1,7 +1,7 @@
 ---
 aliases: [Hypertext Transfer Protocol]
 date created: Tuesday, 2. December 2025, 19:12
-date modified: Monday, 8. December 2025, 18:12
+date modified: Thursday, 11. December 2025, 09:12
 ---
 
 # HTTP
@@ -10,6 +10,7 @@ HTTP is the foundation of data communication on the World Wide Web.
 HTTP operates as a request-response protocol between a client and a server. The client, typically a web browser, sends an HTTP request to the server, which then processes the request and returns an HTTP response containing the requested resource or an error message.
 
 HTTP supports various methods for different types of requests, including GET, POST, PUT, DELETE, and HEAD. Each method serves a specific purpose in the communication between the client and server.
+
 HTTP is a stateless protocol, meaning that each request is independent and does not retain any information about previous requests.
 
 To maintain stateful interactions, mechanisms such as cookies and sessions are often used in conjunction with HTTP.

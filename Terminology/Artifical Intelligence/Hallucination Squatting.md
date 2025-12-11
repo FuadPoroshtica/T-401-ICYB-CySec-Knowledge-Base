@@ -1,12 +1,14 @@
 ---
 aliases: []
 date created: Monday, 8. December 2025, 11:12
-date modified: Monday, 8. December 2025, 15:12
+date modified: Thursday, 11. December 2025, 09:12
 ---
 
 # Hallucination Squatting
 ## Hallucination Squatting
+
 A.k.a. *Package Hallucinations*:
+
 1. [LLMs](LLM.md) often hallucinate (invent) code libraries or packages that *sound* real but don’t actually exist. (Which is in-general just how LLMs work; they generate plausible-sounding text based on patterns in training data.)
 2. The attack:
       1. Attackers query LLMs to find these common hallucinations.
