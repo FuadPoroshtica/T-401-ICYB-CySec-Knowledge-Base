@@ -22,6 +22,7 @@ Here are the names of all the students in this group (`kb_group_7`), including t
 - Daníela Tebé Fannarsdóttir: `danielaf24@ru.is`
 	- GitHub username: `DanielaTebe`
 - Ema Pracková: `ema25@ru.is`
+	- GitHub username: `prackema`
 - Fuad Poroshtica: `fuad23@ru.is`
 	- GitHub username: `FuadPoroshtica`
 - Gísli Hrafn Halldórsson: `gislih24@ru.is`
@@ -34,4 +35,6 @@ Here are the names of all the students in this group (`kb_group_7`), including t
 - Kim Anna Hudson: `kim24@ru.is`
 - Kormákur Snorrason: `kormakur24@ru.is`
 - Nastassia Herman: `nastassia25@ru.is`
+	- GitHub username: `krakengard`
+
 You can see how much each member contributed to the knowledge base on the [contributors page](https://github.com/FuadPoroshtica/T-401-ICYB-CySec-Knowledge-Base/graphs/contributors).
