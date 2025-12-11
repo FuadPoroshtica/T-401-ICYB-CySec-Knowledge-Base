@@ -14,7 +14,7 @@ date modified: Thursday, 11. December 2025, 10:12
 	- TODO
 - Economy of Mechanism:
 	- TODO
-- [Complete mediation](../Terminology/Complete mediation.md):
+- [[Complete mediation]]:
 	- ...always check access for every access, something
 - Open design:
 	- The opposite of security by obscurity. It shouldn’t depend on security by obscurity. The system should be easy to understand so that it is easy to analyze what is going on for forensics.
