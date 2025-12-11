@@ -15,4 +15,4 @@ llm_response = model . generate_code ( user_input )
 eval ( llm_response ) # Arbitrary Code Execution
 ```
 - **[XSS (Cross-Site Scripting)](<../Attacks/XSS.md>)**: If an AI generates HTML/JS content that is directly rendered in a web app without sanitization.
-- **[SQL Injection](../Web Security/SQL Injection (SQLi).md)**: If an AI generates SQL queries based on user input without proper parameterization.
+- **[SQL Injection](../Web Security/SQL Injection (SQLi).md)**: If an AI generates <abbr title="Structured Query Language">SQL</abbr> queries based on user input without proper parameterization.

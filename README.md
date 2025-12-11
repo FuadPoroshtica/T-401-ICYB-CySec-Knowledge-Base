@@ -51,7 +51,7 @@ We initially aimed to use **Notion** because we felt its visual organization too
 
 We organized our information to be maximally efficient for exam lookup, dividing the course content into major, easy-to-navigate sections. We structured the document to follow the flow of the material, moving from foundational principles to system security, and then to advanced, modern threats.
 
-The structure ensured that concepts such as the **CIA Triad** (Confidentiality, Integrity, and Availability) and **Defense in Depth** were defined clearly at the beginning. We then built upon this foundation by dedicating separate sections to highly technical areas like **Operating System Mechanics** (Kernel/User Space, Auditing) and **Network Protocols** (IP, TCP/UDP, BGP). Finally, we grouped the modern and non-technical risks, including **Web Vulnerabilities** (XSS, SQLi) , **AI Security Threats** (Prompt Injection) , and **Operational Security (OPSEC)**. We made sure to clarify core ideas, such as always checking for authorization in **IDOR** vulnerabilities and using prepared statements for **SQLi**.
+The structure ensured that concepts such as the **CIA Triad** (Confidentiality, Integrity, and Availability) and **Defense in Depth** were defined clearly at the beginning. We then built upon this foundation by dedicating separate sections to highly technical areas like **Operating System Mechanics** (Kernel/User Space, Auditing) and **Network Protocols** (IP, TCP/UDP, BGP). Finally, we grouped the modern and non-technical risks, including **Web Vulnerabilities** (XSS, <abbr title="Structured Query Language injection">SQLi</abbr>) , **AI Security Threats** (Prompt Injection) , and **Operational Security (OPSEC)**. We made sure to clarify core ideas, such as always checking for authorization in **IDOR** vulnerabilities and using prepared statements for **SQLi**.
 
 ### Collaborative Process Reflection
 
@@ -65,9 +65,9 @@ Our three-week schedule presented significant time constraints, which required s
  
 **Challenges and How We Overcame Them:**
 
-- **Information Volume and Consistency:** The sheer amount of information, especially specific command syntax and complex acronyms (like ASLR, DEP/NX, BGP, POSIX), was difficult to manage. We overcame this by dedicating time after every major lecture block to a final review session. During this session, we cross-referenced all notes against the original slides to verify key definitions and tool usage, ensuring high accuracy.
+- **Information Volume and Consistency:** The sheer amount of information, especially specific command syntax and complex acronyms (like <abbr title="Address Space Layout Randomization">ASLR</abbr>, DEP/NX, BGP, POSIX), was difficult to manage. We overcame this by dedicating time after every major lecture block to a final review session. During this session, we cross-referenced all notes against the original slides to verify key definitions and tool usage, ensuring high accuracy.
     
-- **Synthesizing Overlapping Concepts:** Many core principles, such as **Least Privilege** and **Defense in Depth**, appeared in the context of Operating Systems, Networks, and Web Security. To avoid repetition, we decided to define these fundamental concepts once in a core section and simply reference them when discussing their technical implementation (e.g., discussing SUID as an enforcement of Least Privilege).
+- **Synthesizing Overlapping Concepts:** Many core principles, such as **Least Privilege** and **Defense in Depth**, appeared in the context of Operating Systems, Networks, and Web Security. To avoid repetition, we decided to define these fundamental concepts once in a core section and simply reference them when discussing their technical implementation (e.g., discussing <abbr title="Set User ID">SUID</abbr> as an enforcement of Least Privilege).
     
 
 cd

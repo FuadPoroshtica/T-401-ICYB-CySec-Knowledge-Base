@@ -51,7 +51,7 @@ Security vulnerabilities can be introduced during any stage of the training proc
 Comparison of injection methods:
 
 - **Buffer overflow code injection**: Overwrite specific memory locations to change program behavior.
-- **SQL Injection**: User input is interpreted as an SQL command.
+- **SQL Injection**: User input is interpreted as an <abbr title="Structured Query Language">SQL</abbr> command.
 - **LLM Injection**: User input is interpreted as a System Instruction
 
 ## Attack Surfaces
@@ -94,7 +94,7 @@ Where the model doesn’t ingest the attack *directly* from the user, but rather
 ## [Model Inversion, Extraction, Poisoning](../Terminology/Artifical Intelligence/Model Inversion, Extraction, Poisoning.md)
 **Model Inversion (Privacy):**
 - Querying the model to reconstruct sensitive training data.
-- *Example*: Asking specifically crafted questions to force the model to leak PII (emails, SSNs) seen during training.
+- *Example*: Asking specifically crafted questions to force the model to leak <abbr title="Personally Identifiable Information">PII</abbr> (emails, SSNs) seen during training.
 - *Mitigation*: Differential Privacy during training to limit memorization of specific data points.
 **Model Extraction (IP Theft):**
 - Querying an API extensively to train a “Student Model” that mimics the proprietary “Teacher Model.”
@@ -129,7 +129,7 @@ llm_response = model . generate_code ( user_input )
 eval ( llm_response ) # Arbitrary Code Execution
 ```
 - **XSS (Cross-Site Scripting)**: If an AI generates HTML/JS content that is directly rendered in a web app without sanitization.
-- **SQL Injection**: If an AI generates SQL queries based on user input without proper parameterization.
+- **SQL Injection**: If an AI generates <abbr title="Structured Query Language">SQL</abbr> queries based on user input without proper parameterization.
 
 ## [Hallucination Squatting](../Terminology/Artifical Intelligence/Hallucination Squatting.md)
 
@@ -172,7 +172,7 @@ A.k.a. *Package Hallucinations*:
 [Carlini et al., “Extracting Training Data from Large Language Models”:](https://www.usenix.org/conference/usenixsecurity21/presentation/carlini-extracting). They demonstrate that LLMs can memorize and regurgitate sensitive training data, even if it’s not the intent of the one training the model, leading to privacy leaks.
 
 - LLMs *memorize* specific training data, especially if it’s repeated often.
-- Attacks can then query the model to extract this memorized data, like PII (SSNs, API keys, etc.) seen once during training.
+- Attacks can then query the model to extract this memorized data, like <abbr title="Personally Identifiable Information">PII</abbr> (SSNs, API keys, etc.) seen once during training.
 - Security Implication: If an LLM is trained on sensitive data, it can inadvertently leak that data when prompted correctly. A trained model is therefore a sort of “leaky” database of its training data.
 
 ## Bias
@@ -187,7 +187,7 @@ If you train a model on racist data, the model will be racist.
 
 **Security Implications:**
 - **Content Moderation**: An AI trained mostly on English might fail to detect threats/radicalization in low-resource languages (False Negatives).
-- **Flagging**: Conversely, it might flag minority slang as “toxic” blocking legitimate users (False Positives/DoS).
+- **Flagging**: Conversely, it might flag minority slang as “toxic” blocking legitimate users (False Positives/<abbr title="Denial of Service">DoS</abbr>).
 
 ## Sybil Attacks & The Liar’s Dividend
 
@@ -225,7 +225,7 @@ If we build security tools (e.g., malware classifiers) on future datasets, they 
 ## Summary
 - Generative AI introduces a new paradigm of probabilistic software with unique security challenges.
 - The core vulnerability is the mixing of instructions and data in the context window, leading to prompt injection attacks.
-- Prompt injection is the new SQL injection.
+- Prompt injection is the new <abbr title="Structured Query Language">SQL</abbr> injection.
 - Developers must treat LLM outputs as untrusted user input and must implement robust validation and sanitization.
 - There are severe societal risks if we rely too much on Generative AI, and not just for security.
 - We must be proactive in addressing these challenges to ensure the safe and ethical deployment of AI technologies.

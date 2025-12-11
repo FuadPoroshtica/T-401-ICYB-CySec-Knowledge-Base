@@ -375,7 +375,7 @@ The Gatekeeper: Inspecting layer 3 ([IP](<../Terminology/Networks/TCP IP Model/I
 - Criteria:
 	- Source & destination IP addresses.
 	- Source & destination port numbers.
-	- Protocol ([TCP](<../Terminology/Networks/TCP IP Model/TCP.md>), [UDP](<../Terminology/Networks/UDP.md>), ICMP, ...).
+	- Protocol ([TCP](<../Terminology/Networks/TCP IP Model/TCP.md>), [UDP](<../Terminology/Networks/UDP.md>), <abbr title="Internet Control Message Protocol">ICMP</abbr>, ...).
 	- Protocol header flags (e.g., TCP SYN, ACK, ...).
 - Actions:
 	- `ALLOW` (accept) the packet.
@@ -406,7 +406,7 @@ Diagnosing reachability and routing path issues.
 
 | Function                                                                                                                                         | Usage Example                           |
 | ------------------------------------------------------------------------------------------------------------------------------------------------ | --------------------------------------- |
-| `ping`<br>Sends ICMP Echo Requests to check if a host is online and measure latency (RTT)                                                        | `ping google.com`<br>`ping 192.168.1.1` |
+| `ping`<br>Sends <abbr title="Internet Control Message Protocol">ICMP</abbr> Echo Requests to check if a host is online and measure latency (<abbr title="Round Trip Time">RTT</abbr>)                                                        | `ping google.com`<br>`ping 192.168.1.1` |
 | `traceroute` (Linux) / `tracert` (Win)<br>Maps the path packets take to the destination by<br>incrementing TTL. Reveals where a connection dies. | `traceroute 8.8.8.8`                    |
 
 ## CLI Tools: Interface Configuration (Layer 2/3)
@@ -500,5 +500,5 @@ Once you’ve used `ssh` to connect to a remote server, you can use various comm
 
 # Further studies
 - UPnP, STUN etc punch holes into [NAT](<../Terminology/Networks/NAT.md>) to allow certain incoming traffic. Why can this be problematic for security? [find](<../Tools and Commands/Basic Bash commands/find.md>) some vulnerabilities of these techniques. How can they be countered?
-- SSL Inspection: In a corporate environment, some firewalls can inspect [HTTPS](<../Terminology/Networks/Transfer Protocols/HTTPS.md>) traffic to look for [Malware](<../Terminology/Attacks/Malware/Malware.md>) (or leaked data). How is this possible given that [TLS](<../Terminology/Networks/TLS.md>) provides end-to-end encryption?
+- <abbr title="Secure Sockets Layer">SSL</abbr> Inspection: In a corporate environment, some firewalls can inspect [HTTPS](<../Terminology/Networks/Transfer Protocols/HTTPS.md>) traffic to look for [Malware](<../Terminology/Attacks/Malware/Malware.md>) (or leaked data). How is this possible given that [TLS](<../Terminology/Networks/TLS.md>) provides end-to-end encryption?
 - [BGP](<../Terminology/Networks/BGP.md>) & The Chain of Trust: Discuss how [HTTPS](<../Terminology/Networks/Transfer Protocols/HTTPS.md>) (TLS) mitigates some of the problems of BGP hijacks. (Example: An attacker successfully hijacks a BGP prefix for a bank and diverts all traffic for the bank’s web server to a machine controlled by the attacker. Can they decrypt the traffic? Would the user notice? How?)

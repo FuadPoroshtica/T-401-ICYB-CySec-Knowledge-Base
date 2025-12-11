@@ -219,7 +219,7 @@ date modified: Wednesday, 10. December 2025, 22:12
   - ✓ Tripwire (checking file checksums/hashes)
  
 > A “[Race condition](../Terminology/Attacks/Race condition.md)” (specifically TOCTOU) exploits which specific aspect of an [Operating System](<../Terminology/Systems & Plaforms/Operating System.md>)?
-  - ~~×The inability of the [OS](<../Terminology/Systems & Plaforms/Operating System.md>) to filter SQL commands from user input.~~
+  - ~~×The inability of the [OS](<../Terminology/Systems & Plaforms/Operating System.md>) to filter <abbr title="Structured Query Language">SQL</abbr> commands from user input.~~
   - ✓ The fact that the [OS](<../Terminology/Systems & Plaforms/Operating System.md>) multitasks, creating a time gap between checking permissions and using a resource.
   - ~~×The finite amount of RAM available to the Stack.~~
   - ~~×The weak encryption used in legacy passwords.~~
@@ -236,15 +236,15 @@ date modified: Wednesday, 10. December 2025, 22:12
   - ✓ Because they do not read memory directly, but infer data based on timing differences in CPU Cache access.
   - ~~×Because they enter the system via the USB port (the side of the laptop).~~
  
-> If a binary file `/usr/bin/program` has the SUID bit set and is owned by root, what happens when a standard user executes it?
+> If a binary file `/usr/bin/program` has the <abbr title="Set User ID">SUID</abbr> bit set and is owned by root, what happens when a standard user executes it?
   - ✓ The program runs with the privileges of root (the file owner) for the duration of the process.
   - ~~×The program is blocked by the [Kernel](<../Terminology/Systems & Plaforms/Kernel.md>) for security reasons.~~
   - ~~×The program runs with the privileges of the standard user.~~
   - ~~×The user is prompted to enter the root password before it runs.~~
  
-> Why is the SUID bit a dangerous attack vector for Privilege Escalation? (Select all that apply)
+> Why is the <abbr title="Set User ID">SUID</abbr> bit a dangerous attack vector for Privilege Escalation? (Select all that apply)
   - ~~×It allows standard users to edit the `/etc/shadow` file directly using a text editor.~~
-  - ✓ If the SUID program has a bug (like a [Buffer Overflow](../Terminology/Attacks/Buffer Overflow.md)), an attacker can trigger it to execute arbitrary code as Root.
+  - ✓ If the <abbr title="Set User ID">SUID</abbr> program has a bug (like a [Buffer Overflow](../Terminology/Attacks/Buffer Overflow.md)), an attacker can trigger it to execute arbitrary code as Root.
   - ~~×It disables the system [Firewall](<../Terminology/Defense & Control/Firewall.md>) while the program is running.~~
   - ✓ Attackers can scan the file system (`find / -perm -4000`) to find these files and use them as entry points.
 
@@ -372,10 +372,10 @@ date modified: Wednesday, 10. December 2025, 22:12
   - ✓ traceroute / tracert
  
 > If you are configuring a standard Packet Filtering [Firewall](<../Terminology/Defense & Control/Firewall.md>), which of the following pieces of information can you use to create a rule? (Select all that apply)
-  - ~~×The specific SQL query inside the database packet.~~
+  - ~~×The specific <abbr title="Structured Query Language">SQL</abbr> query inside the database packet.~~
   - ✓ The Source [IP](<../Terminology/Networks/TCP IP Model/IP.md>) Address.
   - ~~×The URL the user is trying to visit (e.g., www.malware.com).~~
-  - ✓ The Transport Protocol ([TCP](<../Terminology/Networks/TCP IP Model/TCP.md>), [UDP](<../Terminology/Networks/UDP.md>), or ICMP).
+  - ✓ The Transport Protocol ([TCP](<../Terminology/Networks/TCP IP Model/TCP.md>), [UDP](<../Terminology/Networks/UDP.md>), or <abbr title="Internet Control Message Protocol">ICMP</abbr>).
   - ✓ The Destination Port Number.
  
 > When a computer needs to communicate with another device on the same local network segment, which address type is required for the final delivery of the frame?
@@ -444,7 +444,7 @@ date modified: Wednesday, 10. December 2025, 22:12
 > In the context of an [SQL Injection](../Terminology/Web Security/SQL Injection (SQLi).md) attack, what is the primary function of the payload ’ OR ‘1’=‘1?
   - ~~×To guess the admin’s password by trying the most common combination.~~
   - ~~×To overflow the database buffer memory.~~
-  - ✓ To alter the logic of the SQL statement so the WHERE clause always evaluates to true.
+  - ✓ To alter the logic of the <abbr title="Structured Query Language">SQL</abbr> statement so the WHERE clause always evaluates to true.
   - ~~×To encrypt the database tables so the administrator cannot read them.~~
  
 > Which of the following is the most effective defense against [SQL Injection](../Terminology/Web Security/SQL Injection (SQLi).md) vulnerabilities?
@@ -455,9 +455,9 @@ date modified: Wednesday, 10. December 2025, 22:12
  
 > An attacker successfully exploits a [Cross-Site Scripting](<../Terminology/Attacks/XSS.md>) (XSS) vulnerability on a banking website. What is the most likely immediate consequence?
   - ~~×The banking server crashes due to a memory leak.~~
-  - ~~×The attacker obtains the bank’s SSL private key.~~
+  - ~~×The attacker obtains the bank’s <abbr title="Secure Sockets Layer">SSL</abbr> private key.~~
   - ✓ The attacker’s script executes in the victim’s browser, allowing them to hijack the victim’s session.
-  - ~~×The attacker gains direct access to the bank’s SQL database and deletes the tables.~~
+  - ~~×The attacker gains direct access to the bank’s <abbr title="Structured Query Language">SQL</abbr> database and deletes the tables.~~
  
 > Which of the following mechanisms help mitigate the risk of XSS? (Select all that apply)
 - ✓ Context-aware Output Encoding (converting `<` to `&lt;`).
@@ -549,7 +549,7 @@ date modified: Wednesday, 10. December 2025, 22:12
  
 > Which of the following are architectural “Guardrails” rather than just prompt engineering? (Select all that apply)
   - ~~×Asking the model nicely to “please be safe” in the system prompt.~~
-  - ✓ Running a deterministic scanner (like PII detection or virus checking) on the output before sending it to the user.
+  - ✓ Running a deterministic scanner (like <abbr title="Personally Identifiable Information">PII</abbr> detection or virus checking) on the output before sending it to the user.
   - ~~×Increasing the “temperature” setting to 1.0 to ensure diverse responses.~~
   - ✓ Using a separate, smaller model specifically trained to classify inputs as “adversarial” or “benign” before processing.
 
@@ -600,7 +600,7 @@ date modified: Wednesday, 10. December 2025, 22:12
   - ~~×Compiles the exploit~~
   - ~~×Downloads the binary~~
   - ✓ Starts the vulnerable program locally and gives you an interface to interact with it
-  - ~~×Disables ASLR~~
+  - ~~×Disables <abbr title="Address Space Layout Randomization">ASLR</abbr>~~
  
 > What does the tool ROPgadget do?
   - ~~×Prints the program’s source code~~
@@ -612,7 +612,7 @@ date modified: Wednesday, 10. December 2025, 22:12
   - ~~×It fixes corrupted stack frames, such as those created by the attacker.~~
   - ~~×It prints the stack~~
   - ✓ It allows setting the first function argument, which goes in RDI
-  - ~~×It disables ASLR~~
+  - ~~×It disables <abbr title="Address Space Layout Randomization">ASLR</abbr>~~
 
 ## Quiz 11 - Principles of Defence
 > You are conducting a Risk Assessment. Using the standard formula, which of the following variables is NOT part of the calculation?

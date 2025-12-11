@@ -34,7 +34,7 @@ Uses a pair of keys: a public key for encryption and a private key for decryptio
 **Use Cases:**
 - Secure key exchange
 - Digital signatures
-- TLS/SSL certificates
+- TLS/<abbr title="Secure Sockets Layer">SSL</abbr> certificates
 
 ### Hash Functions
 One-way functions that produce a fixed-size output from variable-size input.

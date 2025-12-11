@@ -755,14 +755,14 @@ File permissions in Unix:
 ## Advanced Permissions: SUID & SGID
 
 > 💡 What is SUID?
-SUID = Set User ID. Special permission that makes a program run with the file owner’s privileges, not yours.
+<abbr title="Set User ID">SUID</abbr> = Set User ID. Special permission that makes a program run with the file owner’s privileges, not yours.
 >
 
-**Concept:** SUID (Set User ID) allows a user to execute a file with the permissions of the file owner, rather than their own.
+**Concept:** <abbr title="Set User ID">SUID</abbr> (Set User ID) allows a user to execute a file with the permissions of the file owner, rather than their own.
 
 **Use Case: `passwd`**
 - **Problem**: Standard users cannot write to the password database (`/etc/shadow`).
-- **Solution**: The `passwd` binary is owned by root and has SUID set.
+- **Solution**: The `passwd` binary is owned by root and has <abbr title="Set User ID">SUID</abbr> set.
 - **Result**: When run, the process promotes to root temporarily to save changes.
 
 ### Danger: Why SUID is a Security Risk
@@ -771,8 +771,8 @@ SUID = Set User ID. Special permission that makes a program run with the file ow
 $ find / -perm -4000  # Find all SUID programs/usr/bin/passwd       # Expected/usr/bin/sudo         # Expected/tmp/mysterious_tool  # ← Attacker planted this!
 ```
 
-- SUID is a major vector for **Privilege Escalation**.
-- If an SUID root binary has a bug (e.g., buffer overflow), an attacker can exploit it to gain a Root Shell.
+- <abbr title="Set User ID">SUID</abbr> is a major vector for **Privilege Escalation**.
+- If an <abbr title="Set User ID">SUID</abbr> root binary has a bug (e.g., buffer overflow), an attacker can exploit it to gain a Root Shell.
 - Attackers scan for these immediately: `find / -perm -4000`
 
 **Command:** `chmod u+s file`**Indicator:** `-rwsr-xr-x 1 root root 64152 maí 30 2024 /usr/bin/passwd`

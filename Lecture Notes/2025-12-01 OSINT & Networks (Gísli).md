@@ -201,7 +201,7 @@ The most common model is the OSI (Open Systems Interconnection) model, which has
 3. **[Network Layer](../Terminology/Networks/OSI Model/3-Network Layer.md) (Layer 3):** Manages data routing and forwarding between different networks. (E.g., IP addresses, routers.) Basically, connections that are *more* than one hop away.
 4. **[Transport Layer](../Terminology/Networks/OSI Model/4-Transport Layer.md) (Layer 4):** Ensures reliable data transfer between end devices. (E.g., TCP, UDP.). It essentially manages end-to-end communication. Ensuring that data is delivered error-free, in sequence, and with no losses or duplications.
 5. **[Session Layer](../Terminology/Networks/OSI Model/5-Session Layer.md) (Layer 5):** Manages sessions or connections between applications. Establishes, maintains, and terminates connections. (E.g., APIs, sockets.)
-6. **[Presentation Layer](../Terminology/Networks/OSI Model/6-Presentation Layer.md) (Layer 6):** Translates data formats between the application and the network. Handles data encryption, compression, and translation. (E.g., SSL/TLS, data encoding.)
+6. **[Presentation Layer](../Terminology/Networks/OSI Model/6-Presentation Layer.md) (Layer 6):** Translates data formats between the application and the network. Handles data encryption, compression, and translation. (E.g., <abbr title="Secure Sockets Layer">SSL</abbr>/TLS, data encoding.)
 7. **[Application Layer](../Terminology/Networks/OSI Model/7-Application Layer.md) (Layer 7):** Provides network services directly to end-user applications. (E.g., HTTP, FTP, SMTP.). Services like web browsing, email, file transfer, etc.
 
 ### TCP/IP Model
@@ -315,7 +315,7 @@ Security vulnerabilities often arise when the implementation (code) assumes that
 **Security context: Physical security.**
 
 - **Wiretapping**: Copper emits electromagnetic signals that can be intercepted.
-- **Jamming**: Disrupting wireless signals to prevent communication. DoS against the physical medium.
+- **Jamming**: Disrupting wireless signals to prevent communication. <abbr title="Denial of Service">DoS</abbr> against the physical medium.
 - **Rogue devices**: Unauthorized devices connected to the network (e.g., rogue access points). Like plugging an attacker’s device directly into a wall port to circumvent the firewall.
 - **Rule #1**: If an attacker can physically access your network, then software-based security measures can’t save it.
 

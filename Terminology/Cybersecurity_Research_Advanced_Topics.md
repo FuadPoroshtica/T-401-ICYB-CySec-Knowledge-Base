@@ -651,8 +651,8 @@ Windows 10/11 feature:
 
 **Why SUID is dangerous:**
 - Allows temporary privilege escalation to root
-- If a SUID program has ANY vulnerability, attacker gets root
-- Many programs not designed to be secure with SUID
+- If a <abbr title="Set User ID">SUID</abbr> program has ANY vulnerability, attacker gets root
+- Many programs not designed to be secure with <abbr title="Set User ID">SUID</abbr>
 
 **Common SUID attack vectors:**
 
@@ -672,7 +672,7 @@ SUID-enabled program that:
 
 ### 1. Minimize SUID Binary Usage
 
-**Principle:** If you don’t need SUID, don’t use SUID!
+**Principle:** If you don’t need <abbr title="Set User ID">SUID</abbr>, don’t use SUID!
 
 **Best Practices:**
 
@@ -773,7 +773,7 @@ Even if attacker exploits SUID, SELinux policies can restrict what they can do.
 
 ### 6. Secure SUID Program Development
 
-If you MUST create a custom SUID program:
+If you MUST create a custom <abbr title="Set User ID">SUID</abbr> program:
 
 **Security checklist:**
 
@@ -818,8 +818,8 @@ If you MUST create a custom SUID program:
 ```
 
 **This prevents:**
-- Users creating SUID programs in their home directories
-- Attackers planting SUID backdoors in /tmp
+- Users creating <abbr title="Set User ID">SUID</abbr> programs in their home directories
+- Attackers planting <abbr title="Set User ID">SUID</abbr> backdoors in /tmp
 
 ---
 
@@ -839,16 +839,16 @@ If you MUST create a custom SUID program:
 **Administrative policies:**
 
 1. **Change Management**
-    - Document all SUID changes
-    - Require approval before setting SUID
-    - Security review for all custom SUID programs
+    - Document all <abbr title="Set User ID">SUID</abbr> changes
+    - Require approval before setting <abbr title="Set User ID">SUID</abbr>
+    - Security review for all custom <abbr title="Set User ID">SUID</abbr> programs
 2. **Least Privilege**
-    - Don’t grant SUID “just in case”
+    - Don’t grant <abbr title="Set User ID">SUID</abbr> “just in case”
     - Re-evaluate periodically
-    - Remove SUID when no longer needed
+    - Remove <abbr title="Set User ID">SUID</abbr> when no longer needed
 3. **Security Training**
-    - Educate developers about SUID risks
-    - Show examples of SUID exploits
+    - Educate developers about <abbr title="Set User ID">SUID</abbr> risks
+    - Show examples of <abbr title="Set User ID">SUID</abbr> exploits
     - Teach secure alternatives
 
 ---
@@ -856,13 +856,13 @@ If you MUST create a custom SUID program:
 ## Summary: Defense in Depth
 
 **Layer 1: Prevention**
-- Minimize SUID usage
+- Minimize <abbr title="Set User ID">SUID</abbr> usage
 - Use capabilities instead
 - Secure development practices
 
 **Layer 2: Detection**
-- Audit SUID binaries regularly
-- Monitor SUID execution
+- Audit <abbr title="Set User ID">SUID</abbr> binaries regularly
+- Monitor <abbr title="Set User ID">SUID</abbr> execution
 - Use automated scanning tools
 
 **Layer 3: Containment**
@@ -895,15 +895,15 @@ ausearch -k suid_watch
 
 ## Conclusion
 
-SUID is a powerful but dangerous feature. The key to securing it is:
+<abbr title="Set User ID">SUID</abbr> is a powerful but dangerous feature. The key to securing it is:
 
 1. **Use it sparingly** - only when absolutely necessary
-2. **Audit regularly** - know what has SUID on your systems
-3. **Monitor actively** - detect suspicious SUID usage
+2. **Audit regularly** - know what has <abbr title="Set User ID">SUID</abbr> on your systems
+3. **Monitor actively** - detect suspicious <abbr title="Set User ID">SUID</abbr> usage
 4. **Layer defenses** - SELinux, capabilities, file system restrictions
 5. **Educate users** - awareness prevents misconfigurations
 
-Remember: **The best SUID mitigation is not using SUID at all!** Explore alternatives like capabilities, sudo, or redesigning the application.
+Remember: **The best <abbr title="Set User ID">SUID</abbr> mitigation is not using SUID at all!** Explore alternatives like capabilities, sudo, or redesigning the application.
 
 ---
 

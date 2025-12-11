@@ -472,18 +472,18 @@ Everything is a file, the directory is a file. (This applies to Linux/Unix syste
 
 ## Advanced Permissions: SUID & SGID
 
-Concept: SUID (Set User ID) allows a user to execute a file with the permissions of the file owner, rather than their own.
+Concept: <abbr title="Set User ID">SUID</abbr> (Set User ID) allows a user to execute a file with the permissions of the file owner, rather than their own.
 
 Use Case: `passwd`
 
 - **Problem**: Standard users cannot write to the password database (`/etc/shadow`).
-- **Solution**: The `passwd` binary is owned by root and has SUID set.
+- **Solution**: The `passwd` binary is owned by root and has <abbr title="Set User ID">SUID</abbr> set.
 - **Result**: When run, the process promotes to root temporarily to save changes.
 
 Danger
 
-- SUID is a major vector for **Privilege Escalation**.
-- If an SUID root binary has a bug (e.g., [buffer overflow](../Terminology/Attacks/Buffer Overflow)), an attacker can exploit it to gain a Root Shell.
+- <abbr title="Set User ID">SUID</abbr> is a major vector for **Privilege Escalation**.
+- If an <abbr title="Set User ID">SUID</abbr> root binary has a bug (e.g., [buffer overflow](../Terminology/Attacks/Buffer Overflow)), an attacker can exploit it to gain a Root Shell.
 - Attackers scan for these immediately:
 `find / -perm -4000`
 
@@ -531,7 +531,7 @@ Indicator: `-rwsr-xr-x 1 root root 64152 maí 30 2024 /usr/bin/passwd`
 - Find examples of attacks that used root kits and discuss what role the rootkits played in the attacks.
 - [Side-Channel Attacks](../Terminology/Virtualization/Side-Channel Attack) (Meltdown & Spectre): These famous vulnerabilities exploited Speculative Execution in the CPU hardware. How did they allow a User Mode process to read Kernel Mode memory without ever technically triggering a privilege violation?
 - DMA (Direct Memory Access) Attacks: Peripheral devices (like a GPU or Network Card) use DMA to access RAM without asking the CPU. How can a malicious device (e.g., a compromised USB drive) use DMA to read system memory, bypassing the [OS](<../Terminology/Systems & Plaforms/Operating System.md>) entirely?
-- Which mitigation means exist to avoid the problem of SUID opening the system up for privilege escalation attacks?
+- Which mitigation means exist to avoid the problem of <abbr title="Set User ID">SUID</abbr> opening the system up for privilege escalation attacks?
 
 ## Lab today and Guest Lecture tomorrow
 

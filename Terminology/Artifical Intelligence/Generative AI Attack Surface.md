@@ -38,5 +38,5 @@ Security vulnerabilities can be introduced during any stage of the training proc
 Comparison of injection methods:
 
 - **[Buffer Overflow](../Attacks/Buffer Overflow.md) code injection**: Overwrite specific memory locations to change program behavior.
-- **[SQL Injection](../Web Security/SQL Injection (SQLi).md)**: User input is interpreted as an SQL command.
+- **[SQL Injection](../Web Security/SQL Injection (SQLi).md)**: User input is interpreted as an <abbr title="Structured Query Language">SQL</abbr> command.
 - **LLM Injection**: User input is interpreted as a System Instruction

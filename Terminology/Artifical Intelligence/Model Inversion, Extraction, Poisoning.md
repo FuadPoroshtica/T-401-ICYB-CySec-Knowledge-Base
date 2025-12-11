@@ -8,7 +8,7 @@ date modified: Monday, 8. December 2025, 11:12
 ## Model Inversion, Extraction, Poisoning
 **Model Inversion (Privacy):**
 - Querying the model to reconstruct sensitive training data.
-- *Example*: Asking specifically crafted questions to force the model to leak PII (emails, SSNs) seen during training.
+- *Example*: Asking specifically crafted questions to force the model to leak <abbr title="Personally Identifiable Information">PII</abbr> (emails, SSNs) seen during training.
 - *Mitigation*: Differential Privacy during training to limit memorization of specific data points.
 **Model Extraction (IP Theft):**
 - Querying an API extensively to train a “Student Model” that mimics the proprietary “Teacher Model.”
