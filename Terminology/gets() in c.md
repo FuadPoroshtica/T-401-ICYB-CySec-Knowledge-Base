@@ -15,4 +15,17 @@ char buffer[10];
 gets(buffer);
 ```
 
-**Mitigation**: Use a non deprecated C function that actually has boundaries, `fgets()` is a pretty good alternative
+**Mitigation**: Use a non deprecated C function that actually has boundaries, `fgets()` is a pretty good alternative, it accepts a size parameter:
+```c
+#include <stdio.h>
+int main() {
+	char buff[100];
+	int n = 10;
+	printf("input: ");
+	
+	// read input with fgets
+	fgets(buff, n, stdin);
+	
+	printf("you inputed: %s", buff);
+}
+```
