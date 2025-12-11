@@ -1,7 +1,7 @@
 ---
 aliases: []
 date created: Tuesday, 9. December 2025, 09:12
-date modified: Wednesday, 10. December 2025, 20:12
+date modified: Thursday, 11. December 2025, 09:12
 ---
 
 **The lab today:**
@@ -11,7 +11,9 @@ date modified: Wednesday, 10. December 2025, 20:12
 - There are *hints* in the website itself, and they’re supposed to be used.
 
 # 2025-12-09 Information Warfare (Gísli)
+
 A guest lecture from Jacky Mallett.
+
 - Information Warfare (or “cognitive warfare” as it’s being rebranded at the moment).
 - There’s only been recent awareness that this has been going on for quite a while.
 - She shows various examples of troll bots/AIs from the Russians when they were interfering with the US elections.

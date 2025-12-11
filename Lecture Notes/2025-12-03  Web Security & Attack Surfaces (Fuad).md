@@ -1,7 +1,7 @@
 ---
 aliases: []
 date created: Wednesday, 3. December 2025, 08:12
-date modified: Thursday, 4. December 2025, 11:12
+date modified: Thursday, 11. December 2025, 09:12
 ---
 
 # 2025-12-03  Web Security & Attack Surfaces (Fuad)
@@ -11,7 +11,9 @@ date modified: Thursday, 4. December 2025, 11:12
 ---
 
 ## 1. Context: Documents vs. Applications
+
 The fundamental difficulty in web security arises from a conflict in design versus usage.
+
 - **Original Design:** HTTP was invented to share static, public documents. It was designed to be stateless and “open by default” [1].
 - **Modern Reality:** We use this same protocol for banking, healthcare, and critical infrastructure [1].
 - **The Conflict:** We are forcing a protocol designed for *sharing* to perform tasks requiring *secrecy and rigid control* [2].
@@ -31,6 +33,7 @@ The fundamental difficulty in web security arises from a conflict in design vers
 ---
 
 ## 3. The Attack Surface
+
 The attack surface is the sum of all points (vectors) where an unauthorized user can attempt to enter or extract data [7].
 
 ### A. Server-Side Surface
