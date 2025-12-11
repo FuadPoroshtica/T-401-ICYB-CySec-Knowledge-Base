@@ -1,7 +1,7 @@
 ---
 aliases: [Cross-Site Scripting, Cross Site Scripting, Cross-Site Scripting (XSS), Cross–Site Scripting, Cross–Site Scripting (XSS)]
 date created: Monday, 8. December 2025, 09:12
-date modified: Thursday, 11. December 2025, 09:12
+date modified: Thursday, 11. December 2025, 14:12
 ---
 
 # XSS

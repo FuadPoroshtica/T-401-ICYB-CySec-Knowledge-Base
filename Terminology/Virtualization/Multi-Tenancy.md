@@ -10,6 +10,6 @@ date modified: Monday, 8. December 2025, 19:12
 
 **Definition**: A model where many independent users (tenants) share the same physical infrastructure, but their workloads should remain isolated.
 
-**Context/Example**: In public clouds, different customers’ [VMs](Virtual%20Machine%20(VM).md) run on the same [hypervisors](Hypervisor.md); strong isolation is critical so one customer can’t access another’s data.
+**Context/Example**: In public clouds, different customers’ [VMs](Virtual Machine (VM).md) run on the same [hypervisors](Hypervisor.md); strong isolation is critical so one customer can’t access another’s data.
 
-**Related Concepts**: [Hypervisor](Hypervisor.md) isolation, [VM escape](VM%20Escape.md), cloud security, [side-channel attacks](Side-Channel%20Attack.md).
+**Related Concepts**: [Hypervisor](Hypervisor.md) isolation, [VM escape](VM Escape.md), cloud security, [side-channel attacks](Side-Channel Attack.md).

@@ -5,7 +5,7 @@ date modified: Thursday, 11. December 2025, 09:12
 ---
 
 # ARP
-**ARP (Address Resolution Protocol)** is used to map [IP](TCP%20IP%20Model/IP.md) addresses to [MAC](MAC.md) addresses within a local network.
+**ARP (Address Resolution Protocol)** is used to map [IP](TCP IP Model/IP.md) addresses to [MAC](MAC.md) addresses within a local network.
 When a device wants to communicate with another device on the same network, it sends an ARP request to ask “Who has this IP address?” The device with that IP address responds with its MAC address.
 
 If a computer doesn’t know the MAC address of a device it wants to communicate with, it sends out an ARP request as a broadcast to all devices on the local network. The device with the matching IP address responds with its MAC address.

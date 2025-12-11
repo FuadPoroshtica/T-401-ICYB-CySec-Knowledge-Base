@@ -14,19 +14,19 @@ How do packets actually get to their destination across multiple networks?
 
 **[BGP](BGP.md)**: Border Gateway Protocol (the main EGP used on the Internet).
 
-**[AS](AS.md)**: Autonomous System, a collection of [IP](TCP%20IP%20Model/IP.md) networks and [routers](Network%20hardware/Router.md) under the control of a single organization that presents a common routing policy to the Internet.
+**[AS](AS.md)**: Autonomous System, a collection of [IP](TCP IP Model/IP.md) networks and [routers](Network hardware/Router.md) under the control of a single organization that presents a common routing policy to the Internet.
 
 Routing is done on the basis of these autonomous systems (ASes). Each AS is assigned a unique AS number (ASN).
 
-The BGP is used to exchange routing information between ASes, allowing [routers](Network%20hardware/Router.md) to determine the best path for data packets to reach their destination across the Internet.
+The BGP is used to exchange routing information between ASes, allowing [routers](Network hardware/Router.md) to determine the best path for data packets to reach their destination across the Internet.
 
-[Routers](Network%20hardware/Router.md) maintain a routing table that contains information about the paths to different network destinations. When a packet arrives at a [router](Network%20hardware/Router.md), the [router](Network%20hardware/Router.md) examines the destination IP address and consults its routing table to determine the next hop for the packet. The packet is then forwarded to the next [router](Network%20hardware/Router.md) along the path to its destination.
+[Routers](Network hardware/Router.md) maintain a routing table that contains information about the paths to different network destinations. When a packet arrives at a [router](Network hardware/Router.md), the [router](Network hardware/Router.md) examines the destination IP address and consults its routing table to determine the next hop for the packet. The packet is then forwarded to the next [router](Network hardware/Router.md) along the path to its destination.
 
 Interior Gateway Protocols (IGPs) are used within an AS to manage routing. Examples of IGPs include OSPF (Open Shortest Path First) and EIGRP (Enhanced Interior Gateway Routing Protocol).
 
 ## Routing Mechanics: Populating vs. Using the Routing Table
 1. **Creating the table**
-	1. **The goal**: build a map of the network. To know roughly where everything is. And each [router](Network%20hardware/Router.md) needs to sort of learn this.
+	1. **The goal**: build a map of the network. To know roughly where everything is. And each [router](Network hardware/Router.md) needs to sort of learn this.
 	2. **Input**: Updates from neighboring or statically configured routes.
 	3. **Process**: Algorithms (e.g., Dijkstra’s, Bellman-Ford) to compute shortest paths.
 		1. Dijkstra’s algorithm can’t be used in BGP because it requires complete knowledge of the distance between *all* the nodes, which is not feasible in the decentralized and dynamic environment of the Internet. BGP operates on a path-vector protocol, where each router shares information about the paths it knows to reach different networks, rather than requiring a complete map of the entire network.
@@ -44,10 +44,10 @@ Some tools to see this on your machine:
 - `traceroute` / `tracert`: Show the path packets take to a destination.
 - `ping`: Test reachability of a host on an IP network.
 
-The [Data Link Layer](../Terminology/Networks/OSI%20Model/2-Data%20Link%20Layer.md) uses [MAC](../Terminology/Networks/MAC.md) addresses to deliver frames within the same network.
+The [Data Link Layer](OSI Model/2-Data Link Layer.md) uses [MAC](MAC.md) addresses to deliver frames within the same network.
 
-“Frames” in this context means data packets at the link layer of the [OSI Model](../Terminology/Networks/OSI%20Model/OSI%20Model.md). So the ethernet frame is the data packet used in Ethernet networks at the link layer. Other frames include Wi-Fi frames, which are used in wireless networks.
+“Frames” in this context means data packets at the link layer of the [OSI Model](OSI Model/OSI Model.md). So the ethernet frame is the data packet used in Ethernet networks at the link layer. Other frames include Wi-Fi frames, which are used in wireless networks.
 
-The [MAC](../Terminology/Networks/MAC.md) address (Media Access Control address) is a unique identifier assigned to network interfaces for communications at the [Data Link Layer](../Terminology/Networks/OSI%20Model/2-Data%20Link%20Layer.md) of a network segment.
+The [MAC](MAC.md) address (Media Access Control address) is a unique identifier assigned to network interfaces for communications at the [Data Link Layer](OSI Model/2-Data Link Layer.md) of a network segment.
 
-The [Network Layer](../Terminology/Networks/OSI%20Model/3-Network%20Layer.md) uses IP addresses to route packets between different networks.
+The [Network Layer](OSI Model/3-Network Layer.md) uses IP addresses to route packets between different networks.

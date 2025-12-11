@@ -18,15 +18,15 @@ Assume you will be (or already are) breached:
 	- Logging and forensics is important.
 
 ## Recovery: RPO and RTO ⏱️
-**[RPO](Recovery%20Point%20Objective%20(RPO).md) (Recovery Point Objective)** 📂
+**[RPO](Recovery Point Objective (RPO).md) (Recovery Point Objective)** 📂
 - How much data can we afford to lose?
 - Determined by backup frequency. Backing up all the data once an hour, once a day, etc.
 
-**[RTO](Recovery%20Time%20Objective%20(RTO).md) (Recovery Time Objective)** 🕰️
+**[RTO](Recovery Time Objective (RTO).md) (Recovery Time Objective)** 🕰️
 - How long can the system be down?
 - Determined by redundancy and failover speed.
 
-## Resilience: [The 3-2-1 Backup Rule](The%203-2-1%20Backup%20Rule.md) 💾
+## Resilience: [The 3-2-1 Backup Rule](The 3-2-1 Backup Rule.md) 💾
 
 [Ransomware](../Attacks/Malware/Ransomware.md) targets backups first. Don’t keep a backup just on your computer.
 

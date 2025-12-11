@@ -48,4 +48,4 @@ Do a cost-benefit analysis when deciding on countermeasures.
 
 Defense cost must not exceed the value of what is being protected.
 
-**[Defense in Depth](Defense%20in%20Depth.md):** Multiple layers of defense, so if one fails, others are still there.
+**[Defense in Depth](Defense in Depth.md):** Multiple layers of defense, so if one fails, others are still there.

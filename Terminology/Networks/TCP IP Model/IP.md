@@ -12,7 +12,7 @@ IP assigns unique numerical addresses, known as IP addresses, to devices on a ne
 
 There are two main versions of IP in use today: IPv4 and IPv6. IPv4 uses 32-bit addresses, while IPv6 uses 128-bit addresses to accommodate the growing number of devices connected to the internet.
 
-IP operates at the [Network Layer](../OSI%20Model/3-Network%20Layer.md) (Layer 3) of the [OSI Model](../OSI%20Model/OSI%20Model.md), which is responsible for packet forwarding, including routing through intermediate [routers](../Network%20hardware/Router.md).
+IP operates at the [Network Layer](../OSI Model/3-Network Layer.md) (Layer 3) of the [OSI Model](../OSI Model/OSI Model.md), which is responsible for packet forwarding, including routing through intermediate [routers](../Network hardware/Router.md).
 
 IP works in conjunction with other protocols, such as [TCP (Transmission Control Protocol)](TCP.md) and [UDP (User Datagram Protocol)](../UDP.md), to facilitate reliable and efficient data transmission over networks.
 
@@ -59,4 +59,4 @@ Notionally, high end bits are network identifier, low end bits are host identifi
 
 ## The IPv4 Datagram
 
-![](../../../zAttachments/Pasted%20image%2020251202091743.png)
+![](../../../zAttachments/Pasted image 20251202091743.png)

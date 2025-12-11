@@ -284,7 +284,7 @@ Usage: `Greet -Name "John"`
 | PowerShell   | `myfile.ps1`              | None                         | **Policy**: Blocked by default. Enable with, e.g., `Set-ExecutionPolicy X`. <br>**Run**: Must use `.\file.ps1` (Like Bash). |
 
 > [!note] Note: The Shebang (#!)
-> In Unix/Bash, the first line `#!/bin/bash` tells the [OS](Operating%20System.md) which interpreter to use. You can change this to e.g. `#!/usr/bin/python` to write a Python script that behaves like a shell script.
+> In Unix/Bash, the first line `#!/bin/bash` tells the [OS](Operating System.md) which interpreter to use. You can change this to e.g. `#!/usr/bin/python` to write a Python script that behaves like a shell script.
 
 # Vulnerabilities in the Command Line
 
@@ -327,7 +327,7 @@ path at all).
 > [!error] The “`chmod 777`” trap
 > - **Action**: Granting Read/Write/Execute permissions to *Everyone* to fix a “permission denied” error.
 > - **Risk**: Any user (or hacked web service) can overwrite your scripts.
-> - **Scenario**: Attacker modifies a startup script. When you reboot, their [malware](../Terminology/Malware.md) runs with your admin privileges.
+> - **Scenario**: Attacker modifies a startup script. When you reboot, their [Malware](../Terminology/Attacks/Malware/Malware.md) runs with your admin privileges.
 
 > [!error] Running as Root
 > - **Principle of Least Privilege**: Always log in as a standard user; use `sudo` only when necessary.

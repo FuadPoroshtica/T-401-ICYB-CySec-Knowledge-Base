@@ -5,13 +5,13 @@ date modified: Thursday, 11. December 2025, 09:12
 ---
 
 # TLS
-**TLS ([Transport Layer](OSI%20Model/4-Transport%20Layer.md) Security)** is a cryptographic protocol designed to provide secure communication over a computer network. TLS is widely used to secure data transmitted over the internet, including web browsing, email, instant messaging, and voice over IP (VoIP).
-TLS operates on the [Transport Layer](OSI%20Model/4-Transport%20Layer.md) of the [OSI Model](OSI%20Model/OSI%20Model.md) and is the successor to the earlier Secure Sockets Layer (SSL) protocol.
+**TLS ([Transport Layer](OSI Model/4-Transport Layer.md) Security)** is a cryptographic protocol designed to provide secure communication over a computer network. TLS is widely used to secure data transmitted over the internet, including web browsing, email, instant messaging, and voice over IP (VoIP).
+TLS operates on the [Transport Layer](OSI Model/4-Transport Layer.md) of the [OSI Model](OSI Model/OSI Model.md) and is the successor to the earlier Secure Sockets Layer (SSL) protocol.
 TLS provides several key security features, including:
 - **Encryption:** TLS encrypts data transmitted between a client and server, ensuring that sensitive information remains confidential and protected from eavesdropping.
 - **Integrity:** TLS uses message authentication codes (MACs) to ensure that data has not been tampered with during transmission.
 - **Authentication:** TLS supports the use of digital certificates to authenticate the identity of the server (and optionally the client), helping to prevent man-in-the-middle attacks.
-TLS is commonly used in conjunction with other protocols, such as [HTTPS](Transfer%20Protocols/HTTPS.md) for secure web browsing, FTPS for secure file transfers, and [SMTP](Transfer%20Protocols/SMTP.md) for secure email communication.
+TLS is commonly used in conjunction with other protocols, such as [HTTPS](Transfer Protocols/HTTPS.md) for secure web browsing, FTPS for secure file transfers, and [SMTP](Transfer Protocols/SMTP.md) for secure email communication.
 Overall, TLS is a critical component of modern internet security, providing a secure foundation for online communication and data exchange.
 
 ## TLS Handshake

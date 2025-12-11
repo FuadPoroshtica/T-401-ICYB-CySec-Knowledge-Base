@@ -78,7 +78,7 @@ A VPN (Virtual Private Network) can also hide your traffic.
 
 You should protect your hardware and software. Make sure your own system is safe. Like running it on a VM.
 
-There are even OSes for this, like Tails [OS](Operating%20System.md). It’s an “amnesiac system”, it clears everything after you’re done.
+There are even OSes for this, like Tails [OS](Operating System.md). It’s an “amnesiac system”, it clears everything after you’re done.
 
 You could hide your location with a VPN, Tor (The Onion Router) or by using a public Wi-Fi.
 
@@ -190,19 +190,19 @@ End devices → LANs → ISPs → AS → IXPs → *other* AS → *other* ISPs �
 
 The internet uses a layered architecture to manage the complexity of networking.
 
-![[Pasted image 20251201102251.png|700]]
+!700
 
 ### OSI Model
 
 The most common model is the OSI (Open Systems Interconnection) model, which has seven layers:
 
-1. **[Physical Layer](../Terminology/Networks/OSI%20Model/1-Physical%20Layer.md) (Layer 1):** Deals with the physical connection between devices, including cables, switches, and other hardware.
-2. **[Data Link Layer](../Terminology/Networks/OSI%20Model/2-Data%20Link%20Layer.md) (Layer 2):** Responsible for node-to-node (a node here is a device or a point of connection in a network) data transfer and error detection/correction. (E.g., Ethernet, MAC addresses.)
-3. **[Network Layer](../Terminology/Networks/OSI%20Model/3-Network%20Layer.md) (Layer 3):** Manages data routing and forwarding between different networks. (E.g., IP addresses, routers.) Basically, connections that are *more* than one hop away.
-4. **[Transport Layer](../Terminology/Networks/OSI%20Model/4-Transport%20Layer.md) (Layer 4):** Ensures reliable data transfer between end devices. (E.g., TCP, UDP.). It essentially manages end-to-end communication. Ensuring that data is delivered error-free, in sequence, and with no losses or duplications.
-5. **[Session Layer](../Terminology/Networks/OSI%20Model/5-Session%20Layer.md) (Layer 5):** Manages sessions or connections between applications. Establishes, maintains, and terminates connections. (E.g., APIs, sockets.)
-6. **[Presentation Layer](../Terminology/Networks/OSI%20Model/6-Presentation%20Layer.md) (Layer 6):** Translates data formats between the application and the network. Handles data encryption, compression, and translation. (E.g., SSL/TLS, data encoding.)
-7. **[Application Layer](../Terminology/Networks/OSI%20Model/7-Application%20Layer.md) (Layer 7):** Provides network services directly to end-user applications. (E.g., HTTP, FTP, SMTP.). Services like web browsing, email, file transfer, etc.
+1. **[Physical Layer](../Terminology/Networks/OSI Model/1-Physical Layer.md) (Layer 1):** Deals with the physical connection between devices, including cables, switches, and other hardware.
+2. **[Data Link Layer](../Terminology/Networks/OSI Model/2-Data Link Layer.md) (Layer 2):** Responsible for node-to-node (a node here is a device or a point of connection in a network) data transfer and error detection/correction. (E.g., Ethernet, MAC addresses.)
+3. **[Network Layer](../Terminology/Networks/OSI Model/3-Network Layer.md) (Layer 3):** Manages data routing and forwarding between different networks. (E.g., IP addresses, routers.) Basically, connections that are *more* than one hop away.
+4. **[Transport Layer](../Terminology/Networks/OSI Model/4-Transport Layer.md) (Layer 4):** Ensures reliable data transfer between end devices. (E.g., TCP, UDP.). It essentially manages end-to-end communication. Ensuring that data is delivered error-free, in sequence, and with no losses or duplications.
+5. **[Session Layer](../Terminology/Networks/OSI Model/5-Session Layer.md) (Layer 5):** Manages sessions or connections between applications. Establishes, maintains, and terminates connections. (E.g., APIs, sockets.)
+6. **[Presentation Layer](../Terminology/Networks/OSI Model/6-Presentation Layer.md) (Layer 6):** Translates data formats between the application and the network. Handles data encryption, compression, and translation. (E.g., SSL/TLS, data encoding.)
+7. **[Application Layer](../Terminology/Networks/OSI Model/7-Application Layer.md) (Layer 7):** Provides network services directly to end-user applications. (E.g., HTTP, FTP, SMTP.). Services like web browsing, email, file transfer, etc.
 
 ### TCP/IP Model
 
@@ -282,13 +282,13 @@ Between these addresses there exist mappings:
 
 ### 3. Application Multiplexing
 
-*Problem: Which application on the destination device should receive the packet?Solution: Ports ([Transport Layer](../Terminology/Networks/OSI%20Model/4-Transport%20Layer.md)).*
+*Problem: Which application on the destination device should receive the packet?Solution: Ports ([Transport Layer](../Terminology/Networks/OSI Model/4-Transport Layer.md)).*
 
-- Well known ports: 0-1023 (e.g., [HTTP](../Terminology/Networks/Transfer%20Protocols/HTTP.md): 80, HTTPS: 443, FTP: 21, SSH: 22).
+- Well known ports: 0-1023 (e.g., [HTTP](../Terminology/Networks/Transfer Protocols/HTTP.md): 80, HTTPS: 443, FTP: 21, SSH: 22).
 - Ephemeral ports: randomly assigned ports for temporary communication (1024-65535) for client apps (e.g., your browser tab).
 - Sockets: IP Address + Port number = Unique connection identifier. (E.g., `192.168.1.1:80` for a web server.)
 
-**Security context: [Attack Surface](../Terminology/Attack%20Surface.md).**
+**Security context: [Attack Surface](../Terminology/Attack Surface.md).**
 Every open port is a potential entry point for attackers. Services listening on ports can have vulnerabilities that can be exploited.
 Port scanning (e.g., `nmap`) is a technique used by attackers (and security professionals) to identify open ports on a target system. Tools like Nmap can be used for this purpose. It’s essentially a reconnaissance phase where attackers knock on the doors (ports) to see which ones are open. In many countries this is a criminal offense if done without permission.
 
@@ -431,4 +431,4 @@ Nothing more to say. Bluetooth *is* a vulnerability. It’s a complex mess that 
 - What is the best protection against Bluetooth attacks?
 - How to prevent or defend against attacks that use Rogue Access Points? Distinguish between what individuals and what organizations can do
 
-[Lab 6 (W2-G3)](OSINT%20&%20Networks%202025-12-01/Lab%206%20(W2-G3).md)
+[Lab 6 (W2-G3)](OSINT & Networks 2025-12-01/Lab 6 (W2-G3).md)
