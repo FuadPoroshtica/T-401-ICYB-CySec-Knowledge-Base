@@ -8,7 +8,7 @@ date modified: Monday, 1. December 2025, 21:12
 
 **Tool/Command Name**: grep
 
-**Purpose**: Find patterns in files using [`regex`](Regular%20Expression%20(e%20g%20regex).md)es.
+**Purpose**: Find patterns in files using [`regex`](Regular Expression (e g regex).md)es.
 
 **Basic Syntax/Usage Example**:
 

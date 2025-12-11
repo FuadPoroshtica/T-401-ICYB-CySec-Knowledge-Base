@@ -13,7 +13,7 @@ The idea is that this is a layered approach.
 No single control is infallible. If one layer fails, others are still there and catch the threat.
 
 1. **Physical controls:** Locks, guards, cameras. 🏢🔒
-2. **Technical controls:** [Firewalls](Firewall.md), encryption, [Access Control](Access%20Control.md). 💻🛡️
+2. **Technical controls:** [Firewalls](Firewall.md), encryption, [Access Control](Access Control.md). 💻🛡️
 	- **Perimeter/Network defenses:** Firewalls, IDS/IPS, DMZ, VPN, Intrusion Detection Systems.
 	- **Host/Endpoint defenses:** Antivirus, Monitoring
 	- **Application defenses:** Input validation, secure coding practices.
@@ -29,11 +29,11 @@ No single control is infallible. If one layer fails, others are still there and 
 By type: 🧩
 
 - **Physical controls:** Locks, guards, cameras.
-- **Technical controls:** Firewalls, encryption, [Access Control](Access%20Control.md).
+- **Technical controls:** Firewalls, encryption, [Access Control](Access Control.md).
 - **Administrative controls:** Policies, training, incident response plans.
 
 By function: 🎯
 
-- **Preventive controls:** Stop attacks before they happen (e.g., [Firewalls](Firewall.md), [Access Control](Access%20Control.md)).
+- **Preventive controls:** Stop attacks before they happen (e.g., [Firewalls](Firewall.md), [Access Control](Access Control.md)).
 - **Detective controls:** Identify and log attacks (e.g., Intrusion Detection System (IDS), monitoring).
 - **Corrective controls:** Respond to and recover from attacks (e.g., backups, incident response).

@@ -6,15 +6,15 @@ date modified: Thursday, 11. December 2025, 09:12
 
 # 4-Transport Layer
 
-The Transport Layer is the fourth layer in the [OSI Model](OSI%20Model.md) of computer networking.
+The Transport Layer is the fourth layer in the [OSI Model](OSI Model.md) of computer networking.
 
 It is responsible for providing reliable data transfer services between end systems, ensuring that data is delivered accurately and in the correct order.
 
 The Transport Layer manages end-to-end communication, including error detection and correction, flow control, and congestion control.
 
-It uses protocols such as the [Transmission Control Protocol (TCP)](../TCP%20IP%20Model/TCP.md) and the [User Datagram Protocol (UDP)](../UDP.md) to facilitate data transfer between applications running on different devices.
+It uses protocols such as the [Transmission Control Protocol (TCP)](../TCP IP Model/TCP.md) and the [User Datagram Protocol (UDP)](../UDP.md) to facilitate data transfer between applications running on different devices.
 
-The Transport Layer works closely with the [Network Layer](3-Network%20Layer.md) to provide end-to-end data delivery across multiple networks.
+The Transport Layer works closely with the [Network Layer](3-Network Layer.md) to provide end-to-end data delivery across multiple networks.
 
 ## TCP vs. UDP
 **UDP (User Datagram Protocol):**
@@ -28,7 +28,7 @@ The Transport Layer works closely with the [Network Layer](3-Network%20Layer.md)
 	- **SYN-ACK**: Server responds with a SYN-ACK packet to acknowledge the receipt of the SYN and to indicate its willingness to establish a connection.
 	- **ACK**: Client sends an ACK packet back to the server to acknowledge the receipt of the SYN-ACK, completing the handshake.
 - Guarnteed delivery, in-order delivery, flow control, congestion control.
-- Use cases: Web browsing ([HTTP](../Transfer%20Protocols/HTTP.md)/[HTTPS](../Transfer%20Protocols/HTTPS.md)), email ([SMTP](../Transfer%20Protocols/SMTP.md), IMAP), file transfer ([FTP](../Transfer%20Protocols/FTP.md)). For when *reliable* delivery is more important than *fast* delivery.
+- Use cases: Web browsing ([HTTP](../Transfer Protocols/HTTP.md)/[HTTPS](../Transfer Protocols/HTTPS.md)), email ([SMTP](../Transfer Protocols/SMTP.md), IMAP), file transfer ([FTP](../Transfer Protocols/FTP.md)). For when *reliable* delivery is more important than *fast* delivery.
 
 **Possible attacks:**
 - **TCP SYN Flood**: An attacker sends a large number of SYN requests to a target server, but never finishes the handshake by sending the final ACK. This leaves the server with many half-open connections, consuming resources and potentially leading to a denial of service (DoS) for legitimate users.

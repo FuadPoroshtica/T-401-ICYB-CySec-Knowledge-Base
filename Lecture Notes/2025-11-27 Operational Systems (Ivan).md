@@ -18,7 +18,7 @@ Ivan
 - Isolation used for not starving between processes
 - Program vs process - static exe on disk vs a program is executed instructions in RAM
 - Context switching - halts a process and switches to the other one, PCB
-- [OS](Operating%20System.md) does memory management, and does protection against fragmentation
-- Seqfault - happens when [OS](Operating%20System.md) tries to access a point in a memory that is not available in mapping in TLB
+- [OS](Operating System.md) does memory management, and does protection against fragmentation
+- Seqfault - happens when [OS](Operating System.md) tries to access a point in a memory that is not available in mapping in TLB
 - TLB - Cache that holds the translation table
 - Hardware MMU part of a processor that does the translation dig to vir and other way around.

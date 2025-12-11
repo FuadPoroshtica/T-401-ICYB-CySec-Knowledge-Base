@@ -5,7 +5,7 @@ date modified: Thursday, 11. December 2025, 09:12
 ---
 
 # HTTP
-**HTTP** stands for **Hypertext Transfer Protocol**. It is an [Application Layer](../OSI%20Model/7-Application%20Layer.md) protocol used for transmitting hypermedia documents, such as HTML, over the internet.
+**HTTP** stands for **Hypertext Transfer Protocol**. It is an [Application Layer](../OSI Model/7-Application Layer.md) protocol used for transmitting hypermedia documents, such as HTML, over the internet.
 HTTP is the foundation of data communication on the World Wide Web.
 HTTP operates as a request-response protocol between a client and a server. The client, typically a web browser, sends an HTTP request to the server, which then processes the request and returns an HTTP response containing the requested resource or an error message.
 

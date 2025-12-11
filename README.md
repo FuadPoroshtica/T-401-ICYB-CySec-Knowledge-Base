@@ -44,7 +44,7 @@ You can see how much each member contributed to the knowledge base on the [contr
 
 ## Chosen Tool
 
-We felt that a “wiki”-like approach would be most appropriate for a [Cyber Security](Terminology/Cyber%20Security.md) knowledge base, because it lets us dynamically link together a large number of related topics in an intuitive way. A wiki (like Wikipedia) allows you to add as much information as you want without being constrained by a rigid folder hierarchy, since connections between concepts are handled through links and backlinks rather than through deep folder nesting. This matches the assignment goals of building a navigable, interlinked knowledge base of notes, terminology, tools, and resources.
+We felt that a “wiki”-like approach would be most appropriate for a [Cyber Security](Terminology/Cyber Security.md) knowledge base, because it lets us dynamically link together a large number of related topics in an intuitive way. A wiki (like Wikipedia) allows you to add as much information as you want without being constrained by a rigid folder hierarchy, since connections between concepts are handled through links and backlinks rather than through deep folder nesting. This matches the assignment goals of building a navigable, interlinked knowledge base of notes, terminology, tools, and resources.
 
 We initially started with Notion, a well-known collaborative Markdown-style editor with support for internal links. We chose it at first because:
 
@@ -58,7 +58,7 @@ We chose Obsidian for the final version of the knowledge base because:
 
 - It is completely free for personal and educational use.
 - It works locally, so there are no surprises with quotas or paywalls.
-- Its support for **wikilinks** (`[[Page name]]`, e.g., [Side-Channel Attack](Terminology/Virtualization/Side-Channel%20Attack.md)).
+- Its support for **wikilinks** (`Page name`, e.g., [Side-Channel Attack](Terminology/Virtualization/Side-Channel Attack.md)).
 - It integrates well with **Git and GitHub**, giving us proper version control and an easy way to share our work with instructors. Additionally, it lets us view it online during the final exam itself using GitHub’s “wiki” feature.
 - There is a large ecosystem of community plugins, which we could use if needed (though we mostly stuck to core features for this assignment).
 

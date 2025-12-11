@@ -10,4 +10,4 @@ date modified: Thursday, 11. December 2025, 15:12
 
 **Context/Example**: In a web application, complete mediation means that even after a user logs in, each request to access a file, database record, or functionality is checked against their permissions. For instance, a user with read-only access cannot exploit cached credentials or previously granted access to perform write operations.
 
-**Related Concepts**: [Access Control](Defense%20&%20Control/Access%20Control.md), Authorization, Security Principles, Least Privilege, Security Checks, Reference Monitor, Computer Security
+**Related Concepts**: [Access Control](Defense & Control/Access Control.md), Authorization, Security Principles, Least Privilege, Security Checks, Reference Monitor, Computer Security

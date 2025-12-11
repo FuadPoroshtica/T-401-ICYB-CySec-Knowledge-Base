@@ -10,4 +10,4 @@ date modified: Thursday, 11. December 2025, 15:12
 
 **Context/Example**: Even if a model does not explicitly use “medical condition” as an input, an attacker who knows a user’s age, location, and habits may use the model’s predictions to infer whether the user likely has a certain condition.
 
-**Related Concepts**: Privacy Leakage, Feature Correlation, [Differential Privacy](Differential%20Privacy.md)
+**Related Concepts**: Privacy Leakage, Feature Correlation, [Differential Privacy](Differential Privacy.md)

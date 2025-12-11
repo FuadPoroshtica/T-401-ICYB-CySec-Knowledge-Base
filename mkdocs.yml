@@ -1,0 +1,127 @@
+site_name: T-401-ICYB CySec Knowledge Base
+site_description: Cybersecurity Knowledge Base for T-401-ICYB Course
+site_author: Group 7
+repo_url: https://github.com/FuadPoroshtica/T-401-ICYB-CySec-Knowledge-Base
+repo_name: T-401-ICYB-CySec-Knowledge-Base
+
+theme:
+  name: material
+  palette:
+    # Palette toggle for light mode
+    - scheme: default
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    # Palette toggle for dark mode
+    - scheme: slate
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.expand
+    - navigation.top
+    - search.suggest
+    - search.highlight
+    - content.code.copy
+    - toc.follow
+
+plugins:
+  - search:
+      separator: '[\s\-,:!=\[\]()"/]+|(?!\b)(?=[A-Z][a-z])|\.(?!\d)|&[lg]t;'
+
+markdown_extensions:
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
+  - admonition
+  - pymdownx.details
+  - attr_list
+  - md_in_html
+  - tables
+  - toc:
+      permalink: true
+
+docs_dir: docs_mkdocs
+site_dir: site
+
+nav:
+  - Home: README.md
+  - Lecture Notes:
+    - 'Lecture Notes/2025-11-24 Introduction (Gísli).md'
+    - 'Lecture Notes/2025-11-25 Virtual Machines (Fuad & Kim).md'
+    - 'Lecture Notes/2025-11-26 Command-Line Interface (Gísli).md'
+    - 'Lecture Notes/2025-11-27 Operational Systems (Gísli).md'
+    - 'Lecture Notes/2025-11-27 Operational Systems (Ivan).md'
+    - 'Lecture Notes/2025-11-27 Operational Systems (Kim).md'
+    - 'Lecture Notes/2025-11-28 Phishing and AI.md'
+    - 'Lecture Notes/2025-12-01 OSINT & Networks (Gísli).md'
+    - 'Lecture Notes/2025-12-02 Networks - continuation (Gísli).md'
+    - 'Lecture Notes/2025-12-03  Web Security & Attack Surfaces (Fuad).md'
+    - 'Lecture Notes/2025-12-03 AI Security.md'
+    - 'Lecture Notes/2025-12-03 Web Security & Web Attack Surfaces (Gísli).md'
+    - 'Lecture Notes/2025-12-04 AI Security (Gísli).md'
+    - 'Lecture Notes/2025-12-05 Binary Exploitation (Gísli).md'
+    - 'Lecture Notes/2025-12-08 Principles of Defence (Gísli).md'
+    - 'Lecture Notes/2025-12-09 Information Warfare (Gísli).md'
+    - 'Lecture Notes/2025-12-09 Information Warfare - Computer System Security (Fuad).md'
+    - 'Lecture Notes/2025-12-10 Data Privacy (Fuad).md'
+    - 'Lecture Notes/2025-12-11 Summary (Fuad).md'
+    - 'Lecture Notes/2025-12-11 Summary (Gísli).md'
+    - Additional Notes:
+      - 'Lecture Notes/CLI Notes - Hreimur.md'
+      - 'Lecture Notes/FurtherStudies.md'
+      - 'Lecture Notes/IntroToCySec-Hreimur.md'
+      - 'Lecture Notes/OS Notes - Hreimur.md'
+      - 'Lecture Notes/Virtualization-Hreimur.md'
+  - Terminology:
+    - 'Terminology/Attack Surface.md'
+    - 'Terminology/Cyber Security.md'
+    - 'Terminology/Vulnerability.md'
+    - 'Terminology/Acronyms cheatsheet.md'
+    - Attacks:
+      - 'Terminology/Attacks/'
+    - Artificial Intelligence:
+      - 'Terminology/Artifical Intelligence/'
+    - Binary Exploitation:
+      - 'Terminology/Binary Exploitation/'
+    - Defense & Control:
+      - 'Terminology/Defense & Control/'
+    - Networks:
+      - 'Terminology/Networks/'
+    - Systems & Platforms:
+      - 'Terminology/Systems & Plaforms/'
+    - Virtualization:
+      - 'Terminology/Virtualization/'
+    - Vulnerability Standards:
+      - 'Terminology/Vulnerability standards/'
+  - Tools and Commands:
+    - 'Tools and Commands/Attack Detection & Monitoring/'
+    - 'Tools and Commands/Attack Prevention & Hardening/'
+    - 'Tools and Commands/Basic Bash commands/'
+    - 'Tools and Commands/Forensics & Incident Response/'
+    - 'Tools and Commands/Setup & Config/'
+    - 'Tools and Commands/Vulnerability Scanning & Assessment/'
+  - Resources:
+    - 'resources/All the quizzes and the correct answers.md'
+    - 'resources/references.md'
+    - Course Material:
+      - 'resources/Course material/'
+    - Online Resources:
+      - 'resources/Online Resources/'
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/FuadPoroshtica/T-401-ICYB-CySec-Knowledge-Base

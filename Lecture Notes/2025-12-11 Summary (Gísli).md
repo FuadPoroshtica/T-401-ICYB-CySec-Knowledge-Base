@@ -14,7 +14,7 @@ date modified: Thursday, 11. December 2025, 10:12
 	- TODO
 - Economy of Mechanism:
 	- TODO
-- [Complete mediation](../Terminology/Complete%20mediation.md):
+- [Complete mediation](../Terminology/Complete mediation.md):
 	- ...always check access for every access, something
 - Open design:
 	- The opposite of security by obscurity. It shouldn’t depend on security by obscurity. The system should be easy to understand so that it is easy to analyze what is going on for forensics.
@@ -34,7 +34,7 @@ He’s not expecting us to know everything about computer networks, but we shoul
 
 We should know:
 
-- It’s organized into layers in [OSI Model](../Terminology/Networks/OSI%20Model/OSI%20Model.md) and [TCP IP Model](../Terminology/Networks/TCP%20IP%20Model/TCP%20IP%20Model.md). We don’t have to memorize the layer numbers.
+- It’s organized into layers in [OSI Model](../Terminology/Networks/OSI Model/OSI Model.md) and [TCP IP Model](../Terminology/Networks/TCP IP Model/TCP IP Model.md). We don’t have to memorize the layer numbers.
 - Data is split up into packets.
 - The packets don’t just make one hop, they hop again and again between places.
 	- Just like packages you get in the mail! They transfer between transport hubs!
@@ -49,7 +49,7 @@ todo
 It uses routing tables.
 - Layer 2(LAN): MAC address table / switching table
 
-### [Physical Layer](../Terminology/Networks/OSI%20Model/1-Physical%20Layer.md)
+### [Physical Layer](../Terminology/Networks/OSI Model/1-Physical Layer.md)
 
 For the cyber security final exam, we should know roughly what the purpose is of these layers, and have some idea of how this can be attacked.
 
@@ -60,7 +60,7 @@ Node-to-node delivery on the same network/medium.
 - Ethernet
 - WiFi
 
-## [Network Layer](../Terminology/Networks/OSI%20Model/3-Network%20Layer.md)
+## [Network Layer](../Terminology/Networks/OSI Model/3-Network Layer.md)
 
 Delivery of packets to devices anywhere in the network.
 
@@ -70,7 +70,7 @@ This requires:
     - Routing (finding the path)
 - Forwarding (moving the packet from one link to another)
 
-## [Transport Layer](../Terminology/Networks/OSI%20Model/4-Transport%20Layer.md)
+## [Transport Layer](../Terminology/Networks/OSI Model/4-Transport Layer.md)
 
 Application multiplexing (ports). Essentially, it makes sure that data gets to the right application on the device.
 
@@ -83,13 +83,13 @@ Security context:
     - The attacker sends a lot of TCP SYN packets to a target server, but never completes the handshake. This leaves the server with a lot of half-open connections, consuming resources and potentially leading to a denial of service (DoS).
     - Mitigation strategies include SYN cookies, increasing backlog queue size, and reducing the SYN-RECEIVED timer.
 
-## [Application Layer](../Terminology/Networks/OSI%20Model/7-Application%20Layer.md)
+## [Application Layer](../Terminology/Networks/OSI Model/7-Application Layer.md)
 
 Responsible for providing network services directly to end-users and applications.
 
 Various protocols operate at this layer, including:
 
-- [HTTP](../Terminology/Networks/Transfer%20Protocols/HTTP.md) and [HTTPS](../Terminology/Networks/Transfer%20Protocols/HTTPS.md) (we should be aware of the difference between them)
+- [HTTP](../Terminology/Networks/Transfer Protocols/HTTP.md) and [HTTPS](../Terminology/Networks/Transfer Protocols/HTTPS.md) (we should be aware of the difference between them)
     - These are the protocols used for web browsing.
 - [TLS (Transport Layer Security)](../Terminology/Networks/TLS.md) for CIA (Confidentiality, Integrity, Availability)
     - Provides encryption and secure communication over a network.
@@ -100,27 +100,27 @@ Various protocols operate at this layer, including:
     - Translates human-readable domain names (like `www.example.com`) into IP addresses that computers use to identify each other on the network.
 - [DHCP](../Terminology/Networks/DHCP.md) (Dynamic Host Configuration Protocol)
     - Automatically assigns IP addresses and other network configuration parameters to devices on a network, allowing them to communicate effectively.
-- Email: [SMTP](../Terminology/Networks/Transfer%20Protocols/SMTP.md), IMAP, POP3
-    - [SMTP (Simple Mail Transfer Protocol)](../Terminology/Networks/Transfer%20Protocols/SMTP.md) is used for sending emails.
+- Email: [SMTP](../Terminology/Networks/Transfer Protocols/SMTP.md), IMAP, POP3
+    - [SMTP (Simple Mail Transfer Protocol)](../Terminology/Networks/Transfer Protocols/SMTP.md) is used for sending emails.
 	- IMAP (Internet Message Access Protocol) and POP3 (Post Office Protocol version 3) are used for retrieving emails from a mail server.
 	- POP3 downloads the email to the local device and usually deletes it from the server, while IMAP allows users to view and manage their emails directly on the server, keeping them synchronized across multiple devices.
-- File sharing/file transfer: [FTP](../Terminology/Networks/Transfer%20Protocols/FTP.md), SFTP, SMB
-	- [FTP](../Terminology/Networks/Transfer%20Protocols/FTP.md) (File Transfer Protocol) is used for transferring files between a client and server on a network. It is not secure as it transmits data in plaintext.
+- File sharing/file transfer: [FTP](../Terminology/Networks/Transfer Protocols/FTP.md), SFTP, SMB
+	- [FTP](../Terminology/Networks/Transfer Protocols/FTP.md) (File Transfer Protocol) is used for transferring files between a client and server on a network. It is not secure as it transmits data in plaintext.
 	- SFTP (SSH File Transfer Protocol) is a secure version of FTP that uses SSH to encrypt the data transfer.
 	- SMB (Server Message Block) is a network file sharing protocol that allows applications and users to read and write to files and request services from server programs in a computer network. It is commonly used in Windows environments.
 
 ## Network Security
-- [Firewall](../Terminology/Defense%20&%20Control/Firewall.md) (packet filter)
-    - What the [Firewall](../Terminology/Defense%20&%20Control/Firewall.md) actually does is that it filters packets based on rules.
-    - The definition of a [Firewall](../Terminology/Defense%20&%20Control/Firewall.md) is: “A network security device that monitors and filters incoming and outgoing network traffic based on an organization’s previously established security policies.”
+- [Firewall](../Terminology/Defense & Control/Firewall.md) (packet filter)
+    - What the [Firewall](../Terminology/Defense & Control/Firewall.md) actually does is that it filters packets based on rules.
+    - The definition of a [Firewall](../Terminology/Defense & Control/Firewall.md) is: “A network security device that monitors and filters incoming and outgoing network traffic based on an organization’s previously established security policies.”
     - It can block or allow traffic based on IP addresses, ports, protocols, etc.
 - VPN (Virtual Private Network)
 	- A VPN creates a secure, encrypted connection over a less secure network, such as the internet. It allows users to send and receive data as if their devices were directly connected to a private network.
 	- It provides confidentiality and integrity for data in transit.
 
 # Operating System
-## What is an [OS](../Terminology/Systems%20&%20Plaforms/Operating%20System.md)?
-- Know the difference between the [Kernel](../Terminology/Systems%20&%20Plaforms/Kernel.md) and user space.
+## What is an [OS](../Terminology/Systems & Plaforms/Operating System.md)?
+- Know the difference between the [Kernel](../Terminology/Systems & Plaforms/Kernel.md) and user space.
 - Core functionality
     - Abstracton from raw hardware interfaces. E.g., instead of having to know how to talk to a hard drive, you can just use file system calls.
     - Arbitration / Resource management for multiple processes/users. Essentially deciding who gets to use what resources when.
@@ -139,16 +139,16 @@ Various protocols operate at this layer, including:
 
 Issues:
 
-- Memory Safety: [Buffer Overflows](../Terminology/Attacks/Buffer%20Overflow.md).
-    - A [Buffer Overflow](../Terminology/Attacks/Buffer%20Overflow.md) occurs when a program writes more data to a buffer (a contiguous block of memory) than it can hold. This can overwrite adjacent memory, leading to unpredictable behavior, crashes, or security vulnerabilities.
-    - Attackers can exploit [Buffer Overflows](../Terminology/Attacks/Buffer%20Overflow.md) to inject malicious code into a program’s memory space, allowing them to take control of the program or system.
+- Memory Safety: [Buffer Overflows](../Terminology/Attacks/Buffer Overflow.md).
+    - A [Buffer Overflow](../Terminology/Attacks/Buffer Overflow.md) occurs when a program writes more data to a buffer (a contiguous block of memory) than it can hold. This can overwrite adjacent memory, leading to unpredictable behavior, crashes, or security vulnerabilities.
+    - Attackers can exploit [Buffer Overflows](../Terminology/Attacks/Buffer Overflow.md) to inject malicious code into a program’s memory space, allowing them to take control of the program or system.
     - Common mitigation techniques include bounds checking, stack canaries, and using safer programming languages.
-- [Race conditions](../Terminology/Attacks/Race%20condition.md) (in [Access Control](../Terminology/Defense%20&%20Control/Access%20Control.md)), e.g., TOCTOU
+- [Race conditions](../Terminology/Attacks/Race condition.md) (in [Access Control](../Terminology/Defense & Control/Access Control.md)), e.g., TOCTOU
     - Race conditions occur when the behavior of a program depends on the timing or sequence of uncontrollable events, such as the order in which threads are scheduled. This can lead to unexpected behavior and security vulnerabilities.
     - TOCTOU (Time of Check to Time of Use) is a specific type of race condition where a resource is checked for a certain condition (e.g., access permissions) and then used later, but the condition may have changed in the meantime.
     - Attackers can exploit TOCTOU vulnerabilities to gain unauthorized access to resources.
 - Command Injection
-    - Command injection is a security vulnerability that occurs when an attacker is able to execute arbitrary commands on a host [Operating System](../Terminology/Systems%20&%20Plaforms/Operating%20System.md) via a vulnerable application. This typically happens when user input is not properly sanitized and is passed directly to a system shell or command interpreter.
+    - Command injection is a security vulnerability that occurs when an attacker is able to execute arbitrary commands on a host [Operating System](../Terminology/Systems & Plaforms/Operating System.md) via a vulnerable application. This typically happens when user input is not properly sanitized and is passed directly to a system shell or command interpreter.
     - Attackers can exploit command injection vulnerabilities to gain unauthorized access, manipulate data, or compromise the system.
     - Mitigation strategies include input validation, using parameterized queries, and avoiding the use of system shells for executing commands.
 - Privilege Escalation
@@ -173,9 +173,9 @@ Important concepts:
 What types we need to know for the exam:
 
 - Different types:
-	- [Hypervisor](../Terminology/Virtualization/Hypervisor.md) / [Virtual Machine](../Terminology/Virtualization/Virtual%20Machine%20(VM).md)
-	- [Container](../Terminology/Virtualization/Virtualization%20methods/Container.md) (e.g., Docker)
-	- [Emulation](../Terminology/Virtualization/Virtualization%20methods/Emulation.md)
+	- [Hypervisor](../Terminology/Virtualization/Hypervisor.md) / [Virtual Machine](../Terminology/Virtualization/Virtual Machine (VM).md)
+	- [Container](../Terminology/Virtualization/Virtualization methods/Container.md) (e.g., Docker)
+	- [Emulation](../Terminology/Virtualization/Virtualization methods/Emulation.md)
 - ... offer different
 	- Isolation from each other,
 	- Separation from the host,
@@ -183,12 +183,12 @@ What types we need to know for the exam:
 - Main security issues:
 	- VM/Container escape.
     	- When an attacker manages to break out of a virtual machine or container and gain access to the host system or other virtual machines/containers running on the same host.
-	- Attacks on other containers/images on the same host (e.g., [Side-Channel Attacks](../Terminology/Virtualization/Side-Channel%20Attack.md))
+	- Attacks on other containers/images on the same host (e.g., [Side-Channel Attacks](../Terminology/Virtualization/Side-Channel Attack.md))
 
-# [Binary Exploitation](../Terminology/Binary%20Exploitation/Binary%20Exploitation.md)
+# [Binary Exploitation](../Terminology/Binary Exploitation/Binary Exploitation.md)
 ## Buffer Overflow
 
-We should understand what is a [Buffer Overflow](../Terminology/Attacks/Buffer%20Overflow.md), and how it can be exploited. Writing in memory outside the designated buffer for the input.
+We should understand what is a [Buffer Overflow](../Terminology/Attacks/Buffer Overflow.md), and how it can be exploited. Writing in memory outside the designated buffer for the input.
 
 It can be used to overwrite the return address of a function, so that when the function returns, it jumps to attacker-controlled code. So we can call functions that normally we wouldn’t be able to call, or use parameters that we normally wouldn’t be able to use.
 
@@ -220,18 +220,18 @@ Client-Side:
     - Third-party scripts can introduce vulnerabilities if they are compromised or malicious, potentially leading to attacks such as data theft or unauthorized actions on behalf of the user.
 
 ## Key Vulnerabilities
-- [SQL Injection / SQLi](../Terminology/Web%20Security/SQL%20Injection%20(SQLi).md)
-    - [SQL Injection (SQLi)](../Terminology/Web%20Security/SQL%20Injection%20(SQLi).md) is a web security vulnerability that allows an attacker to interfere with the queries that an application makes to its database. It occurs when user input is improperly sanitized and is directly included in SQL queries. This can allow attackers to view, modify, or delete data in the database, as well as execute administrative operations.
+- [SQL Injection / SQLi](../Terminology/Web Security/SQL Injection (SQLi).md)
+    - [SQL Injection (SQLi)](../Terminology/Web Security/SQL Injection (SQLi).md) is a web security vulnerability that allows an attacker to interfere with the queries that an application makes to its database. It occurs when user input is improperly sanitized and is directly included in SQL queries. This can allow attackers to view, modify, or delete data in the database, as well as execute administrative operations.
     - *Mitigation*: Common mitigation techniques include using prepared statements and parameterized queries, input validation, and employing least privilege principles for database access.
-- [Insecure Direct Object References (IDOR)](../Terminology/Insecure%20Direct%20Object%20References%20(IDOR).md)
-    - [Insecure Direct Object References (IDOR)](../Terminology/Insecure%20Direct%20Object%20References%20(IDOR).md) is a web security vulnerability that occurs when an application exposes a reference to an internal implementation object, such as a file, database record, or URL, without proper [Access Control](../Terminology/Defense%20&%20Control/Access%20Control.md). This allows attackers to manipulate these references to gain unauthorized access to data or functionality.
+- [Insecure Direct Object References (IDOR)](../Terminology/Insecure Direct Object References (IDOR).md)
+    - [Insecure Direct Object References (IDOR)](../Terminology/Insecure Direct Object References (IDOR).md) is a web security vulnerability that occurs when an application exposes a reference to an internal implementation object, such as a file, database record, or URL, without proper [Access Control](../Terminology/Defense & Control/Access Control.md). This allows attackers to manipulate these references to gain unauthorized access to data or functionality.
     - *Example*: An application that uses sequential numeric IDs in URLs (e.g., `/user/123`) without verifying the user’s authorization to access that resource.
-    - *Mitigation*: Mitigation strategies include implementing proper [Access Controls](../Terminology/Defense%20&%20Control/Access%20Control.md), validating user input, and using indirect references
-- [Broken Authentication](../Terminology/Web%20Security/Broken%20Authentication.md) (passwords, session ids, tokens)
-    - [Broken Authentication](../Terminology/Web%20Security/Broken%20Authentication.md) refers to vulnerabilities in the authentication mechanisms of a web application that allow attackers to compromise user accounts or gain unauthorized access. This can occur due to weak password policies, session management flaws, or inadequate protection of authentication credentials.
+    - *Mitigation*: Mitigation strategies include implementing proper [Access Controls](../Terminology/Defense & Control/Access Control.md), validating user input, and using indirect references
+- [Broken Authentication](../Terminology/Web Security/Broken Authentication.md) (passwords, session ids, tokens)
+    - [Broken Authentication](../Terminology/Web Security/Broken Authentication.md) refers to vulnerabilities in the authentication mechanisms of a web application that allow attackers to compromise user accounts or gain unauthorized access. This can occur due to weak password policies, session management flaws, or inadequate protection of authentication credentials.
     - *Mitigation*: Mitigation techniques include implementing strong password policies, using multi-factor authentication, securely managing sessions, and regularly reviewing authentication mechanisms for vulnerabilities.
 - [Cross-Site Scripting (XSS)](../Terminology/Attacks/XSS.md)
-⇒ [OWASP](../Terminology/Web%20Security/OWASP.md) Top-Ten
+⇒ [OWASP](../Terminology/Web Security/OWASP.md) Top-Ten
 The main problem with “Vibe Coding” is that it encourages developers to write code quickly without actually understanding it or considering security implications.
 
 # AI
@@ -240,7 +240,7 @@ The main problem with “Vibe Coding” is that it encourages developers to writ
   - User Prompts. Malicious users can craft prompts to manipulate the AI into generating harmful or unintended outputs.
   - Uploaded Documents. If the AI processes uploaded documents, attackers can embed malicious content to exploit vulnerabilities in the AI system.
   - Web Search results. If the AI uses web search results to inform its responses, attackers can manipulate search results to influence the AI’s output.
-  - *Attack Vectors*: [Prompt Injection](../Terminology/Artifical%20Intelligence/Prompt%20Injection.md), Jailbreaking.
+  - *Attack Vectors*: [Prompt Injection](../Terminology/Artifical Intelligence/Prompt Injection.md), Jailbreaking.
 - Model Surface
   - Weights & Embeddings. Attackers can manipulate the model’s weights or embeddings to alter its behavior.
   - The neural network file. If attackers gain access to the model file, they can modify it to introduce vulnerabilities or change its functionality.
@@ -333,7 +333,7 @@ What will be on the exam? :
 	- E.g., “The Morris Worm (1988) used two kinds of vulnerabilities. Briefly explain what those vulnerabilities were, how it allowed the worm to execute code and how similar exploits can be prevented.”
 	- (Note to self: write down all the “further reading” things he’s asked us to do after every lecture, and write info about all of those topics. I’ve been neglecting them too much…)
 - Questions about technologies we discussed, what their purpose is, roughly how they work, what security issues arise due to them, and which ones they potentially help mitigate.
-- Understanding [Defense in Depth](../Terminology/Defense%20&%20Control/Defense%20in%20Depth.md) and Design Principles for Secure Systems and how this ties into the other topics.
+- Understanding [Defense in Depth](../Terminology/Defense & Control/Defense in Depth.md) and Design Principles for Secure Systems and how this ties into the other topics.
 
 ## Knowledge Base
 - Hand in a link today.

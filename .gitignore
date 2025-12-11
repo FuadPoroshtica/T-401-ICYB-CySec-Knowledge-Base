@@ -1,2 +1,6 @@
 .DS_Store
 .obsidian/
+
+# MkDocs
+site/
+docs_mkdocs/
