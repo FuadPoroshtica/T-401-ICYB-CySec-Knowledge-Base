@@ -5,7 +5,7 @@ date modified: Monday, 8. December 2025, 19:12
 ---
 
 # FurtherStudies
-Day 1intro
+Day 1 - Intro
 1-How the [Virus](../Terminology/Attacks/Malware/Virus.md) / attack worked
 2What was the impact
 3Which weakness was used
@@ -97,3 +97,12 @@ Day 6 - Networks [Networks](../Terminology/Networks)
    6. **Employee Education** - Train staff on risks of unauthorized devices and enforce strict policies about personal routers.
    7. **Zero Trust Architecture** - Treat all users and devices as untrusted until authenticated and authorized.
 
+Day 9 - AI Security [AI Security](../Terminology/Artifical Intelligence/Defensive Strategies)
+1. The 2024 Hong Kong Deepfake Scam.
+   - _What happened?_ In early February 2024, Hong Kong police reported a case where **deepfake techology** was employed to execute a multimillion-dollar **fraud**. The scammers orchestrated a video conference call, using deepfakes to impersonate the chief financial offier and other staff members of the mutlinational firm **Arup**, convincing a finance worker to transfer approximately 25 million dollars to five Hong Kong bank accounts.
+   - _In general how can cases like these be prevented?_ These cases can be prevented be implementing **stronger verification methods** beyond visual confirmation, sucha as multi-factor authentication or independent confirmation of requests, as well as **training for employees** on recognizing deepfake technology and understanding the tactics used in such scams can help employees remain vigilant.
+   - _What are security risks that come with the existence (and easy creation) of Deepfakes for:_
+	 - _Individuals?_ Enabling impersonations of people and gain unauthorized access to sensitive information. Additionally, they can lead to reputational damage and privacy violations by creating misleading or harmful content that appears real.
+     - _Organizations?_  Enabling impersonation executives, which can lead to unauthorized access to sensitive information and financial fraud. They can also damage an organization's reputation and undermine trust, making it essential for companies to implement detection technologies and response plans.
+     - _Society as a whole?_ Enabling misinformation, identity theft, and manipulation of public opinion, particularly during elections or crises. Their realistic nature can undermine trust in genuine media, making it difficult for individuals to discern truth from falsehoods, which can lead to broader societal consequences.
+     - Keywords: **Identity theft, fraud, undermining of democracy, misinformation**.   
