@@ -1,7 +1,7 @@
 ---
 aliases: [Transport Layer Security]
 date created: Tuesday, 2. December 2025, 20:12
-date modified: Monday, 8. December 2025, 18:12
+date modified: Thursday, 11. December 2025, 09:12
 ---
 
 # TLS
@@ -15,7 +15,9 @@ TLS is commonly used in conjunction with other protocols, such as [HTTPS](Transf
 Overall, TLS is a critical component of modern internet security, providing a secure foundation for online communication and data exchange.
 
 ## TLS Handshake
+
 The goal: safely agree on a shared secret key over an insecure wire.
+
 - Asymmetric cryptography (public key) cryptography to exchange a symmetric session key.
 	- Used only during setup.
 	- Slow, high overhead.
