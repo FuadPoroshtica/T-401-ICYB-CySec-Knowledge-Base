@@ -97,7 +97,23 @@ Day 6 - Networks [Networks](../Terminology/Networks)
    6. **Employee Education** - Train staff on risks of unauthorized devices and enforce strict policies about personal routers.
    7. **Zero Trust Architecture** - Treat all users and devices as untrusted until authenticated and authorized.
 
-Day 9 - AI Security [AI Security](../Terminology/Artifical_Intelligence/Defensive_Strategies)
+Day 8. - Web Security [Web Security](../Terminology/Web\Security)
+1. Cross-Site Request Forgery (CSRF):
+   - _What is it?_ It's an attack where a user’s browser is tricked into performing unintended actions on a website they are already authenticated with. Because the site trusts the user’s active session, the attacker can make the browser send legitimate-looking requests without the user’s consent, leading to unauthorized actions such as changing account details or performing transactions.
+   - _How does it differ from XSS?_ CSRF forces a victim to send authenticated requests, exploiting the trust a website has in the user’s browser, while XSS **injects malicious scripts into a website**, exploiting the trust a user has in the website. In short, CSRF abuses authenticated sessions, whereas XSS executes attacker-controlled scripts in the victim’s browser to steal data or manipulate content.
+   - _What are mitigation means for it?_ Mitigations include using anti-CSRF tokens that must be included in each state-changing request, enforcing SameSite cookies to prevent automatic cross-site cookie sending, checking referer or origin headers to verify request sources, and requiring re-authentication or CAPTCHAs for sensitive actions. Together these reduce the ability for attackers to trigger unauthorized actions from another site.
+   - _Where does it appear in the OWASP Top 10?_ CSRF used to appear explicitly as its own category in older OWASP Top 10 editions, but in recent versions it has been folded into broader categories such as “Broken Access Control” due to its nature as an access-control bypass. It is no longer a standalone item but remains an important vulnerability included within modern access-control risks.
+2. Server-Side Request Forgery (SSRF):
+   - _What is it?_ It's a vulnerability where an attacker tricks a server into making unintended requests to internal or external resources. Instead of the attacker sending the request directly, the server itself becomes the requester, allowing attackers to reach systems or endpoints they normally couldn’t access. 
+   - _What are the potential risks?_ Risks include accessing internal networks, cloud metadata services, or sensitive administrative interfaces; performing port scans; leaking internal data; bypassing firewalls; and potentially escalating to full compromise of internal services. In cloud environments, SSRF can allow attackers to obtain credentials or configuration data that lead to further exploitation.
+   - _What are mitigation means for it?_ Mitigations include strict allowlists for outbound server requests, blocking or sanitizing user-controlled URLs, isolating network segments so servers cannot freely access internal systems, disabling direct access to cloud metadata endpoints, and using URL parsing libraries that protect against DNS rebinding and protocol smuggling. Continuous monitoring of outbound requests also helps detect abnormal behavior.
+   - _Where does it appear in the OWASP Top 10?_ SSRF appeared explicitly in the OWASP Top 10 (2021) as its own category due to its increasing relevance in cloud and microservice environments. It is recognized as a significant issue caused by improper access control over server-initiated requests.
+3. Insecure Deserialization:
+	- _What is Remote Code Execution (RCE)?_
+	- _If an attacker modifies a serialized object (e.g., in a cookie), how can this lead to Remote Code Execution upon deserialization?_
+
+
+Day 9 - AI Security [AI Security](<../Terminology/Artifical_Intelligence/Defensive Strategies>)
 1. The 2024 Hong Kong Deepfake Scam.
    - _What happened?_ In early February 2024, Hong Kong police reported a case where **deepfake techology** was employed to execute a multimillion-dollar **fraud**. The scammers orchestrated a video conference call, using deepfakes to impersonate the chief financial offier and other staff members of the mutlinational firm **Arup**, convincing a finance worker to transfer approximately 25 million dollars to five Hong Kong bank accounts.
    - _In general how can cases like these be prevented?_ These cases can be prevented be implementing **stronger verification methods** beyond visual confirmation, sucha as multi-factor authentication or independent confirmation of requests, as well as **training for employees** on recognizing deepfake technology and understanding the tactics used in such scams can help employees remain vigilant.
@@ -107,7 +123,7 @@ Day 9 - AI Security [AI Security](../Terminology/Artifical_Intelligence/Defensiv
      - _Society as a whole?_ Enabling misinformation, identity theft, and manipulation of public opinion, particularly during elections or crises. Their realistic nature can undermine trust in genuine media, making it difficult for individuals to discern truth from falsehoods, which can lead to broader societal consequences.
      - Keywords: **Identity theft, fraud, undermining of democracy, misinformation**.   
 
-Day 11 - Defense [Defense](../Terminology/Defense&Control)
+Day 11 - Defense [Defense](<../Terminology/Defense & Control>)
 1. What replaces the Firewall as a primary enforcement point in Zero Point?
    Instead of relying on a traditional perimeter firewall/VPN, Google uses **context-aware access proxies** and a **centralized Access Control Engine** that authenticate and authorize every request based on user identity and device trust, not network location.
 2. How does a system decide if a device is trusted?
