@@ -66,7 +66,7 @@ The wiki is organized as follows:
 
 ## 🔗 Link Format
 
-All Obsidian wikilinks (`[[Page]]`) have been converted to standard markdown links (`[Page](path/to/page.md)`).
+All Obsidian wikilinks (`Page`) have been converted to standard markdown links (`[Page](path/to/page.md)`).
 
 If you add new content:
 - Use standard markdown links: `[Text](path/to/file.md)`
@@ -107,7 +107,7 @@ python3 convert_links.py
 ```
 
 This script:
-- Converts `[[Page]]` to `[Page](path/to/page.md)`
+- Converts `Page` to `[Page](path/to/page.md)`
 - Fixes image paths
 - Handles URL-encoded characters
 

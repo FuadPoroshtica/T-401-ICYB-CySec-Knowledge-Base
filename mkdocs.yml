@@ -90,29 +90,18 @@ nav:
     - 'Terminology/Cyber Security.md'
     - 'Terminology/Vulnerability.md'
     - 'Terminology/Acronyms cheatsheet.md'
-    - Attacks:
-      - 'Terminology/Attacks/'
-    - Artificial Intelligence:
-      - 'Terminology/Artifical Intelligence/'
-    - Binary Exploitation:
-      - 'Terminology/Binary Exploitation/'
-    - Defense & Control:
-      - 'Terminology/Defense & Control/'
-    - Networks:
-      - 'Terminology/Networks/'
-    - Systems & Platforms:
-      - 'Terminology/Systems & Plaforms/'
-    - Virtualization:
-      - 'Terminology/Virtualization/'
-    - Vulnerability Standards:
-      - 'Terminology/Vulnerability standards/'
   - Tools and Commands:
-    - 'Tools and Commands/Attack Detection & Monitoring/'
-    - 'Tools and Commands/Attack Prevention & Hardening/'
-    - 'Tools and Commands/Basic Bash commands/'
-    - 'Tools and Commands/Forensics & Incident Response/'
-    - 'Tools and Commands/Setup & Config/'
-    - 'Tools and Commands/Vulnerability Scanning & Assessment/'
+    - Attack Detection & Monitoring: 'Tools and Commands/Attack Detection & Monitoring/Attack Detection & Monitoring.md'
+    - Attack Prevention & Hardening: 'Tools and Commands/Attack Prevention & Hardening/Attack Prevention & Hardening.md'
+    - Basic Bash Commands:
+      - Overview: 'Tools and Commands/Basic Bash commands/Basic Bash commands.md'
+      - grep: 'Tools and Commands/Basic Bash commands/grep.md'
+      - find: 'Tools and Commands/Basic Bash commands/find.md'
+      - Regular Expression: 'Tools and Commands/Basic Bash commands/Regular Expression (e g regex).md'
+    - Forensics & Incident Response: 'Tools and Commands/Forensics & Incident Response/Forensics & Incident Response.md'
+    - Setup & Config:
+      - Qemu: 'Tools and Commands/Setup & Config/Qemu.md'
+    - Vulnerability Scanning & Assessment: 'Tools and Commands/Vulnerability Scanning & Assessment/Vulnerability Scanning & Assessment.md'
   - Resources:
     - 'resources/All the quizzes and the correct answers.md'
     - 'resources/references.md'
