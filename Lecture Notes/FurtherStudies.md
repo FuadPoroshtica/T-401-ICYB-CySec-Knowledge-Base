@@ -59,4 +59,41 @@ https://monovm.com/blog/vm-vs-containers/
 	4. What mitigation strategies exist to counter these types of attacks?
 3. What are the risks associated with using untrusted or vulnerable [container](../Terminology/Virtualization/Virtualization%20methods/Container.md) [images](../Terminology/Virtualization/Virtualization%20Hardening%20&%20Operations/Image.md) from public repositories?
 
+Day 6 - Networks [Networks](../Terminology/Networks)
+1. Find examples of vulnerabilities and attacks using Bluetooth:
+	1. **PerfektBlue (2024-2025):** This recent vulnerability chain affects millions of vehicles through OpenSynergy's BlueSDK, enabling remote code execution over Bluetooth Classic with minimal user interaction.  Attackers within Bluetooth range can compromise infotainment systems to access GPS location, microphones, and contact lists. 
+    2. **KNOB Attack (Key Negotiation of Bluetooth):** This exploit forces devices to agree on encryption keys with significantly reduced entropy during the pairing process, making brute-force attacks feasible. The vulnerability exists because the key negotiation itself isn't encrypted.
+   3. **BLUFFS Attack (CVE-2023-24023):** Six attacks that break forward and future secrecy guarantees in Bluetooth, allowing adversaries-in-the-middle to compromise one session key and reuse it across multiple sessions. This affects Bluetooth Core Specification 4.2 to 5.4.
+3. Why Bluetooth is a terrible protocol?
+   1. **Complex Protocol Stack:** Bluetooth stacks handle large volumes of untrusted data through multi-layer protocols like L2CAP, RFCOMM, and AVRCP, largely implemented in C, combining memory safety risks with complex state handling.
+   2. **Legacy Issues:** Legacy bugs often persist in modern systems for years, and many vulnerabilities are logic-based and difficult to detect using traditional testing methods.
+   3. **Default Insecure Configurations:** Many devices ship with Bluetooth in discoverable mode or use weak default PINs, and developers often use insecure examples from SDKs without implementing proper security features.
+   4. **Default Insecure Configurations:** Many devices ship with Bluetooth in discoverable mode or use weak default PINs, and developers often use insecure examples from SDKs without implementing proper security features.
+5. What is the best protection against Bluetooth attacks? **Primary Defense:** The simplest and most effective way to block attacks is to turn off Bluetooth whenever you don't need it.
+   **Additional Protections:**
+   1. **Disable Discovery Mode:** Ensure devices are set to non-discoverable mode when not actively pairing.
+   2. **Keep Firmware Updated:** Regular updates patch known vulnerabilities.
+   3. **Use Strong Authentication:** Avoid default PINs like "0000" or "1234"
+   4. **Reject Unknown Connections:** Never accept pairing requests from unrecognized devices
+   5. **Avoid Public Pairing:** Don't pair devices in public spaces where attackers may be scanning
+   6. **Use Encryption:** Enable Bluetooth encryption when available
+   7. **Remove Old Pairings:** Delete unused or untrusted device pairings
+   8. **For Organizations:** Implement Mobile Device Management (MDM) policies to control Bluetooth settings
+7. What individuals and organizations can do prevent or defend against attacks that use Rogue Access Points?
+   **What Are Rogue Access Points?** Unauthorized wireless access points installed on a secure network without administrator authorization. Evil twins are a specific type where hackers create fake Wi-Fi that mimics legitimate networks.
+   **Individual Defenses:**
+   1. **Use a VPN** - Your strongest defense. Even if you connect to a rogue AP, VPN encryption prevents hackers from reading your traffic.
+   2. **Verify Networks** - Check that the SSID matches what the venue provides and look for duplicate network names. Ask staff when uncertain.
+   3. **Disable Auto-Connect** - Regularly clear saved Wi-Fi networks so your device doesn't automatically connect to evil twins using familiar names.
+   4. **Use HTTPS** - Stick to websites with the padlock icon, which encrypt communication.
+   5. **Enable Multi-Factor Authentication** - Requires extra verification beyond passwords, protecting accounts even if credentials are stolen.
+   6. **Avoid Sensitive Activities on Public Wi-Fi** - Use mobile data for banking or wait until you're on a trusted network.
+   **Organization Defenses**
+   1. **Deploy WIDS/WIPS** - Systems that scan Wi-Fi frequencies to detect unauthorized access points and can automatically block connections to them.
+   2. **Network Segmentation** - Divide networks into VLANs so a breach in one segment doesn't grant access to everything
+   3. **Strong Authentication** - Use WPA2/WPA3-Enterprise with 802.1X and RADIUS for secure authentication.
+   4. **Regular Audits** - Regularly scan for unauthorized access points through automated and manual checks.
+   5. **Physical Security** - Limit physical access to network hardware to prevent direct connection of rogue devices.
+   6. **Employee Education** - Train staff on risks of unauthorized devices and enforce strict policies about personal routers.
+   7. **Zero Trust Architecture** - Treat all users and devices as untrusted until authenticated and authorized.
 
