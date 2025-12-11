@@ -1,6 +1,8 @@
 .DS_Store
 .obsidian/
 
-# MkDocs
+# extra
 site/
 docs_mkdocs/
+.claude/
+
