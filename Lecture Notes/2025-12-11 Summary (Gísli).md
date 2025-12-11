@@ -89,7 +89,7 @@ Responsible for providing network services directly to end-users and application
 
 Various protocols operate at this layer, including:
 
-- [HTTP](../Terminology/Networks/Transfer Protocols/HTTP.md) and [HTTPS](../Terminology/Networks/Transfer Protocols/HTTPS.md) (we should be aware of the difference between them)
+- [HTTP](<../Terminology/Networks/Transfer Protocols/HTTP.md>) and [HTTPS](<../Terminology/Networks/Transfer Protocols/HTTPS.md>) (we should be aware of the difference between them)
     - These are the protocols used for web browsing.
 - [TLS](<../Terminology/Networks/TLS.md>) for CIA (Confidentiality, Integrity, Availability) [TLS](<../Terminology/Networks/TLS.md>)
     - Provides encryption and secure communication over a network.
