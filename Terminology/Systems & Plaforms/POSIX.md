@@ -1,7 +1,7 @@
 ---
-aliases: []
+aliases: [Portable Operating System Interface]
 date created: Monday, 1. December 2025, 20:12
-date modified: Thursday, 4. December 2025, 08:12
+date modified: Monday, 8. December 2025, 19:12
 ---
 
 # POSIX
@@ -10,7 +10,7 @@ date modified: Thursday, 4. December 2025, 08:12
 
 **Definition**:
 Stands for “**P**ortable **O**perating **S**ystem **I**nterface” (the **X** stands for UNIX)
-A family of standards that defines compatibility between different [Unix-like](Unix-Like.md) operating systems. If an API works on [Unix-like](Unix-Like.md) system A, then it should work on a [Unix-like](Unix-Like.md) system B.
+A family of standards that defines compatibility between different [Unix-like](Unix-Like.md) [Operating Systems](Operating%20System.md). If an API works on [Unix-like](Unix-Like.md) system A, then it should work on a [Unix-like](Unix-Like.md) system B.
 
 POSIX Model of permission:
 

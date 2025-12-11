@@ -1,11 +1,10 @@
 ---
-aliases: []
+aliases: [Virtualisation]
 date created: Wednesday, 26. November 2025, 18:11
-date modified: Monday, 1. December 2025, 22:12
+date modified: Thursday, 11. December 2025, 09:12
 ---
 
 # Virtualization
-
 
 [Host Machine / Host OS](Virtualization/Host%20Machine%20Host%20OS.md)
 
@@ -23,7 +22,7 @@ date modified: Monday, 1. December 2025, 22:12
 
 **Definition**: A set of technologies that make one physical computer behave like many separate “virtual” computers by abstracting hardware into software.
 
-**Context/Example**: One powerful server can be split into several virtual machines (VMs), each running its own OS (e.g., one Linux server, one Windows server) on the same physical box.
+**Context/Example**: One powerful server can be split into several [Virtual Machines (VMs)](Virtual%20Machine%20(VM).md), each running its own [OS](Operating%20System.md) (e.g., one Linux server, one Windows server) on the same physical box.
 
 **Related Concepts**: [Virtual machine](Virtual%20Machine%20(VM).md), [hypervisor](Hypervisor.md), [containers](Virtualization%20methods/Container.md), cloud computing
 
@@ -38,5 +37,7 @@ date modified: Monday, 1. December 2025, 22:12
 ## Mitigating Security Risks
 
 Patch Management
+
 Principle of Least Privilege → give users/programs only the minimum permission they need to do their job.
+
 Disable unused [ports](../Systems%20&%20Plaforms/Port.md)

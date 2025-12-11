@@ -1,10 +1,11 @@
 ---
 aliases: [Physical Layer]
 date created: Tuesday, 2. December 2025, 10:12
-date modified: Thursday, 4. December 2025, 08:12
+date modified: Thursday, 11. December 2025, 09:12
 ---
 
 # Physical Layer
+
 The **Physical Layer** is the first and lowest layer in the [OSI Model](OSI%20Model.md) of computer networking. It is responsible for the physical connection between devices, including the transmission and reception of raw bit streams over a physical medium such as cables, fiber optics, or wireless signals.
 
 The Physical Layer defines the electrical, mechanical, and procedural aspects of the physical connection, including voltage levels, timing, data rates, and connector types. It ensures that data is transmitted accurately and efficiently between devices at the hardware level.

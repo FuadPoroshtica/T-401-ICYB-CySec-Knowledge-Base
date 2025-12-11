@@ -1,10 +1,11 @@
 ---
 aliases: []
 date created: Tuesday, 25. November 2025, 16:11
-date modified: Thursday, 4. December 2025, 11:12
+date modified: Thursday, 11. December 2025, 09:12
 ---
 
 # 2025-11-24 Introduction (Gísli)
+
 (24.11.2025 W1 Monday 09:00)
 
 ## Course overview
@@ -12,7 +13,7 @@ date modified: Thursday, 4. December 2025, 11:12
 ### Course contents:
 
 - Linux + Windows CLI tools.
-- OS basics ([access control](../Terminology/Defense & Control/Access Control)).
+- [OS](Operating%20System.md) basics ([access control](../Terminology/Defense & Control/Access Control)).
 - Networking basics.
 - [Virtualization](../Terminology/Virtualization/Virtualization).
     - Some of the labs we’ll be doing will be on virtual machines and stuff.
@@ -99,7 +100,7 @@ Computer architecture.
 - There are still risks:
     - Inadvertent virus introduction (email, USB, evil website, [Trojan](../Terminology/Attacks/Malware/Trojan) software)
     - Unpatched software versions
-    - Zero-day exploit in an OS or a network application.
+    - Zero-day exploit in an [OS](Operating%20System.md) or a network application.
         - An exploit in the software that can be used to gain access to the system, but there is no fix for it yet.
     - Web browser malware.
     - Hardware [backdoor](../Terminology/Attacks/Backdoor) (Intel Management System)
@@ -124,7 +125,9 @@ Part of our research task today is looking at how they work, what weaknesses the
 Definition: “Acting in anticipation to oppose an attack through cyber and cognitive domains.”
 
 The attacker wants to read, modify, inject, and control the system.
+
 An old idea is to put a firewall between the attacker and all the data. But we can’t just do this anymore because we need to get information in and out of our system.
+
 The most secure system is also unusable. We have to consider the users.
 
 Computer security involves:

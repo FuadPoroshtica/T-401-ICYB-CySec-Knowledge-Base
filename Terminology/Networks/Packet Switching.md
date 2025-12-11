@@ -1,11 +1,13 @@
 ---
 aliases: []
 date created: Tuesday, 2. December 2025, 19:12
-date modified: Thursday, 4. December 2025, 08:12
+date modified: Thursday, 11. December 2025, 09:12
 ---
 
 # Packet Switching
+
 The internet uses a method called **packet switching** to send data. Instead of sending data as a continuous stream, it breaks the data into smaller packets. Each packet contains a portion of the data, along with metadata like source and destination addresses, sequence numbers, and error-checking information.
+
 Steps:
 
 1. Data is broken into smaller chunks called “packets”.

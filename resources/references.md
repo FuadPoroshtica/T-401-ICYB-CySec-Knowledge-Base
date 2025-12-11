@@ -1,3 +1,9 @@
+---
+aliases: []
+date created: Wednesday, 3. December 2025, 08:12
+date modified: Wednesday, 10. December 2025, 21:12
+---
+
 # References and Resources
 
 A curated list of cybersecurity resources, references, and learning materials.
@@ -67,11 +73,11 @@ A curated list of cybersecurity resources, references, and learning materials.
 
 ## Books (Recommended Reading)
 
-1. "The Web Application Hacker's Handbook" - Dafydd Stuttard
-2. "Practical Malware Analysis" - Michael Sikorski
-3. "Network Security Assessment" - Chris McNab
-4. "Blue Team Handbook" - Don Murdoch
-5. "The Art of Intrusion" - Kevin Mitnick
+1. “The Web Application Hacker’s Handbook” - Dafydd Stuttard
+2. “Practical Malware Analysis” - Michael Sikorski
+3. “Network Security Assessment” - Chris McNab
+4. “Blue Team Handbook” - Don Murdoch
+5. “The Art of Intrusion” - Kevin Mitnick
 
 ## Community and Forums
 

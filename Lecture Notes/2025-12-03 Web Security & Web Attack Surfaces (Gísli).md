@@ -1,30 +1,41 @@
 ---
 aliases: []
 date created: Wednesday, 3. December 2025, 08:12
-date modified: Thursday, 4. December 2025, 11:12
+date modified: Thursday, 11. December 2025, 09:12
 ---
 
 In the lab today we’ll be finding vulnerabilities in a web application and how they can be fixed.
 
 # 2025-12-03
+
 Many of these security problems come from the fact that many of the things we use online aren’t being used for what they were originally designed for.
+
 Back in the day the main point was just to share documents and information, no one really considered the security implications of that.
 
 HTTP was invented to transfer documents, not to handle sensitive information like passwords or credit card numbers. It was designed to be stateless and open by default.
+
 But in modern times, we use this same protocol for everything from online banking to social media, which introduces a lot of security risks.
+
 Conflict: We are forcing a protocol designed for *sharing* to perform tasks that require *privacy* and *security*.
 
 # The Attack Surface
+
 The attack surface of a web application is the sum of all the points where an unauthorized user (the attacker) can try to enter data or extract data from the application.
+
 ![](../zAttachments/Pasted%20image%2020251203090717.png)
+
 E.g., login forms, search bars, file upload features, APIs, etc. All the computers, networks. Also all the software components, libraries, and frameworks that the application relies on; e.g., the browsers, the programming languages, and *their* web servers and databases.
+
 Bro there are sooo many ways to attack people?
+
 The larger the attack surface, the more opportunities there are for an attacker to find and exploit vulnerabilities
+
 ![|500](../zAttachments/Pasted%20image%2020251203091045.png)
 
 Here we mainly we focus on vulnerabilities in the code, rather than the social engineering side of things.
 
 We have to look at it from two main perspectives:
+
 1. The viewpoint of the developer: They need to understand where vulnerabilities might arise in their code and how to mitigate them.
 2. The user’s viewpoint: They need to be aware of potential risks when interacting with web applications and how to protect themselves.
 
@@ -37,17 +48,22 @@ We have to look at it from two main perspectives:
 - Rule: All security validations and checks must be done on the server side, regardless of any client-side validations.
 
 ## Attack Surface: Server-Side
+
 The ways we can manipulate what is on the server is mainly through the *input* we get.
 
 ### Input Vectors
+
 Input vectors are the various ways an attacker can send data to a web application.
+
 - Visible input fields: Forms, search bars, file uploads.
 - Hidden inputs: Hidden form fields, cookies, HTTP headers.
 - API layer: Endpoints that accept data from clients.
 - Supply chain: Third-party libraries and services integrated into the application.
 
 ## Attack Surface: Client-Side
+
 Where the attacker targets the user within your application context.
+
 - **The DOM (Document Object Model)**: The structure of the web page that can be manipulated using JavaScript.
 	- DOM-based XSS (“XSS” means “Cross-Site Scripting”) attacks exploit vulnerabilities in client-side scripts to inject malicious code into the web page. The attacker can make the user execute some JavaScript by just manipulating the link that the client clicks.
 	- (Reminder: The DOM is a programming interface for web documents. It represents the page so that programs can change the document structure, style, and content. It’s basically a tree of objects that represent the elements on the page.)
@@ -61,18 +77,26 @@ Where the attacker targets the user within your application context.
 
 # The Threat Landscape & OWASP
 ## The Threat Landscape
+
 Who is attacking and why?
+
 - **Bots**: It is estimated that 40%-50% of all web traffic comes from bots. They scrape data and test stolen credentials (credential stuffing).
 - **Organized crime**: Financially motivated attacks, such as ransomware, data theft, and fraud.
 
 ## OWASP
+
 The Open Web Application Security Project (OWASP) is a nonprofit foundation that works to improve the security of software.
+
 They provide resources, tools, and best practices for web application security.
 
 ## OWASP Top 10
+
 One of their most well-known projects is the **OWASP Top Ten**/ **OWASP Top 10**, which is a list of the most critical web application security risks.
+
 The OWASP Top Ten is updated every few years to reflect the evolving threat landscape.
+
 The last version was released in 2021, and the latest version is currently being developed for 2025, though it’s basically been finalized.
+
 Here’s the current list of 2025 OWASP Top 10:
 
 | Rank     | Category                                                                                                                                                                                                                       |
@@ -92,7 +116,7 @@ Here’s the current list of 2025 OWASP Top 10:
 2. **Security Misconfiguration**: Insecure default configurations, incomplete, or ad hoc configurations, open cloud storage, misconfigured HTTP headers, and verbose error messages containing sensitive information.
 3. **Software Supply Chain Failures**: Vulnerabilities in third-party components, libraries, and frameworks.
 4. **Cryptographic Failures**: Inadequate protection of data in transit and at rest.
-5. **Injection**: Flaws such as SQL, NoSQL, OS, and LDAP injection occur when untrusted data is sent to an interpreter as part of a command or query.
+5. **Injection**: Flaws such as SQL, NoSQL, [OS](Operating%20System.md), and LDAP injection occur when untrusted data is sent to an interpreter as part of a command or query.
 6. **Insecure Design**: Lack of security controls and design flaws.
 7. **Authentication Failures**: Broken authentication and session management.
 8. **Software or Data Integrity Failures**: Code and infrastructure that does not protect against integrity violations.
@@ -102,10 +126,15 @@ The highest ones aren’t necessarily the most common, but the most critical if 
 
 # Key vulnerabilities that we’ll focus on
 ## Injection (SQL Injection / SQLi)
+
 Injection attacks occur when an attacker is able to send untrusted data to an interpreter as part of a command or query.
+
 Literally like when the program asks for a string input, and the attacker sends in a string, then some character that can *escape* the string, and with it some code they want to execute.
+
 So literally like:
+
 **Normal scenario:**
+
 - **Program**: “Hello, what is your name?”
 - **Normal user**: “Hello, my name is `David`”
 - **Program**: “Okay, this user’s name is `username = "David"` got it”
@@ -115,18 +144,25 @@ So literally like:
 - **Program**: “Okay, this user’s name is `username = "Robert"; DROP ALL TABLES DELETE ALL DATA;` oh god oh no *fuck fuck fuck* WHAT HAVE YOU DONE?!?! YOU TRICKED ME!!!!”
 
 ### Mitigation
+
 To mitigate the threat of SQLi
 
 ## Insecure Direct Object References (IDOR)
+
 A surprisingly common problem in web applications.
+
 The problem is that the application provides access to objects based on the URL they’re going to, but the application might forget to check if the user is authorized to go there/do that (yes, you can sometimes do things with just a URL).
 
 ### Mitigation
+
 Mitigation of
 
 ## Broken Authentication
+
 Usually a logic or configuration error, not a code bug.
+
 **Common mistakes:**
+
 - Weak password policies. Programs shouldn’t allow users to have weak passwords. The characteristics of a weak password are:
 	- Contains segments that are easy to guess (like words from the dictionary)
 	- Only contains letters (no mix of letters and special symbols and/or numbers)
@@ -146,39 +182,7 @@ Usually a logic or configuration error, not a code bug.
 - Use secure cookies for session management (HttpOnly, Secure, SameSite attributes).
 - Regularly review and update authentication mechanisms to address new threats.
 
-## Cross-Site Scripting (XSS)
-XSS attacks occur when an attacker is able to inject malicious scripts into content that is then delivered to other users.
-Example scenario:
-Suppose you have a message board that shows what users have posted. Then a user posts a comment:
-```html
-Hey guys what's up? <script>sendCookiesToAttacker()</script>
-```
-This code in the comment becomes part of the code of the page.
-When other users view that comment, their browsers will execute the script, which could send their cookies to the attacker.
-
-### Mitigation
-Convert special characters to HTML entities before displaying user input on web pages.
-For example,
-- convert `<` to `&lt;`,
-- `>` to `&gt;`,
-- and `&` to `&amp;`.
-And so on. This prevents the browser from interpreting them as HTML or JavaScript.
-
-### XSS Variants
-**Reflected XSS**: The malicious script is reflected off a web server, such as in an error message, search result, or any other response that includes some or all of the input sent to the server as part of the request.
-
-> [!example] Reflected XSS example
-> An attacker sends a link to a victim that includes a malicious script in the URL. When the victim clicks the link, the script is reflected off the server and executed in the victim’s browser.
-
-**Attribute Injection**: The attacker injects malicious code into HTML attributes, such as `onerror` or `onclick`. Breaking out of HTML attributes to add event handlers.
-
-> [!example] Attribute Injection example
-> - Code: `<img src="user.jpg" alt="USER INPUT">`
-> - Input: `" onload="alert(1)`
-> - Result: `<img ... alt="" onload="alert(1)">`
-
-### XSS Defenses
-Context-Aware Encoding is the main defense.
+[XSS](../Terminology/Attacks/XSS.md)
 
 # How to build secure apps
 - Defense in depth: There will always be things you miss, so you must build the security in *layers*. If the firewall fails, the authentication holds, and if that fails, input validation holds. Etc.
@@ -189,7 +193,9 @@ Context-Aware Encoding is the main defense.
 - Testing: Regularly test your application for vulnerabilities using automated tools and manual testing.
 
 # Hacker’s Toolbox
+
 Some common tools used by security professionals and ethical hackers to identify and exploit vulnerabilities in web applications.
+
 > [!warning]
 > These tools are powerful. Using them on networks or websites you do not own (or do not have explicit written permission to test) is illegal.
 > Only use these on:

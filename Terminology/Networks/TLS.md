@@ -1,11 +1,11 @@
 ---
 aliases: [Transport Layer Security]
 date created: Tuesday, 2. December 2025, 20:12
-date modified: Thursday, 4. December 2025, 08:12
+date modified: Thursday, 11. December 2025, 09:12
 ---
 
 # TLS
-**TLS (Transport Layer Security)** is a cryptographic protocol designed to provide secure communication over a computer network. TLS is widely used to secure data transmitted over the internet, including web browsing, email, instant messaging, and voice over IP (VoIP).
+**TLS ([Transport Layer](OSI%20Model/4-Transport%20Layer.md) Security)** is a cryptographic protocol designed to provide secure communication over a computer network. TLS is widely used to secure data transmitted over the internet, including web browsing, email, instant messaging, and voice over IP (VoIP).
 TLS operates on the [Transport Layer](OSI%20Model/4-Transport%20Layer.md) of the [OSI Model](OSI%20Model/OSI%20Model.md) and is the successor to the earlier Secure Sockets Layer (SSL) protocol.
 TLS provides several key security features, including:
 - **Encryption:** TLS encrypts data transmitted between a client and server, ensuring that sensitive information remains confidential and protected from eavesdropping.
@@ -15,7 +15,9 @@ TLS is commonly used in conjunction with other protocols, such as [HTTPS](Transf
 Overall, TLS is a critical component of modern internet security, providing a secure foundation for online communication and data exchange.
 
 ## TLS Handshake
+
 The goal: safely agree on a shared secret key over an insecure wire.
+
 - Asymmetric cryptography (public key) cryptography to exchange a symmetric session key.
 	- Used only during setup.
 	- Slow, high overhead.

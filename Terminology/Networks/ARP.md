@@ -1,7 +1,7 @@
 ---
 aliases: [Address Resolution Protocol]
 date created: Tuesday, 2. December 2025, 20:12
-date modified: Thursday, 4. December 2025, 08:12
+date modified: Thursday, 11. December 2025, 09:12
 ---
 
 # ARP
@@ -11,6 +11,7 @@ When a device wants to communicate with another device on the same network, it s
 If a computer doesn’t know the MAC address of a device it wants to communicate with, it sends out an ARP request as a broadcast to all devices on the local network. The device with the matching IP address responds with its MAC address.
 
 In the lecture, the teacher went into the terminal and runs `arp -n` to see the ARP table on his system. It shows:
+
 - Address (IP address)
 - HWtype (hardware type, e.g., Ethernet)
 - HWaddress (MAC address)

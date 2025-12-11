@@ -1,13 +1,14 @@
 ---
 aliases: []
 date created: Thursday, 27. November 2025, 10:11
-date modified: Monday, 1. December 2025, 21:12
+date modified: Thursday, 11. December 2025, 09:12
 ---
 
 # Physical View
+**Definition:** The “Physical View” refers to the tangible, hardware aspects of a computer system, including components such as the motherboard, CPU, RAM, hard drives, and other peripherals. It encompasses the actual devices and their configurations that make up the computer system. It is concerned with how these components are arranged and connected to function together.
 
-**Definition**: A hard drive is an array of millions of generic blocks(sections)
+**Related concepts:** MMU (Memory Management Unit), Cache, Storage Devices, Input/Output Devices, Hardware Architecture
 
-**Context/Example**: Storing data with its bit blocks on a hard drive, every section is separated
+## Physical View vs. Hard drive
 
-**Related Concepts**:MMU, Kernel,
+The “Physical View” refers to the overall hardware structure of a computer system, while a “Hard Drive” is a specific hardware component within that structure used for data storage.

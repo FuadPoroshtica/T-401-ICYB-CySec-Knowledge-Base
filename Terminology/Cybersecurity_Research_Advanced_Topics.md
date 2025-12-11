@@ -1,7 +1,7 @@
 ---
 aliases: []
 date created: Thursday, 27. November 2025, 23:11
-date modified: Monday, 1. December 2025, 22:12
+date modified: Thursday, 11. December 2025, 09:12
 ---
 
 # Cybersecurity Research: Advanced Topics
@@ -126,7 +126,7 @@ A rootkit is [malware](Attacks/Malware/Malware) designed to hide its presence by
 
 **Why MBR rootkits are dangerous:**
 - Load before antivirus software starts
-- Survive OS reinstallation
+- Survive [OS](Operating%20System.md) reinstallation
 - Require special boot-time tools to detect and remove
 
 ---
@@ -148,6 +148,7 @@ All these attacks follow a similar pattern:
 ## Understanding the Foundation: Speculative Execution
 
 Modern CPUs use **speculative execution** to improve performance:
+
 - Like a chef preparing popular dishes before orders come in
 - The CPU guesses which code will run next and executes it early
 - If the guess is wrong, results are discarded
@@ -168,6 +169,7 @@ Imagine a secure vault where you can’t see inside:
 - **Side-channel attack**: Listen to the clicking sounds the lock makes and deduce the combination
 
 In Meltdown/Spectre:
+
 - **Direct attack**: Try to read kernel memory (blocked by permissions)
 - **Side-channel attack**: Trick the CPU into speculatively accessing kernel memory, then measure cache timing to deduce what was accessed
 
@@ -342,6 +344,7 @@ They exploit the fact that modern CPUs operate in two “realities”:
 ### Hardware Mitigations
 
 New processors include:
+
 - Hardware barriers that prevent speculation
 - Better permission checking during speculation
 - Reduced speculative execution windows
@@ -514,10 +517,10 @@ Step 4: Attacker Actions
 
 ### 1. Pre-Boot DMA Attacks
 
-**Target:** Systems before OS loads
+**Target:** Systems before [OS](Operating%20System.md) loads
 - UEFI Secure Boot can’t stop them
 - BIOS protections ineffective
-- Steal encryption keys before OS starts
+- Steal encryption keys before [OS](Operating%20System.md) starts
 
 **Example:** FileVault password extraction on locked Macs ([CVE](Vulnerability standards/CVE)-2016-7585)
 
@@ -597,8 +600,9 @@ Modern systems have Thunderbolt security settings:
 ### 3. Kernel DMA Protection (Windows)
 
 Windows 10/11 feature:
+
 - Enabled by default on new systems
-- Blocks DMA until OS fully boots
+- Blocks DMA until [OS](Operating%20System.md) fully boots
 - Uses IOMMU to restrict access
 
 ### 4. Physical Security Measures
@@ -613,7 +617,7 @@ Windows 10/11 feature:
 ### 5. Software Protections
 
 **Operating System Level:**
-- Keep OS updated
+- Keep [OS](Operating%20System.md) updated
 - Enable Secure Boot
 - Enable Trusted Boot
 - Use pre-boot authentication (TPM)
@@ -629,7 +633,7 @@ Windows 10/11 feature:
 
 **Why DMA attacks are hard to detect:**
 
-1. **Below OS visibility**: Operates at hardware level
+1. **Below [OS](Operating%20System.md) visibility**: Operates at hardware level
 2. **No software traces**: Doesn’t execute code traditionally
 3. **Fast execution**: Can be completed in seconds
 4. **Looks legitimate**: DMA is a normal hardware feature
@@ -892,6 +896,7 @@ ausearch -k suid_watch
 ## Conclusion
 
 SUID is a powerful but dangerous feature. The key to securing it is:
+
 1. **Use it sparingly** - only when absolutely necessary
 2. **Audit regularly** - know what has SUID on your systems
 3. **Monitor actively** - detect suspicious SUID usage
