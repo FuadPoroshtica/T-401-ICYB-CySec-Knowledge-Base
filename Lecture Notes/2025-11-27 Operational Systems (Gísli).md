@@ -6,15 +6,15 @@ date created: Monday, 1. December 2025, 20:12
 
 # Operating System Basics
 
-# What is an [OS](Operating System.md)?
+# What is an [OS](<../Terminology/Systems & Plaforms/Operating System.md>)?
 
 ## The Operating System
 
 - Event-driven program that manages the hardware state.
 - Acts as a bridge between applications and hardware.
-- The [Kernel](../Terminology/Systems & Plaforms/Kernel.md):
-    - The core component of the [OS](Operating System.md).
-    - Runs in Privileged Mode ([Kernel](../Terminology/Systems & Plaforms/Kernel.md) Mode).
+- The [Kernel](<../Terminology/Systems & Plaforms/Kernel.md>):
+    - The core component of the [OS](<../Terminology/Systems & Plaforms/Operating System.md>).
+    - Runs in Privileged Mode ([Kernel](<../Terminology/Systems & Plaforms/Kernel.md>) Mode).
     - Has direct access to hardware instructions and memory.
 - User Space:
     - Where your applications run.
@@ -26,10 +26,10 @@ Problem: Raw hardware interfaces (registers, disk controllers) are complex and i
 
 > [!check] Solution: System Calls
 >
-> - The [OS](Operating System.md) wraps hardware instructions in clean software APIs.
+> - The [OS](<../Terminology/Systems & Plaforms/Operating System.md>) wraps hardware instructions in clean software APIs.
 > - API is consistent across platforms, independent of the actual hardware.
 > - When you call `printf()` or `fopen()`, you trigger a System Call.
-> - The [OS](Operating System.md) switches to [Kernel](../Terminology/Systems & Plaforms/Kernel.md) Mode, performs the hardware task, and returns the result.
+> - The [OS](<../Terminology/Systems & Plaforms/Operating System.md>) switches to [Kernel](<../Terminology/Systems & Plaforms/Kernel.md>) Mode, performs the hardware task, and returns the result.
 
 ## Arbitration / Resource Management
 
@@ -51,21 +51,21 @@ want them simultaneously.
     - “*Program*”: Static instructions on disk.
     - “*Process*”: A program in execution (loaded into RAM with a specific program counter, stack pointer, and registers).
 - Context Switching:
-    - The [OS](Operating System.md) halts the current process.
+    - The [OS](<../Terminology/Systems & Plaforms/Operating System.md>) halts the current process.
     - Saves the CPU register state to a Process Control Block (PCB) in RAM.
     - Loads the saved state of the next process.
 - Result: The illusion of parallelism on a single core.
 
 ## Memory Management ([Virtualization](<../Terminology/Virtualization/Virtualization.md>))
 
-- The [OS](Operating System.md) provides the abstraction of Virtual Memory.
+- The [OS](<../Terminology/Systems & Plaforms/Operating System.md>) provides the abstraction of Virtual Memory.
 - **Address Spaces**: Every process believes it has access to a contiguous map of memory (e.g., 0x0000 to 0xFFFF).
-- **Translation**: The [OS](Operating System.md) + Hardware (MMU) map virtual addresses to physical RAM addresses.
+- **Translation**: The [OS](<../Terminology/Systems & Plaforms/Operating System.md>) + Hardware (MMU) map virtual addresses to physical RAM addresses.
     - Basically, what process_1 calls “memory 0x0001”, it might be mapped to like 0x0251 or something in actual memory, and what process_1 sees as “memory 0x0002” might actually be mapped to 0x0571 etc.
     - Basically, they just get like block 1, block 2, block 3 etc. which are mapped and spread out across the whole memory.
 - **Protection**:
     - Process A cannot access Process B’s physical memory pages (or segments).
-    - A user process cannot access [Kernel](../Terminology/Systems & Plaforms/Kernel.md) memory.
+    - A user process cannot access [Kernel](<../Terminology/Systems & Plaforms/Kernel.md>) memory.
     - “*Segfault*” (*segmentation fault*): Occurs when a process tries to access an address that *has no mapping to a physical address*.
 
 ## I/O and Interrupt Management
@@ -73,15 +73,15 @@ want them simultaneously.
 *Architecture context*: I/O can be millions of times slower than a CPU cycle. We cannot use busy-waiting.
 
 1. **Request**🫴: User program requests I/O (System Call).
-2. **Sleep**😴: [OS](Operating System.md) puts the process in a “Waiting” state and yields the CPU to another process.
+2. **Sleep**😴: [OS](<../Terminology/Systems & Plaforms/Operating System.md>) puts the process in a “Waiting” state and yields the CPU to another process.
 3. **Interrupt**🫸: When hardware is ready, it sends an electrical signal (Interrupt) to the CPU.
-4. **ISR (Interrupt Service Routine)** 🚫: CPU jumps to the OS’s Interrupt Service Routine (essentially a function in the [Kernel](../Terminology/Systems & Plaforms/Kernel.md)).
-5. **Wake**😱: [OS](Operating System.md) moves the original process back to the “Ready” queue.
+4. **ISR (Interrupt Service Routine)** 🚫: CPU jumps to the OS’s Interrupt Service Routine (essentially a function in the [Kernel](<../Terminology/Systems & Plaforms/Kernel.md>)).
+5. **Wake**😱: [OS](<../Terminology/Systems & Plaforms/Operating System.md>) moves the original process back to the “Ready” queue.
 
 ## File Systems📂 / Storage Abstraction
 
 - **[Physical View](../Terminology/Physical View)**: A hard drive is an array of millions of generic blocks (sectors).
-- **Logical View**: The [OS](Operating System.md) creates the concept of Files, Directories, and Paths.
+- **Logical View**: The [OS](<../Terminology/Systems & Plaforms/Operating System.md>) creates the concept of Files, Directories, and Paths.
 - **Responsibility**:
     - Mapping filenames to physical block addresses.
     - Managing metadata (permissions, timestamps).
@@ -93,7 +93,7 @@ Hardware architectures (like x86) support privilege levels.
 
 In practice, only these 2 rings are used:
 
-**Ring 0 ([Kernel](../Terminology/Systems & Plaforms/Kernel.md) Mode)**
+**Ring 0 ([Kernel](<../Terminology/Systems & Plaforms/Kernel.md>) Mode)**
 
 - Full access to all hardware instructions.
 - Can manipulate memory maps and disable interrupts.
@@ -103,7 +103,7 @@ In practice, only these 2 rings are used:
 - Restricted subset of instructions.
 - Cannot directly access hardware.
 
-**Traps**: If user code attempts a privileged instruction, the CPU hardware “traps” the attempt and hands control to the [OS](Operating System.md) to handle the violation (usually by killing the process).
+**Traps**: If user code attempts a privileged instruction, the CPU hardware “traps” the attempt and hands control to the [OS](<../Terminology/Systems & Plaforms/Operating System.md>) to handle the violation (usually by killing the process).
 
 # Common Operating Systems
 
@@ -119,22 +119,22 @@ In practice, only these 2 rings are used:
 
 **Linux** 🐧:
 
-- Technically just the ***[Kernel](../Terminology/Systems & Plaforms/Kernel.md)*** (Linus Torvalds, 1991).
+- Technically just the ***[Kernel](<../Terminology/Systems & Plaforms/Kernel.md>)*** (Linus Torvalds, 1991).
     - He used to work with MS-DOS (Microsoft), but he didn’t like that it wasn’t open-source.
-- **Distro (short for “distribution”)**: [Kernel](../Terminology/Systems & Plaforms/Kernel.md) + GNU Tools + Package Manager + Desktop.
-- Architecture: Monolithic [Kernel](../Terminology/Systems & Plaforms/Kernel.md) (drivers in [Kernel](../Terminology/Systems & Plaforms/Kernel.md) space).
+- **Distro (short for “distribution”)**: [Kernel](<../Terminology/Systems & Plaforms/Kernel.md>) + GNU Tools + Package Manager + Desktop.
+- Architecture: Monolithic [Kernel](<../Terminology/Systems & Plaforms/Kernel.md>) (drivers in [Kernel](<../Terminology/Systems & Plaforms/Kernel.md>) space).
 **macOS** 🍎:
-- Based on the **Darwin** [Kernel](../Terminology/Systems & Plaforms/Kernel.md) (Hybrid XNU [Kernel](../Terminology/Systems & Plaforms/Kernel.md): Mach Unix + BSD Unix).
-- It is [POSIX](../Terminology/Systems & Plaforms/POSIX) compliant (i.e. compatible with standard Unix APIs).
+- Based on the **Darwin** [Kernel](<../Terminology/Systems & Plaforms/Kernel.md>) (Hybrid XNU [Kernel](<../Terminology/Systems & Plaforms/Kernel.md>): Mach Unix + BSD Unix).
+- It is [POSIX](<../Terminology/Systems & Plaforms/POSIX.md>) compliant (i.e. compatible with standard Unix APIs).
 
 ## Windows 🪟 (compared to Unix)
 
 Slightly different to Linux.
 
 - **Architecture: Hybrid Kernel**
-    - Performance critical parts (filesystem, networking) run in [Kernel](../Terminology/Systems & Plaforms/Kernel.md) Mode.
+    - Performance critical parts (filesystem, networking) run in [Kernel](<../Terminology/Systems & Plaforms/Kernel.md>) Mode.
     - Other subsystems run in User Mode (has a Microkernel-like influence).
-        - Everything we really need is run in [Kernel](../Terminology/Systems & Plaforms/Kernel.md) mode, and the rest is in user mode.
+        - Everything we really need is run in [Kernel](<../Terminology/Systems & Plaforms/Kernel.md>) mode, and the rest is in user mode.
 - **Configuration: The Registry**
     - *Unix*: Uses text files (e.g., `/etc/config`). Most configuration is done via plain text files.
         - Pros: Simple, easy to back up/restore.
@@ -150,26 +150,26 @@ Slightly different to Linux.
 
 ## Android 🤖📱
 
-Often misunderstood as “Just Linux.” It uses the Linux [Kernel](../Terminology/Systems & Plaforms/Kernel.md), but the user-space is unique.
+Often misunderstood as “Just Linux.” It uses the Linux [Kernel](<../Terminology/Systems & Plaforms/Kernel.md>), but the user-space is unique.
 
-It is ***the*** most deployed [OS](Operating System.md) in the world (billions of devices). Because unlike iOS, Android is open-source and used by many manufacturers, not just for phones but also tablets, TVs, cars, etc.
+It is ***the*** most deployed [OS](<../Terminology/Systems & Plaforms/Operating System.md>) in the world (billions of devices). Because unlike iOS, Android is open-source and used by many manufacturers, not just for phones but also tablets, TVs, cars, etc.
 
 > The Android Stack
 >
 > 1. **Top**: Android Runtime (ART). Apps compile to Bytecode (DEX), not native machine code. So each app runs in its own instance of the ART VM (like Java).
 > 2. **Middle**: Native Libraries & Hardware Abstraction Layer (HAL). So things like OpenGL, SQLite, Media codecs, etc.
-> 3. **Bottom**: Linux [Kernel](../Terminology/Systems & Plaforms/Kernel.md) (Memory, Scheduling, Drivers). So all the low-level stuff is handled by the Linux [Kernel](../Terminology/Systems & Plaforms/Kernel.md).
+> 3. **Bottom**: Linux [Kernel](<../Terminology/Systems & Plaforms/Kernel.md>) (Memory, Scheduling, Drivers). So all the low-level stuff is handled by the Linux [Kernel](<../Terminology/Systems & Plaforms/Kernel.md>).
 
 **Key Mechanism: Binder IPC**
 
 - Apps are strictly sandboxed (security).
-- They communicate via Binder (Inter-Process Communication) to talk to the [OS](Operating System.md) or other apps. Which means that apps can’t directly access each other’s memory or data.
+- They communicate via Binder (Inter-Process Communication) to talk to the [OS](<../Terminology/Systems & Plaforms/Operating System.md>) or other apps. Which means that apps can’t directly access each other’s memory or data.
 
 ## Embedded and RTOS (Real-Time Operating Systems)
 
 There are many other kinds of operating systems designed for specific use-cases, especially in embedded systems (IoT (Internet of Things) devices, automotive systems, industrial machines).
 
-*General Purpose [OS](Operating System.md) (Windows/Linux) Goal*: Throughput.
+*General Purpose [OS](<../Terminology/Systems & Plaforms/Operating System.md>) (Windows/Linux) Goal*: Throughput.
 *RTOS Goal*: Determinism / Consistency.
 
 - **RTOS (Real-Time Operating System):**
@@ -185,10 +185,10 @@ There are many other kinds of operating systems designed for specific use-cases,
 **POSIX** = **P**ortable **O**perating **S**ystem **I**nterface (the **X** is for Unix).
 
 > The Concept: An API Contract
-POSIX is an IEEE (Institute of Electrical and Electronics Engineers) standard that defines an interface between User Space applications and the [OS](Operating System.md) [Kernel](../Terminology/Systems & Plaforms/Kernel.md).
+POSIX is an IEEE (Institute of Electrical and Electronics Engineers) standard that defines an interface between User Space applications and the [OS](<../Terminology/Systems & Plaforms/Operating System.md>) [Kernel](<../Terminology/Systems & Plaforms/Kernel.md>).
 >
-> - It does not tell the [OS](Operating System.md) how to implement a feature.
-> - It tells the [OS](Operating System.md): “If you want to be Unix-compatible, you must support these function names and behaviors.”
+> - It does not tell the [OS](<../Terminology/Systems & Plaforms/Operating System.md>) how to implement a feature.
+> - It tells the [OS](<../Terminology/Systems & Plaforms/Operating System.md>): “If you want to be Unix-compatible, you must support these function names and behaviors.”
 
 The Motivation (The “Unix Wars”)
 
@@ -207,9 +207,9 @@ What does POSIX actually define?
     - Standardizes behavior of CLI tools (`ls`, `grep`, `awk`) so scripts are portable.
     Who is Compliant?
 
-| [OS](Operating System.md)      | Status                                                                                           |
+| [OS](<../Terminology/Systems & Plaforms/Operating System.md>)      | Status                                                                                           |
 | ------- | ------------------------------------------------------------------------------------------------ |
-| macOS   | **Certified**. Actually fully [POSIX](../Terminology/Systems & Plaforms/POSIX.md) compliant. |
+| macOS   | **Certified**. Actually fully [POSIX](<../Terminology/Systems & Plaforms/POSIX.md>) compliant. |
 | Linux   | **De Facto**. Mostly compliant, but people rarely pay for the certification.                     |
 | Windows | **No**. Uses Win32 API. Needs WSL (Subsystem for Linux).                                         |
 
@@ -217,14 +217,14 @@ So if they’re POSIX compliant, that means they support the same system calls a
 
 # Operating Systems and Security
 
-## The [OS](Operating System.md) and the Trusted Computing Base
+## The [OS](<../Terminology/Systems & Plaforms/Operating System.md>) and the Trusted Computing Base
 
 > [!definition] Trusted Computing Base (TCB)
 “... is the totality of protection mechanisms within a computer system – including hardware, firmware, and software – that is responsible for enforcing a security policy. TCB is all components that must work correctly for the system to be secure. If any part is broken, the security of the entire system is broken.”
 >
 
 **The Reference Monitor**
-The [OS](Operating System.md) acts as a gatekeeper between Subjects (Users, Processes) and Objects (Files, Hardware).
+The [OS](<../Terminology/Systems & Plaforms/Operating System.md>) acts as a gatekeeper between Subjects (Users, Processes) and Objects (Files, Hardware).
 Every system call (e.g., `open()`) is intercepted to check:
 1. **Authentication**: *Who* are you?
 2. **Authorization**: Are you *allowed to do this*?
@@ -238,18 +238,18 @@ Every system call (e.g., `open()`) is intercepted to check:
 
 **Secure Storage (Hashing)**
 
-- **Rule #1**: The [OS](Operating System.md) never stores passwords in plain text.
-- **Hashing**: The [OS](Operating System.md) stores a cryptographic hash (e.g., SHA-256) of the password.
+- **Rule #1**: The [OS](<../Terminology/Systems & Plaforms/Operating System.md>) never stores passwords in plain text.
+- **Hashing**: The [OS](<../Terminology/Systems & Plaforms/Operating System.md>) stores a cryptographic hash (e.g., SHA-256) of the password.
     - On login: `InputHash = Hash(UserInput)`.
     - If `InputHash == StoredHash`, access is granted.
 - **Salting** 🧂:
-    - To prevent “Rainbow Table” attacks (pre-computed hash databases), the [OS](Operating System.md) adds a random string (salt) before hashing.
+    - To prevent “Rainbow Table” attacks (pre-computed hash databases), the [OS](<../Terminology/Systems & Plaforms/Operating System.md>) adds a random string (salt) before hashing.
         - This ensures that even if two users have the same password, their stored hashes differ.
     - `StoredValue = Hash(Password + Salt)`.
 
 ## [Access Control](../Terminology/Defense & Control/Access Control):”What can you do?”
 
-Once authenticated, the [OS](Operating System.md) uses a **User ID (UID)** to enforce permissions.
+Once authenticated, the [OS](<../Terminology/Systems & Plaforms/Operating System.md>) uses a **User ID (UID)** to enforce permissions.
 
 - **DAC (Discretionary Access Control):**
     - The **Owner** of the file decides permissions.
@@ -262,20 +262,20 @@ Once authenticated, the [OS](Operating System.md) uses a **User ID (UID)** to en
 
 ## The Principle of Least Privilege
 
-> Golden Rule of [OS](Operating System.md) Architecture
+> Golden Rule of [OS](<../Terminology/Systems & Plaforms/Operating System.md>) Architecture
 A process should only have the absolute minimum privileges necessary to do its job.
 >
 
 Why?
 
 - It limits the “Blast Radius.”
-- If a calculator app is hacked, it shouldn’t have permission to read the network driver or [Kernel](../Terminology/Systems & Plaforms/Kernel.md) memory.
-- This is enforced via CPU modes (User Mode vs. [Kernel](../Terminology/Systems & Plaforms/Kernel.md) Mode).
-- (Also: modern OSes use techniques like **Sandboxing** and **[Containers](../Terminology/Virtualization/Virtualization methods/Container)** to isolate applications further.)
+- If a calculator app is hacked, it shouldn’t have permission to read the network driver or [Kernel](<../Terminology/Systems & Plaforms/Kernel.md>) memory.
+- This is enforced via CPU modes (User Mode vs. [Kernel](<../Terminology/Systems & Plaforms/Kernel.md>) Mode).
+- (Also: modern OSes use techniques like **Sandboxing** and **[Containers](<../Terminology/Virtualization/Virtualization methods/Container.md>)** to isolate applications further.)
 
 ## System Logs
 
-The “Flight Recorder” of the [OS](Operating System.md).
+The “Flight Recorder” of the [OS](<../Terminology/Systems & Plaforms/Operating System.md>).
 
 - **What**: High-level textual records of events.
 - **Content**: (Failed) logins, sudo usage, Service crashes.
@@ -292,14 +292,14 @@ The “Flight Recorder” of the [OS](Operating System.md).
 
 Going deeper than standard logs:
 
-- System Auditing ([Kernel](../Terminology/Systems & Plaforms/Kernel.md) Level):
-    - Hooks into the [Kernel](../Terminology/Systems & Plaforms/Kernel.md) to track System Calls.
+- System Auditing ([Kernel](<../Terminology/Systems & Plaforms/Kernel.md>) Level):
+    - Hooks into the [Kernel](<../Terminology/Systems & Plaforms/Kernel.md>) to track System Calls.
     - *Example*: Not just “User logged in”, but “Process 402 attempted `open()` on `/etc/shadow` and was denied.”
     - Required for strict compliance to various standards (PCI-DSS, HIPAA).
 - File Integrity Monitoring (FIM):
     - *Threat*: Attackers replacing system binaries (like `/bin/login`) with [Trojan horses](<../Terminology/Attacks/Malware/Trojan.md>).
     - *Defense*: Calculate checksums (hashes) of critical files.
-    - If the hash of /bin/login changes, the [OS](Operating System.md) triggers an alarm immediately.
+    - If the hash of /bin/login changes, the [OS](<../Terminology/Systems & Plaforms/Operating System.md>) triggers an alarm immediately.
 
 We’ll be doing this in today’s lab!
 
@@ -329,13 +329,13 @@ Logs are viewed in the **Event Viewer** or using `Get-EventLog` in PowerShell.
 
 ### Enable System Auditing: Linux🐧
 
-Linux uses the Linux Audit Framework. It listens to the [Kernel](../Terminology/Systems & Plaforms/Kernel.md) for specific system calls and file changes.
+Linux uses the Linux Audit Framework. It listens to the [Kernel](<../Terminology/Systems & Plaforms/Kernel.md>) for specific system calls and file changes.
 
 **Installation:**
 
 - Install: `sudo apt install auditd` (Debian/Ubuntu) or `yum install audit` (RHEL/CentOS).
 - Start: `sudo systemctl start auditd`.
-- Defining Rules: You use `auditctl` to add rules to the [Kernel](../Terminology/Systems & Plaforms/Kernel.md) in real-time.
+- Defining Rules: You use `auditctl` to add rules to the [Kernel](<../Terminology/Systems & Plaforms/Kernel.md>) in real-time.
 
 > [!example] Example: Watch for changes to passwords
 >```bash
@@ -378,7 +378,7 @@ Stems from the C/C++ programming languages allowing direct memory manipulation w
 
 - **The Flaw:**
     - A program allocates a fixed buffer.
-    - The [OS](Operating System.md)/Program fails to check input size, allowing writes past the buffer end.
+    - The [OS](<../Terminology/Systems & Plaforms/Operating System.md>)/Program fails to check input size, allowing writes past the buffer end.
 - **The Exploit (Stack Smashing):**
     - The attacker overflows the stack to overwrite the **Return Address**.
     - CPU jumps to malicious code (shellcode) instead of returning to the main function.
@@ -391,9 +391,9 @@ Stems from the C/C++ programming languages allowing direct memory manipulation w
 > [!example] Example: TOCTOU (Time-of-Check to Time-of-Use)
 Because OSes multitask, a gap exists between checking the file permissions and using it.
 >
-> 1. **Check**: [OS](Operating System.md) confirms User A can write to `temp.txt`.
+> 1. **Check**: [OS](<../Terminology/Systems & Plaforms/Operating System.md>) confirms User A can write to `temp.txt`.
 > 2. **The Gap (Context Switch)**: Attacker quickly swaps `temp.txt` with a symbolic link to `/etc/shadow` (password file).
-> 3. **Use**: [OS](Operating System.md) resumes the process and writes to the target, overwriting the password file because the check already passed.
+> 3. **Use**: [OS](<../Terminology/Systems & Plaforms/Operating System.md>) resumes the process and writes to the target, overwriting the password file because the check already passed.
 
 A research task we have today is how to mitigate and prevent these.
 
@@ -405,16 +405,16 @@ Occurs when the Shell is tricked into executing unintended commands.
 - The Exploit:
     - Script expects a filename: `rm $filename`
     - Attacker inputs: `file.txt; rm -rf /`
-    - The [OS](Operating System.md) interprets ; as a command separator and executes both.
+    - The [OS](<../Terminology/Systems & Plaforms/Operating System.md>) interprets ; as a command separator and executes both.
 
 ## Privilege Escalation
 
-The attacker’s goal: Move from Ring 3 (User) to Ring 0 ([Kernel](../Terminology/Systems & Plaforms/Kernel.md)).
+The attacker’s goal: Move from Ring 3 (User) to Ring 0 ([Kernel](<../Terminology/Systems & Plaforms/Kernel.md>)).
 
 - Vertical Escalation:
     - Exploiting bugs in “SetUID” programs (programs that run as root, like `sudo` or `passwd`).
-- [Kernel](../Terminology/Systems & Plaforms/Kernel.md) Exploits:
-    - Crashing or manipulating the [Kernel](../Terminology/Systems & Plaforms/Kernel.md) itself.
+- [Kernel](<../Terminology/Systems & Plaforms/Kernel.md>) Exploits:
+    - Crashing or manipulating the [Kernel](<../Terminology/Systems & Plaforms/Kernel.md>) itself.
     - **Weak Link**: Third-party **Drivers**. They run with full privileges but often have less rigorous code quality than the core kernel.
 
 ## Rootkits and Zero-Days
@@ -424,13 +424,13 @@ The attacker’s goal: Move from Ring 3 (User) to Ring 0 ([Kernel](../Terminolog
 - [Malware](<../Terminology/Attacks/Malware/Malware.md>) that modifies the system to hide its own existence.
 - e.g., by just diverting or intercepting system calls.
 - Essentially, it’s malware that’s designed to be stealthy and avoid detection by traditional security measures. It gets the [Operating System](<../Terminology/Systems & Plaforms/Operating System.md>) to lie to the user or security software about what’s really happening on the system.
-- Example: When you run `ls` or `ps`, the rootkit filters the output of the underlying system calls to hide the hacker’s files and processes. The [OS](Operating System.md) lies to the user.
+- Example: When you run `ls` or `ps`, the rootkit filters the output of the underlying system calls to hide the hacker’s files and processes. The [OS](<../Terminology/Systems & Plaforms/Operating System.md>) lies to the user.
 - **Defense**: Use trusted boot mechanisms and integrity checks to detect unauthorized changes to system binaries.
 
 ### Zero-Day Vulnerabilities
 
 - A flaw known to the attacker but unknown to the vendor (0 days to fix).
-- **Defense**: “[Defense in Depth](../Terminology/Defense & Control/Defense in Depth.md)”. You cannot patch it, so you must rely on [firewalls](../Terminology/Defense & Control/Firewall), strict [access control](../Terminology/Defense & Control/Access Control), procedures, etc. to contain it.
+- **Defense**: “[Defense in Depth](../Terminology/Defense & Control/Defense in Depth.md)”. You cannot patch it, so you must rely on [firewalls](<../Terminology/Defense & Control/Firewall.md>), strict [access control](../Terminology/Defense & Control/Access Control), procedures, etc. to contain it.
 
 # Commands for Sysadmins
 
@@ -448,7 +448,7 @@ The attacker’s goal: Move from Ring 3 (User) to Ring 0 ([Kernel](../Terminolog
 
 ## File Permissions: Linux vs. Windows
 
-**Linux ([POSIX](../Terminology/Systems & Plaforms/POSIX) Model)**
+**Linux ([POSIX](<../Terminology/Systems & Plaforms/POSIX.md>) Model)**
 
 - Simple Structure: Permissions apply to three rigid categories:
 1. User (Owner)
@@ -522,7 +522,7 @@ Indicator: `-rwsr-xr-x 1 root root 64152 maí 30 2024 /usr/bin/passwd`
 | Action          | Linux Command                                    | PowerShell / Windows                                      |
 | --------------- | ------------------------------------------------ | --------------------------------------------------------- |
 | ScheduleTasks   | `crontab -e`(opens the cron table in aneditor)   | `Register-ScheduledTask`                                  |
-| Install Updates | `apt update && apt upgrade`(Depending on Distro) | `winget upgrade --all`(Only for apps, not the [OS](Operating System.md) itself!) |
+| Install Updates | `apt update && apt upgrade`(Depending on Distro) | `winget upgrade --all`(Only for apps, not the [OS](<../Terminology/Systems & Plaforms/Operating System.md>) itself!) |
 
 # Up Next ..
 
@@ -530,7 +530,7 @@ Indicator: `-rwsr-xr-x 1 root root 64152 maí 30 2024 /usr/bin/passwd`
 
 - Find examples of attacks that used root kits and discuss what role the rootkits played in the attacks.
 - [Side-Channel Attacks](../Terminology/Virtualization/Side-Channel Attack) (Meltdown & Spectre): These famous vulnerabilities exploited Speculative Execution in the CPU hardware. How did they allow a User Mode process to read Kernel Mode memory without ever technically triggering a privilege violation?
-- DMA (Direct Memory Access) Attacks: Peripheral devices (like a GPU or Network Card) use DMA to access RAM without asking the CPU. How can a malicious device (e.g., a compromised USB drive) use DMA to read system memory, bypassing the [OS](Operating System.md) entirely?
+- DMA (Direct Memory Access) Attacks: Peripheral devices (like a GPU or Network Card) use DMA to access RAM without asking the CPU. How can a malicious device (e.g., a compromised USB drive) use DMA to read system memory, bypassing the [OS](<../Terminology/Systems & Plaforms/Operating System.md>) entirely?
 - Which mitigation means exist to avoid the problem of SUID opening the system up for privilege escalation attacks?
 
 ## Lab today and Guest Lecture tomorrow

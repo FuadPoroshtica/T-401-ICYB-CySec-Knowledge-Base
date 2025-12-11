@@ -48,7 +48,7 @@ date modified: Wednesday, 10. December 2025, 22:12
 
 > Which weaknesses did the Melissa Email Worm exploit? (Select all that apply)
 - ✓ Vulnerabilities in the Microsoft Word application to execute macros.
-- ~~× Inadequate [Firewall](../Terminology/Defense & Control/Firewall.md) configurations that permitted unfiltered email traffic.~~
+- ~~× Inadequate [Firewall](<../Terminology/Defense & Control/Firewall.md>) configurations that permitted unfiltered email traffic.~~
 - ~~× Weaknesses in network protocols that allowed unauthorized access to servers.~~
 - ✓ Insecure email systems that allowed for automatic opening of attachments.
 - ✓ Lack of user awareness regarding suspicious email attachments.
@@ -76,8 +76,8 @@ date modified: Wednesday, 10. December 2025, 22:12
 
 > Which virtualisation method is characterised by the guest operating system being modified or having special drivers to communicate directly with the [Hypervisor](<../Terminology/Virtualization/Hypervisor.md>) for better performance?
 - ~~× Hardware-Assisted Virtualisation~~
-- ✓ [Paravirtualization](../Terminology/Virtualization/Virtualization methods/Paravirtualization.md)
-- ~~× [Emulation](../Terminology/Virtualization/Virtualization methods/Emulation.md)~~
+- ✓ [Paravirtualization](<../Terminology/Virtualization/Virtualization methods/Paravirtualization.md>)
+- ~~× [Emulation](<../Terminology/Virtualization/Virtualization methods/Emulation.md>)~~
 - ~~× Full Virtualisation~~
 
 > Regarding OS-Level Virtualisation (Containerisation), which of the following statements are true? (Select all that apply)
@@ -94,16 +94,16 @@ date modified: Wednesday, 10. December 2025, 22:12
 - ~~× The ability of a virtual machine to dynamically scale its resources up or down.~~
 
 > When comparing the inherent isolation mechanisms, which of the following typically offers the *least* level of isolation among the common virtualisation methods discussed?
-- ~~× [Emulation](../Terminology/Virtualization/Virtualization methods/Emulation.md)~~
+- ~~× [Emulation](<../Terminology/Virtualization/Virtualization methods/Emulation.md>)~~
 - ~~× Full Virtualisation (Type 1 Hypervisor)~~
 - ~~× Full Virtualisation (Type 2 Hypervisor)~~
 - ✓ OS-Level Virtualisation (Containerisation)
 
-> For OS-based virtualisation (containers), what is the primary purpose of “[Orchestration](../Terminology/Virtualization/Virtualization Hardening & Operations/Orchestration.md)”?
+> For OS-based virtualisation (containers), what is the primary purpose of “[Orchestration](<../Terminology/Virtualization/Virtualization Hardening & Operations/Orchestration.md>)”?
 - ~~× To manually configure network settings for each individual container.~~
 - ~~× To provide a graphical user interface for interacting with single containers.~~
 - ✓ To automate the management, deployment, scaling, and networking of containerized applications at scale.
-- ~~× To convert [Container images](../Terminology/Virtualization/Virtualization Hardening & Operations/Image.md) into [Virtual Machine](../Terminology/Virtualization/Virtual Machine (VM).md) [Images](../Terminology/Virtualization/Virtualization Hardening & Operations/Image.md).~~
+- ~~× To convert [Container images](../Terminology/Virtualization/Virtualization Hardening & Operations/Image.md) into [Virtual Machine](../Terminology/Virtualization/Virtual Machine (VM).md) [Images](<../Terminology/Virtualization/Virtualization Hardening & Operations/Image.md>).~~
 
 > In a multi-tenant cloud environment, what is the primary concern with [Side-Channel Attacks](../Terminology/Virtualization/Side-Channel Attack.md) in [Virtualisation](<../Terminology/Virtualization/Virtualization.md>)?
 - ~~× Unauthorized access to the cloud provider’s billing system.~~
@@ -115,7 +115,7 @@ date modified: Wednesday, 10. December 2025, 22:12
 - ✓ They may contain [Malware](<../Terminology/Attacks/Malware/Malware.md>), unpatched vulnerabilities, or misconfigurations that compromise the application or host.
 - ~~× They automatically encrypt all data stored within the container, making it inaccessible.~~
 - ~~× They will always cause the entire host operating system to crash immediately.~~
-- ~~× They require significantly more computational resources than trusted [Images](../Terminology/Virtualization/Virtualization Hardening & Operations/Image.md).~~
+- ~~× They require significantly more computational resources than trusted [Images](<../Terminology/Virtualization/Virtualization Hardening & Operations/Image.md>).~~
 
 > Which of the following are crucial mitigation strategies for enhancing [Virtualisation](<../Terminology/Virtualization/Virtualization.md>) security? (Select all that apply)
 - ✓ Implementing strong [Access Control](../Terminology/Defense & Control/Access Control.md) and Multi-Factor Authentication for management interfaces.
@@ -194,17 +194,17 @@ date modified: Wednesday, 10. December 2025, 22:12
   - ~~×The specific set of antivirus software installed on the machine.~~
   - ~~×The database where the OS stores user passwords.~~
 
-> What is the primary architectural difference between the [Kernel](../Terminology/Systems & Plaforms/Kernel.md) and User Space?
-  - ~~×The [Kernel](../Terminology/Systems & Plaforms/Kernel.md) runs in Ring 3, while User Space runs in Ring 0.~~
-  - ✓ The [Kernel](../Terminology/Systems & Plaforms/Kernel.md) has direct access to hardware instructions and memory, while User Space runs in a restricted mode.
-  - ~~×The [Kernel](../Terminology/Systems & Plaforms/Kernel.md) is [POSIX](../Terminology/Systems & Plaforms/POSIX.md) compliant, but User Space is not.~~
+> What is the primary architectural difference between the [Kernel](<../Terminology/Systems & Plaforms/Kernel.md>) and User Space?
+  - ~~×The [Kernel](<../Terminology/Systems & Plaforms/Kernel.md>) runs in Ring 3, while User Space runs in Ring 0.~~
+  - ✓ The [Kernel](<../Terminology/Systems & Plaforms/Kernel.md>) has direct access to hardware instructions and memory, while User Space runs in a restricted mode.
+  - ~~×The [Kernel](<../Terminology/Systems & Plaforms/Kernel.md>) is [POSIX](<../Terminology/Systems & Plaforms/POSIX.md>) compliant, but User Space is not.~~
   - ~~×User Space processes are invisible to the Task Manager.~~
 
-> Which of the following statements about [POSIX](../Terminology/Systems & Plaforms/POSIX.md) are TRUE? (Select all that apply)
+> Which of the following statements about [POSIX](<../Terminology/Systems & Plaforms/POSIX.md>) are TRUE? (Select all that apply)
   - ✓ It defines a standard API (like `fork()` and `open()`) to ensure code portability between [Unix-Like](../Terminology/Systems & Plaforms/Unix-Like.md) systems.
   - ✓ It stands for [Portable Operating System Interface](../Terminology/Systems & Plaforms/POSIX.md).
   - ~~×Windows 10 is fully POSIX certified out of the box.~~
-  - ✓ macOS is a certified UNIX system and follows [POSIX](../Terminology/Systems & Plaforms/POSIX.md) standards.
+  - ✓ macOS is a certified UNIX system and follows [POSIX](<../Terminology/Systems & Plaforms/POSIX.md>) standards.
  
 > In the context of password storage, what is the purpose of “Salting”?
   - ~~×To encrypt the password so it can be decrypted later by the admin.~~
@@ -227,25 +227,25 @@ date modified: Wednesday, 10. December 2025, 22:12
 > What is the underlying mechanism that Meltdown and Spectre attacks exploit?
   - ✓ Speculative Execution in modern CPU hardware.
   - ~~×A bug in the Linux sudo command.~~
-  - ~~×An overflow in the [TCP](../Terminology/Networks/TCP IP Model/TCP.md)/[IP](../Terminology/Networks/TCP IP Model/IP.md) network stack.~~
+  - ~~×An overflow in the [TCP](<../Terminology/Networks/TCP IP Model/TCP.md>)/[IP](<../Terminology/Networks/TCP IP Model/IP.md>) network stack.~~
   - ~~×Weak permissions in the Windows Registry.~~
  
 > Why are Meltdown and Spectre considered “[Side-Channel](../Terminology/Virtualization/Side-Channel Attack.md)” attacks? (Select all that apply)
   - ~~×Because they exploit the physical voltage of the RAM.~~
-  - ✓ Because they allow a User Space process to infer the contents of [Kernel](../Terminology/Systems & Plaforms/Kernel.md) Space memory.
+  - ✓ Because they allow a User Space process to infer the contents of [Kernel](<../Terminology/Systems & Plaforms/Kernel.md>) Space memory.
   - ✓ Because they do not read memory directly, but infer data based on timing differences in CPU Cache access.
   - ~~×Because they enter the system via the USB port (the side of the laptop).~~
  
 > If a binary file `/usr/bin/program` has the SUID bit set and is owned by root, what happens when a standard user executes it?
   - ✓ The program runs with the privileges of root (the file owner) for the duration of the process.
-  - ~~×The program is blocked by the [Kernel](../Terminology/Systems & Plaforms/Kernel.md) for security reasons.~~
+  - ~~×The program is blocked by the [Kernel](<../Terminology/Systems & Plaforms/Kernel.md>) for security reasons.~~
   - ~~×The program runs with the privileges of the standard user.~~
   - ~~×The user is prompted to enter the root password before it runs.~~
  
 > Why is the SUID bit a dangerous attack vector for Privilege Escalation? (Select all that apply)
   - ~~×It allows standard users to edit the `/etc/shadow` file directly using a text editor.~~
   - ✓ If the SUID program has a bug (like a [Buffer Overflow](../Terminology/Attacks/Buffer Overflow.md)), an attacker can trigger it to execute arbitrary code as Root.
-  - ~~×It disables the system [Firewall](../Terminology/Defense & Control/Firewall.md) while the program is running.~~
+  - ~~×It disables the system [Firewall](<../Terminology/Defense & Control/Firewall.md>) while the program is running.~~
   - ✓ Attackers can scan the file system (`find / -perm -4000`) to find these files and use them as entry points.
 
 ## Quiz 5 - Phishing and AI
@@ -257,7 +257,7 @@ date modified: Wednesday, 10. December 2025, 22:12
  
 > What is the primary limitation of using blocklists for phishing detection?
   - ~~×They consume too much processing power on the client side.~~
-  - ~~×They cannot handle [HTTPS](../Terminology/Networks/Transfer Protocols/HTTPS.md) traffic.~~
+  - ~~×They cannot handle [HTTPS](<../Terminology/Networks/Transfer Protocols/HTTPS.md>) traffic.~~
   - ~~×They generate too many false positives on legitimate websites.~~
   - ✓ Phishing sites are often taken down before or shortly after being listed, making the list useless.
  
@@ -294,7 +294,7 @@ date modified: Wednesday, 10. December 2025, 22:12
 > Under what condition is an adversarial attack against a logo detector most effective?
   - ~~×When the logo used is black and white.~~
   - ~~×When the attacker uses a Vision Transformer (ViT) and the defender uses a CNN.~~
-  - ~~×When the phishing page is hosted on [HTTPS](../Terminology/Networks/Transfer Protocols/HTTPS.md).~~
+  - ~~×When the phishing page is hosted on [HTTPS](<../Terminology/Networks/Transfer Protocols/HTTPS.md>).~~
   - ✓ When the attacker and defender use the exact same Deep Learning model.
 
 ## Quiz 6 - OSINT/OPSEC
@@ -311,7 +311,7 @@ date modified: Wednesday, 10. December 2025, 22:12
   - ~~×Reading the front page of the Wall Street Journal.~~
  
 > In a “Red Team” (offensive) scenario, how might an ethical hacker use OSINT before launching a simulated attack?
-  - ~~×By using a supercomputer to crack the company’s [Firewall](../Terminology/Defense & Control/Firewall.md) password through brute force.~~
+  - ~~×By using a supercomputer to crack the company’s [Firewall](<../Terminology/Defense & Control/Firewall.md>) password through brute force.~~
   - ~~×By sending a [Virus](<../Terminology/Attacks/Malware/Virus.md>) to the CEO immediately.~~
   - ✓ By analyzing the target company’s job postings to determine what antivirus software they use.
   - ~~×By physically breaking into the office to steal a laptop.~~
@@ -348,38 +348,38 @@ date modified: Wednesday, 10. December 2025, 22:12
  
 > Why is relying solely on “Incognito Mode” (or “Private Browsing”) insufficient for protecting an analyst’s identity during a high-risk investigation?
   - ~~×Incognito mode is illegal to use for government investigations.~~
-  - ✓ Incognito mode does not hide your [IP](../Terminology/Networks/TCP IP Model/IP.md) address from the website you are visiting.
+  - ✓ Incognito mode does not hide your [IP](<../Terminology/Networks/TCP IP Model/IP.md>) address from the website you are visiting.
   - ~~×Incognito mode prevents you from taking screenshots.~~
   - ~~×Incognito mode automatically blocks all foreign websites.~~
  
-> You are conducting an investigation inside a secure [Virtual Machine (VM)](../Terminology/Virtualization/Virtual Machine (VM).md). You decide to check your personal sports news feed in a separate tab within that same [VM](../Terminology/Virtualization/Virtual Machine (VM).md). Why is this a critical error?
+> You are conducting an investigation inside a secure [Virtual Machine (VM)](../Terminology/Virtualization/Virtual Machine (VM).md). You decide to check your personal sports news feed in a separate tab within that same [VM](<../Terminology/Virtualization/Virtual Machine (VM>).md). Why is this a critical error?
   - ~~×The sports website might be blocked by your VPN.~~
   - ~~×It violates the terms of service of the [Virtual Machine](../Terminology/Virtualization/Virtual Machine (VM).md) software.~~
   - ✓ If the sports site drops a tracking cookie, it could link your investigative session to your personal browsing habits.
   - ~~×It wastes computing power, slowing down the investigation.~~
 
 ## Quiz 7 - Network Security
-> In a [BGP](<../Terminology/Networks/BGP.md>) Hijacking attack, how does an attacker convince global [routers](../Terminology/Networks/Network hardware/Router.md) to send traffic to them instead of the legitimate victim?
+> In a [BGP](<../Terminology/Networks/BGP.md>) Hijacking attack, how does an attacker convince global [routers](<../Terminology/Networks/Network hardware/Router.md>) to send traffic to them instead of the legitimate victim?
   - ~~×By using [ARP](<../Terminology/Networks/ARP.md>) poisoning to fool the border gateway.~~
   - ~~×By advertising a shorter physical distance (cable length) to the destination.~~
-  - ~~×By flooding the [BGP](<../Terminology/Networks/BGP.md>) [routers](../Terminology/Networks/Network hardware/Router.md) with “Hello” packets until they crash.~~
-  - ✓ By advertising a more specific [IP](../Terminology/Networks/TCP IP Model/IP.md) range (a longer subnet mask) than the victim.
+  - ~~×By flooding the [BGP](<../Terminology/Networks/BGP.md>) [routers](<../Terminology/Networks/Network hardware/Router.md>) with “Hello” packets until they crash.~~
+  - ✓ By advertising a more specific [IP](<../Terminology/Networks/TCP IP Model/IP.md>) range (a longer subnet mask) than the victim.
  
-> You suspect a [Router](../Terminology/Networks/Network hardware/Router.md) halfway between your computer and a server is malfunctioning. Which command-line tool helps you identify the exact hop where the connection is failing?
+> You suspect a [Router](<../Terminology/Networks/Network hardware/Router.md>) halfway between your computer and a server is malfunctioning. Which command-line tool helps you identify the exact hop where the connection is failing?
   - ~~×ip route~~
   - ~~×ping~~
   - ~~×netstat~~
   - ✓ traceroute / tracert
  
-> If you are configuring a standard Packet Filtering [Firewall](../Terminology/Defense & Control/Firewall.md), which of the following pieces of information can you use to create a rule? (Select all that apply)
+> If you are configuring a standard Packet Filtering [Firewall](<../Terminology/Defense & Control/Firewall.md>), which of the following pieces of information can you use to create a rule? (Select all that apply)
   - ~~×The specific SQL query inside the database packet.~~
-  - ✓ The Source [IP](../Terminology/Networks/TCP IP Model/IP.md) Address.
+  - ✓ The Source [IP](<../Terminology/Networks/TCP IP Model/IP.md>) Address.
   - ~~×The URL the user is trying to visit (e.g., www.malware.com).~~
-  - ✓ The Transport Protocol ([TCP](../Terminology/Networks/TCP IP Model/TCP.md), [UDP](<../Terminology/Networks/UDP.md>), or ICMP).
+  - ✓ The Transport Protocol ([TCP](<../Terminology/Networks/TCP IP Model/TCP.md>), [UDP](<../Terminology/Networks/UDP.md>), or ICMP).
   - ✓ The Destination Port Number.
  
 > When a computer needs to communicate with another device on the same local network segment, which address type is required for the final delivery of the frame?
-  - ~~×The Logical Address ([IP](../Terminology/Networks/TCP IP Model/IP.md) Address).~~
+  - ~~×The Logical Address ([IP](<../Terminology/Networks/TCP IP Model/IP.md>) Address).~~
   - ~~×The Port Number (e.g., 80).~~
   - ~~×The [Autonomous System](<../Terminology/Networks/AS.md>) Number (ASN).~~
   - ✓ The Physical Address ([MAC](<../Terminology/Networks/MAC.md>) Address).
@@ -391,12 +391,12 @@ date modified: Wednesday, 10. December 2025, 22:12
   - ~~×NAT allows external attackers to see the internal network topology clearly.~~
  
 > You are analyzing a legacy network device. You observe that when a packet enters one port, the device blindly copies that packet and transmits it out of every other port, regardless of the destination. What type of device is this, and what is the more efficient modern alternative?
-  - ~~×It is a [Router](../Terminology/Networks/Network hardware/Router.md); it should be replaced with a Gateway.~~
-  - ✓ It is a [Hub](../Terminology/Networks/Network hardware/Hub.md); it should be replaced with a [Switch](../Terminology/Networks/Network hardware/Switch.md).
-  - ~~×It is a Bridge; it should be replaced with a [Hub](../Terminology/Networks/Network hardware/Hub.md).~~
-  - ~~×It is a [Switch](../Terminology/Networks/Network hardware/Switch.md); it should be replaced with a [Router](../Terminology/Networks/Network hardware/Router.md).~~
+  - ~~×It is a [Router](<../Terminology/Networks/Network hardware/Router.md>); it should be replaced with a Gateway.~~
+  - ✓ It is a [Hub](<../Terminology/Networks/Network hardware/Hub.md>); it should be replaced with a [Switch](<../Terminology/Networks/Network hardware/Switch.md>).
+  - ~~×It is a Bridge; it should be replaced with a [Hub](<../Terminology/Networks/Network hardware/Hub.md>).~~
+  - ~~×It is a [Switch](<../Terminology/Networks/Network hardware/Switch.md>); it should be replaced with a [Router](<../Terminology/Networks/Network hardware/Router.md>).~~
  
-> A “BadUSB” attack (such as a Rubber Ducky) bypasses [Firewall](../Terminology/Defense & Control/Firewall.md) restrictions and antivirus checks by identifying itself to the [Operating System](<../Terminology/Systems & Plaforms/Operating System.md>) as which type of device?
+> A “BadUSB” attack (such as a Rubber Ducky) bypasses [Firewall](<../Terminology/Defense & Control/Firewall.md>) restrictions and antivirus checks by identifying itself to the [Operating System](<../Terminology/Systems & Plaforms/Operating System.md>) as which type of device?
   - ~~×A Network Interface Card.~~
   - ~~×A Mass Storage Device (Flash Drive).~~
   - ~~×A Biometric Scanner.~~
@@ -450,7 +450,7 @@ date modified: Wednesday, 10. December 2025, 22:12
 > Which of the following is the most effective defense against [SQL Injection](../Terminology/Web Security/SQL Injection (SQLi).md) vulnerabilities?
   - ~~×Hiding the database schema from the public.~~
   - ✓ Using Prepared Statements (Parameterized Queries).
-  - ~~×Encrypting the database connection ([HTTPS](../Terminology/Networks/Transfer Protocols/HTTPS.md)).~~
+  - ~~×Encrypting the database connection ([HTTPS](<../Terminology/Networks/Transfer Protocols/HTTPS.md>)).~~
   - ~~×Implementing client-side JavaScript validation.~~
  
 > An attacker successfully exploits a [Cross-Site Scripting](<../Terminology/Attacks/XSS.md>) (XSS) vulnerability on a banking website. What is the most likely immediate consequence?
@@ -487,13 +487,13 @@ date modified: Wednesday, 10. December 2025, 22:12
 ## Quiz 9 - GenAI Security
 
 > From an architectural perspective, why do standard sanitization methods (like Regex filtering) often fail to prevent [Prompt Injection](../Terminology/Artifical Intelligence/Prompt Injection.md)?
-  - ~~×The model’s parameters are encrypted in transit, preventing the [Firewall](../Terminology/Defense & Control/Firewall.md) from inspecting the payload.~~
-  - ~~×[LLMs](../Terminology/Artifical Intelligence/LLM.md) process inputs as continuous signals rather than individual text strings, bypassing text filters.~~
+  - ~~×The model’s parameters are encrypted in transit, preventing the [Firewall](<../Terminology/Defense & Control/Firewall.md>) from inspecting the payload.~~
+  - ~~×[LLMs](<../Terminology/Artifical Intelligence/LLM.md>) process inputs as continuous signals rather than individual text strings, bypassing text filters.~~
   - ✓ The system uses “in-band” signaling, where user data and developer instructions share the same communication channel.
   - ~~×Sanitization libraries are incompatible with the GPU hardware used for inference.~~
  
 
-> When we say an [LLM](../Terminology/Artifical Intelligence/LLM.md) processes “Tokens,” what data structure are we actually referring to?
+> When we say an [LLM](<../Terminology/Artifical Intelligence/LLM.md>) processes “Tokens,” what data structure are we actually referring to?
   - ~~×A high-dimensional vector (embedding) containing floating-point coordinates.~~
   - ✓ A discrete integer that maps to a specific sub-word unit in the model’s vocabulary.
   - ~~×A JSON object containing the user’s session metadata and API keys.~~
@@ -521,7 +521,7 @@ date modified: Wednesday, 10. December 2025, 22:12
  
 
 > How does “AI Package Hallucination” differ from traditional “Typosquatting”?
-  - ~~×Typosquatting is manual; Package Hallucination is the result of a [Virus](<../Terminology/Attacks/Malware/Virus.md>) inside the [LLM](../Terminology/Artifical Intelligence/LLM.md).~~
+  - ~~×Typosquatting is manual; Package Hallucination is the result of a [Virus](<../Terminology/Attacks/Malware/Virus.md>) inside the [LLM](<../Terminology/Artifical Intelligence/LLM.md>).~~
   - ~~×Typosquatting targets compiled languages; Package Hallucination only targets interpreted languages.~~
   - ~~×Typosquatting relies on user spelling errors; Package Hallucination relies on the AI compromising the NPM registry database.~~
   - ✓ Typosquatting relies on human error; Package Hallucination exploits the probabilistic nature of the model.
@@ -596,7 +596,7 @@ date modified: Wednesday, 10. December 2025, 22:12
   - ~~×The [Operating System](<../Terminology/Systems & Plaforms/Operating System.md>) detected a hacker.~~
   - ~~×The buffer is full.~~
  
-> In [Pwntools](../Terminology/Binary Exploitation/Pwntools.md), what does the line `p = process("./vuln")` do?
+> In [Pwntools](<../Terminology/Binary Exploitation/Pwntools.md>), what does the line `p = process("./vuln")` do?
   - ~~×Compiles the exploit~~
   - ~~×Downloads the binary~~
   - ✓ Starts the vulnerable program locally and gives you an interface to interact with it
@@ -633,7 +633,7 @@ date modified: Wednesday, 10. December 2025, 22:12
   - ~~×Open Design~~
   - ✓ Least Privilege
  
-> A [Firewall](../Terminology/Defense & Control/Firewall.md) is configured to block all incoming traffic by default, and the administrator manually adds rules to allow specific connections. Which principle is being applied?
+> A [Firewall](<../Terminology/Defense & Control/Firewall.md>) is configured to block all incoming traffic by default, and the administrator manually adds rules to allow specific connections. Which principle is being applied?
   - ~~×Least Privilege~~
   - ~~×Complete Mediation~~
   - ~~×Psychological Acceptability~~
@@ -641,7 +641,7 @@ date modified: Wednesday, 10. December 2025, 22:12
  
 > Which of the following best describes “[Defense in Depth](../Terminology/Defense & Control/Defense in Depth.md)”?
   - ~~×Moving all critical data to an air-gapped server.~~
-  - ~~×Relying on a single, mathematically unbreakable [Firewall](../Terminology/Defense & Control/Firewall.md).~~
+  - ~~×Relying on a single, mathematically unbreakable [Firewall](<../Terminology/Defense & Control/Firewall.md>).~~
   - ~~×The practice of attacking your own network to find flaws.~~
   - ✓ Layering multiple security controls so that if one fails, another mitigates the threat.
  
@@ -665,16 +665,16 @@ date modified: Wednesday, 10. December 2025, 22:12
   - ✓ NIS2 Directive
  
 > A business determines that in the event of a database crash, they cannot afford to lose more than 15 minutes of data transactions. This metric is known as the:
-  - ✓ [RPO](../Terminology/Defense & Control/Recovery Point Objective (RPO).md) (Recovery Point Objective)
+  - ✓ [RPO](<../Terminology/Defense & Control/Recovery Point Objective (RPO>).md) (Recovery Point Objective)
   - ~~×MTBF (Mean Time Between Failures)~~
   - ~~×SLA (Service Level Agreement)~~
-  - ~~×[RTO](../Terminology/Defense & Control/Recovery Time Objective (RTO).md) (Recovery Time Objective)~~
+  - ~~×[RTO](<../Terminology/Defense & Control/Recovery Time Objective (RTO>).md) (Recovery Time Objective)~~
  
 > Why is the “[Castle and Moat](../Terminology/Defense & Control/Castle and Moat security model.md)” perimeter model considered outdated in favor of “[Zero Trust](../Terminology/Defense & Control/Zero Trust Architecture.md)”?
   - ✓ Cloud computing and remote work mean there is no longer a clearly defined “inside” of the network.
   - ~~× The “[Castle and Moat](../Terminology/Defense & Control/Castle and Moat security model.md)” model does not support encryption.~~
-  - ~~× [Zero Trust](../Terminology/Defense & Control/Zero Trust Architecture.md) is cheaper to implement than a perimeter [Firewall](../Terminology/Defense & Control/Firewall.md).~~
-  - ~~× [Firewalls](../Terminology/Defense & Control/Firewall.md) are no longer effective against viruses.~~
+  - ~~× [Zero Trust](../Terminology/Defense & Control/Zero Trust Architecture.md) is cheaper to implement than a perimeter [Firewall](<../Terminology/Defense & Control/Firewall.md>).~~
+  - ~~× [Firewalls](<../Terminology/Defense & Control/Firewall.md>) are no longer effective against viruses.~~
 
 ## Quiz 12 - Information Warfare
 > What was “Wellington House” during World War I?
@@ -740,7 +740,7 @@ date modified: Wednesday, 10. December 2025, 22:12
 ## Quiz 13 - Data Privacy
 > What is the fundamental distinction between Privacy and Security?
   - ✓ Privacy asks “Who has the right to access personal data?”; Security asks “How do we enforce authorized access?”
-  - ~~×Privacy deals with encryption standards; Security deals with [Firewall](../Terminology/Defense & Control/Firewall.md) configurations.~~
+  - ~~×Privacy deals with encryption standards; Security deals with [Firewall](<../Terminology/Defense & Control/Firewall.md>) configurations.~~
   - ~~×Privacy is a technical implementation; Security is a legal requirement.~~
   - ~~×Privacy protects public spaces; Security protects private homes.~~
  

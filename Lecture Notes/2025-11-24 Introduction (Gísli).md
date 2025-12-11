@@ -13,7 +13,7 @@ date modified: Thursday, 11. December 2025, 09:12
 ### Course contents:
 
 - Linux + Windows CLI tools.
-- [OS](Operating System.md) basics ([access control](../Terminology/Defense & Control/Access Control)).
+- [OS](<../Terminology/Systems & Plaforms/Operating System.md>) basics ([access control](<../Terminology/Defense & Control/Access Control.md>)).
 - Networking basics.
 - [Virtualization](<../Terminology/Virtualization/Virtualization.md>).
     - Some of the labs we’ll be doing will be on virtual machines and stuff.
@@ -77,7 +77,7 @@ Computer architecture.
 
 ## Main lecture
 
-### The problem: [attack surface](../Terminology/Attack Surface)
+### The problem: [attack surface](<../Terminology/Attack Surface.md>)
 
 - Definition: “The sum of all potential vulnerabilities in a system where an attacker could try to subvert the intended purpose of the system and organization or person who is using it.”
     - E.g., they could obtain physical access, access via a public network, or access to online backups of your computer.
@@ -94,13 +94,13 @@ Computer architecture.
 ### What are the real risks?
 
 - Assume:
-    - Secure machine, all [port](../Terminology/Systems & Plaforms/Port)s closed.
-    - Local [firewall](../Terminology/Defense & Control/Firewall) enabled.
+    - Secure machine, all [port](<../Terminology/Systems & Plaforms/Port.md>)s closed.
+    - Local [firewall](<../Terminology/Defense & Control/Firewall.md>) enabled.
     - all software updates applied
 - There are still risks:
     - Inadvertent virus introduction (email, USB, evil website, [Trojan](<../Terminology/Attacks/Malware/Trojan.md>) software)
     - Unpatched software versions
-    - Zero-day exploit in an [OS](Operating System.md) or a network application.
+    - Zero-day exploit in an [OS](<../Terminology/Systems & Plaforms/Operating System.md>) or a network application.
         - An exploit in the software that can be used to gain access to the system, but there is no fix for it yet.
     - Web browser malware.
     - Hardware [backdoor](<../Terminology/Attacks/Backdoor.md>) (Intel Management System)
@@ -161,7 +161,7 @@ Every computer professional should be doing it this way anyway.
 - [Ransomware](<../Terminology/Attacks/Malware/Ransomware.md>)
 - Masquerade as a victim
 - Add files - poison web cache
-- [Corporate espionage](../Terminology/Attacks/Corporate Espionage)
+- [Corporate espionage](<../Terminology/Attacks/Corporate Espionage.md>)
 - Information warfare
 
 ### Computer security evolution
@@ -196,7 +196,7 @@ The attacks:
     - **Impact:** Displayed the message: “I’m the creeper, catch me if you can!” on infected systems. It was not malicious and did not cause harm to the systems. Could only have affect about 28 machines in total.
     - **Weaknesses used:** Exploited vulnerabilities in ARPANET’s TENEX operating system.
 - Morris Worm (1988)
-    - **How it worked:** Exploited vulnerabilities in the debug mode of Unix sendmail, a [buffer overflow](../Terminology/Attacks/Buffer Overflow) [vulnerability](<../Terminology/Vulnerability.md>) in the “finger” network service, and he transitive trust enabled by people setting up network [logins](https://en.wikipedia.org/wiki/Login) with no [password](https://en.wikipedia.org/wiki/Password) requirements via [remote execution](https://en.wikipedia.org/wiki/Berkeley_r-commands) (rexec) with [Remote Shell](https://en.wikipedia.org/wiki/Remote_Shell) (rsh), termed “rexec/rsh”, as well as weak passwords
+    - **How it worked:** Exploited vulnerabilities in the debug mode of Unix sendmail, a [buffer overflow](../Terminology/Attacks/Buffer Overflow) [vulnerability](<../Terminology/Vulnerability.md>) in the “finger” network service, and he transitive trust enabled by people setting up network [logins](<https://en.wikipedia.org/wiki/Login>) with no [password](<https://en.wikipedia.org/wiki/Password>) requirements via [remote execution](https://en.wikipedia.org/wiki/Berkeley_r-commands) (rexec) with [Remote Shell](https://en.wikipedia.org/wiki/Remote_Shell) (rsh), termed “rexec/rsh”, as well as weak passwords
     - **Impact:**
     - **Weaknesses used:**
 - Vladimir Levin stole $10 million USD from Citibank (1994)
@@ -225,7 +225,7 @@ The attacks:
 - Check the security of your own system.
 - Useful resources:
     - [https://nvd.nist.gov](https://nvd.nist.gov/) (US) National Vulnerability Database
-    - [https://www.cve.org](https://www.cve.org/), [https://www.cvedetails.com](https://www.cvedetails.com/) Maintains a searchable database of [CVE](../Terminology/Vulnerability standards/CVE)s (Common Vulnerabilities and Exposures).
+    - [https://www.cve.org](https://www.cve.org/), [https://www.cvedetails.com](https://www.cvedetails.com/) Maintains a searchable database of [CVE](<../Terminology/Vulnerability standards/CVE.md>)s (Common Vulnerabilities and Exposures).
         - Sponsored by the US Dept. of Homeland Security.
         - Restricted to publicised vulnerabilities.
     - [https://www.exploit-db.com](https://www.exploit-db.com/) Public open source database of vulnerabilities

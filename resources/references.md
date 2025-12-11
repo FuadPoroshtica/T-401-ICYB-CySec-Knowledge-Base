@@ -28,11 +28,11 @@ A curated list of cybersecurity resources, references, and learning materials.
 ## Learning Platforms
 
 ### Free Resources
-- [Cybrary](https://www.cybrary.it/)
-- [TryHackMe](https://tryhackme.com/)
+- [Cybrary](<https://www.cybrary.it/>)
+- [TryHackMe](<https://tryhackme.com/>)
 - [Hack The Box Academy](https://academy.hackthebox.com/)
-- [OverTheWire](https://overthewire.org/wargames/)
-- [PentesterLab](https://pentesterlab.com/)
+- [OverTheWire](<https://overthewire.org/wargames/>)
+- [PentesterLab](<https://pentesterlab.com/>)
 
 ### Certification Preparation
 - CompTIA Security+

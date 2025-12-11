@@ -11,7 +11,7 @@ TLS provides several key security features, including:
 - **Encryption:** TLS encrypts data transmitted between a client and server, ensuring that sensitive information remains confidential and protected from eavesdropping.
 - **Integrity:** TLS uses message authentication codes (MACs) to ensure that data has not been tampered with during transmission.
 - **Authentication:** TLS supports the use of digital certificates to authenticate the identity of the server (and optionally the client), helping to prevent man-in-the-middle attacks.
-TLS is commonly used in conjunction with other protocols, such as [HTTPS](Transfer Protocols/HTTPS.md) for secure web browsing, FTPS for secure file transfers, and [SMTP](Transfer Protocols/SMTP.md) for secure email communication.
+TLS is commonly used in conjunction with other protocols, such as [HTTPS](<./Transfer Protocols/HTTPS.md>) for secure web browsing, FTPS for secure file transfers, and [SMTP](<./Transfer Protocols/SMTP.md>) for secure email communication.
 Overall, TLS is a critical component of modern internet security, providing a secure foundation for online communication and data exchange.
 
 ## TLS Handshake

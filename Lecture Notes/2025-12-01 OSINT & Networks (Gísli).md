@@ -78,7 +78,7 @@ A VPN (Virtual Private Network) can also hide your traffic.
 
 You should protect your hardware and software. Make sure your own system is safe. Like running it on a VM.
 
-There are even OSes for this, like Tails [OS](Operating System.md). It’s an “amnesiac system”, it clears everything after you’re done.
+There are even OSes for this, like Tails [OS](<../Terminology/Systems & Plaforms/Operating System.md>). It’s an “amnesiac system”, it clears everything after you’re done.
 
 You could hide your location with a VPN, Tor (The Onion Router) or by using a public Wi-Fi.
 
@@ -168,7 +168,7 @@ A home router is actually much more than just a router. It typically combines mu
 - Router.
 - NAT (Network Address Translation).
     - NAT is for sharing a *single* public IP address among *multiple* devices on a local network. What it does is that it translates the private IP addresses of devices on the local network to the public IP address when they access the internet, and vice versa for incoming traffic.
-- [Firewall](../Terminology/Defense & Control/Firewall) (basic security features).
+- [Firewall](<../Terminology/Defense & Control/Firewall.md>) (basic security features).
 
 **Backbone routers:**
 - These are high-capacity routers that form the core of the internet.
@@ -284,7 +284,7 @@ Between these addresses there exist mappings:
 
 *Problem: Which application on the destination device should receive the packet?Solution: Ports ([Transport Layer](../Terminology/Networks/OSI Model/4-Transport Layer.md)).*
 
-- Well known ports: 0-1023 (e.g., [HTTP](../Terminology/Networks/Transfer Protocols/HTTP.md): 80, HTTPS: 443, FTP: 21, SSH: 22).
+- Well known ports: 0-1023 (e.g., [HTTP](<../Terminology/Networks/Transfer Protocols/HTTP.md>): 80, HTTPS: 443, FTP: 21, SSH: 22).
 - Ephemeral ports: randomly assigned ports for temporary communication (1024-65535) for client apps (e.g., your browser tab).
 - Sockets: IP Address + Port number = Unique connection identifier. (E.g., `192.168.1.1:80` for a web server.)
 

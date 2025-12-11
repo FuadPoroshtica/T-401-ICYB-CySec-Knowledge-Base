@@ -89,7 +89,7 @@ Responsible for providing network services directly to end-users and application
 
 Various protocols operate at this layer, including:
 
-- [HTTP](../Terminology/Networks/Transfer Protocols/HTTP.md) and [HTTPS](../Terminology/Networks/Transfer Protocols/HTTPS.md) (we should be aware of the difference between them)
+- [HTTP](<../Terminology/Networks/Transfer Protocols/HTTP.md>) and [HTTPS](<../Terminology/Networks/Transfer Protocols/HTTPS.md>) (we should be aware of the difference between them)
     - These are the protocols used for web browsing.
 - [TLS](<../Terminology/Networks/TLS.md>) for CIA (Confidentiality, Integrity, Availability) [TLS](<../Terminology/Networks/TLS.md>)
     - Provides encryption and secure communication over a network.
@@ -100,19 +100,19 @@ Various protocols operate at this layer, including:
     - Translates human-readable domain names (like `www.example.com`) into IP addresses that computers use to identify each other on the network.
 - [DHCP](<../Terminology/Networks/DHCP.md>) (Dynamic Host Configuration Protocol)
     - Automatically assigns IP addresses and other network configuration parameters to devices on a network, allowing them to communicate effectively.
-- Email: [SMTP](../Terminology/Networks/Transfer Protocols/SMTP.md), <abbr title="Internet Message Access Protocol">IMAP</abbr>, <abbr title="Post Office Protocol Version 3">POP3</abbr>
+- Email: [SMTP](<../Terminology/Networks/Transfer Protocols/SMTP.md>), <abbr title="Internet Message Access Protocol">IMAP</abbr>, <abbr title="Post Office Protocol Version 3">POP3</abbr>
     - [SMTP (Simple Mail Transfer Protocol)](../Terminology/Networks/Transfer Protocols/SMTP.md) is used for sending emails.
 	- <abbr title="Internet Message Access Protocol">IMAP</abbr> (Internet Message Access Protocol) and <abbr title="Post Office Protocol Version 3">POP3</abbr> (Post Office Protocol version 3) are used for retrieving emails from a mail server.
 	- <abbr title="Post Office Protocol Version 3">POP3</abbr> downloads the email to the local device and usually deletes it from the server, while <abbr title="Internet Message Access Protocol">IMAP</abbr> allows users to view and manage their emails directly on the server, keeping them synchronized across multiple devices.
-- File sharing/file transfer: [FTP](../Terminology/Networks/Transfer Protocols/FTP.md), <abbr title="SSH File Transfer Protocol">SFTP</abbr>, <abbr title="Server Message Block">SMB</abbr>
-	- [FTP](../Terminology/Networks/Transfer Protocols/FTP.md) (File Transfer Protocol) is used for transferring files between a client and server on a network. It is not secure as it transmits data in plaintext.
+- File sharing/file transfer: [FTP](<../Terminology/Networks/Transfer Protocols/FTP.md>), <abbr title="SSH File Transfer Protocol">SFTP</abbr>, <abbr title="Server Message Block">SMB</abbr>
+	- [FTP](<../Terminology/Networks/Transfer Protocols/FTP.md>) (File Transfer Protocol) is used for transferring files between a client and server on a network. It is not secure as it transmits data in plaintext.
 	- SFTP (<abbr title="Secure Shell">SSH</abbr> File Transfer Protocol) is a secure version of [FTP](<../Terminology/Networks/Transfer Protocols/FTP.md>) that uses <abbr title="Secure Shell">SSH</abbr> to encrypt the data transfer.
 	- <abbr title="Server Message Block">SMB</abbr> (Server Message Block) is a network file sharing protocol that allows applications and users to read and write to files and request services from server programs in a computer network. It is commonly used in Windows environments.
 
 ## Network Security
-- [Firewall](../Terminology/Defense & Control/Firewall.md) (packet filter)
-    - What the [Firewall](../Terminology/Defense & Control/Firewall.md) actually does is that it filters packets based on rules.
-    - The definition of a [Firewall](../Terminology/Defense & Control/Firewall.md) is: “A network security device that monitors and filters incoming and outgoing network traffic based on an organization’s previously established security policies.”
+- [Firewall](<../Terminology/Defense & Control/Firewall.md>) (packet filter)
+    - What the [Firewall](<../Terminology/Defense & Control/Firewall.md>) actually does is that it filters packets based on rules.
+    - The definition of a [Firewall](<../Terminology/Defense & Control/Firewall.md>) is: “A network security device that monitors and filters incoming and outgoing network traffic based on an organization’s previously established security policies.”
     - It can block or allow traffic based on IP addresses, ports, protocols, etc.
 - <abbr title="Virtual Private Network">VPN</abbr> (Virtual Private Network)
 	- A <abbr title="Virtual Private Network">VPN</abbr> creates a secure, encrypted connection over a less secure network, such as the internet. It allows users to send and receive data as if their devices were directly connected to a private network.
@@ -120,7 +120,7 @@ Various protocols operate at this layer, including:
 
 # Operating System
 ## What is an [OS](<../Terminology/Systems & Plaforms/Operating System.md>)?
-- Know the difference between the [Kernel](../Terminology/Systems & Plaforms/Kernel.md) and user space.
+- Know the difference between the [Kernel](<../Terminology/Systems & Plaforms/Kernel.md>) and user space.
 - Core functionality
     - Abstracton from raw hardware interfaces. E.g., instead of having to know how to talk to a hard drive, you can just use file system calls.
     - Arbitration / Resource management for multiple processes/users. Essentially deciding who gets to use what resources when.
@@ -174,8 +174,8 @@ What types we need to know for the exam:
 
 - Different types:
 	- [Hypervisor](<../Terminology/Virtualization/Hypervisor.md>) / [Virtual Machine](../Terminology/Virtualization/Virtual Machine (VM).md)
-	- [Container](../Terminology/Virtualization/Virtualization methods/Container.md) (e.g., Docker)
-	- [Emulation](../Terminology/Virtualization/Virtualization methods/Emulation.md)
+	- [Container](<../Terminology/Virtualization/Virtualization methods/Container.md>) (e.g., Docker)
+	- [Emulation](<../Terminology/Virtualization/Virtualization methods/Emulation.md>)
 - ... offer different
 	- Isolation from each other,
 	- Separation from the host,
@@ -231,7 +231,7 @@ Client-Side:
     - [Broken Authentication](../Terminology/Web Security/Broken Authentication.md) refers to vulnerabilities in the authentication mechanisms of a web application that allow attackers to compromise user accounts or gain unauthorized access. This can occur due to weak password policies, session management flaws, or inadequate protection of authentication credentials.
     - *Mitigation*: Mitigation techniques include implementing strong password policies, using multi-factor authentication, securely managing sessions, and regularly reviewing authentication mechanisms for vulnerabilities.
 - [Cross-Site Scripting (XSS)](<../Terminology/Attacks/XSS.md>)
-⇒ [OWASP](../Terminology/Web Security/OWASP.md) Top-Ten
+⇒ [OWASP](<../Terminology/Web Security/OWASP.md>) Top-Ten
 The main problem with “Vibe Coding” is that it encourages developers to write code quickly without actually understanding it or considering security implications.
 
 # AI

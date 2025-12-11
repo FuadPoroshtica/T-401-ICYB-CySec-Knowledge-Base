@@ -6,7 +6,7 @@ date modified: Thursday, 11. December 2025, 09:12
 
 # 7-Application Layer
 
-The **Application Layer** is the seventh and highest layer in the [OSI Model](OSI Model.md) of computer networking. It is responsible for providing network services directly to end-user applications. The Application Layer facilitates communication between software applications and the underlying network, enabling users to access network resources and serThe AppThe Application Layer encompasses a wide range of protocols and services, including [HTTP](../Transfer Protocols/HTTP.md) for web browsing, [FTP](../Transfer Protocols/FTP.md) for file transfers, [SMTP](../Transfer Protocols/SMTP.md) for email communication, and [DNS](<../DNS.md>) for domain name resolution.
+The **Application Layer** is the seventh and highest layer in the [OSI Model](OSI Model.md) of computer networking. It is responsible for providing network services directly to end-user applications. The Application Layer facilitates communication between software applications and the underlying network, enabling users to access network resources and serThe AppThe Application Layer encompasses a wide range of protocols and services, including [HTTP](<../Transfer Protocols/HTTP.md>) for web browsing, [FTP](<../Transfer Protocols/FTP.md>) for file transfers, [SMTP](<../Transfer Protocols/SMTP.md>) for email communication, and [DNS](<../DNS.md>) for domain name resolution.
 
 The Application Layer also handles various functions such as resource sharing, remote file access, and network management. It provides an interface for applications to interact with the network, allowing users to perform tasks such as sending emails, browsing the web, and transferring files.
 

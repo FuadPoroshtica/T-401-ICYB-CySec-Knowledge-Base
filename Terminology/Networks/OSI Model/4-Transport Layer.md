@@ -28,7 +28,7 @@ The Transport Layer works closely with the [Network Layer](3-Network Layer.md) t
 	- **SYN-ACK**: Server responds with a SYN-ACK packet to acknowledge the receipt of the SYN and to indicate its willingness to establish a connection.
 	- **ACK**: Client sends an ACK packet back to the server to acknowledge the receipt of the SYN-ACK, completing the handshake.
 - Guarnteed delivery, in-order delivery, flow control, congestion control.
-- Use cases: Web browsing ([HTTP](../Transfer Protocols/HTTP.md)/[HTTPS](../Transfer Protocols/HTTPS.md)), email ([SMTP](../Transfer Protocols/SMTP.md), IMAP), file transfer ([FTP](../Transfer Protocols/FTP.md)). For when *reliable* delivery is more important than *fast* delivery.
+- Use cases: Web browsing ([HTTP](<../Transfer Protocols/HTTP.md>)/[HTTPS](<../Transfer Protocols/HTTPS.md>)), email ([SMTP](<../Transfer Protocols/SMTP.md>), IMAP), file transfer ([FTP](<../Transfer Protocols/FTP.md>)). For when *reliable* delivery is more important than *fast* delivery.
 
 **Possible attacks:**
 - **TCP SYN Flood**: An attacker sends a large number of SYN requests to a target server, but never finishes the handshake by sending the final ACK. This leaves the server with many half-open connections, consuming resources and potentially leading to a denial of service (DoS) for legitimate users.

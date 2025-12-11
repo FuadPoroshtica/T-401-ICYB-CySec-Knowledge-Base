@@ -12,7 +12,7 @@ It is responsible for the logical addressing and routing of data packets across 
 
 The Network Layer determines the best path for data to travel from the source to the destination, taking into account factors such as network congestion, link costs, and policies.
 
-It uses logical addresses, such as [IP](../TCP IP Model/IP.md) addresses, to identify devices on the network and facilitate communication between them.
+It uses logical addresses, such as [IP](<../TCP IP Model/IP.md>) addresses, to identify devices on the network and facilitate communication between them.
 
 The Network Layer also handles packet fragmentation and reassembly, ensuring that large data packets are broken down into smaller segments for transmission and then reassembled at the destination.
 

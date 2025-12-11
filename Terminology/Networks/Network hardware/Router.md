@@ -15,8 +15,8 @@ A home router is actually much more than just a router. It typically combines mu
 - Wireless access point (for Wi-Fi).
 - Router.
 - NAT (Network Address Translation).
-    - NAT is for sharing a *single* public [IP](../TCP IP Model/IP.md) address among *multiple* devices on a local network. What it does is that it translates the private [IP](../TCP IP Model/IP.md) addresses of devices on the local network to the public [IP](../TCP IP Model/IP.md) address when they access the internet, and vice versa for incoming traffic.
-- [Firewall](../Terminology/Defense & Control/Firewall) (basic security features).
+    - NAT is for sharing a *single* public [IP](<../TCP IP Model/IP.md>) address among *multiple* devices on a local network. What it does is that it translates the private [IP](<../TCP IP Model/IP.md>) addresses of devices on the local network to the public [IP](<../TCP IP Model/IP.md>) address when they access the internet, and vice versa for incoming traffic.
+- [Firewall](<../Terminology/Defense & Control/Firewall>) (basic security features).
 
 **Backbone routers:**
 - These are high-capacity routers that form the core of the internet.
