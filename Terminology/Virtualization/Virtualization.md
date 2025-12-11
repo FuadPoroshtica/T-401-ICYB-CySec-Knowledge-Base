@@ -6,15 +6,15 @@ date modified: Thursday, 11. December 2025, 09:12
 
 # Virtualization
 
-[Host Machine / Host OS](Virtualization/Host%20Machine%20Host%20OS.md)
+[Host Machine (Host OS)](Host%20Machine%20(Host%20OS).md)
 
 [Virtual Machine (VM)](Virtual%20Machine%20(VM).md)
 
 [Hypervisor](Hypervisor.md)
 
-[Virtualization methods](Virtualization/Virtualization%20methods.md)
+[Virtualization methods](Virtualization%20methods/Virtualization%20methods.md)
 
-[Virtualization Hardening & Operations](Virtualization/Virtualization%20Hardening%20&%20Operations.md)
+[Virtualization Hardening & Operations](Virtualization%20Hardening%20&%20Operations/Virtualization%20Hardening%20&%20Operations.md)
 
 ---
 

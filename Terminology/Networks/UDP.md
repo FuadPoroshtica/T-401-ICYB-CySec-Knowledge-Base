@@ -6,7 +6,7 @@ date modified: Thursday, 11. December 2025, 09:12
 
 # UDP
 
-The **User Datagram Protocol (UDP)** is a communication protocol used across the Internet for time-sensitive transmissions such as video playback or [DNS](/DNS) lookups.
+The **User Datagram Protocol (UDP)** is a communication protocol used across the Internet for time-sensitive transmissions such as video playback or [DNS](DNS.md) lookups.
 
 UDP is a connectionless protocol, meaning it does not establish a dedicated end-to-end connection before sending data.
 

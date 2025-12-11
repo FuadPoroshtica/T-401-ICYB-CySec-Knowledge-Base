@@ -8,7 +8,7 @@ date modified: Monday, 8. December 2025, 19:12
 
 **Term**: Container
 
-**Definition**: An isolated environment that bundles an application and its dependencies, running on a shared [OS](Operating%20System.md) kernel but separated from other containers.
+**Definition**: An isolated environment that bundles an application and its dependencies, running on a shared [OS](Operating%20System.md) [Kernel](../../Systems%20&%20Plaforms/Kernel.md) but separated from other containers.
 
 **Context/Example**: A web app packaged as a Docker container that you can run on any Linux machine with Docker installed, without worrying about library versions.
 

@@ -44,10 +44,10 @@ Some tools to see this on your machine:
 - `traceroute` / `tracert`: Show the path packets take to a destination.
 - `ping`: Test reachability of a host on an IP network.
 
-The [Data Link Layer](../Terminology/Networks/OSI%20Model/2-Data%20Link%20Layer.md) uses [MAC](../Terminology/Networks/MAC.md) addresses to deliver frames within the same network.
+The [Data Link Layer](OSI%20Model/2-Data%20Link%20Layer.md) uses [MAC](MAC.md) addresses to deliver frames within the same network.
 
-“Frames” in this context means data packets at the link layer of the [OSI Model](../Terminology/Networks/OSI%20Model/OSI%20Model.md). So the ethernet frame is the data packet used in Ethernet networks at the link layer. Other frames include Wi-Fi frames, which are used in wireless networks.
+“Frames” in this context means data packets at the link layer of the [OSI Model](OSI%20Model/OSI%20Model.md). So the ethernet frame is the data packet used in Ethernet networks at the link layer. Other frames include Wi-Fi frames, which are used in wireless networks.
 
-The [MAC](../Terminology/Networks/MAC.md) address (Media Access Control address) is a unique identifier assigned to network interfaces for communications at the [Data Link Layer](../Terminology/Networks/OSI%20Model/2-Data%20Link%20Layer.md) of a network segment.
+The [MAC](MAC.md) address (Media Access Control address) is a unique identifier assigned to network interfaces for communications at the [Data Link Layer](OSI%20Model/2-Data%20Link%20Layer.md) of a network segment.
 
-The [Network Layer](../Terminology/Networks/OSI%20Model/3-Network%20Layer.md) uses IP addresses to route packets between different networks.
+The [Network Layer](OSI%20Model/3-Network%20Layer.md) uses IP addresses to route packets between different networks.
