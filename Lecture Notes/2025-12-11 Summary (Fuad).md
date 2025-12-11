@@ -13,6 +13,6 @@ date modified: Thursday, 11. December 2025, 10:12
 - Accept: The cost of the fix > impact. Management signs off.
 - Transfer risk to a 3rd party (e.g., Cyber Insurance, Cloud Provider).
 
-Network:![](../zAttachments/Screenshot%202025-12-11%20at%2009.13.26.png)
+Network:![](../zAttachments/Screenshot 2025-12-11 at 09.13.26.png)
 - Packets may take any path through the network, reassembled by the receiver.
 - Nmap - scans open port

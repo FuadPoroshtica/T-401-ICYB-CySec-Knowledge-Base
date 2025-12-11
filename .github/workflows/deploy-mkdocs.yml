@@ -1,0 +1,40 @@
+name: Deploy MkDocs to GitHub Pages
+
+on:
+  push:
+    branches:
+      - main
+      - master
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.x'
+      
+      - name: Install dependencies
+        run: |
+          pip install mkdocs mkdocs-material
+      
+      - name: Setup docs directory
+        run: |
+          mkdir -p docs_mkdocs
+          ln -sf "../Lecture Notes" "docs_mkdocs/Lecture Notes"
+          ln -sf ../Terminology "docs_mkdocs/Terminology"
+          ln -sf "../Tools and Commands" "docs_mkdocs/Tools and Commands"
+          ln -sf ../resources "docs_mkdocs/resources"
+          ln -sf ../Templates "docs_mkdocs/Templates"
+          ln -sf ../zAttachments "docs_mkdocs/zAttachments"
+          ln -sf ../README.md "docs_mkdocs/README.md"
+      
+      - name: Deploy to GitHub Pages
+        run: mkdocs gh-deploy --force

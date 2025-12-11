@@ -17,7 +17,7 @@ Extra Reading <br>
 **Which weakness it used?** used a weakness in FTP? <br>
 
 ## **Morris Worm (1988)**
-**How it worked?** used a backdoor in sendmail program to spread, and a bug in the finger program to identify network users, but it targeted specific version of Unix [OS](Operating%20System.md)’s with known flaws and it used weak passwords to its advantage to gain access to other systems where the same user had an account <br>
+**How it worked?** used a backdoor in sendmail program to spread, and a bug in the finger program to identify network users, but it targeted specific version of Unix [OS](Operating System.md)’s with known flaws and it used weak passwords to its advantage to gain access to other systems where the same user had an account <br>
 **Impact?** Since the worm was instructed to replicate itself 14% of the time, some machines were infected a few times causing them to become slower and slower and eventually unusable and crashing, some lame US office said total economic impact was between 100k and 10ms <br>
 **Which weakness it used?** A hole in the debug mode of the Unix sendmail program, and a buffer overflow or overrun hole in the finger network service and weak passwords <br>
 

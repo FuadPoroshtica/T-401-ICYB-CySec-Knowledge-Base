@@ -27,9 +27,9 @@ date modified: Wednesday, 10. December 2025, 20:12
 - **Attack:**
 - loc3 = 2 > t0, loc3 (Trajectory 1), loc3 (Trajectory 2)
 - At night, people are less likely to move places which is why they got this formula:
-		![](../zAttachments/Pasted%20image%2020251210091739.png)
+		![](../zAttachments/Pasted image 20251210091739.png)
 
-- They try to figure out the next move, ![](../zAttachments/Pasted%20image%2020251210092029.png)
+- They try to figure out the next move, ![](../zAttachments/Pasted image 20251210092029.png)
 - **Myth 2:** You have zero privacy anyway - get over it.
 	- You can be captured on CCTV without consent, for example, or Covid 19 getting notification that the next person in your vicinity has the virus
 - The Europe General Data Protection Regulation (GDPR) has explicitly made Data Protection by Design and by Default an obligation for data controllers
@@ -74,28 +74,28 @@ date modified: Wednesday, 10. December 2025, 20:12
 	- Privacy, utility, security, and functionality are opposing, irreconcilable goals, meaning that achieving one requires sacrificing the others.
 
 ## **Privacy Enhancing Techniques**
-- K-Anonymity: ![](../zAttachments/Pasted%20image%2020251210094802.png)
-- Differential Privacy:![](../zAttachments/Pasted%20image%2020251210095218.png)
-- Differential Privacy 2: ![](../zAttachments/Pasted%20image%2020251210095346.png)
+- K-Anonymity: ![](../zAttachments/Pasted image 20251210094802.png)
+- Differential Privacy:![](../zAttachments/Pasted image 20251210095218.png)
+- Differential Privacy 2: ![](../zAttachments/Pasted image 20251210095346.png)
 
 ## **Future Challenges: Large Language Models**
 
 **Large Language Models** - attack strategies
-- Passive Leakage: Sensitive Inquiries ![](../zAttachments/Pasted%20image%2020251210095700.png)
+- Passive Leakage: Sensitive Inquiries ![](../zAttachments/Pasted image 20251210095700.png)
 - A PhD student accessed Samsung’s data, noting that it relies on a third-party company, and that the information he obtained was also private. This was a huge mistake made by Samsung.
-- Passive Leakage: Contextual Leakage![](../zAttachments/Pasted%20image%2020251210095750.png)
+- Passive Leakage: Contextual Leakage![](../zAttachments/Pasted image 20251210095750.png)
 - Mental and sensitive data should not be revealed with LLM. - Law is not the same as any authorized person, like the police, can have access to that data.
-- Passive Leakage: Personal Preferences Leakage ![](../zAttachments/Pasted%20image%2020251210095833.png)
+- Passive Leakage: Personal Preferences Leakage ![](../zAttachments/Pasted image 20251210095833.png)
 - A big LLM will soon start using your data to create an advertisement, which will lead to your data being used.
-- Active Attacks: Jailbreak Attack ![](../zAttachments/Pasted%20image%2020251210100401.png)
+- Active Attacks: Jailbreak Attack ![](../zAttachments/Pasted image 20251210100401.png)
 - Yu, Zhiyuan, et al. “Don’t listen to me: Understanding and exploring jailbreak prompts of large language models.” 33rd USENIX Security Symposium (USENIX Security 24). 2024.
-- Active Attacks: Jailbreak Attack 2![](../zAttachments/Screenshot%202025-12-10%20at%2010.04.50.png)
+- Active Attacks: Jailbreak Attack 2![](../zAttachments/Screenshot 2025-12-10 at 10.04.50.png)
 
 ## **Large Language Models**
 **Attack Targets**
-- Attack Target: Membership Inference Attacks![](../zAttachments/Screenshot%202025-12-10%20at%2010.06.15.png)
+- Attack Target: Membership Inference Attacks![](../zAttachments/Screenshot 2025-12-10 at 10.06.15.png)
 - They need to know about previous data to learn more about you,
-- Attack Target: Model Inversion ![](../zAttachments/Screenshot%202025-12-10%20at%2010.08.20.png)
+- Attack Target: Model Inversion ![](../zAttachments/Screenshot 2025-12-10 at 10.08.20.png)
 **Takeaways**
 - Lessons:
 	- Privacy is a technical and ethical requirement

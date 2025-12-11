@@ -12,4 +12,4 @@ date modified: Monday, 8. December 2025, 19:12
 
 **Context/Example**: Running an unmodified Windows ISO in VirtualBox; Windows thinks it owns real hardware, but it’s actually talking to virtual devices.
 
-**Related Concepts**: [Hardware-assisted virtualization](Hardware-Assisted%20Virtualization.md), [paravirtualization](Paravirtualization.md), Type 1/Type 2 [hypervisors](../Hypervisor.md).
+**Related Concepts**: [Hardware-assisted virtualization](Hardware-Assisted Virtualization.md), [paravirtualization](Paravirtualization.md), Type 1/Type 2 [hypervisors](../Hypervisor.md).

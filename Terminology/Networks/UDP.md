@@ -6,17 +6,17 @@ date modified: Thursday, 11. December 2025, 09:12
 
 # UDP
 
-The **User Datagram Protocol (UDP)** is a communication protocol used across the Internet for time-sensitive transmissions such as video playback or [DNS](/DNS) lookups.
+The **User Datagram Protocol (UDP)** is a communication protocol used across the Internet for time-sensitive transmissions such as video playback or [DNS](DNS.md) lookups.
 
 UDP is a connectionless protocol, meaning it does not establish a dedicated end-to-end connection before sending data.
 
 This allows for faster data transmission but does not guarantee delivery, order, or error-checking.
 
-UDP operates at the [Transport Layer](OSI%20Model/4-Transport%20Layer.md) (Layer 4) of the [OSI Model](OSI%20Model/OSI%20Model.md), alongside [TCP (Transmission Control Protocol)](TCP%20IP%20Model/TCP.md).
+UDP operates at the [Transport Layer](OSI Model/4-Transport Layer.md) (Layer 4) of the [OSI Model](OSI Model/OSI Model.md), alongside [TCP (Transmission Control Protocol)](TCP IP Model/TCP.md).
 
 It is often used in applications where speed is more critical than reliability, such as online gaming, live streaming, and voice over IP (VoIP).
 
-UDP packets, known as datagrams, contain source and destination [ports](../Systems%20&%20Plaforms/Port.md), length, and a checksum for error-checking.
+UDP packets, known as datagrams, contain source and destination [ports](../Systems & Plaforms/Port.md), length, and a checksum for error-checking.
 
 Because of its low overhead, UDP is suitable for applications that require efficient transmission of small amounts of data without the need for acknowledgment or retransmission.
 

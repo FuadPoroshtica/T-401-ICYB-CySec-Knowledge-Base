@@ -29,7 +29,7 @@ What guarantees can/should a network offer?
 - **Security:** No eavesdropping. No diversion to different hosts. No undetected modifications.
 Which guarantees are offered by the Internet (Internet Protocol - IP)? **NONE OF THE ABOVE!** Instead, it offers a “best-effort” delivery service.
 
-![](../zAttachments/Pasted%20image%2020251202091743.png)
+![](../zAttachments/Pasted image 20251202091743.png)
 
 Components of the IPv4 header:
 
@@ -99,7 +99,7 @@ When a device in your home sends data to the Internet, the router translates the
 
 When the response comes back, the router translates the public IP address back to the appropriate private IP address and forwards the data to the correct device.
 
-![](../zAttachments/Pasted%20image%2020251202093337.png)
+![](../zAttachments/Pasted image 20251202093337.png)
 
 Everyone on the internet doesn’t see the difference between multiple devices behind a NAT and a single device with a public IP address.
 
@@ -169,13 +169,13 @@ Some tools to see this on your machine:
 - `traceroute` / `tracert`: Show the path packets take to a destination.
 - `ping`: Test reachability of a host on an IP network.
 
-The [Data Link Layer](../Terminology/Networks/OSI%20Model/2-Data%20Link%20Layer.md) uses [MAC](../Terminology/Networks/MAC.md) addresses to deliver frames within the same network.
+The [Data Link Layer](../Terminology/Networks/OSI Model/2-Data Link Layer.md) uses [MAC](../Terminology/Networks/MAC.md) addresses to deliver frames within the same network.
 
-“Frames” in this context means data packets at the link layer of the [OSI Model](../Terminology/Networks/OSI%20Model/OSI%20Model.md). So the ethernet frame is the data packet used in Ethernet networks at the link layer. Other frames include Wi-Fi frames, which are used in wireless networks.
+“Frames” in this context means data packets at the link layer of the [OSI Model](../Terminology/Networks/OSI Model/OSI Model.md). So the ethernet frame is the data packet used in Ethernet networks at the link layer. Other frames include Wi-Fi frames, which are used in wireless networks.
 
-The [MAC](../Terminology/Networks/MAC.md) address (Media Access Control address) is a unique identifier assigned to network interfaces for communications at the [Data Link Layer](../Terminology/Networks/OSI%20Model/2-Data%20Link%20Layer.md) of a network segment.
+The [MAC](../Terminology/Networks/MAC.md) address (Media Access Control address) is a unique identifier assigned to network interfaces for communications at the [Data Link Layer](../Terminology/Networks/OSI Model/2-Data Link Layer.md) of a network segment.
 
-The [Network Layer](../Terminology/Networks/OSI%20Model/3-Network%20Layer.md) uses IP addresses to route packets between different networks.
+The [Network Layer](../Terminology/Networks/OSI Model/3-Network Layer.md) uses IP addresses to route packets between different networks.
 
 ## Border Gateway Protocol: BGP
 - Used between routes of neighboring autonomous systems (ASes) to exchange routing information (info about available routes).
@@ -294,7 +294,7 @@ Infrastructure protocols, technically application layer protocols, but not user-
 
 ## Email
 
-[SMTP (Simple Mail Transfer Protocol)](../Terminology/Networks/Transfer%20Protocols/SMTP.md) for sending email (Port 25, 587):
+[SMTP (Simple Mail Transfer Protocol)](../Terminology/Networks/Transfer Protocols/SMTP.md) for sending email (Port 25, 587):
 
 - Pushing mail from client to server or between servers.
 - Vulnerability: Cleartext (no encryption), no authentication.
@@ -312,7 +312,7 @@ Because SMTP trusts the sender address in the email header, an attacker can send
 - SPF/DKIM/DMARC: Email authentication protocols that help verify the legitimacy of the sender and protect against email spoofing.
 
 ## File Sharing
-**[FTP (File Transfer Protocol)](../Terminology/Networks/Transfer%20Protocols/FTP.md) (Ports 20, 21):**
+**[FTP (File Transfer Protocol)](../Terminology/Networks/Transfer Protocols/FTP.md) (Ports 20, 21):**
 - For transferring files between client and server.
 - **Vulnerability**: Cleartext (no encryption), no authentication.
 - **Mitigation**: Always use SFTP (SSH File Transfer Protocol) or FTPS (FTP over TLS).
@@ -331,7 +331,7 @@ Because SMTP trusts the sender address in the email header, an attacker can send
 
 Many older protocols are text-based (SMTP, HTTP, FTP, ...) and can be interacted with using command-line tools like `telnet` or `netcat (nc)`.
 
-Example: Using `telnet` to interact with an [SMTP](../Terminology/Networks/Transfer%20Protocols/SMTP.md) server.
+Example: Using `telnet` to interact with an [SMTP](../Terminology/Networks/Transfer Protocols/SMTP.md) server.
 
 ```bash
 telnet mail.server.com 25
@@ -368,14 +368,14 @@ smb : \ > get xyz
 # Security
 ## Packet Filtering Firewalls
 
-The Gatekeeper: Inspecting layer 3 ([IP](../Terminology/Networks/TCP%20IP%20Model/IP.md)) and layer 4 ([TCP](../Terminology/Networks/TCP%20IP%20Model/TCP.md)/[UDP](../Terminology/Networks/UDP.md)) headers of packets.
+The Gatekeeper: Inspecting layer 3 ([IP](../Terminology/Networks/TCP IP Model/IP.md)) and layer 4 ([TCP](../Terminology/Networks/TCP IP Model/TCP.md)/[UDP](../Terminology/Networks/UDP.md)) headers of packets.
 
 - Location: Usually at the network perimeter (between internal network and Internet).
 - Logic: Compares packet headers against a set of rules (ACLs - Access Control Lists).
 - Criteria:
 	- Source & destination IP addresses.
 	- Source & destination port numbers.
-	- Protocol ([TCP](../Terminology/Networks/TCP%20IP%20Model/TCP.md), [UDP](../Terminology/Networks/UDP.md), ICMP, ...).
+	- Protocol ([TCP](../Terminology/Networks/TCP IP Model/TCP.md), [UDP](../Terminology/Networks/UDP.md), ICMP, ...).
 	- Protocol header flags (e.g., TCP SYN, ACK, ...).
 - Actions:
 	- `ALLOW` (accept) the packet.
@@ -391,7 +391,7 @@ A VPN creates a secure, encrypted tunnel over a public network (like the Interne
 - **Common protocols**: WireGuard, IPsec, OpenVPN.
 
 **How it works: Encapsulation and encryption.**
-1. **The original packet** (e.g., an [HTTP](../Terminology/Networks/Transfer%20Protocols/HTTP.md) request) is created by the client.
+1. **The original packet** (e.g., an [HTTP](../Terminology/Networks/Transfer Protocols/HTTP.md) request) is created by the client.
 2. **Encryption**: The original packet is encrypted using a symmetric encryption algorithm (e.g., AES) with a session key.
 3. **Encapsulation**: The encrypted packet is encapsulated within a new packet with a new header (e.g., an IPsec header).
 4. **Transit**: The encapsulated packet is sent over the public network (Internet).
@@ -436,7 +436,7 @@ and `Get-NetNeighbor`.
 | `netcat` (`nc`)<br>Read/Write data across networks. Used for port scanning, chat, or file transfer. | `nc -v google.com 80`<br>`nc -l 1234` (Listen)                    |
 | `wireshark`<br>GUI packet analyzer.                                                                 | `wireshark`                                                       |
 | `tcpdump` / `tshark`<br>Command-line packet analyzers. Capture raw traffic for analysis.            | `tcpdump -i eth0 port 80 tshark -Y "http.request.method == POST"` |
-| `nmap`<br>Network exploration tool. Scans for open ports and [OS](Operating%20System.md) versions.                           | `nmap -sV 192.168.1.1`                                            |
+| `nmap`<br>Network exploration tool. Scans for open ports and [OS](Operating System.md) versions.                           | `nmap -sV 192.168.1.1`                                            |
 
 We’ll need `nmap` for today’s lab.
 
@@ -499,6 +499,6 @@ Once you’ve used `ssh` to connect to a remote server, you can use various comm
      ```
 
 # Further studies
-- UPnP, STUN etc punch holes into [NAT](../Terminology/Networks/NAT.md) to allow certain incoming traffic. Why can this be problematic for security? [find](../Tools%20and%20Commands/Basic%20Bash%20commands/find.md) some vulnerabilities of these techniques. How can they be countered?
-- SSL Inspection: In a corporate environment, some firewalls can inspect [HTTPS](../Terminology/Networks/Transfer%20Protocols/HTTPS.md) traffic to look for [Malware](../Terminology/Attacks/Malware/Malware.md) (or leaked data). How is this possible given that [TLS](../Terminology/Networks/TLS.md) provides end-to-end encryption?
-- [BGP](../Terminology/Networks/BGP.md) & The Chain of Trust: Discuss how [HTTPS](../Terminology/Networks/Transfer%20Protocols/HTTPS.md) (TLS) mitigates some of the problems of BGP hijacks. (Example: An attacker successfully hijacks a BGP prefix for a bank and diverts all traffic for the bank’s web server to a machine controlled by the attacker. Can they decrypt the traffic? Would the user notice? How?)
+- UPnP, STUN etc punch holes into [NAT](../Terminology/Networks/NAT.md) to allow certain incoming traffic. Why can this be problematic for security? [find](../Tools and Commands/Basic Bash commands/find.md) some vulnerabilities of these techniques. How can they be countered?
+- SSL Inspection: In a corporate environment, some firewalls can inspect [HTTPS](../Terminology/Networks/Transfer Protocols/HTTPS.md) traffic to look for [Malware](../Terminology/Attacks/Malware/Malware.md) (or leaked data). How is this possible given that [TLS](../Terminology/Networks/TLS.md) provides end-to-end encryption?
+- [BGP](../Terminology/Networks/BGP.md) & The Chain of Trust: Discuss how [HTTPS](../Terminology/Networks/Transfer Protocols/HTTPS.md) (TLS) mitigates some of the problems of BGP hijacks. (Example: An attacker successfully hijacks a BGP prefix for a bank and diverts all traffic for the bank’s web server to a machine controlled by the attacker. Can they decrypt the traffic? Would the user notice? How?)

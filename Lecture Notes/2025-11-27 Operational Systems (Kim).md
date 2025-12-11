@@ -8,14 +8,14 @@ date modified: Thursday, 11. December 2025, 18:12
 
 # Operating System Basics - Enhanced Study Guide
 
-## What is an [OS](Operating%20System.md)?
+## What is an [OS](Operating System.md)?
 
 ### The Operating System (Kernel)
 
 - *Event-driven* program that manages the hardware state.
 - Acts as a bridge between applications and hardware.
 - **The Kernel:**
-    - The core component of the [OS](Operating%20System.md).
+    - The core component of the [OS](Operating System.md).
     - Runs in *Privileged Mode* (Kernel Mode).
     - Has direct access to hardware instructions and memory.
 - **User Space:**
@@ -66,10 +66,10 @@ Think of a building with two floors:
 
 > Solution: System Calls
 >
-> - The [OS](Operating%20System.md) wraps hardware instructions in clean software APIs.
+> - The [OS](Operating System.md) wraps hardware instructions in clean software APIs.
 > - API is consistent across platforms, independent of the actual hardware.
 > - When you call `printf()` or `fopen()`, you trigger a System Call.
-> - The [OS](Operating%20System.md) switches to Kernel Mode, performs the hardware task, and returns the result.
+> - The [OS](Operating System.md) switches to Kernel Mode, performs the hardware task, and returns the result.
 
 ---
 
@@ -101,7 +101,7 @@ I/O = Input/Output. Any interaction with devices outside the CPU:
     - “*Program*”: Static instructions on disk (like a recipe)
     - “*Process*”: A program in execution (like actually cooking - loaded into RAM with a specific program counter, stack pointer, and registers)
 - **Context Switching:**
-    - The [OS](Operating%20System.md) halts the current process.
+    - The [OS](Operating System.md) halts the current process.
     - Saves the CPU register state to a Process Control Block (PCB) in RAM.
     - Loads the saved state of the next process.
 - **Result:** The illusion of parallelism on a single core.
@@ -110,9 +110,9 @@ I/O = Input/Output. Any interaction with devices outside the CPU:
 
 ## Memory Management (Virtualization)
 
-- The [OS](Operating%20System.md) provides the abstraction of Virtual Memory.
+- The [OS](Operating System.md) provides the abstraction of Virtual Memory.
 - **Address Spaces**: Every process believes it has access to a contiguous map of memory (e.g., 0x0000 to 0xFFFF).
-- **Translation**: The [OS](Operating%20System.md) + Hardware (MMU) map virtual addresses to physical RAM addresses.
+- **Translation**: The [OS](Operating System.md) + Hardware (MMU) map virtual addresses to physical RAM addresses.
     - Basically, what process_1 calls “memory 0x0001”, it might be mapped to like 0x0251 or something in actual memory, and what process_1 sees as “memory 0x0002” might actually be mapped to 0x0571 etc.
     - Basically, they just get like block 1, block 2, block 3 etc. which are mapped and spread out across the whole memory.
 - **Protection**:
@@ -127,17 +127,17 @@ I/O = Input/Output. Any interaction with devices outside the CPU:
 *Architecture context*: I/O can be millions of times slower than a CPU cycle. We cannot use busy-waiting.
 
 1. **Request**🫴: User program requests I/O (System Call).
-2. **Sleep**😴: [OS](Operating%20System.md) puts the process in a “Waiting” state and yields the CPU to another process.
+2. **Sleep**😴: [OS](Operating System.md) puts the process in a “Waiting” state and yields the CPU to another process.
 3. **Interrupt**🫸: When hardware is ready, it sends an electrical signal (Interrupt) to the CPU.
 4. **ISR (Interrupt Service Routine)** 🚫: CPU jumps to the OS’s Interrupt Service Routine (essentially a function in the kernel).
-5. **Wake**😱: [OS](Operating%20System.md) moves the original process back to the “Ready” queue.
+5. **Wake**😱: [OS](Operating System.md) moves the original process back to the “Ready” queue.
 
 ---
 
 ## File Systems📂 / Storage Abstraction
 
 - **Physical View**: A hard drive is an array of millions of generic blocks (sectors).
-- **Logical View**: The [OS](Operating%20System.md) creates the concept of Files, Directories, and Paths.
+- **Logical View**: The [OS](Operating System.md) creates the concept of Files, Directories, and Paths.
 - **Responsibility**:
     - Mapping filenames to physical block addresses.
     - Managing metadata (permissions, timestamps).
@@ -158,7 +158,7 @@ In practice, only these 2 rings are used:
 - Restricted subset of instructions.
 - Cannot directly access hardware.
 
-**Traps**: If user code attempts a privileged instruction, the CPU hardware “traps” the attempt and hands control to the [OS](Operating%20System.md) to handle the violation (usually by killing the process).
+**Traps**: If user code attempts a privileged instruction, the CPU hardware “traps” the attempt and hands control to the [OS](Operating System.md) to handle the violation (usually by killing the process).
 
 ---
 
@@ -223,7 +223,7 @@ Slightly different to Linux.
 ## Android 🤖📱
 
 Often misunderstood as “Just Linux.” It uses the Linux Kernel, but the user-space is unique.
-It is ***the*** most deployed [OS](Operating%20System.md) in the world (billions of devices). Because unlike iOS, Android is open-source and used by many manufacturers, not just for phones but also tablets, TVs, cars, etc.
+It is ***the*** most deployed [OS](Operating System.md) in the world (billions of devices). Because unlike iOS, Android is open-source and used by many manufacturers, not just for phones but also tablets, TVs, cars, etc.
 
 > The Android Stack
 >
@@ -233,7 +233,7 @@ It is ***the*** most deployed [OS](Operating%20System.md) in the world (billions
 
 **Key Mechanism: Binder IPC**
 - Apps are strictly sandboxed (security).
-- They communicate via Binder (Inter-Process Communication) to talk to the [OS](Operating%20System.md) or other apps. Which means that apps can’t directly access each other’s memory or data.
+- They communicate via Binder (Inter-Process Communication) to talk to the [OS](Operating System.md) or other apps. Which means that apps can’t directly access each other’s memory or data.
 
 ---
 
@@ -241,7 +241,7 @@ It is ***the*** most deployed [OS](Operating%20System.md) in the world (billions
 
 There are many other kinds of operating systems designed for specific use-cases, especially in embedded systems (IoT (Internet of Things) devices, automotive systems, industrial machines).
 
-*General Purpose [OS](Operating%20System.md) (Windows/Linux) Goal*: Throughput.
+*General Purpose [OS](Operating System.md) (Windows/Linux) Goal*: Throughput.
 *RTOS Goal*: Determinism / Consistency.
 
 - **RTOS (Real-Time Operating System):**
@@ -259,10 +259,10 @@ There are many other kinds of operating systems designed for specific use-cases,
 **POSIX** = **P**ortable **O**perating **S**ystem **I**nterface (the **X** is for Unix).
 
 > The Concept: An API Contract
-POSIX is an IEEE (Institute of Electrical and Electronics Engineers) standard that defines an interface between User Space applications and the [OS](Operating%20System.md) Kernel.
+POSIX is an IEEE (Institute of Electrical and Electronics Engineers) standard that defines an interface between User Space applications and the [OS](Operating System.md) Kernel.
 >
-> - It does not tell the [OS](Operating%20System.md) how to implement a feature.
-> - It tells the [OS](Operating%20System.md): “If you want to be Unix-compatible, you must support these function names and behaviors.”
+> - It does not tell the [OS](Operating System.md) how to implement a feature.
+> - It tells the [OS](Operating System.md): “If you want to be Unix-compatible, you must support these function names and behaviors.”
 
 **The Motivation (The “Unix Wars”)**
 - In the 80s, Unix fragmented (BSD, System V, etc.). Code written for one Linux machine wouldn’t compile on another.
@@ -300,7 +300,7 @@ So if they’re POSIX compliant, that means they support the same system calls a
 >
 
 **The Reference Monitor**
-The [OS](Operating%20System.md) acts as a gatekeeper between Subjects (Users, Processes) and Objects (Files, Hardware).
+The [OS](Operating System.md) acts as a gatekeeper between Subjects (Users, Processes) and Objects (Files, Hardware).
 Every system call (e.g., `open()`) is intercepted to check:
 
 1. **Authentication**: *Who* are you?
@@ -322,12 +322,12 @@ A one-way mathematical function that turns any input into a fixed-length string.
 - Even a tiny change creates a completely different hash
 - One-way: You can’t reverse it to get the original password back
 >
-- **Rule #1**: The [OS](Operating%20System.md) never stores passwords in plain text.
-- **Hashing**: The [OS](Operating%20System.md) stores a cryptographic hash (e.g., SHA-256) of the password.
+- **Rule #1**: The [OS](Operating System.md) never stores passwords in plain text.
+- **Hashing**: The [OS](Operating System.md) stores a cryptographic hash (e.g., SHA-256) of the password.
     - On login: `InputHash = Hash(UserInput)`.
     - If `InputHash == StoredHash`, access is granted.
 - **Salting** 🧂:
-    - To prevent “Rainbow Table” attacks (pre-computed hash databases), the [OS](Operating%20System.md) adds a random string (salt) before hashing.
+    - To prevent “Rainbow Table” attacks (pre-computed hash databases), the [OS](Operating System.md) adds a random string (salt) before hashing.
         - This ensures that even if two users have the same password, their stored hashes differ.
     - `StoredValue = Hash(Password + Salt)`.
 
@@ -342,7 +342,7 @@ A pre-computed database of hashes:
 
 ## Access Control: “What can you do?”
 
-Once authenticated, the [OS](Operating%20System.md) uses a **User ID (UID)** to enforce permissions.
+Once authenticated, the [OS](Operating System.md) uses a **User ID (UID)** to enforce permissions.
 
 - **DAC (Discretionary Access Control):**
     - The **Owner** of the file decides permissions.
@@ -357,7 +357,7 @@ Once authenticated, the [OS](Operating%20System.md) uses a **User ID (UID)** to 
 
 ## The Principle of Least Privilege
 
-> Golden Rule of [OS](Operating%20System.md) Architecture
+> Golden Rule of [OS](Operating System.md) Architecture
 A process should only have the absolute minimum privileges necessary to do its job.
 >
 
@@ -371,7 +371,7 @@ A process should only have the absolute minimum privileges necessary to do its j
 
 ## System Logs
 
-The “Flight Recorder” of the [OS](Operating%20System.md).
+The “Flight Recorder” of the [OS](Operating System.md).
 
 > 💡 What is System Auditing?
 Recording detailed logs of what happens on the system at the kernel level - who did what, when, and whether it succeeded or failed. Goes beyond regular logs to track specific system calls.
@@ -406,7 +406,7 @@ A hash used to verify file integrity. Like a seal on a package:
 - **File Integrity Monitoring (FIM):**
     - *Threat*: Attackers replacing system binaries (like `/bin/login`) with Trojan horses.
     - *Defense*: Calculate checksums (hashes) of critical files.
-    - If the hash of `/bin/login` changes, the [OS](Operating%20System.md) triggers an alarm immediately.
+    - If the hash of `/bin/login` changes, the [OS](Operating System.md) triggers an alarm immediately.
 
 We’ll be doing this in today’s lab!
 
@@ -522,7 +522,7 @@ char buffer[10];gets(buffer);  // Dangerous! No length check// If user types 50 
 
 - **The Flaw:**
     - A program allocates a fixed buffer.
-    - The [OS](Operating%20System.md)/Program fails to check input size, allowing writes past the buffer end.
+    - The [OS](Operating System.md)/Program fails to check input size, allowing writes past the buffer end.
 - **The Exploit (Stack Smashing):**
     - Attacker overflows the stack to overwrite the **Return Address**.
     - CPU jumps to malicious code (shellcode) instead of returning to the main function.
@@ -557,9 +557,9 @@ Timeline:
 ```
 
 **The technical steps:**
-1. **Check**: [OS](Operating%20System.md) confirms User A can write to `temp.txt`.
+1. **Check**: [OS](Operating System.md) confirms User A can write to `temp.txt`.
 2. **The Gap (Context Switch)**: Attacker quickly swaps `temp.txt` with a symbolic link to `/etc/shadow` (password file).
-3. **Use**: [OS](Operating%20System.md) resumes the process and writes to the target, overwriting the password file because the check already passed.
+3. **Use**: [OS](Operating System.md) resumes the process and writes to the target, overwriting the password file because the check already passed.
 
 A research task we have today is how to mitigate and prevent these.
 
@@ -596,7 +596,7 @@ Server runs: delete invoice.pdf; cat /etc/passwd
 - **The Exploit:**
     - Script expects a filename: `rm $filename`
     - Attacker inputs: `file.txt; rm -rf /`
-    - The [OS](Operating%20System.md) interprets `;` as a command separator and executes both.
+    - The [OS](Operating System.md) interprets `;` as a command separator and executes both.
 
 ---
 
@@ -676,7 +676,7 @@ Rootkit shows you fake output (malware hidden)
 ```
 
 - Essentially, it’s malware that’s designed to be stealthy and avoid detection by traditional security measures. It gets the operating system to lie to the user or security software about what’s really happening on the system.
-- Example: When you run `ls` or `ps`, the rootkit filters the output of the underlying system calls to hide the hacker’s files and processes. The [OS](Operating%20System.md) lies to the user.
+- Example: When you run `ls` or `ps`, the rootkit filters the output of the underlying system calls to hide the hacker’s files and processes. The [OS](Operating System.md) lies to the user.
 - **Defense**: Use trusted boot mechanisms and integrity checks to detect unauthorized changes to system binaries.
 
 ---
@@ -708,7 +708,7 @@ CPU optimization where the processor guesses which code will run next and starts
 
 ---
 
-![image.png](Operational%20Systems%202025-11-27/image.png)
+![image.png](Operational Systems 2025-11-27/image.png)
 
 ## File Permissions: Linux vs. Windows
 
@@ -816,7 +816,7 @@ $ find / -perm -4000  # Find all SUID programs/usr/bin/passwd       # Expected/u
 | Action | Linux Command | PowerShell / Windows |
 | --- | --- | --- |
 | ScheduleTasks | `crontab -e`(opens the cron table in aneditor) | `Register-ScheduledTask` |
-| Install Updates | `apt update && apt upgrade`(Depending on Distro) | `winget upgrade --all`(Only for apps, not the [OS](Operating%20System.md) itself!) |
+| Install Updates | `apt update && apt upgrade`(Depending on Distro) | `winget upgrade --all`(Only for apps, not the [OS](Operating System.md) itself!) |
 
 ---
 
@@ -824,7 +824,7 @@ $ find / -perm -4000  # Find all SUID programs/usr/bin/passwd       # Expected/u
 
 ---
 
-[Cybersecurity_Research_Advanced_Topics](Operational%20Systems/Cybersecurity_Research_Advanced_Topics.md)
+[Cybersecurity_Research_Advanced_Topics](../Terminology/Cybersecurity_Research_Advanced_Topics.md)
 
 ---
 

@@ -25,18 +25,18 @@ Security vulnerabilities can be introduced during any stage of the training proc
 3. **RLHF (Reinforcement Learning from Human Feedback) (The Safety Layer):**
 	- Humans teach the model to refuse harmful requests.
 	- *Risk*: Jailbreaking is essentially bypassing RLHF alignment.
-    	- Example: [Prompt Injection](Prompt%20Injection.md) attacks.
+    	- Example: [Prompt Injection](Prompt Injection.md) attacks.
 	- *Mitigation*: Advanced Alignment Techniques. Using more sophisticated methods to align the model with human values.
 
 ## The Mechanism (Why injection works)
 - **Tokenization**: [LLMs](LLM.md) break down input text into smaller pieces called tokens. These tokens can be words, subwords, or even characters.
 - **Context Window (Short Term Memory)**: LLMs have a limited context window, meaning they can only consider a certain number of tokens at a time when generating responses.
-- *Risk*: [Prompt Injection](Prompt%20Injection.md) Attacks
+- *Risk*: [Prompt Injection](Prompt Injection.md) Attacks
     - Attackers can craft inputs that exploit the tokenization and context window limitations to manipulate the model’s behavior.
     - Example: An attacker could input a prompt that tricks the model into ignoring its safety instructions and generating harmful content.
 
 Comparison of injection methods:
 
-- **[Buffer Overflow](../Attacks/Buffer%20Overflow.md) code injection**: Overwrite specific memory locations to change program behavior.
-- **[SQL Injection](../Web%20Security/SQL%20Injection%20(SQLi).md)**: User input is interpreted as an SQL command.
+- **[Buffer Overflow](../Attacks/Buffer Overflow.md) code injection**: Overwrite specific memory locations to change program behavior.
+- **[SQL Injection](../Web Security/SQL Injection (SQLi).md)**: User input is interpreted as an SQL command.
 - **LLM Injection**: User input is interpreted as a System Instruction

@@ -11,4 +11,4 @@ date modified: Monday, 8. December 2025, 18:12
 - Unmanaged switches are plug-and-play.
 - Managed switches offer advanced features like VLANs (Virtual Local Networks), QoS (Quality-of-Service), and network monitoring. They can be controlled and customized via software.
 - Handles a Local Area Network (LAN).
-- (Operates at the [Data Link Layer](../OSI%20Model/2-Data%20Link%20Layer.md) (Layer 2) of the [OSI Model](../OSI%20Model/OSI%20Model.md).)
+- (Operates at the [Data Link Layer](../OSI Model/2-Data Link Layer.md) (Layer 2) of the [OSI Model](../OSI Model/OSI Model.md).)

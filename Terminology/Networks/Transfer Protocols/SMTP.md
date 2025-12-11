@@ -5,10 +5,10 @@ date modified: Thursday, 11. December 2025, 09:12
 ---
 
 # SMTP
-**SMTP** stands for **Simple Mail Transfer Protocol**. It is a protocol used for sending and receiving email messages over the internet. SMTP operates on the [Application Layer](../OSI%20Model/7-Application%20Layer.md) of the [OSI Model](../OSI%20Model/OSI%20Model.md).
+**SMTP** stands for **Simple Mail Transfer Protocol**. It is a protocol used for sending and receiving email messages over the internet. SMTP operates on the [Application Layer](../OSI Model/7-Application Layer.md) of the [OSI Model](../OSI Model/OSI Model.md).
 SMTP is responsible for the transmission of email messages from a sender’s email client to the recipient’s email server. It uses a set of commands and responses to facilitate the transfer of email messages between servers.
 
-SMTP typically uses [Port](../../Systems%20&%20Plaforms/Port.md) 25 for communication, although other [ports](../../Systems%20&%20Plaforms/Port.md) such as 587 and 465 are also used for secure email transmission.
+SMTP typically uses [Port](../../Systems & Plaforms/Port.md) 25 for communication, although other [ports](../../Systems & Plaforms/Port.md) such as 587 and 465 are also used for secure email transmission.
 
 SMTP works in conjunction with other protocols, such as POP3 and IMAP, which are used for retrieving email messages from the recipient’s email server.
 

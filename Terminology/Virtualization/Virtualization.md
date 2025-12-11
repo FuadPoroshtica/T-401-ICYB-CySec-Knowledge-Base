@@ -6,15 +6,15 @@ date modified: Thursday, 11. December 2025, 09:12
 
 # Virtualization
 
-[Host Machine / Host OS](Virtualization/Host%20Machine%20Host%20OS.md)
+[Host Machine (Host OS)](Host Machine (Host OS).md)
 
-[Virtual Machine (VM)](Virtual%20Machine%20(VM).md)
+[Virtual Machine (VM)](Virtual Machine (VM).md)
 
 [Hypervisor](Hypervisor.md)
 
-[Virtualization methods](Virtualization/Virtualization%20methods.md)
+[Virtualization methods](Virtualization methods/Virtualization methods.md)
 
-[Virtualization Hardening & Operations](Virtualization/Virtualization%20Hardening%20&%20Operations.md)
+[Virtualization Hardening & Operations](Virtualization Hardening & Operations/Virtualization Hardening & Operations.md)
 
 ---
 
@@ -22,17 +22,17 @@ date modified: Thursday, 11. December 2025, 09:12
 
 **Definition**: A set of technologies that make one physical computer behave like many separate “virtual” computers by abstracting hardware into software.
 
-**Context/Example**: One powerful server can be split into several [Virtual Machines (VMs)](Virtual%20Machine%20(VM).md), each running its own [OS](Operating%20System.md) (e.g., one Linux server, one Windows server) on the same physical box.
+**Context/Example**: One powerful server can be split into several [Virtual Machines (VMs)](Virtual Machine (VM).md), each running its own [OS](Operating System.md) (e.g., one Linux server, one Windows server) on the same physical box.
 
-**Related Concepts**: [Virtual machine](Virtual%20Machine%20(VM).md), [hypervisor](Hypervisor.md), [containers](Virtualization%20methods/Container.md), cloud computing
+**Related Concepts**: [Virtual machine](Virtual Machine (VM).md), [hypervisor](Hypervisor.md), [containers](Virtualization methods/Container.md), cloud computing
 
 ## Security Challenges
 
-[VM Escape](VM%20Escape.md)
+[VM Escape](VM Escape.md)
 
 [Multi-Tenancy](Multi-Tenancy.md)
 
-[Side-Channel Attack](Side-Channel%20Attack.md)
+[Side-Channel Attack](Side-Channel Attack.md)
 
 ## Mitigating Security Risks
 
@@ -40,4 +40,4 @@ Patch Management
 
 Principle of Least Privilege → give users/programs only the minimum permission they need to do their job.
 
-Disable unused [ports](../Systems%20&%20Plaforms/Port.md)
+Disable unused [ports](../Systems & Plaforms/Port.md)

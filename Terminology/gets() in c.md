@@ -6,7 +6,7 @@ date modified: Thursday, 11. December 2025, 14:12
 
 # gets() in C
 
-**Definition**: *`gets()`* is a C standard library function used to read a line of text from standard input into a buffer. It is considered highly dangerous because it does not perform bounds checking on the buffer, allowing users to input more data than the buffer can hold, which leads to buffer overflows. This is also the case for the stdlib function `scanf()`
+**Definition**: *`gets()`* is a C standard library function used to read a line of text from standard input into a buffer. It is considered highly dangerous because it does not perform bounds checking on the buffer, allowing users to input more data than the buffer can hold, which leads to [buffer overflows](Attacks/Buffer Overflow.md). This is also the case for the stdlib function `scanf()`
 
 **Context/Example**: Using `gets()` like this:
 

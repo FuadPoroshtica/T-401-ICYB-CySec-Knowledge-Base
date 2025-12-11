@@ -5,7 +5,7 @@ date modified: Thursday, 11. December 2025, 09:12
 ---
 
 # FTP
-**FTP** stands for **File Transfer Protocol**. It is a standard network protocol used for transferring files between a client and a server over a computer network, such as the internet. FTP operates on the [Application Layer](../OSI%20Model/7-Application%20Layer.md) of the [OSI Model](../OSI%20Model/OSI%20Model.md).
+**FTP** stands for **File Transfer Protocol**. It is a standard network protocol used for transferring files between a client and a server over a computer network, such as the internet. FTP operates on the [Application Layer](../OSI Model/7-Application Layer.md) of the [OSI Model](../OSI Model/OSI Model.md).
 FTP allows users to upload, download, and manage files on a remote server. It supports various commands for file operations, such as listing directories, changing directories, and deleting files.
 FTP can operate in two modes: active and passive.
 - In active mode, the client opens a random port and waits for the server to connect to it,
