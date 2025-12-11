@@ -5,12 +5,11 @@ date modified: Monday, 8. December 2025, 19:12
 ---
 
 # Image
-**Term**: Image / Template ([VM](<../Virtual Machine (VM>).md) or [Container](<../Virtualization methods/Container.md>))
+**Term**: Image / Template ([VM](<../Virtual Machine (VM).md>) or [Container](<../Virtualization methods/Container.md>))
 
-**Definition**: A preconfigured disk or filesystem snapshot used as a base to create new [VMs](<../Virtual Machine (VM>).md) or [containers](<../Virtualization methods/Container.md>) quickly and consistently.
+**Definition**: A preconfigured disk or filesystem snapshot used as a base to create new [VMs](<../Virtual Machine (VM).md>) or [containers](<../Virtualization methods/Container.md>) quickly and consistently.
 
-**Context/Example**: A “Ubuntu server base image” used to spin up dozens of identical web-server [VMs](<../Virtual Machine (VM>).md), or a [Docker](<https://en.wikipedia.org/wiki/Docker_(software>)) image pushed to a registry for deployments.
-
+**Context/Example**: A “Ubuntu server base image” used to spin up dozens of identical web-server [VMs](<../Virtual Machine (VM).md>), or a [Docker](<https://en.wikipedia.org/wiki/Docker_(software>)) image pushed to a registry for deployments.
 **Related Concepts**:
 
 ---

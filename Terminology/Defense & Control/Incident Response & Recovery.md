@@ -18,11 +18,11 @@ Assume you will be (or already are) breached:
 	- Logging and forensics is important.
 
 ## Recovery: RPO and RTO ⏱️
-**[RPO](<Recovery Point Objective (RPO>).md) (Recovery Point Objective)** 📂
+**[RPO](<./Recovery Point Objective (RPO).md>) (Recovery Point Objective)** 📂
 - How much data can we afford to lose?
 - Determined by backup frequency. Backing up all the data once an hour, once a day, etc.
 
-**[RTO](<Recovery Time Objective (RTO>).md) (Recovery Time Objective)** 🕰️
+**[RTO](<./Recovery Time Objective (RTO).md>) (Recovery Time Objective)** 🕰️
 - How long can the system be down?
 - Determined by redundancy and failover speed.
 

@@ -11,7 +11,7 @@ date modified: Monday, 8. December 2025, 11:12
 
 **Context/Example**: VirtualBox, VMware ESXi, and KVM are hypervisors; they decide how much CPU, RAM, and disk each VM gets and enforce isolation.
 
-**Related Concepts**: Type 1 / Type 2 hypervisor, [VM](<Virtual Machine (VM>).md), resource allocation, isolation.
+**Related Concepts**: Type 1 / Type 2 hypervisor, [VM](<./Virtual Machine (VM).md>), resource allocation, isolation.
 
 ---
 
@@ -21,7 +21,7 @@ date modified: Monday, 8. December 2025, 11:12
 
 **Definition**: A hypervisor that runs *directly* on the physical hardware, with no “normal” host OS underneath.
 
-**Context/Example**: VMware ESXi or Microsoft Hyper-V Server installed directly on a server; all [VMs](<Virtual Machine (VM>).md) run on top of this thin hypervisor layer.
+**Context/Example**: VMware ESXi or Microsoft Hyper-V Server installed directly on a server; all [VMs](<./Virtual Machine (VM).md>) run on top of this thin hypervisor layer.
 
 **Related Concepts**: Type 2 hypervisor, [full virtualization](Virtualization methods/Full Virtualization.md), [multi-tenancy](<./Multi-Tenancy.md>), cloud providers.
 

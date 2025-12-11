@@ -352,7 +352,7 @@ date modified: Wednesday, 10. December 2025, 22:12
   - ~~×Incognito mode prevents you from taking screenshots.~~
   - ~~×Incognito mode automatically blocks all foreign websites.~~
  
-> You are conducting an investigation inside a secure [Virtual Machine (VM)](../Terminology/Virtualization/Virtual Machine (VM).md). You decide to check your personal sports news feed in a separate tab within that same [VM](<../Terminology/Virtualization/Virtual Machine (VM>).md). Why is this a critical error?
+> You are conducting an investigation inside a secure [Virtual Machine (VM)](../Terminology/Virtualization/Virtual Machine (VM).md). You decide to check your personal sports news feed in a separate tab within that same [VM](<../Terminology/Virtualization/Virtual Machine (VM).md>). Why is this a critical error?
   - ~~×The sports website might be blocked by your VPN.~~
   - ~~×It violates the terms of service of the [Virtual Machine](../Terminology/Virtualization/Virtual Machine (VM).md) software.~~
   - ✓ If the sports site drops a tracking cookie, it could link your investigative session to your personal browsing habits.
@@ -665,10 +665,10 @@ date modified: Wednesday, 10. December 2025, 22:12
   - ✓ NIS2 Directive
  
 > A business determines that in the event of a database crash, they cannot afford to lose more than 15 minutes of data transactions. This metric is known as the:
-  - ✓ [RPO](<../Terminology/Defense & Control/Recovery Point Objective (RPO>).md) (Recovery Point Objective)
+  - ✓ [RPO](<../Terminology/Defense & Control/Recovery Point Objective (RPO).md>) (Recovery Point Objective)
   - ~~×MTBF (Mean Time Between Failures)~~
   - ~~×SLA (Service Level Agreement)~~
-  - ~~×[RTO](<../Terminology/Defense & Control/Recovery Time Objective (RTO>).md) (Recovery Time Objective)~~
+  - ~~×[RTO](<../Terminology/Defense & Control/Recovery Time Objective (RTO).md>) (Recovery Time Objective)~~
  
 > Why is the “[Castle and Moat](../Terminology/Defense & Control/Castle and Moat security model.md)” perimeter model considered outdated in favor of “[Zero Trust](../Terminology/Defense & Control/Zero Trust Architecture.md)”?
   - ✓ Cloud computing and remote work mean there is no longer a clearly defined “inside” of the network.
