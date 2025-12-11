@@ -327,7 +327,7 @@ path at all).
 > [!error] The “`chmod 777`” trap
 > - **Action**: Granting Read/Write/Execute permissions to *Everyone* to fix a “permission denied” error.
 > - **Risk**: Any user (or hacked web service) can overwrite your scripts.
-> - **Scenario**: Attacker modifies a startup script. When you reboot, their [malware](../Terminology/Malware.md) runs with your admin privileges.
+> - **Scenario**: Attacker modifies a startup script. When you reboot, their [Malware](../Terminology/Attacks/Malware/Malware.md) runs with your admin privileges.
 
 > [!error] Running as Root
 > - **Principle of Least Privilege**: Always log in as a standard user; use `sudo` only when necessary.

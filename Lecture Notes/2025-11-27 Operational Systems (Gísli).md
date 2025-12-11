@@ -544,4 +544,4 @@ Exam (Friday, 12th of December) will be later in the day? Around noon or later?
 
 Knowledge base in the exam: we might just get a print-out. It shouldn’t be too big.
 
-[Lab 4 (Gísli) Operating Systems](Operational%20Systems%202025-11-27/Lab%204%20(G%C3%ADsli)%20Operating%20Systems.md)
+[Lab 4 (Gísli) Operating Systems](Labs/Lab%204%20(Gísli)%20Operating%20Systems.md)

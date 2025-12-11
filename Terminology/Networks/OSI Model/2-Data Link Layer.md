@@ -15,7 +15,7 @@ The Data Link Layer is divided into two sublayers:
 1. the [Media Access Control](../MAC.md) (MAC) layer, which controls access to the physical medium,
 2. and the Logical Link Control (LLC) layer, which manages communication between devices on the same network.
 
-The Data Link Layer works closely with the [Physical Layer](Physical%20Layer.md) to provide reliable data transfer over the physical medium.
+The Data Link Layer works closely with the [Physical Layer](1-Physical%20Layer.md) to provide reliable data transfer over the physical medium.
 
 ## Link Layer Functions
 

@@ -16,4 +16,4 @@ It uses logical addresses, such as [IP](../TCP%20IP%20Model/IP.md) addresses, to
 
 The Network Layer also handles packet fragmentation and reassembly, ensuring that large data packets are broken down into smaller segments for transmission and then reassembled at the destination.
 
-The Network Layer works closely with the [Data Link Layer](Data%20Link%20Layer.md) to provide end-to-end data delivery across multiple networks.
+The Network Layer works closely with the [Data Link Layer](2-Data%20Link%20Layer.md) to provide end-to-end data delivery across multiple networks.

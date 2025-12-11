@@ -10,4 +10,4 @@ The **Physical Layer** is the first and lowest layer in the [OSI Model](OSI%20Mo
 
 The Physical Layer defines the electrical, mechanical, and procedural aspects of the physical connection, including voltage levels, timing, data rates, and connector types. It ensures that data is transmitted accurately and efficiently between devices at the hardware level.
 
-The Physical Layer works closely with the [Data Link Layer](Data%20Link%20Layer.md) to provide reliable data transfer over the physical medium.
+The Physical Layer works closely with the [Data Link Layer](2-Data%20Link%20Layer.md) to provide reliable data transfer over the physical medium.

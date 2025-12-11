@@ -8,7 +8,7 @@ date modified: Monday, 8. December 2025, 18:12
 
 The most common model is the OSI (Open Systems Interconnection) model, which has seven layers:
 
-1. **[Physical Layer](../Terminology/Networks/OSI%20Model/1-Physical%20Layer.md) (Layer 1):** Deals with the physical connection between devices, including cables, [Switches](../Network%20hardware/Switch.md), and other hardware.
+1. **[Physical Layer](../Terminology/Networks/OSI%20Model/1-Physical%20Layer.md) [Physical Layer](1-Physical%20Layer.md) (Layer 1):** Deals with the physical connection between devices, including cables, [Switches](../Network%20hardware/Switch.md), and other hardware.
 2. **[Data Link Layer](../Terminology/Networks/OSI%20Model/2-Data%20Link%20Layer.md) (Layer 2):** Responsible for node-to-node (a node here is a device or a point of connection in a network) data transfer and error detection/correction. (E.g., Ethernet, [MAC](../MAC.md) addresses.)
 3. **[Network Layer](../Terminology/Networks/OSI%20Model/3-Network%20Layer.md) (Layer 3):** Manages data routing and forwarding between different networks. (E.g., [IP](../TCP%20IP%20Model/IP.md) addresses, [routers](../Network%20hardware/Router.md).) Basically, connections that are *more* than one hop away.
 4. **[Transport Layer](../Terminology/Networks/OSI%20Model/4-Transport%20Layer.md) (Layer 4):** Ensures reliable data transfer between end devices. (E.g., [TCP](../TCP%20IP%20Model/TCP.md), [UDP](../UDP.md).). It essentially manages end-to-end communication. Ensuring that data is delivered error-free, in sequence, and with no losses or duplications.
