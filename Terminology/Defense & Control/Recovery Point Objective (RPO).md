@@ -1,7 +1,7 @@
 ---
 aliases: [Recovery Point Objective, RPO]
 date created: Monday, 8. December 2025, 11:12
-date modified: Monday, 8. December 2025, 18:12
+date modified: Thursday, 11. December 2025, 21:12
 ---
 
 # Recovery Point Objective (RPO)
