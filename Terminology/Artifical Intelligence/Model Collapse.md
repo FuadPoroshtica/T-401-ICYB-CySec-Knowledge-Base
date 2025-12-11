@@ -16,4 +16,4 @@ date modified: Thursday, 11. December 2025, 09:12
 - *The Result*: Model Collapse. The variance of the model disappears; it loses touch with reality and becomes “dumber.”
 
 **Security Context**: This is a long-term Data Supply Chain vulnerability.
-If we build security tools (e.g., [Malware](../Attacks/Malware/Malware.md) classifiers) on future datasets, they may be trained on “synthetic garbage,” rendering them ineffective.
+If we build security tools (e.g., [Malware](<../Attacks/Malware/Malware.md>) classifiers) on future datasets, they may be trained on “synthetic garbage,” rendering them ineffective.

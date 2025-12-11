@@ -15,7 +15,7 @@ date modified: Wednesday, 10. December 2025, 22:12
 - ~~× The total number of users on a system.~~
 
 > What is a primary risk even in a secure machine with all updates applied?
-- ✓ Inadvertent [Virus](../Terminology/Attacks/Malware/Virus.md) introduction via external sources
+- ✓ Inadvertent [Virus](<../Terminology/Attacks/Malware/Virus.md>) introduction via external sources
 - ~~× Network congestion~~
 - ~~× Unpatched software versions~~
 - ~~× Hardware failure~~
@@ -30,17 +30,17 @@ date modified: Wednesday, 10. December 2025, 22:12
 > Which of the following is NOT a category of computer security threat?
 - ~~× Denial of authorized access~~
 - ✓ Corporate stewardship
-- ~~× [Spoofing](../Terminology/Attacks/Spoofing.md)~~
+- ~~× [Spoofing](<../Terminology/Attacks/Spoofing.md>)~~
 - ~~× Unauthorized access~~
 
 
 > Which type of attack involves encrypting files and demanding money for information on how to decrypt them?
 - ~~× Physical destruction~~
-- ~~× [Phishing](../Terminology/Attacks/Phishing.md) attack~~
+- ~~× [Phishing](<../Terminology/Attacks/Phishing.md>) attack~~
 - ~~× Denial of service attack~~
-- ✓ [Ransomware](../Terminology/Attacks/Malware/Ransomware.md) attack
+- ✓ [Ransomware](<../Terminology/Attacks/Malware/Ransomware.md>) attack
 
-> What can best describe the impact of the Stuxnet [Worm](../Terminology/Attacks/Malware/Worm.md)?
+> What can best describe the impact of the Stuxnet [Worm](<../Terminology/Attacks/Malware/Worm.md>)?
 - ~~× It caused data loss on personal computers.~~
 - ✓ It physically destroyed components in an Iranian nuclear facility.
 - ~~× It implemented a denial of service attack on a website.~~
@@ -74,7 +74,7 @@ date modified: Wednesday, 10. December 2025, 22:12
 - ✓ Improved flexibility and agility in deploying resources.
 - ~~× Increased hardware costs due to specialized equipment.~~
 
-> Which virtualisation method is characterised by the guest operating system being modified or having special drivers to communicate directly with the [Hypervisor](../Terminology/Virtualization/Hypervisor.md) for better performance?
+> Which virtualisation method is characterised by the guest operating system being modified or having special drivers to communicate directly with the [Hypervisor](<../Terminology/Virtualization/Hypervisor.md>) for better performance?
 - ~~× Hardware-Assisted Virtualisation~~
 - ✓ [Paravirtualization](../Terminology/Virtualization/Virtualization methods/Paravirtualization.md)
 - ~~× [Emulation](../Terminology/Virtualization/Virtualization methods/Emulation.md)~~
@@ -105,19 +105,19 @@ date modified: Wednesday, 10. December 2025, 22:12
 - ✓ To automate the management, deployment, scaling, and networking of containerized applications at scale.
 - ~~× To convert [Container images](../Terminology/Virtualization/Virtualization Hardening & Operations/Image.md) into [Virtual Machine](../Terminology/Virtualization/Virtual Machine (VM).md) [Images](../Terminology/Virtualization/Virtualization Hardening & Operations/Image.md).~~
 
-> In a multi-tenant cloud environment, what is the primary concern with [Side-Channel Attacks](../Terminology/Virtualization/Side-Channel Attack.md) in [Virtualisation](../Terminology/Virtualization/Virtualization.md)?
+> In a multi-tenant cloud environment, what is the primary concern with [Side-Channel Attacks](../Terminology/Virtualization/Side-Channel Attack.md) in [Virtualisation](<../Terminology/Virtualization/Virtualization.md>)?
 - ~~× Unauthorized access to the cloud provider’s billing system.~~
 - ~~× An attacker stealing physical hardware from the data center.~~
 - ~~× The complete shutdown of the cloud provider’s network infrastructure.~~
 - ✓ A malicious virtual machine inferring sensitive data or operations from a co-located virtual machine by analyzing shared resource usage patterns.
 
 > What is the main security risk associated with using untrusted or vulnerable [Container images](../Terminology/Virtualization/Virtualization Hardening & Operations/Image.md) from public repositories?
-- ✓ They may contain [Malware](../Terminology/Attacks/Malware/Malware.md), unpatched vulnerabilities, or misconfigurations that compromise the application or host.
+- ✓ They may contain [Malware](<../Terminology/Attacks/Malware/Malware.md>), unpatched vulnerabilities, or misconfigurations that compromise the application or host.
 - ~~× They automatically encrypt all data stored within the container, making it inaccessible.~~
 - ~~× They will always cause the entire host operating system to crash immediately.~~
 - ~~× They require significantly more computational resources than trusted [Images](../Terminology/Virtualization/Virtualization Hardening & Operations/Image.md).~~
 
-> Which of the following are crucial mitigation strategies for enhancing [Virtualisation](../Terminology/Virtualization/Virtualization.md) security? (Select all that apply)
+> Which of the following are crucial mitigation strategies for enhancing [Virtualisation](<../Terminology/Virtualization/Virtualization.md>) security? (Select all that apply)
 - ✓ Implementing strong [Access Control](../Terminology/Defense & Control/Access Control.md) and Multi-Factor Authentication for management interfaces.
 - ✓ Segmenting management networks from guest networks.
 - ~~× Disabling all network connectivity to virtualised environments.~~
@@ -170,10 +170,10 @@ date modified: Wednesday, 10. December 2025, 22:12
 > What is the purpose of the “Shebang” (`#!/bin/bash`) at the very first line of a Unix script?
   - ~~× It tells the script to look for files in the `/bin` directory.~~
   - ~~× It is a comment line used for copyright information.~~
-  - ✓ It tells the [Operating System](../Terminology/Systems & Plaforms/Operating System.md) which interpreter (e.g., Bash, Python, Ruby) should be used to execute the file.
+  - ✓ It tells the [Operating System](<../Terminology/Systems & Plaforms/Operating System.md>) which interpreter (e.g., Bash, Python, Ruby) should be used to execute the file.
   - ~~× It grants the script Administrator permissions automatically.~~
 
-> Why is passing a password as a flag (e.g., `mysql -u root -pSecret123`) considered a security [Vulnerability](../Terminology/Vulnerability.md)?
+> Why is passing a password as a flag (e.g., `mysql -u root -pSecret123`) considered a security [Vulnerability](<../Terminology/Vulnerability.md>)?
   - ~~× It causes a [Buffer Overflow](../Terminology/Attacks/Buffer Overflow.md) in the database.~~
   - ✓ The password will be saved in the shell’s history file (e.g., `.bash_history`) in plaintext on the hard drive.
   - ~~× The password is sent over the internet in plain text.~~
@@ -218,9 +218,9 @@ date modified: Wednesday, 10. December 2025, 22:12
   - ✓ Windows Event Viewer
   - ✓ Tripwire (checking file checksums/hashes)
  
-> A “[Race condition](../Terminology/Attacks/Race condition.md)” (specifically TOCTOU) exploits which specific aspect of an [Operating System](../Terminology/Systems & Plaforms/Operating System.md)?
-  - ~~×The inability of the [OS](../Terminology/Systems & Plaforms/Operating System.md) to filter SQL commands from user input.~~
-  - ✓ The fact that the [OS](../Terminology/Systems & Plaforms/Operating System.md) multitasks, creating a time gap between checking permissions and using a resource.
+> A “[Race condition](../Terminology/Attacks/Race condition.md)” (specifically TOCTOU) exploits which specific aspect of an [Operating System](<../Terminology/Systems & Plaforms/Operating System.md>)?
+  - ~~×The inability of the [OS](<../Terminology/Systems & Plaforms/Operating System.md>) to filter SQL commands from user input.~~
+  - ✓ The fact that the [OS](<../Terminology/Systems & Plaforms/Operating System.md>) multitasks, creating a time gap between checking permissions and using a resource.
   - ~~×The finite amount of RAM available to the Stack.~~
   - ~~×The weak encryption used in legacy passwords.~~
  
@@ -312,7 +312,7 @@ date modified: Wednesday, 10. December 2025, 22:12
  
 > In a “Red Team” (offensive) scenario, how might an ethical hacker use OSINT before launching a simulated attack?
   - ~~×By using a supercomputer to crack the company’s [Firewall](../Terminology/Defense & Control/Firewall.md) password through brute force.~~
-  - ~~×By sending a [Virus](../Terminology/Attacks/Malware/Virus.md) to the CEO immediately.~~
+  - ~~×By sending a [Virus](<../Terminology/Attacks/Malware/Virus.md>) to the CEO immediately.~~
   - ✓ By analyzing the target company’s job postings to determine what antivirus software they use.
   - ~~×By physically breaking into the office to steal a laptop.~~
  
@@ -359,10 +359,10 @@ date modified: Wednesday, 10. December 2025, 22:12
   - ~~×It wastes computing power, slowing down the investigation.~~
 
 ## Quiz 7 - Network Security
-> In a [BGP](../Terminology/Networks/BGP.md) Hijacking attack, how does an attacker convince global [routers](../Terminology/Networks/Network hardware/Router.md) to send traffic to them instead of the legitimate victim?
-  - ~~×By using [ARP](../Terminology/Networks/ARP.md) poisoning to fool the border gateway.~~
+> In a [BGP](<../Terminology/Networks/BGP.md>) Hijacking attack, how does an attacker convince global [routers](../Terminology/Networks/Network hardware/Router.md) to send traffic to them instead of the legitimate victim?
+  - ~~×By using [ARP](<../Terminology/Networks/ARP.md>) poisoning to fool the border gateway.~~
   - ~~×By advertising a shorter physical distance (cable length) to the destination.~~
-  - ~~×By flooding the [BGP](../Terminology/Networks/BGP.md) [routers](../Terminology/Networks/Network hardware/Router.md) with “Hello” packets until they crash.~~
+  - ~~×By flooding the [BGP](<../Terminology/Networks/BGP.md>) [routers](../Terminology/Networks/Network hardware/Router.md) with “Hello” packets until they crash.~~
   - ✓ By advertising a more specific [IP](../Terminology/Networks/TCP IP Model/IP.md) range (a longer subnet mask) than the victim.
  
 > You suspect a [Router](../Terminology/Networks/Network hardware/Router.md) halfway between your computer and a server is malfunctioning. Which command-line tool helps you identify the exact hop where the connection is failing?
@@ -375,16 +375,16 @@ date modified: Wednesday, 10. December 2025, 22:12
   - ~~×The specific SQL query inside the database packet.~~
   - ✓ The Source [IP](../Terminology/Networks/TCP IP Model/IP.md) Address.
   - ~~×The URL the user is trying to visit (e.g., www.malware.com).~~
-  - ✓ The Transport Protocol ([TCP](../Terminology/Networks/TCP IP Model/TCP.md), [UDP](../Terminology/Networks/UDP.md), or ICMP).
+  - ✓ The Transport Protocol ([TCP](../Terminology/Networks/TCP IP Model/TCP.md), [UDP](<../Terminology/Networks/UDP.md>), or ICMP).
   - ✓ The Destination Port Number.
  
 > When a computer needs to communicate with another device on the same local network segment, which address type is required for the final delivery of the frame?
   - ~~×The Logical Address ([IP](../Terminology/Networks/TCP IP Model/IP.md) Address).~~
   - ~~×The Port Number (e.g., 80).~~
-  - ~~×The [Autonomous System](../Terminology/Networks/AS.md) Number (ASN).~~
-  - ✓ The Physical Address ([MAC](../Terminology/Networks/MAC.md) Address).
+  - ~~×The [Autonomous System](<../Terminology/Networks/AS.md>) Number (ASN).~~
+  - ✓ The Physical Address ([MAC](<../Terminology/Networks/MAC.md>) Address).
  
-> An administrator argues that because their network uses [Network Address Translation](../Terminology/Networks/NAT.md) (NAT), they are immune to malware infections. Why is this assumption incorrect?
+> An administrator argues that because their network uses [Network Address Translation](<../Terminology/Networks/NAT.md>) (NAT), they are immune to malware infections. Why is this assumption incorrect?
   - ~~×NAT increases the [Attack Surface](../Terminology/Attack Surface.md) by opening all ports by default.~~
   - ✓ NAT does not inspect the contents of traffic initiated by the user (solicited traffic), such as downloading a malicious file.
   - ~~×NAT only translates IPv4 to IPv6, offering no traffic filtering.~~
@@ -396,7 +396,7 @@ date modified: Wednesday, 10. December 2025, 22:12
   - ~~×It is a Bridge; it should be replaced with a [Hub](../Terminology/Networks/Network hardware/Hub.md).~~
   - ~~×It is a [Switch](../Terminology/Networks/Network hardware/Switch.md); it should be replaced with a [Router](../Terminology/Networks/Network hardware/Router.md).~~
  
-> A “BadUSB” attack (such as a Rubber Ducky) bypasses [Firewall](../Terminology/Defense & Control/Firewall.md) restrictions and antivirus checks by identifying itself to the [Operating System](../Terminology/Systems & Plaforms/Operating System.md) as which type of device?
+> A “BadUSB” attack (such as a Rubber Ducky) bypasses [Firewall](../Terminology/Defense & Control/Firewall.md) restrictions and antivirus checks by identifying itself to the [Operating System](<../Terminology/Systems & Plaforms/Operating System.md>) as which type of device?
   - ~~×A Network Interface Card.~~
   - ~~×A Mass Storage Device (Flash Drive).~~
   - ~~×A Biometric Scanner.~~
@@ -453,7 +453,7 @@ date modified: Wednesday, 10. December 2025, 22:12
   - ~~×Encrypting the database connection ([HTTPS](../Terminology/Networks/Transfer Protocols/HTTPS.md)).~~
   - ~~×Implementing client-side JavaScript validation.~~
  
-> An attacker successfully exploits a [Cross-Site Scripting](../Terminology/Attacks/XSS.md) (XSS) vulnerability on a banking website. What is the most likely immediate consequence?
+> An attacker successfully exploits a [Cross-Site Scripting](<../Terminology/Attacks/XSS.md>) (XSS) vulnerability on a banking website. What is the most likely immediate consequence?
   - ~~×The banking server crashes due to a memory leak.~~
   - ~~×The attacker obtains the bank’s SSL private key.~~
   - ✓ The attacker’s script executes in the victim’s browser, allowing them to hijack the victim’s session.
@@ -521,13 +521,13 @@ date modified: Wednesday, 10. December 2025, 22:12
  
 
 > How does “AI Package Hallucination” differ from traditional “Typosquatting”?
-  - ~~×Typosquatting is manual; Package Hallucination is the result of a [Virus](../Terminology/Attacks/Malware/Virus.md) inside the [LLM](../Terminology/Artifical Intelligence/LLM.md).~~
+  - ~~×Typosquatting is manual; Package Hallucination is the result of a [Virus](<../Terminology/Attacks/Malware/Virus.md>) inside the [LLM](../Terminology/Artifical Intelligence/LLM.md).~~
   - ~~×Typosquatting targets compiled languages; Package Hallucination only targets interpreted languages.~~
   - ~~×Typosquatting relies on user spelling errors; Package Hallucination relies on the AI compromising the NPM registry database.~~
   - ✓ Typosquatting relies on human error; Package Hallucination exploits the probabilistic nature of the model.
  
 
-> Beyond simply writing better [Phishing](../Terminology/Attacks/Phishing.md) emails, how does GenAI automate the “Reconnaissance” phase of a cyberattack? (Select all that apply)
+> Beyond simply writing better [Phishing](<../Terminology/Attacks/Phishing.md>) emails, how does GenAI automate the “Reconnaissance” phase of a cyberattack? (Select all that apply)
   - ~~×By automatically brute-forcing passwords using GPU acceleration.~~
   - ✓ By analyzing open-source code repositories to identify zero-day logic flaws faster than human auditors.
   - ✓ By ingesting and correlating massive amounts of public OSINT (Open Source Intelligence) data about a target’s employees.
@@ -593,7 +593,7 @@ date modified: Wednesday, 10. December 2025, 22:12
 > The program crashes with a SIGSEGV (Segmentation Fault) when the attacker runs `python3 -c "print(chr(0x41) * 100)"` and the Return Address is overwritten with `0x4141`... Why does this specific crash happen?
   - ✓ The CPU attempts to jump to address `0x4141414141414141`, which is not a valid mapped memory address.
   - ~~×The `printf` function failed.~~
-  - ~~×The [Operating System](../Terminology/Systems & Plaforms/Operating System.md) detected a hacker.~~
+  - ~~×The [Operating System](<../Terminology/Systems & Plaforms/Operating System.md>) detected a hacker.~~
   - ~~×The buffer is full.~~
  
 > In [Pwntools](../Terminology/Binary Exploitation/Pwntools.md), what does the line `p = process("./vuln")` do?
@@ -619,7 +619,7 @@ date modified: Wednesday, 10. December 2025, 22:12
   - ~~×Impact (Cost)~~
   - ✓ Complexity
   - ~~×Threat~~
-  - ~~×[Vulnerability](../Terminology/Vulnerability.md)~~
+  - ~~×[Vulnerability](<../Terminology/Vulnerability.md>)~~
  
 > A company decides that the cost of upgrading a legacy server is too high compared to the value of the data it holds. They decide to leave it as-is and monitor it. Which Risk Management strategy is this?
   - ~~×Risk Avoidance~~

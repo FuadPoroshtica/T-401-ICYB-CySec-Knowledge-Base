@@ -15,12 +15,12 @@ date modified: Thursday, 11. December 2025, 09:12
 - Linux + Windows CLI tools.
 - [OS](Operating System.md) basics ([access control](../Terminology/Defense & Control/Access Control)).
 - Networking basics.
-- [Virtualization](../Terminology/Virtualization/Virtualization).
+- [Virtualization](<../Terminology/Virtualization/Virtualization.md>).
     - Some of the labs we’ll be doing will be on virtual machines and stuff.
 - Web security.
 - Common tools for security testing.
 - Principles of defense.
-- Guest lectures on various topics: [phishing](../Terminology/Attacks/Phishing), information warfare, binary exploitation, maybe more topics.
+- Guest lectures on various topics: [phishing](<../Terminology/Attacks/Phishing.md>), information warfare, binary exploitation, maybe more topics.
 They’ll be teaching us like shell scripts and stuff.
 Computer architecture.
 
@@ -86,7 +86,7 @@ Computer architecture.
     - Email.
     - Network points of access.
     - USB, CD-ROM.
-    - Downloaded [virus](../Terminology/Attacks/Malware/Virus)es and [malware](../Terminology/Attacks/Malware/Malware).
+    - Downloaded [virus](<../Terminology/Attacks/Malware/Virus.md>)es and [malware](<../Terminology/Attacks/Malware/Malware.md>).
     - SMS messages.
     - Software distributions, external software, BIOS, chips,...
     - **Any form of input or control over the software or machine**.
@@ -98,12 +98,12 @@ Computer architecture.
     - Local [firewall](../Terminology/Defense & Control/Firewall) enabled.
     - all software updates applied
 - There are still risks:
-    - Inadvertent virus introduction (email, USB, evil website, [Trojan](../Terminology/Attacks/Malware/Trojan) software)
+    - Inadvertent virus introduction (email, USB, evil website, [Trojan](<../Terminology/Attacks/Malware/Trojan.md>) software)
     - Unpatched software versions
     - Zero-day exploit in an [OS](Operating System.md) or a network application.
         - An exploit in the software that can be used to gain access to the system, but there is no fix for it yet.
     - Web browser malware.
-    - Hardware [backdoor](../Terminology/Attacks/Backdoor) (Intel Management System)
+    - Hardware [backdoor](<../Terminology/Attacks/Backdoor.md>) (Intel Management System)
     - IT security failure.
 
 ### History of attacks
@@ -112,7 +112,7 @@ Computer architecture.
     - First virus on the internet (which was just the ARPANET at this point).
     - It didn’t actually do anything harmful, just displayed a message. It was kind of just a warning.
 - **1986**: North Korea trains the first “cyber-warriors”.
-- **1988**: The Morris [worm](../Terminology/Attacks/Malware/Worm) brings down 6,000+ internet computers.
+- **1988**: The Morris [worm](<../Terminology/Attacks/Malware/Worm.md>) brings down 6,000+ internet computers.
 - **1994**: $10 million was stolen from Citibank by Russian hackers.
 - **1999**: Windows 98: ‘Melissa email worm’ brings down all email globally.
 - **2007**: Aurora generator test: 30 lines of code physically destroyed power generators.
@@ -144,8 +144,8 @@ Every computer professional should be doing it this way anyway.
 - **Unauthorized disclosure**
 - **Denial of authorized access**
 - **Forgery**
-- **[Repudiation](../Terminology/Repudiation)** - where the integrity of an asset can be disputed
-- **[Spoofing](../Terminology/Attacks/Spoofing)** - masquerading as a legitimate entity.
+- **[Repudiation](<../Terminology/Repudiation.md>)** - where the integrity of an asset can be disputed
+- **[Spoofing](<../Terminology/Attacks/Spoofing.md>)** - masquerading as a legitimate entity.
 - Still missing that don’t really fit well in these:
     - Information warfare?
     - Bribery/blackmail?
@@ -158,7 +158,7 @@ Every computer professional should be doing it this way anyway.
 - Modify information
 - Physical destruction - Stuxnet
 - Infrastructure attack
-- [Ransomware](../Terminology/Attacks/Malware/Ransomware)
+- [Ransomware](<../Terminology/Attacks/Malware/Ransomware.md>)
 - Masquerade as a victim
 - Add files - poison web cache
 - [Corporate espionage](../Terminology/Attacks/Corporate Espionage)
@@ -178,9 +178,9 @@ Every computer professional should be doing it this way anyway.
 ### Further reading (we have to read this):
 
 - **1971**: ARPANET: Creeper
-    - First [virus](../Terminology/Attacks/Malware/Virus) on the internet (the ARPANET at this point).
+    - First [virus](<../Terminology/Attacks/Malware/Virus.md>) on the internet (the ARPANET at this point).
     - It didn’t actually do anything harmful, just displayed a message. It was kind of just a warning.
-- **1988**: The Morris [worm](../Terminology/Attacks/Malware/Worm) brings down 6,000+ internet computers.
+- **1988**: The Morris [worm](<../Terminology/Attacks/Malware/Worm.md>) brings down 6,000+ internet computers.
 - **1994**: $10 million was stolen from Citibank by Russian hackers.
 - **2009**: Operation Olympic Games
 - **2017**: WannaCry ransomware attack
@@ -196,7 +196,7 @@ The attacks:
     - **Impact:** Displayed the message: “I’m the creeper, catch me if you can!” on infected systems. It was not malicious and did not cause harm to the systems. Could only have affect about 28 machines in total.
     - **Weaknesses used:** Exploited vulnerabilities in ARPANET’s TENEX operating system.
 - Morris Worm (1988)
-    - **How it worked:** Exploited vulnerabilities in the debug mode of Unix sendmail, a [buffer overflow](../Terminology/Attacks/Buffer Overflow) [vulnerability](../Terminology/Vulnerability) in the “finger” network service, and he transitive trust enabled by people setting up network [logins](https://en.wikipedia.org/wiki/Login) with no [password](https://en.wikipedia.org/wiki/Password) requirements via [remote execution](https://en.wikipedia.org/wiki/Berkeley_r-commands) (rexec) with [Remote Shell](https://en.wikipedia.org/wiki/Remote_Shell) (rsh), termed “rexec/rsh”, as well as weak passwords
+    - **How it worked:** Exploited vulnerabilities in the debug mode of Unix sendmail, a [buffer overflow](../Terminology/Attacks/Buffer Overflow) [vulnerability](<../Terminology/Vulnerability.md>) in the “finger” network service, and he transitive trust enabled by people setting up network [logins](https://en.wikipedia.org/wiki/Login) with no [password](https://en.wikipedia.org/wiki/Password) requirements via [remote execution](https://en.wikipedia.org/wiki/Berkeley_r-commands) (rexec) with [Remote Shell](https://en.wikipedia.org/wiki/Remote_Shell) (rsh), termed “rexec/rsh”, as well as weak passwords
     - **Impact:**
     - **Weaknesses used:**
 - Vladimir Levin stole $10 million USD from Citibank (1994)

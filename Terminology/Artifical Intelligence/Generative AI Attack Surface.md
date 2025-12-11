@@ -29,7 +29,7 @@ Security vulnerabilities can be introduced during any stage of the training proc
 	- *Mitigation*: Advanced Alignment Techniques. Using more sophisticated methods to align the model with human values.
 
 ## The Mechanism (Why injection works)
-- **Tokenization**: [LLMs](LLM.md) break down input text into smaller pieces called tokens. These tokens can be words, subwords, or even characters.
+- **Tokenization**: [LLMs](<./LLM.md>) break down input text into smaller pieces called tokens. These tokens can be words, subwords, or even characters.
 - **Context Window (Short Term Memory)**: LLMs have a limited context window, meaning they can only consider a certain number of tokens at a time when generating responses.
 - *Risk*: [Prompt Injection](Prompt Injection.md) Attacks
     - Attackers can craft inputs that exploit the tokenization and context window limitations to manipulate the model’s behavior.

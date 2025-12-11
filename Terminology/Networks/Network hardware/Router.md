@@ -6,12 +6,12 @@ date modified: Monday, 8. December 2025, 18:12
 
 # A Network Router
 - Routers forward packets between (local) networks.
-- (Unlike [Switches](Switch.md), routers operate at Layer 3 ([Network Layer](../OSI Model/3-Network Layer.md)) of the [OSI Model](../OSI Model/OSI Model.md).)
-- The difference between a [Switch](Switch.md) and a router is that a [Switch](Switch.md) connects devices within the same network, while a router connects *different* networks together.
+- (Unlike [Switches](<./Switch.md>), routers operate at Layer 3 ([Network Layer](../OSI Model/3-Network Layer.md)) of the [OSI Model](../OSI Model/OSI Model.md).)
+- The difference between a [Switch](<./Switch.md>) and a router is that a [Switch](<./Switch.md>) connects devices within the same network, while a router connects *different* networks together.
 
 **Home router:**
 A home router is actually much more than just a router. It typically combines multiple functions:
-- [Switch](Switch.md).
+- [Switch](<./Switch.md>).
 - Wireless access point (for Wi-Fi).
 - Router.
 - NAT (Network Address Translation).

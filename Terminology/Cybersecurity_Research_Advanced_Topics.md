@@ -19,7 +19,7 @@ date modified: Thursday, 11. December 2025, 09:12
 
 ## What is a Rootkit?
 
-A rootkit is [malware](Attacks/Malware/Malware) designed to hide its presence by intercepting and modifying system calls. Think of it as a dishonest accountant who alters the books - when you ask “show me all files,” the rootkit filters the output to hide malicious files and processes.
+A rootkit is [malware](<./Attacks/Malware/Malware.md>) designed to hide its presence by intercepting and modifying system calls. Think of it as a dishonest accountant who alters the books - when you ask “show me all files,” the rootkit filters the output to hide malicious files and processes.
 
 ## Famous Rootkit Attacks
 
@@ -57,7 +57,7 @@ A rootkit is [malware](Attacks/Malware/Malware) designed to hide its presence by
 1. **Stealth Operations**: The rootkit component hid all files and processes from detection
 2. **Deception**: Faked normal sensor readings so operators saw no problems
 3. **Persistence**: Remained undetected for months while sabotaging centrifuges
-4. **Protection**: Prevented antivirus software from detecting the [worm](Attacks/Malware/Worm)
+4. **Protection**: Prevented antivirus software from detecting the [worm](<./Attacks/Malware/Worm.md>)
 
 **Technical Details:**
 - Kernel-mode rootkit that modified Windows kernel functions
@@ -100,7 +100,7 @@ A rootkit is [malware](Attacks/Malware/Malware) designed to hide its presence by
 ### Rustock (2006) - The Spam King
 
 **What happened:**
-- Created one of the largest [botnets](Attacks/Botnet) in history
+- Created one of the largest [botnets](<./Attacks/Botnet.md>) in history
 - Infected between **150,000 and 2.4 million** computers
 - Used primarily for sending spam emails
 
@@ -122,7 +122,7 @@ A rootkit is [malware](Attacks/Malware/Malware) designed to hide its presence by
 1. **Boot-Level Persistence**: Loaded before the operating system
 2. **Deep System Control**: Could modify kernel operations
 3. **Data Theft**: Stole banking credentials and personal information
-4. **[Backdoor](Attacks/Backdoor) Creation**: Allowed remote attacker access
+4. **[Backdoor](<./Attacks/Backdoor.md>) Creation**: Allowed remote attacker access
 
 **Why MBR rootkits are dangerous:**
 - Load before antivirus software starts
@@ -448,9 +448,9 @@ Step 4: Attacker Actions
 2. **Bypass Login Screens**
     - Patch kernel memory to skip authentication
     - Works on locked Windows, Linux, macOS systems
-3. **Install [Backdoors](Attacks/Backdoor)**
+3. **Install [Backdoors](<./Attacks/Backdoor.md>)**
     - Inject kernel modules
-    - Install persistent [malware](Attacks/Malware/Malware)
+    - Install persistent [malware](<./Attacks/Malware/Malware.md>)
 4. **Mount File System**
     - Access all files as if logged in
 
@@ -529,7 +529,7 @@ Step 4: Attacker Actions
 **Target:** Running systems
 - Bypass login screens
 - Read live memory
-- Inject [malware](Attacks/Malware/Malware) into running kernel
+- Inject [malware](<./Attacks/Malware/Malware.md>) into running kernel
 
 ### 3. Remote DMA (RDMA) Attacks
 

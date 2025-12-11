@@ -10,7 +10,7 @@ date modified: Monday, 8. December 2025, 19:12
 
 **Definition**:
 Stands for “**P**ortable **O**perating **S**ystem **I**nterface” (the **X** stands for UNIX)
-A family of standards that defines compatibility between different [Unix-like](Unix-Like.md) [Operating Systems](Operating System.md). If an API works on [Unix-like](Unix-Like.md) system A, then it should work on a [Unix-like](Unix-Like.md) system B.
+A family of standards that defines compatibility between different [Unix-like](<./Unix-Like.md>) [Operating Systems](Operating System.md). If an API works on [Unix-like](<./Unix-Like.md>) system A, then it should work on a [Unix-like](<./Unix-Like.md>) system B.
 
 POSIX Model of permission:
 
@@ -23,4 +23,4 @@ POSIX Model of permission:
 
 **Example:** Linux and MacOS are POSIX compliant,
 
-**Related Concepts**: [Unix-Like](Unix-Like.md), Linux, Permissions
+**Related Concepts**: [Unix-Like](<./Unix-Like.md>), Linux, Permissions

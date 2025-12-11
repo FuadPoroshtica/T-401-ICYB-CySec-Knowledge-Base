@@ -169,11 +169,11 @@ Some tools to see this on your machine:
 - `traceroute` / `tracert`: Show the path packets take to a destination.
 - `ping`: Test reachability of a host on an IP network.
 
-The [Data Link Layer](../Terminology/Networks/OSI Model/2-Data Link Layer.md) uses [MAC](../Terminology/Networks/MAC.md) addresses to deliver frames within the same network.
+The [Data Link Layer](../Terminology/Networks/OSI Model/2-Data Link Layer.md) uses [MAC](<../Terminology/Networks/MAC.md>) addresses to deliver frames within the same network.
 
 “Frames” in this context means data packets at the link layer of the [OSI Model](../Terminology/Networks/OSI Model/OSI Model.md). So the ethernet frame is the data packet used in Ethernet networks at the link layer. Other frames include Wi-Fi frames, which are used in wireless networks.
 
-The [MAC](../Terminology/Networks/MAC.md) address (Media Access Control address) is a unique identifier assigned to network interfaces for communications at the [Data Link Layer](../Terminology/Networks/OSI Model/2-Data Link Layer.md) of a network segment.
+The [MAC](<../Terminology/Networks/MAC.md>) address (Media Access Control address) is a unique identifier assigned to network interfaces for communications at the [Data Link Layer](../Terminology/Networks/OSI Model/2-Data Link Layer.md) of a network segment.
 
 The [Network Layer](../Terminology/Networks/OSI Model/3-Network Layer.md) uses IP addresses to route packets between different networks.
 
@@ -279,16 +279,16 @@ Mitigation strategies:
 
 Infrastructure protocols, technically application layer protocols, but not user-facing.
 
-**[DNS (Domain Name System)](../Terminology/Networks/DNS.md) (Port 53)**:
+**[DNS (Domain Name System)](<../Terminology/Networks/DNS.md>) (Port 53)**:
 
 - Translates human-readable domain names (e.g., www.example.com) into IP addresses.
-- **Issue**: [UDP](../Terminology/Networks/UDP.md)/cleartext → vulnerable to spoofing, cache poisoning.
+- **Issue**: [UDP](<../Terminology/Networks/UDP.md>)/cleartext → vulnerable to spoofing, cache poisoning.
 - **Various attacks**: Cache poisoning, DNS Tunneling, Amplification attacks, Typosquatting.
 - **Mitigation**: DNSSEC (DNS Security Extensions) to provide authentication and integrity for DNS data.
 
-**[DHCP (Dynamic Host Configuration Protocol)](../Terminology/Networks/DHCP.md) (Ports 67, 68)**:
+**[DHCP (Dynamic Host Configuration Protocol)](<../Terminology/Networks/DHCP.md>) (Ports 67, 68)**:
 - Automatically assigns IP addresses and other network configuration parameters to devices on a network.
-- **Issue**: [UDP](../Terminology/Networks/UDP.md)/cleartext → vulnerable to spoofing, rogue DHCP servers.
+- **Issue**: [UDP](<../Terminology/Networks/UDP.md>)/cleartext → vulnerable to spoofing, rogue DHCP servers.
 - **Attack**: Rogue DHCP server can assign incorrect IP addresses or DNS servers to clients, leading to traffic interception or denial of service.
 - **Mitigation**: Use DHCP snooping on switches to prevent unauthorized DHCP servers from operating on the network.
 
@@ -368,14 +368,14 @@ smb : \ > get xyz
 # Security
 ## Packet Filtering Firewalls
 
-The Gatekeeper: Inspecting layer 3 ([IP](../Terminology/Networks/TCP IP Model/IP.md)) and layer 4 ([TCP](../Terminology/Networks/TCP IP Model/TCP.md)/[UDP](../Terminology/Networks/UDP.md)) headers of packets.
+The Gatekeeper: Inspecting layer 3 ([IP](../Terminology/Networks/TCP IP Model/IP.md)) and layer 4 ([TCP](../Terminology/Networks/TCP IP Model/TCP.md)/[UDP](<../Terminology/Networks/UDP.md>)) headers of packets.
 
 - Location: Usually at the network perimeter (between internal network and Internet).
 - Logic: Compares packet headers against a set of rules (ACLs - Access Control Lists).
 - Criteria:
 	- Source & destination IP addresses.
 	- Source & destination port numbers.
-	- Protocol ([TCP](../Terminology/Networks/TCP IP Model/TCP.md), [UDP](../Terminology/Networks/UDP.md), ICMP, ...).
+	- Protocol ([TCP](../Terminology/Networks/TCP IP Model/TCP.md), [UDP](<../Terminology/Networks/UDP.md>), ICMP, ...).
 	- Protocol header flags (e.g., TCP SYN, ACK, ...).
 - Actions:
 	- `ALLOW` (accept) the packet.
@@ -499,6 +499,6 @@ Once you’ve used `ssh` to connect to a remote server, you can use various comm
      ```
 
 # Further studies
-- UPnP, STUN etc punch holes into [NAT](../Terminology/Networks/NAT.md) to allow certain incoming traffic. Why can this be problematic for security? [find](../Tools and Commands/Basic Bash commands/find.md) some vulnerabilities of these techniques. How can they be countered?
-- SSL Inspection: In a corporate environment, some firewalls can inspect [HTTPS](../Terminology/Networks/Transfer Protocols/HTTPS.md) traffic to look for [Malware](../Terminology/Attacks/Malware/Malware.md) (or leaked data). How is this possible given that [TLS](../Terminology/Networks/TLS.md) provides end-to-end encryption?
-- [BGP](../Terminology/Networks/BGP.md) & The Chain of Trust: Discuss how [HTTPS](../Terminology/Networks/Transfer Protocols/HTTPS.md) (TLS) mitigates some of the problems of BGP hijacks. (Example: An attacker successfully hijacks a BGP prefix for a bank and diverts all traffic for the bank’s web server to a machine controlled by the attacker. Can they decrypt the traffic? Would the user notice? How?)
+- UPnP, STUN etc punch holes into [NAT](<../Terminology/Networks/NAT.md>) to allow certain incoming traffic. Why can this be problematic for security? [find](../Tools and Commands/Basic Bash commands/find.md) some vulnerabilities of these techniques. How can they be countered?
+- SSL Inspection: In a corporate environment, some firewalls can inspect [HTTPS](../Terminology/Networks/Transfer Protocols/HTTPS.md) traffic to look for [Malware](<../Terminology/Attacks/Malware/Malware.md>) (or leaked data). How is this possible given that [TLS](<../Terminology/Networks/TLS.md>) provides end-to-end encryption?
+- [BGP](<../Terminology/Networks/BGP.md>) & The Chain of Trust: Discuss how [HTTPS](../Terminology/Networks/Transfer Protocols/HTTPS.md) (TLS) mitigates some of the problems of BGP hijacks. (Example: An attacker successfully hijacks a BGP prefix for a bank and diverts all traffic for the bank’s web server to a machine controlled by the attacker. Can they decrypt the traffic? Would the user notice? How?)

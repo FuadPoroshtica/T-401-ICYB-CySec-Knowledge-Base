@@ -824,7 +824,7 @@ $ find / -perm -4000  # Find all SUID programs/usr/bin/passwd       # Expected/u
 
 ---
 
-[Cybersecurity_Research_Advanced_Topics](../Terminology/Cybersecurity_Research_Advanced_Topics.md)
+[Cybersecurity_Research_Advanced_Topics](<../Terminology/Cybersecurity_Research_Advanced_Topics.md>)
 
 ---
 

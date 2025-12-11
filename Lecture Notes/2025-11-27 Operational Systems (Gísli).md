@@ -56,7 +56,7 @@ want them simultaneously.
     - Loads the saved state of the next process.
 - Result: The illusion of parallelism on a single core.
 
-## Memory Management ([Virtualization](../Terminology/Virtualization/Virtualization))
+## Memory Management ([Virtualization](<../Terminology/Virtualization/Virtualization.md>))
 
 - The [OS](Operating System.md) provides the abstraction of Virtual Memory.
 - **Address Spaces**: Every process believes it has access to a contiguous map of memory (e.g., 0x0000 to 0xFFFF).
@@ -254,7 +254,7 @@ Once authenticated, the [OS](Operating System.md) uses a **User ID (UID)** to en
 - **DAC (Discretionary Access Control):**
     - The **Owner** of the file decides permissions.
     - Example: Linux `chmod`. You can make your file readable by everyone.
-    - Risk: [Malware](../Terminology/Attacks/Malware/Malware) running as “You” can change your file permissions.
+    - Risk: [Malware](<../Terminology/Attacks/Malware/Malware.md>) running as “You” can change your file permissions.
 - **MAC (Mandatory Access Control):**
     - The **System Policy** decides permissions. Users cannot override this.
     - Used in High Security (SELinux) and Mobile (iOS/Android).
@@ -297,7 +297,7 @@ Going deeper than standard logs:
     - *Example*: Not just “User logged in”, but “Process 402 attempted `open()` on `/etc/shadow` and was denied.”
     - Required for strict compliance to various standards (PCI-DSS, HIPAA).
 - File Integrity Monitoring (FIM):
-    - *Threat*: Attackers replacing system binaries (like `/bin/login`) with [Trojan horses](../Terminology/Attacks/Malware/Trojan).
+    - *Threat*: Attackers replacing system binaries (like `/bin/login`) with [Trojan horses](<../Terminology/Attacks/Malware/Trojan.md>).
     - *Defense*: Calculate checksums (hashes) of critical files.
     - If the hash of /bin/login changes, the [OS](Operating System.md) triggers an alarm immediately.
 
@@ -421,9 +421,9 @@ The attacker’s goal: Move from Ring 3 (User) to Ring 0 ([Kernel](../Terminolog
 
 ### Rootkits
 
-- [Malware](../Terminology/Attacks/Malware/Malware) that modifies the system to hide its own existence.
+- [Malware](<../Terminology/Attacks/Malware/Malware.md>) that modifies the system to hide its own existence.
 - e.g., by just diverting or intercepting system calls.
-- Essentially, it’s malware that’s designed to be stealthy and avoid detection by traditional security measures. It gets the [Operating System](../Terminology/Systems & Plaforms/Operating System.md) to lie to the user or security software about what’s really happening on the system.
+- Essentially, it’s malware that’s designed to be stealthy and avoid detection by traditional security measures. It gets the [Operating System](<../Terminology/Systems & Plaforms/Operating System.md>) to lie to the user or security software about what’s really happening on the system.
 - Example: When you run `ls` or `ps`, the rootkit filters the output of the underlying system calls to hide the hacker’s files and processes. The [OS](Operating System.md) lies to the user.
 - **Defense**: Use trusted boot mechanisms and integrity checks to detect unauthorized changes to system binaries.
 
@@ -444,7 +444,7 @@ The attacker’s goal: Move from Ring 3 (User) to Ring 0 ([Kernel](../Terminolog
 
 `ls -l` access modifiers and their meanings:
 
-![image](../zAttachments/image.png)
+![image](<../zAttachments/image.png>)
 
 ## File Permissions: Linux vs. Windows
 
@@ -536,7 +536,7 @@ Indicator: `-rwsr-xr-x 1 root root 64152 maí 30 2024 /usr/bin/passwd`
 ## Lab today and Guest Lecture tomorrow
 
 - Lab 4: Use auditing (turn it on!) to find ”malicious” processes modifying the file system.
-- Guest Lecture tomorrow by **Giovanni Apruzzese** on [Phishing](../Terminology/Attacks/Phishing).
+- Guest Lecture tomorrow by **Giovanni Apruzzese** on [Phishing](<../Terminology/Attacks/Phishing.md>).
 
 Day before the exam will be a recap lecture.
 

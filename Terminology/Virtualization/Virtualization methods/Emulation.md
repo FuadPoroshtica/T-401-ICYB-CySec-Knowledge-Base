@@ -11,4 +11,4 @@ date modified: Monday, 8. December 2025, 19:12
 
 **Context/Example**: Using [QEMU](../../../Tools and Commands/Setup & Config/Qemu.md) to run an ARM Linux [image](../Virtualization Hardening & Operations/Image.md) on an x86 laptop; every ARM instruction is translated to x86, which is much slower but highly flexible.
 
-**Related Concepts**: [Virtualization](../Virtualization.md) vs emulation, instruction translation, performance overhead.
+**Related Concepts**: [Virtualization](<../Virtualization.md>) vs emulation, instruction translation, performance overhead.

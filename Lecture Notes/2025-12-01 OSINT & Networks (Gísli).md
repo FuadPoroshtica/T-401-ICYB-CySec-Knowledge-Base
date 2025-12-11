@@ -86,7 +86,7 @@ We want to counter “Browser fingerprinting” (screen resolution, installed fo
 
 Countermeasures:
 
-1. User agent [spoofing](../Terminology/Attacks/Spoofing). Basically lying to the website? Like “Hahha yeahhh I’m tootally using Chrome right now”. There are even extensions made for just this.
+1. User agent [spoofing](<../Terminology/Attacks/Spoofing.md>). Basically lying to the website? Like “Hahha yeahhh I’m tootally using Chrome right now”. There are even extensions made for just this.
 2. Script blockers, e.g., uBlock Origin, NoScript.
 3. Dedicated research browser.
 
@@ -250,7 +250,7 @@ Sometimes we have to consider *where* our packets are being sent. E.g., if you�
 
 **Potential attacks:**
 
-- **[Spoofing](../Terminology/Attacks/Spoofing)**: Faking the source address of a packet to impersonate another device. (MAC or IP address in packets.)
+- **[Spoofing](<../Terminology/Attacks/Spoofing.md>)**: Faking the source address of a packet to impersonate another device. (MAC or IP address in packets.)
 - Attacks on the mappings between different addresses: ARP (Address Resolution Protocol) poisoning (mapping between MAC and IP), DNS cache poisoning (mapping between domain names and IP addresses).
 
 Between these addresses there exist mappings:
@@ -383,7 +383,7 @@ He goes into the terminal and runs `arp -n` to see the ARP table on his system. 
 - Iface (interface)
     - The network interface associated with the ARP entry (e.g., eth0, wlan0).
 
-If you get several responses to an ARP request, you might be under an ARP [Spoofing](../Attacks/Spoofing.md) attack. Because normally only one device should respond with its MAC address.
+If you get several responses to an ARP request, you might be under an ARP [Spoofing](<../Terminology/Attacks/Spoofing.md>) attack. Because normally only one device should respond with its MAC address.
 
 ### Layer 2 Vulnerabilities: Wired Networks
 

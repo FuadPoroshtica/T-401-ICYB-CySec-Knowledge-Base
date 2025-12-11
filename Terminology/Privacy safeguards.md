@@ -9,4 +9,4 @@ date modified: Monday, 8. December 2025, 11:12
 
 **Context/Example**: A company implements safeguards such as data minimization, encryption, [Differential Privacy](Differential Privacy.md), [Access Controls](Defense & Control/Access Control.md), and regular audits. For example, instead of storing full customer addresses, the system stores only what is necessary (e.g., ZIP code), and encrypts it both in transit and at rest. These measures limit how much information can be leaked or misused.
 
-**Related Concepts**: Data Minimization, Encryption, [Access Control](Defense & Control/Access Control.md), [Differential Privacy](Differential Privacy.md), [K-anonymity](K-anonymity.md), Privacy by Design, Compliance (GDPR/CCPA), Audit Logging
+**Related Concepts**: Data Minimization, Encryption, [Access Control](Defense & Control/Access Control.md), [Differential Privacy](Differential Privacy.md), [K-anonymity](<./K-anonymity.md>), Privacy by Design, Compliance (GDPR/CCPA), Audit Logging

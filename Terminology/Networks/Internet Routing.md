@@ -8,13 +8,13 @@ date modified: Thursday, 11. December 2025, 09:12
 
 How do packets actually get to their destination across multiple networks?
 
-**IGP**: Interior Gateway Protocol (within an [Autonomous System (AS)](AS.md)).
+**IGP**: Interior Gateway Protocol (within an [Autonomous System (AS)](<./AS.md>)).
 
-**EGP**: Exterior Gateway Protocol (between [Autonomous Systems](AS.md)).
+**EGP**: Exterior Gateway Protocol (between [Autonomous Systems](<./AS.md>)).
 
-**[BGP](BGP.md)**: Border Gateway Protocol (the main EGP used on the Internet).
+**[BGP](<./BGP.md>)**: Border Gateway Protocol (the main EGP used on the Internet).
 
-**[AS](AS.md)**: Autonomous System, a collection of [IP](TCP IP Model/IP.md) networks and [routers](Network hardware/Router.md) under the control of a single organization that presents a common routing policy to the Internet.
+**[AS](<./AS.md>)**: Autonomous System, a collection of [IP](TCP IP Model/IP.md) networks and [routers](Network hardware/Router.md) under the control of a single organization that presents a common routing policy to the Internet.
 
 Routing is done on the basis of these autonomous systems (ASes). Each AS is assigned a unique AS number (ASN).
 
@@ -44,10 +44,10 @@ Some tools to see this on your machine:
 - `traceroute` / `tracert`: Show the path packets take to a destination.
 - `ping`: Test reachability of a host on an IP network.
 
-The [Data Link Layer](OSI Model/2-Data Link Layer.md) uses [MAC](MAC.md) addresses to deliver frames within the same network.
+The [Data Link Layer](OSI Model/2-Data Link Layer.md) uses [MAC](<./MAC.md>) addresses to deliver frames within the same network.
 
 “Frames” in this context means data packets at the link layer of the [OSI Model](OSI Model/OSI Model.md). So the ethernet frame is the data packet used in Ethernet networks at the link layer. Other frames include Wi-Fi frames, which are used in wireless networks.
 
-The [MAC](MAC.md) address (Media Access Control address) is a unique identifier assigned to network interfaces for communications at the [Data Link Layer](OSI Model/2-Data Link Layer.md) of a network segment.
+The [MAC](<./MAC.md>) address (Media Access Control address) is a unique identifier assigned to network interfaces for communications at the [Data Link Layer](OSI Model/2-Data Link Layer.md) of a network segment.
 
 The [Network Layer](OSI Model/3-Network Layer.md) uses IP addresses to route packets between different networks.

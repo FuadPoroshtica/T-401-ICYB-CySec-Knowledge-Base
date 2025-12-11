@@ -14,7 +14,7 @@ There are two main versions of IP in use today: IPv4 and IPv6. IPv4 uses 32-bit 
 
 IP operates at the [Network Layer](../OSI Model/3-Network Layer.md) (Layer 3) of the [OSI Model](../OSI Model/OSI Model.md), which is responsible for packet forwarding, including routing through intermediate [routers](../Network hardware/Router.md).
 
-IP works in conjunction with other protocols, such as [TCP (Transmission Control Protocol)](TCP.md) and [UDP (User Datagram Protocol)](../UDP.md), to facilitate reliable and efficient data transmission over networks.
+IP works in conjunction with other protocols, such as [TCP (Transmission Control Protocol)](<./TCP.md>) and [UDP (User Datagram Protocol)](<../UDP.md>), to facilitate reliable and efficient data transmission over networks.
 
 IP is a connectionless protocol, meaning that it does not establish a dedicated end-to-end connection before transmitting data. Instead, data packets are sent independently and may take different paths to reach their destination.
 

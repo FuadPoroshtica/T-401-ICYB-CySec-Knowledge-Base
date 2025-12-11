@@ -12,7 +12,7 @@ It is responsible for providing reliable data transfer services between end syst
 
 The Transport Layer manages end-to-end communication, including error detection and correction, flow control, and congestion control.
 
-It uses protocols such as the [Transmission Control Protocol (TCP)](../TCP IP Model/TCP.md) and the [User Datagram Protocol (UDP)](../UDP.md) to facilitate data transfer between applications running on different devices.
+It uses protocols such as the [Transmission Control Protocol (TCP)](../TCP IP Model/TCP.md) and the [User Datagram Protocol (UDP)](<../UDP.md>) to facilitate data transfer between applications running on different devices.
 
 The Transport Layer works closely with the [Network Layer](3-Network Layer.md) to provide end-to-end data delivery across multiple networks.
 
@@ -20,7 +20,7 @@ The Transport Layer works closely with the [Network Layer](3-Network Layer.md) t
 **UDP (User Datagram Protocol):**
 - Connectionless protocol. Fire-and-forget. No handshake, no confirmation.
 - Fast, low overhead, no guarantees.
-- Use cases: Streaming, gaming, VoIP, [DNS](../DNS.md) queries. For when delivering *fast* is more important than delivering *reliably*.
+- Use cases: Streaming, gaming, VoIP, [DNS](<../DNS.md>) queries. For when delivering *fast* is more important than delivering *reliably*.
 
 **TCP (Transmission Control Protocol):**
 - Connection-oriented protocol. **3-Way Handshake** (syn, syn-ack, ack) to establish a connection.

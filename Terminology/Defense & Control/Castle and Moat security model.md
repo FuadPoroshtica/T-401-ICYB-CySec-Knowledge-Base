@@ -8,7 +8,7 @@ date modified: Thursday, 11. December 2025, 09:12
 
 The **Castle and Moat security model** is a traditional cybersecurity concept that likens an organization’s security infrastructure to a medieval castle surrounded by a moat. In this model, the “castle” represents the internal network or system that needs protection, while the “moat” symbolizes the defensive measures put in place to prevent unauthorized access.
 
-The primary idea behind the Castle and Moat model is to create a strong perimeter defense that keeps threats out. This is typically achieved through various security measures such as [Firewalls](Firewall.md), intrusion detection systems, and [Access Controls](Access Control.md). The moat serves as a barrier that deters attackers from reaching the castle, much like how a physical moat would deter invaders from breaching a fortress.
+The primary idea behind the Castle and Moat model is to create a strong perimeter defense that keeps threats out. This is typically achieved through various security measures such as [Firewalls](<./Firewall.md>), intrusion detection systems, and [Access Controls](Access Control.md). The moat serves as a barrier that deters attackers from reaching the castle, much like how a physical moat would deter invaders from breaching a fortress.
 
 ## Limitations
 

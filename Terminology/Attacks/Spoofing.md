@@ -12,4 +12,4 @@ date modified: Monday, 8. December 2025, 15:12
 
 **Context/Example**: Spoofed [IP](../Networks/TCP IP Model/IP.md) addresses or fake login pages.
 
-**Related Concepts**: [Phishing](Phishing.md), impersonation, man-in-the-middle (MITM), identity theft.
+**Related Concepts**: [Phishing](<./Phishing.md>), impersonation, man-in-the-middle (MITM), identity theft.
