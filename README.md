@@ -36,6 +36,7 @@ Here are the names of all the students in this group (`kb_group_7`), including t
 - Jón Ingi Birgisson: `jonb24@ru.is`
 - Kim Anna Hudson: `kim24@ru.is`
 - Kormákur Snorrason: `kormakur24@ru.is`
+	- GitHub username: `kormakursnorras`
 - Nastassia Herman: `nastassia25@ru.is`
 	- GitHub username: `krakengard`
 
