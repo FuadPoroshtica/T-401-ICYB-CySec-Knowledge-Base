@@ -106,3 +106,30 @@ Day 9 - AI Security [AI Security](../Terminology/Artifical_Intelligence/Defensiv
      - _Organizations?_  Enabling impersonation executives, which can lead to unauthorized access to sensitive information and financial fraud. They can also damage an organization's reputation and undermine trust, making it essential for companies to implement detection technologies and response plans.
      - _Society as a whole?_ Enabling misinformation, identity theft, and manipulation of public opinion, particularly during elections or crises. Their realistic nature can undermine trust in genuine media, making it difficult for individuals to discern truth from falsehoods, which can lead to broader societal consequences.
      - Keywords: **Identity theft, fraud, undermining of democracy, misinformation**.   
+
+Day 11 - Defense [Defense](../Terminology/Defense&Control)
+1. What replaces the Firewall as a primary enforcement point in Zero Point?
+   Instead of relying on a traditional perimeter firewall/VPN, Google uses **context-aware access proxies** and a **centralized Access Control Engine** that authenticate and authorize every request based on user identity and device trust, not network location.
+2. How does a system decide if a device is trusted?
+   Trust is determined dynamically using a Trust Inferer that evaluates multiple device and user attributes such as:
+   - Device state (patch level, antivirus, encryption, certificates)
+   - Whether the device is managed/registered
+   - User identity and role
+   - Contextual signals (location, time, behavior)
+  Based on these, a trust level or tier is assigned, which dictates what resources the device can access. 
+3. What are advantages and disadvantages of this approach regarding security?
+   **Advantages:**
+   - No trusted network perimeter — all access is verified per request, reducing implicit trust.
+   - Granular, context-aware access control — decisions based on identity & device posture, not IP or location.
+   - Least-privilege enforcement — devices/users get only what they need.
+   - Improved protection against lateral movement — attackers can’t exploit broad network access.
+   **Disadvantages:**
+   - Complexity & cost — implementing continuous verification and trust inference requires major architectural changes.
+   - Operational overhead — needs continuous monitoring of devices and identities.
+   - Dependency on backend systems — if access proxies or identity services fail, user access and productivity are impacted.
+   - Policy management difficulty — creating and maintaining fine-grained rules takes effort.
+4. Quick summary of how Google replaced VPN and traditional firewalls
+   **Traditional model:** If you’re on the corporate network (inside firewall + VPN), you’re trusted and get broad access. Google’s Zero Trust (BeyondCorp):
+   - No special trusted network — whether you’re on-site or remote, all access is treated as coming from an untrusted network.
+   - Authentication & authorization happen on every request through an access proxy using device identity + user credentials + context.
+   - Firewall/VPN are not primary defense points — enforcement is done by access proxies and policy engines that verify trust continuously. 
