@@ -9,18 +9,24 @@ date modified: Thursday, 11. December 2025, 10:12
 
 ## Defense in Depth
 - Least privilege:
-	- Only give users the bare minimum privileges that they need
+	- *TL;DR:* Only give users the bare minimum privileges that they need.
+	- *Explained in detail:* Least privilege is the principle that users, programs, and systems should only have the minimum level of access or permissions necessary to perform their tasks. This helps reduce the attack surface and limits the potential damage that can be caused by compromised accounts or software.
 - Fail-safe defaults:
-	- TODO
+	- *TL;DR:* Default to denying access, unless explicitly allowed.
+    - *Explained in detail:* Fail-safe defaults is the principle that systems should be designed to default to a secure state in the event of a failure or unexpected condition. This means that if something goes wrong, the system should deny access or functionality rather than allowing it by default. This helps prevent unauthorized access or actions when the system is not functioning as intended.
 - Economy of Mechanism:
-	- TODO
+	- *TL;DR:* Keep it simple.
+    - *Explained in detail:* Economy of mechanism is the principle that security mechanisms should be as simple and straightforward as possible. Complex systems are more difficult to understand, analyze, and secure, which can lead to vulnerabilities. By keeping security mechanisms simple, it becomes easier to identify and address potential weaknesses.
 - [Complete mediation](<../Terminology/Complete mediation.md>):
-	- ...always check access for every access, something
+	- *TL;DR:* Complete mediation means that every access to every resource must be checked for authorization.
+	- *Explained in detail:* Complete mediation is the principle that every access to every resource must be checked for authorization. This means that every time a user or process attempts to access a resource (such as a file, database, or network service), the system must verify that they have the necessary permissions to do so. This helps prevent unauthorized access and ensures that security policies are consistently enforced.
 - Open design:
-	- The opposite of security by obscurity. It shouldn’t depend on security by obscurity. The system should be easy to understand so that it is easy to analyze what is going on for forensics.
+	- *TL;DR:* Don’t rely on secrecy of design (security by obscurity) or implementation for security.
+	- *Explained in detail:* Open design is the principle that the security of a system should not depend on the secrecy of its design or implementation. Instead, security should be based on well-established principles and practices that can be openly reviewed and analyzed. This allows for greater scrutiny and helps identify potential vulnerabilities that may not be apparent in a closed or secretive design.
 - Psychological acceptability:
-	- Your security principles need to be accepted by the user, or else the user will circumvent it.
-	- E.g. if you have super super complicated passwords, then the users might just write it down on a sticky note and basically make it completely useless.
+	- *TL;DR:* Your security principles need to be accepted by the user, or else the user will circumvent it.
+    	- E.g. if you have super super complicated passwords, then the users might just write it down on a sticky note and basically make it completely useless.
+  	- *Explained in detail:* Psychological acceptability is the principle that security mechanisms should be designed in a way that is user-friendly and easy to understand. If security measures are too complex or inconvenient, users may be tempted to bypass them or find workarounds, which can compromise the overall security of the system. By designing security mechanisms that are intuitive and easy to use, users are more likely to comply with security policies and practices.
 
 ### The layered approach
 
