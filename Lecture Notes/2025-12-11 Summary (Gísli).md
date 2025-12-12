@@ -1,7 +1,7 @@
 ---
 aliases: []
 date created: Thursday, 11. December 2025, 09:12
-date modified: Thursday, 11. December 2025, 10:12
+date modified: Friday, 12. December 2025, 12:12
 ---
 
 # 2025-12-11 Introduction to Cyber Security Course Summary (Gísli)
